@@ -31,6 +31,28 @@
 
   <body>
     <header class="site-header">
+      <div class="top-header-bar">
+        <div class="container">
+            <div class="row flex-wrap justify-content-center justify-content-lg-between align-items-lg-center">
+                <div class="col-12 col-lg-8 d-none d-md-flex flex-wrap justify-content-center justify-content-lg-start mb-3 mb-lg-0">
+                    <div class="header-bar-email">
+                        MAIL: <i class="fa fa-envelope"></i> <a>lesheltergh@gmail.com</a>
+                    </div><!-- .header-bar-email -->
+
+                    <div class="header-bar-text">
+                        <p>PHONE: <i class="fa fa-phone"></i> 053 044 9325</p>
+                    </div><!-- .header-bar-text -->
+                </div><!-- .col -->
+
+                <div class="col-12 col-lg-4 d-flex flex-wrap justify-content-center justify-content-lg-end align-items-center">
+                    <div class="donate-btn" data-modal="donateModal1">
+                        <a >Donate Now</a>
+                    </div><!-- .donate-btn -->
+                </div><!-- .col -->
+            </div><!-- .row -->
+        </div><!-- .container -->
+    </div><!-- .top-header-bar -->
+
       <!-- logo & navs -->
       <div class="nav-bar">
         <div class="container">
@@ -80,57 +102,47 @@
         <div class="carousel-inner">
           <!-- Carousel Item 1 -->
           <div class="carousel-item active">
-            <img src="images/hero.jpg" class="d-block w-100" alt="Image 1" />
+            <img
+              src="images/15.jpg"
+              class="d-block w-100"
+              alt="Image 1"
+            />
             <div class="carousel-overlay"></div>
-            <div class="carousel-caption d-none d-md-block text-start">
+            <div class="carousel-caption text-start">
               <h1>Donate</h1>
               <h4>for a better world</h4>
               <p>
-                At Le Shelter, we are committed to improving the lives of
-                children facing hardship. With years of dedication and hard
-                work, we’ve achieved significant milestones in education,
-                healthcare, and community support. Join us in continuing to
-                create lasting change and hope for children everywhere.
+                At Le Shelter, we are committed to improving the lives of children facing hardship. With years of dedication and hard work, we’ve achieved significant milestones in education, healthcare, and community support. Join us in continuing to create lasting change and hope for children everywhere.
               </p>
-
               <div class="d-flex flex-wrap align-items-center mt-5">
-                <a
-                  href="#"
-                  class="primary-button donate-btn"
-                  data-modal="donateModal1"
-                  >Donate Now</a
-                >
+                <a class="primary-button donate-btn" data-modal="donateModal1">Donate Now</a>
                 <a href="about.html" class="btn orange-border">Read More</a>
               </div>
             </div>
           </div>
-
+        
           <!-- Carousel Item 2 -->
           <div class="carousel-item">
-            <img src="images/hero.jpg" class="d-block w-100" alt="Image 2" />
+            <img
+              src="images/IMG_6657.JPG"
+              class="d-block w-100"
+              alt="Image 2"
+            />
             <div class="carousel-overlay"></div>
-            <div class="carousel-caption d-none d-md-block text-start">
+            <div class="carousel-caption text-start">
               <h1>Donate</h1>
               <h4>for a better world</h4>
               <p>
-                At Le Shelter, we are committed to improving the lives of
-                children facing hardship. With years of dedication and hard
-                work, we’ve achieved significant milestones in education,
-                healthcare, and community support. Join us in continuing to
-                create lasting change and hope for children everywhere.
+                At Le Shelter, we are committed to improving the lives of children facing hardship. With years of dedication and hard work, we’ve achieved significant milestones in education, healthcare, and community support. Join us in continuing to create lasting change and hope for children everywhere.
               </p>
               <div class="d-flex flex-wrap align-items-center mt-5">
-                <a
-                  href="#"
-                  class="primary-button donate-btn"
-                  data-modal="donateModal1"
-                  >Donate Now</a
-                >
+                <a class="primary-button donate-btn" data-modal="donateModal1">Donate Now</a>
                 <a href="about.html" class="btn orange-border">Read More</a>
               </div>
             </div>
           </div>
         </div>
+        
 
         <!-- Pagination and controls -->
         <div class="pagination-wrap position-absolute w-100">
@@ -181,7 +193,7 @@
           <span class="close-btn">&times;</span>
           <img
             src="images/image__1_-removebg-preview.png"
-            style="height: 70px; width: 180px"
+            style="height: 80px; width: 180px"
           />
           <p>Here are the details for making your donation:</p>
 
@@ -216,13 +228,13 @@
                 <p>Toiletries etc.</p>
               </div>
               <div class="other-items-btn">
-                <a href="/contact.html" class="primary-button donate-btn"
+                <a href="contact.html" class="primary-button donate-btn"
                   >Click Here</a
                 >
               </div>
             </div>
           </div>
-          <p>Thank you for your support!</p>
+          <p>Thank you for your support 🤝 🤗!</p>
         </div>
       </div>
 
@@ -230,11 +242,14 @@
       <div id="donateModal1" class="modal">
         <div class="modal-content">
           <span class="close-btn">&times;</span>
-          <h2>NGO Details</h2>
+          <img
+            src="images/image__1_-removebg-preview.png"
+            style="height: 80px; width: 180px"
+          />
           <p>Here are the details for making your donation:</p>
 
           <div class="donation-details">
-            <h3>Mobile Money (MOMO) Details</h3>
+            <h4>Mobile Money (MOMO) Details</h4>
             <div class="momo-details">
               <div class="momo-item">
                 <img
@@ -242,12 +257,14 @@
                   alt="MTN Mobile Money"
                   class="momo-logo"
                 />
-                <p>Name: Le Shelter Foundation</p>
-                <p>Mobile Money Number: 0530449325</p>
-                <span>Merchant ID: 440792 </span>
+                <p><strong>Name:</strong> Le Shelter Foundation</p>
+
+                <p><strong>Mobile Money Number:</strong> 0530449325</p>
+
+                <p><strong>Merchant ID:</strong> 440792</p>
               </div>
             </div>
-            <h3>Other Items to donate</h3>
+            <h4>Other Items to donate</h4>
             <div class="momo-details">
               <div class="momo-item">
                 <img
@@ -261,12 +278,14 @@
                 <p>Cloths</p>
                 <p>Toiletries etc.</p>
               </div>
-              <a href="contact.html" class="primary-button donate-btn"
-                >Click Here</a
-              >
+              <div class="other-items-btn">
+                <a href="contact.html" class="primary-button donate-btn"
+                  >Click Here</a
+                >
+              </div>
             </div>
           </div>
-          <p>Thank you for your support!</p>
+          <p>Thank you for your support 🤝 🤗!</p>
         </div>
       </div>
     </div>
@@ -386,50 +405,143 @@
 
     <div class="home-page-welcome">
       <div class="container">
-        <div class="row">
-          <div class="col-10 col-lg-6 order-2 order-lg-1">
-            <div class="welcome-content">
-              <header class="entry-header">
-                <h2 class="entry-title">Our Mission</h2>
-              </header>
-              <!-- .entry-header -->
-
-              <div class="entry-content mt-5">
-                <p>
-                  The mission of the Foundation is to provide equal educational
-                  opportunities for all, focusing mainly on students in rural
-                  areas by donating learning materials, providing guidance, and
-                  engaging students to inspire hope and representation
-                </p>
+          <div class="row align-items-center">
+              <div class="col-12 col-lg-6 order-2 order-lg-1">
+                  <div class="welcome-content">
+                      <header class="entry-header">
+                          <h2 class="entry-title">Our Mission</h2>
+                      </header>
+                      <div class="entry-content mt-3 mt-lg-5">
+                          <p>
+                              The mission of the Foundation is to provide equal educational
+                              opportunities for all, focusing mainly on students in rural
+                              areas by donating learning materials, providing guidance, and
+                              engaging students to inspire hope and representation
+                          </p>
+                      </div>
+                      <div class="entry-footer mt-3 mt-lg-5">
+                          <a href="about.html" class="btn orange-border">Read More</a>
+                      </div>
+                  </div>
               </div>
-
-              <!-- .entry-content -->
-
-              <div class="entry-footer mt-5">
-                <a href="about.html" class="btn orange-border">Read More</a>
+              <div class="col-12 col-lg-6 mt-4 mt-lg-0 order-1 order-lg-2">
+                  <img src="images/DJI_0036.JPG" alt="welcome" class="welcome-image" />
               </div>
-              <!-- .entry-footer -->
-            </div>
-            <!-- .welcome-content -->
           </div>
-          <!-- .col -->
-          <div class="">
-<!-- todo -->
-          </div>
-          <div class="col-10 col-lg-6 mt-4 order-1 order-lg-2">
-            <img src="images/welcome.jpg" alt="welcome" />
-          </div>
-          <!-- .col -->
-        </div>
-        <!-- .row -->
       </div>
-      <!-- .container -->
-    </div>
+  </div>
     <!-- .home-page-icon-boxes -->
 
     <div class="home-page-events">
       <div class="container">
         <div class="row">
+          <div class="col-12 col-lg-6">
+            <div class="featured-cause">
+              <div class="section-heading">
+                <h2 class="entry-title">Upcoming Events</h2>
+              </div>
+              <!-- .section-heading -->
+
+              <div class="cause-wrap d-flex flex-wrap justify-content-between">
+                <figure class="m-0">
+                  <img src="images/Flyer1.jpg" alt="Flyer" class="flyer" onclick="openFlyerModal()" />
+              </figure>
+              <div id="flyerModal" class="modal">
+                <span class="close" onclick="closeFlyerModal()">&times;</span>
+                <img class="modal-content" id="fullFlyer">
+            </div>
+                <div class="cause-content-wrap">
+                  <header
+                    class="entry-header d-flex flex-wrap align-items-center"
+                  >
+                    <h3 class="entry-title w-100 m-0">
+                      <a href="#">Fundraiser for Kids</a>
+                    </h3>
+
+                    <div class="posted-date">
+                      <a >May 10, 2024 </a>
+                    </div>
+                    <!-- .posted-date -->
+
+                    <div class="cats-links">
+                      <a >Aburi</a>
+                    </div>
+                    <!-- .cats-links -->
+                  </header>
+                  <!-- .entry-header -->
+
+                  <div class="entry-content">
+                    <p class="m-0" style="text-align:left;">
+                      Your donation, no matter how small, can make a significant impact. 
+                      It can provide school supplies, mentorship programs, clean water, and even hope for those who need it most. 
+                      Together, we can reach more children, support more families, and extend our mission to even the most remote areas. 
+                    </p>
+                    <div class="entry-footer mt-5">
+                      <a class="flyer-primary-button donate-btn" data-modal="donateModal1">Donate Now</a>
+  
+                    </div>
+                  </div>
+                  <!-- .entry-content -->
+
+                 
+                  <div id="donateModal" class="modal">
+                    <div class="modal-content">
+                      <span class="close-btn">&times;</span>
+                      <img
+                        src="images/image__1_-removebg-preview.png"
+                        style="height: 80px; width: 180px"
+                      />
+                      <p>Here are the details for making your donation:</p>
+            
+                      <div class="donation-details">
+                        <h4>Mobile Money (MOMO) Details</h4>
+                        <div class="momo-details">
+                          <div class="momo-item">
+                            <img
+                              src="images/mtnlogo.png"
+                              alt="MTN Mobile Money"
+                              class="momo-logo"
+                            />
+                            <p><strong>Name:</strong> Le Shelter Foundation</p>
+            
+                            <p><strong>Mobile Money Number:</strong> 0530449325</p>
+            
+                            <p><strong>Merchant ID:</strong> 440792</p>
+                          </div>
+                        </div>
+                        <h4>Other Items to donate</h4>
+                        <div class="momo-details">
+                          <div class="momo-item">
+                            <img
+                              src="images/food-donation.png"
+                              alt="MTN Mobile Money"
+                              class="momo-logo"
+                            />
+                            <p>Food items</p>
+                            <p>Cloths</p>
+                            <p>Stationary</p>
+                            <p>Cloths</p>
+                            <p>Toiletries etc.</p>
+                          </div>
+                          <div class="other-items-btn">
+                            <a href="contact.html" class="primary-button donate-btn"
+                              >Click Here</a
+                            >
+                          </div>
+                        </div>
+                      </div>
+                      <p>Thank you for your support!</p>
+                    </div>
+                  </div>
+                  <!-- .entry-footer -->
+                </div>
+                <!-- .cause-content-wrap -->
+              </div>
+              <!-- .cause-wrap -->
+            </div>
+            <!-- .featured-cause -->
+          </div>
+
           <div class="col-12 col-lg-6">
             <div class="upcoming-events">
               <div class="section-heading">
@@ -439,7 +551,7 @@
 
               <div class="event-wrap d-flex flex-wrap justify-content-between">
                 <figure class="m-0">
-                  <img src="images/event-1.jpg" alt="" />
+                  <img src="images/34.JPG" alt="" />
                 </figure>
 
                 <div class="event-content-wrap">
@@ -447,16 +559,16 @@
                     class="entry-header d-flex flex-wrap align-items-center"
                   >
                     <h3 class="entry-title w-100 m-0">
-                      <a href="#">Fundraiser for Kids</a>
+                      <a href="#">Donation 1</a>
                     </h3>
 
                     <div class="posted-date">
-                      <a href="#">Aug 25, 2018 </a>
+                      <a >Aug 25, 2018 </a>
                     </div>
                     <!-- .posted-date -->
 
                     <div class="cats-links">
-                      <a href="#">Ball Room New York</a>
+                      <a>Lapaz</a>
                     </div>
                     <!-- .cats-links -->
                   </header>
@@ -481,7 +593,7 @@
 
               <div class="event-wrap d-flex flex-wrap justify-content-between">
                 <figure class="m-0">
-                  <img src="images/event-2.jpg" alt="" />
+                  <img src="images/53.jpg" alt="" />
                 </figure>
 
                 <div class="event-content-wrap">
@@ -489,16 +601,16 @@
                     class="entry-header d-flex flex-wrap align-items-center"
                   >
                     <h3 class="entry-title w-100 m-0">
-                      <a href="#">Bring water to the childrens</a>
+                      <a href="#">Bring water to the children</a>
                     </h3>
 
                     <div class="posted-date">
-                      <a href="#">Aug 25, 2018 </a>
+                      <a>Aug 25, 2018 </a>
                     </div>
                     <!-- .posted-date -->
 
                     <div class="cats-links">
-                      <a href="#">Ball Room New York</a>
+                      <a >Koforidua</a>
                     </div>
                     <!-- .cats-links -->
                   </header>
@@ -523,7 +635,7 @@
 
               <div class="event-wrap d-flex flex-wrap justify-content-between">
                 <figure class="m-0">
-                  <img src="images/event-3.jpg" alt="" />
+                  <img src="images/IMG_7044.JPG" alt="" />
                 </figure>
 
                 <div class="event-content-wrap">
@@ -531,16 +643,16 @@
                     class="entry-header d-flex flex-wrap align-items-center"
                   >
                     <h3 class="entry-title w-100 m-0">
-                      <a href="#">Bring water to the childrens</a>
+                      <a href="#">Assisting schools under trees </a>
                     </h3>
 
                     <div class="posted-date">
-                      <a href="#">Aug 25, 2018 </a>
+                      <a >Aug 25, 2018 </a>
                     </div>
                     <!-- .posted-date -->
 
                     <div class="cats-links">
-                      <a href="#">Ball Room New York</a>
+                      <a >Mampong</a>
                     </div>
                     <!-- .cats-links -->
                   </header>
@@ -566,65 +678,6 @@
             <!-- .upcoming-events -->
           </div>
           <!-- .col -->
-
-          <div class="col-12 col-lg-6">
-            <div class="featured-cause">
-              <div class="section-heading">
-                <h2 class="entry-title">Upcoming Events</h2>
-              </div>
-              <!-- .section-heading -->
-
-              <div class="cause-wrap d-flex flex-wrap justify-content-between">
-                <figure class="m-0">
-                  <img src="images/featured-causes.jpg" alt="" />
-                </figure>
-
-                <div class="cause-content-wrap">
-                  <header
-                    class="entry-header d-flex flex-wrap align-items-center"
-                  >
-                    <h3 class="entry-title w-100 m-0">
-                      <a href="#">Fundraiser for Kids</a>
-                    </h3>
-
-                    <div class="posted-date">
-                      <a href="#">Aug 25, 2018 </a>
-                    </div>
-                    <!-- .posted-date -->
-
-                    <div class="cats-links">
-                      <a href="#">Ball Room New York</a>
-                    </div>
-                    <!-- .cats-links -->
-                  </header>
-                  <!-- .entry-header -->
-
-                  <div class="entry-content">
-                    <p class="m-0">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Mauris tempus vestib ulum mauris. Lorem ipsum dolor sit
-                      amet, consectetur.
-                    </p>
-                  </div>
-                  <!-- .entry-content -->
-
-                  <div class="entry-footer mt-5">
-                    <a
-                      href="#"
-                      class="primary-button donate-btn"
-                      data-modal="donateModal1"
-                      >Donate Now</a
-                    >
-                  </div>
-                  <!-- .entry-footer -->
-                </div>
-                <!-- .cause-content-wrap -->
-              </div>
-              <!-- .cause-wrap -->
-            </div>
-            <!-- .featured-cause -->
-          </div>
-          <!-- .col -->
         </div>
         <!-- .row -->
       </div>
@@ -643,7 +696,6 @@
                 significant milestones in education, healthcare, and community
                 support.
               </h6>
-              
             </div>
             <!-- .section-heading -->
           </div>
@@ -660,18 +712,16 @@
               <div class="carousel-inner">
                 <!-- Slide 1 -->
                 <div class="carousel-item active">
-                  <img src="images/1.jpg" class="d-block w-100" alt="..." />
+                  <img src="images/IMG_6743.JPG" class="d-block w-100" alt="..." />
                   <div class="carousel-caption d-none d-md-block">
                     <!-- <h5>First Slide</h5> -->
-                    <p>Some description about the first slide.</p>
                   </div>
                 </div>
                 <!-- Slide 2 -->
                 <div class="carousel-item">
-                  <img src="images/2.jpg" class="d-block w-100" alt="..." />
+                  <img src="images/49.jpg" class="d-block w-100" alt="..." />
                   <div class="carousel-caption d-none d-md-block">
                     <!-- <h5>Second Slide</h5> -->
-                    <p>Some description about the second slide.</p>
                   </div>
                 </div>
                 <!-- Slide 3 -->
@@ -682,8 +732,7 @@
                     alt="..."
                   />
                   <div class="carousel-caption d-none d-md-block">
-                    <!-- <h5>Third Slide</h5> -->
-                    <p>Some description about the third slide.</p>
+                  
                   </div>
                 </div>
               </div>
@@ -735,8 +784,83 @@
                 <a class="logo" href="#"
                   ><img src="images/image__1_-removebg-preview.png" alt=""
                 /></a>
+                <ul class="footer-social">
+                  <li>
+                    <a
+                      href="https://www.facebook.com/profile.php?id=100067770571763"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        x="0px"
+                        y="0px"
+                        width="30"
+                        height="30"
+                        viewBox="0 0 50 50"
+                      >
+                        <path
+                          d="M 25 3 C 12.861562 3 3 12.861562 3 25 C 3 36.019135 11.127533 45.138355 21.712891 46.728516 L 22.861328 46.902344 L 22.861328 29.566406 L 17.664062 29.566406 L 17.664062 26.046875 L 22.861328 26.046875 L 22.861328 21.373047 C 22.861328 18.494965 23.551973 16.599417 24.695312 15.410156 C 25.838652 14.220896 27.528004 13.621094 29.878906 13.621094 C 31.758714 13.621094 32.490022 13.734993 33.185547 13.820312 L 33.185547 16.701172 L 30.738281 16.701172 C 29.349697 16.701172 28.210449 17.475903 27.619141 18.507812 C 27.027832 19.539724 26.84375 20.771816 26.84375 22.027344 L 26.84375 26.044922 L 32.966797 26.044922 L 32.421875 29.564453 L 26.84375 29.564453 L 26.84375 46.929688 L 27.978516 46.775391 C 38.71434 45.319366 47 36.126845 47 25 C 47 12.861562 37.138438 3 25 3 z M 25 5 C 36.057562 5 45 13.942438 45 25 C 45 34.729791 38.035799 42.731796 28.84375 44.533203 L 28.84375 31.564453 L 34.136719 31.564453 L 35.298828 24.044922 L 28.84375 24.044922 L 28.84375 22.027344 C 28.84375 20.989871 29.033574 20.060293 29.353516 19.501953 C 29.673457 18.943614 29.981865 18.701172 30.738281 18.701172 L 35.185547 18.701172 L 35.185547 12.009766 L 34.318359 11.892578 C 33.718567 11.811418 32.349197 11.621094 29.878906 11.621094 C 27.175808 11.621094 24.855567 12.357448 23.253906 14.023438 C 21.652246 15.689426 20.861328 18.170128 20.861328 21.373047 L 20.861328 24.046875 L 15.664062 24.046875 L 15.664062 31.566406 L 20.861328 31.566406 L 20.861328 44.470703 C 11.816995 42.554813 5 34.624447 5 25 C 5 13.942438 13.942438 5 25 5 z"
+                        ></path>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://x.com/le_shelter?t=dWlkQidVKnRSYGSbFpbjHg&s=09"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        x="0px"
+                        y="0px"
+                        width="30"
+                        height="30"
+                        viewBox="0 0 30 30"
+                      >
+                        <path
+                          d="M26.37,26l-8.795-12.822l0.015,0.012L25.52,4h-2.65l-6.46,7.48L11.28,4H4.33l8.211,11.971L12.54,15.97L3.88,26h2.65 l7.182-8.322L19.42,26H26.37z M10.23,6l12.34,18h-2.1L8.12,6H10.23z"
+                        ></path>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.tiktok.com/@le.shelter.founda?_t=ZM-8sl65FqR7XZ&_r=1"
+                    >
+                      <svg
+                        width="30px"
+                        height="30px"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M20 7.50414C18.5333 7.56942 15.52 6.75998 15.2 3H12.4V13.9666C12.4 17.0999 9.93253 18.4412 8.289 17.2507C6.20169 15.7389 7.60003 12.5958 10.2 12.9874V9.6583C8.20003 9.6583 4 10.4416 4 15.3374C4 21.6041 10.8146 21.4083 12.4 20.5824C14.9798 19.2385 15.6 17.7827 15.6 14.5541C15.6 11.6166 15.6 9.85413 15.6 9.0708C16.2667 9.39719 18.08 10.0891 20 10.2458"
+                          stroke="#000000"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.instagram.com/le.shelter.foundation?igsh=bGxneno2OTN5NjF5"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        x="0px"
+                        y="0px"
+                        width="30"
+                        height="30"
+                        viewBox="0 0 50 50"
+                      >
+                        <path
+                          d="M 16 3 C 8.8324839 3 3 8.8324839 3 16 L 3 34 C 3 41.167516 8.8324839 47 16 47 L 34 47 C 41.167516 47 47 41.167516 47 34 L 47 16 C 47 8.8324839 41.167516 3 34 3 L 16 3 z M 16 5 L 34 5 C 40.086484 5 45 9.9135161 45 16 L 45 34 C 45 40.086484 40.086484 45 34 45 L 16 45 C 9.9135161 45 5 40.086484 5 34 L 5 16 C 5 9.9135161 9.9135161 5 16 5 z M 37 11 A 2 2 0 0 0 35 13 A 2 2 0 0 0 37 15 A 2 2 0 0 0 39 13 A 2 2 0 0 0 37 11 z M 25 14 C 18.936712 14 14 18.936712 14 25 C 14 31.063288 18.936712 36 25 36 C 31.063288 36 36 31.063288 36 25 C 36 18.936712 31.063288 14 25 14 z M 25 16 C 29.982407 16 34 20.017593 34 25 C 34 29.982407 29.982407 34 25 34 C 20.017593 34 16 29.982407 16 25 C 16 20.017593 20.017593 16 25 16 z"
+                        ></path>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
               </div>
-              
             </div>
           </div>
           <!-- /footer contact -->
@@ -744,18 +868,20 @@
           <!-- footer galery -->
           <div class="col-md-4">
             <ul class="footer-contact">
-                <li><i class="fa fa-map-marker"></i> Baatsona-Spintex Accra</li>
-                <li><i class="fa fa-phone"></i> 053 044 9325</li>
-                <li>
-                  <i class="fa fa-envelope"></i> <a>lesheltergh@gmail.com</a>
-                </li>
-              </ul>
+              <li><i class="fa fa-map-marker"></i> Baatsona-Spintex Accra</li>
+              <li><i class="fa fa-phone"></i> 053 044 9325</li>
+              <li>
+                <i class="fa fa-envelope"></i> <a>lesheltergh@gmail.com</a>
+              </li>
+            </ul>
           </div>
           <!-- /footer galery -->
 
           <!-- footer newsletter -->
           <div class="col-md-4">
             <div class="footer">
+              <h3 class="footer-title">Be a Volunteer</h3>
+              <p>Join us and become a volunteer today! Fill out the form to get started and help us make a lasting impact ❤️❤️❤️. </p>
               <button class="footer-button">
                 <a
                   href="https://docs.google.com/forms/d/e/1FAIpQLSf8BNb_TOu1TX99yPvh-6kXlTA_dcG3nNBWbJJK5OmTPgmAxQ/viewform?usp=sharing"
@@ -764,82 +890,7 @@
                 >
               </button>
 
-              <ul class="footer-social">
-                <li>
-                  <a
-                    href="https://www.facebook.com/profile.php?id=100067770571763"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      x="0px"
-                      y="0px"
-                      width="30"
-                      height="30"
-                      viewBox="0 0 50 50"
-                    >
-                      <path
-                        d="M 25 3 C 12.861562 3 3 12.861562 3 25 C 3 36.019135 11.127533 45.138355 21.712891 46.728516 L 22.861328 46.902344 L 22.861328 29.566406 L 17.664062 29.566406 L 17.664062 26.046875 L 22.861328 26.046875 L 22.861328 21.373047 C 22.861328 18.494965 23.551973 16.599417 24.695312 15.410156 C 25.838652 14.220896 27.528004 13.621094 29.878906 13.621094 C 31.758714 13.621094 32.490022 13.734993 33.185547 13.820312 L 33.185547 16.701172 L 30.738281 16.701172 C 29.349697 16.701172 28.210449 17.475903 27.619141 18.507812 C 27.027832 19.539724 26.84375 20.771816 26.84375 22.027344 L 26.84375 26.044922 L 32.966797 26.044922 L 32.421875 29.564453 L 26.84375 29.564453 L 26.84375 46.929688 L 27.978516 46.775391 C 38.71434 45.319366 47 36.126845 47 25 C 47 12.861562 37.138438 3 25 3 z M 25 5 C 36.057562 5 45 13.942438 45 25 C 45 34.729791 38.035799 42.731796 28.84375 44.533203 L 28.84375 31.564453 L 34.136719 31.564453 L 35.298828 24.044922 L 28.84375 24.044922 L 28.84375 22.027344 C 28.84375 20.989871 29.033574 20.060293 29.353516 19.501953 C 29.673457 18.943614 29.981865 18.701172 30.738281 18.701172 L 35.185547 18.701172 L 35.185547 12.009766 L 34.318359 11.892578 C 33.718567 11.811418 32.349197 11.621094 29.878906 11.621094 C 27.175808 11.621094 24.855567 12.357448 23.253906 14.023438 C 21.652246 15.689426 20.861328 18.170128 20.861328 21.373047 L 20.861328 24.046875 L 15.664062 24.046875 L 15.664062 31.566406 L 20.861328 31.566406 L 20.861328 44.470703 C 11.816995 42.554813 5 34.624447 5 25 C 5 13.942438 13.942438 5 25 5 z"
-                      ></path>
-                    </svg>
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://x.com/le_shelter?t=dWlkQidVKnRSYGSbFpbjHg&s=09"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      x="0px"
-                      y="0px"
-                      width="30"
-                      height="30"
-                      viewBox="0 0 30 30"
-                    >
-                      <path
-                        d="M26.37,26l-8.795-12.822l0.015,0.012L25.52,4h-2.65l-6.46,7.48L11.28,4H4.33l8.211,11.971L12.54,15.97L3.88,26h2.65 l7.182-8.322L19.42,26H26.37z M10.23,6l12.34,18h-2.1L8.12,6H10.23z"
-                      ></path>
-                    </svg>
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://www.tiktok.com/@le.shelter.founda?_t=ZM-8sl65FqR7XZ&_r=1"
-                  >
-                    <svg
-                      width="30px"
-                      height="30px"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M20 7.50414C18.5333 7.56942 15.52 6.75998 15.2 3H12.4V13.9666C12.4 17.0999 9.93253 18.4412 8.289 17.2507C6.20169 15.7389 7.60003 12.5958 10.2 12.9874V9.6583C8.20003 9.6583 4 10.4416 4 15.3374C4 21.6041 10.8146 21.4083 12.4 20.5824C14.9798 19.2385 15.6 17.7827 15.6 14.5541C15.6 11.6166 15.6 9.85413 15.6 9.0708C16.2667 9.39719 18.08 10.0891 20 10.2458"
-                        stroke="#000000"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://www.instagram.com/le.shelter.foundation?igsh=bGxneno2OTN5NjF5"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      x="0px"
-                      y="0px"
-                      width="30"
-                      height="30"
-                      viewBox="0 0 50 50"
-                    >
-                      <path
-                        d="M 16 3 C 8.8324839 3 3 8.8324839 3 16 L 3 34 C 3 41.167516 8.8324839 47 16 47 L 34 47 C 41.167516 47 47 41.167516 47 34 L 47 16 C 47 8.8324839 41.167516 3 34 3 L 16 3 z M 16 5 L 34 5 C 40.086484 5 45 9.9135161 45 16 L 45 34 C 45 40.086484 40.086484 45 34 45 L 16 45 C 9.9135161 45 5 40.086484 5 34 L 5 16 C 5 9.9135161 9.9135161 5 16 5 z M 37 11 A 2 2 0 0 0 35 13 A 2 2 0 0 0 37 15 A 2 2 0 0 0 39 13 A 2 2 0 0 0 37 11 z M 25 14 C 18.936712 14 14 18.936712 14 25 C 14 31.063288 18.936712 36 25 36 C 31.063288 36 36 31.063288 36 25 C 36 18.936712 31.063288 14 25 14 z M 25 16 C 29.982407 16 34 20.017593 34 25 C 34 29.982407 29.982407 34 25 34 C 20.017593 34 16 29.982407 16 25 C 16 20.017593 20.017593 16 25 16 z"
-                      ></path>
-                    </svg>
-                  </a>
-                </li>
-              </ul>
+              
             </div>
           </div>
           <!-- /footer newsletter -->
@@ -876,13 +927,12 @@
       // Loop through each button to add event listeners
       donateBtns.forEach(function (button) {
         button.addEventListener("click", function (event) {
-          event.preventDefault(); // Prevent default link behavior
           var modalId = button.getAttribute("data-modal"); // Get the modal ID
           var modal = document.getElementById(modalId); // Get the corresponding modal
           modal.style.display = "block"; // Show the modal
         });
       });
-
+   
       // Close modal when clicking on close button
       closeBtns.forEach(function (btn) {
         btn.addEventListener("click", function () {
@@ -900,5 +950,21 @@
         });
       });
     </script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    document.getElementById("flyerModal").style.display = "none"; // Ensures it's hidden on load
+});
+
+function openFlyerModal() {
+    document.getElementById("flyerModal").style.display = "flex";
+    document.getElementById("fullFlyer").src = document.querySelector(".flyer").src;
+}
+
+function closeFlyerModal() {
+    document.getElementById("flyerModal").style.display = "none";
+}
+
+</script>
   </body>
 </html>
