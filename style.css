@@ -2972,7 +2972,7 @@ background: linear-gradient(180deg, #14744F 0%, #3a9e8b 100%);
     opacity: 0;
     -webkit-transition: 0.3s opacity;
     transition: 0.3s opacity;
-  }
+  } 
   
   .widget-causes>a:hover .widget-img:after {
     opacity: 0.6;
@@ -2995,6 +2995,7 @@ background: linear-gradient(180deg, #14744F 0%, #3a9e8b 100%);
     margin-bottom: 30px; }
   
   
+    
   /* footer for single event bottom */
   
 .footer-galery li a {
