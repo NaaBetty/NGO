@@ -429,6 +429,7 @@ a:hover, a:active {
     background: linear-gradient(270deg, rgba(255,90,0,1) 0%, rgba(255,54,0,1) 100%); /* w3c */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff5a00', endColorstr='#ff3600',GradientType=1 ); /* ie6-9 */
     color: #fff;
+    border-radius: 20px;
 }
 
 
@@ -1461,6 +1462,133 @@ background: linear-gradient(180deg, #14744F 0%, #3a9e8b 100%);
     border-radius: 2px;
     background: #ff5a00;
 }
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Mission Section */
+.mission-section {
+    padding: 4rem 0;
+    background-color: #f8f9fa;
+}
+
+.mission-text {
+    font-size: 1.5rem;
+    line-height: 1.6;
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+    color: #333;
+}
+
+/* Volunteers Section */
+.volunteers-section {
+    padding: 4rem 0;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 3rem;
+    color: #333;
+}
+
+/* Testimonial Card */
+.testimonial-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.volunteer-image {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 1.5rem;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.volunteer-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.volunteer-name {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.testimonial-text {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #666;
+}
+
+/* Swiper Customization */
+.swiper {
+    padding: 2rem 1rem;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    color: #333;
+}
+
+.swiper-pagination-bullet {
+    background: #333;
+}
+
+.swiper-pagination-bullet-active {
+    background: #0066ff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .mission-text {
+        font-size: 1.25rem;
+        padding: 0 1rem;
+    }
+
+    .section-title {
+        font-size: 1.75rem;
+    }
+
+    .testimonial-card {
+        padding: 1.5rem;
+    }
+
+    .volunteer-image {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+/* Animation */
+.testimonial-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Smooth transitions */
+.swiper-slide {
+    transition: opacity 0.3s ease;
+}
+
+.swiper-slide-active {
+    opacity: 1;
+}
+
+.swiper-slide-next,
+.swiper-slide-prev {
+    opacity: 0.7;
+}
 
 .about-page .page-header {
     background: url(images/about-bg.jpg) no-repeat center;
@@ -1506,6 +1634,132 @@ background: linear-gradient(180deg, #14744F 0%, #3a9e8b 100%);
     color: #fff;
 }
 
+/* Team Section Styles */
+.team-section {
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.team-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    opacity: 0;
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+/* Grid Layout */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 1rem;
+}
+
+/* Team Card Styles */
+.team-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0;
+    animation: fadeInUp 0.6s ease forwards;
+    animation-delay: calc(var(--card-index, 0) * 0.1s);
+}
+
+.team-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.member-image {
+    width: 100%;
+    aspect-ratio: 1;
+    overflow: hidden;
+}
+
+.member-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.team-card:hover .member-image img {
+    transform: scale(1.05);
+}
+
+.member-info {
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.member-info h3 {
+    font-size: 1.25rem;
+    margin: 0 0 0.5rem 0;
+    color: #333;
+}
+
+.role {
+    color: #14744F;
+    font-size: 0.9rem;
+    margin: 0 0 1rem 0;
+}
+
+/* Social Links */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.social-icon {
+    color: #666;
+    font-size: 1.2rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icon:hover {
+    color: #14744F;
+    transform: translateY(-3px);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .team-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1.5rem;
+    }
+
+    .team-title {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .team-section {
+        padding: 2rem 1rem;
+    }
+
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+}
 .about-testimonial {
     padding: 0 0 96px;
 }
