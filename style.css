@@ -2,7 +2,7 @@
 
 body {
     color: #262626;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 1.8;
     font-family: 'Montserrat', sans-serif;
     padding-top: 70px;
@@ -98,7 +98,7 @@ a:hover, a:active {
 --------------------------------*/
 .site-branding {
     width: calc(100% - 24px);
-    padding: 15px 0;
+    padding: 5px 0;
 }
 .site-branding img {
     width: 30%; 
@@ -115,6 +115,16 @@ a:hover, a:active {
     }
 }
 
+.fa.fa-twitter::before {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    content: "";
+    background-color: currentColor;
+    -webkit-mask: url('data:image/svg+xml;utf8,<svg viewBox="0 -8 26 30" xmlns="http://www.w3.org/2000/svg"><g><path fill="white" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></g></svg>') no-repeat center;
+    mask: url('data:image/svg+xml;utf8,<svg viewBox="0 -8 26 30" xmlns="http://www.w3.org/2000/svg"><g><path fill="white" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></g></svg>') no-repeat center;
+    background-position: center 3px;
+  }
 
 /*
 # Main Menu

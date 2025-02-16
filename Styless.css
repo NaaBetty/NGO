@@ -1,0 +1,1307 @@
+/*
+Template Name: Le Shelter HTML Template
+Author: IHAG
+
+Colors:
+	Primary		: Green #14744F , White #FFF
+    Text    : Black #0000, Off-Black #262626
+	Hover 1   : Orange #ff5a00 , Grey #f4f4f8 , #e6e6ea
+  
+Fonts: Roboto, Source Sans Pro, Montserrat, Sans-serif
+
+Table OF Contents
+------------------------------------
+RESPONSIVE
+
+GENERAL
+    modal
+.Header
+    email
+    text
+    topdonate
+.Site branding
+.Main Menu
+    .Navigation
+    .Hamburger Menu
+.Buttons
+  donate
+  readmore
+  readmore1
+.Footer
+  .logo
+  .volunteer
+  .copyright
+  .social
+  .copyright
+
+/*=========================================================
+BODY
+==========================================================*
+
+1. HOME PAGE
+.Carousel
+.Carousel overlay
+.Carousel buttons
+.Volunteer box
+.Volunteer Icons 
+.Counter box
+.Mission 
+.Mission title
+.Mission text
+.Mission image
+.Mission buttons
+.Upcoming events
+  title
+  sub-title
+  text
+  image
+  button
+.Featured Project
+  title
+  sub-title
+  text
+  image
+  button
+.Home Caption
+.Carousel2
+
+
+
+2. ABOUT PAGE
+.Header
+.About title
+.About text
+.About image
+.Team name
+.Team title
+.Team social
+.Volunteer image
+.Volunteer title
+.Volunteer text
+
+3. PROJECTS PAGE
+.Header
+.Project title
+.Project subtitle
+.Project text
+.Project image
+.Project button
+.Project caption
+.Project subimage
+.Project subtitle
+.Project subtext
+.
+    3.1 SINGLE-EVENT PAGE
+    .Image
+    .Page title
+    .Page text
+    .gallery grid
+    .Sidebar
+    .Sidebar topic
+    .Sidebar title
+    .Sidebar image
+    .Sidebar text
+    
+
+
+4. PORTFOLIO
+.grid
+
+5. CONTACT PAGE
+.Header
+.Contact title
+.Contact text
+.Contact button
+
+
+OWL THEME
+------------------------------------*/
+
+/*=========================================================
+	RESPONSIVE
+===========================================================*/
+/*----------------------------*\
+	Responsive
+\*----------------------------*/
+@media only screen and (max-width: 1201px) {}
+
+@media only screen and (max-width: 991px) {
+  .section-title .title {
+    font-size: 33px;
+  }
+  .home-content h1 {
+    font-size: 43px;
+  }
+  .about-video {
+    margin-top: 30px;
+  }
+  .cta-content h1 {
+    font-size: 43px;
+  }
+  #footer-bottom .footer-nav {
+    text-align: left;
+  }
+  .footer-copyright {
+    margin-top: 20px;
+    
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .causes-details .causes-progress {
+    width: 100%;
+    float: none;
+  }
+  .causes-details .causes-donate {
+    float: none;
+  }
+  .article-tags-share .tags, .article-tags-share .share {
+    display: block;
+    float: none;
+    width: 100%;
+  }
+  .article-tags-share .share {
+    margin-top: 15px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .event .event-img {
+    float: none;
+    margin-bottom: 15px;
+  }
+  .event .event-content {
+    padding-left: 0px;
+  }
+  .article-comments .media {
+    padding: 10px;
+  }
+}
+
+/*=========================================================
+	GENERAL
+===========================================================*/
+
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700');
+
+body {
+    color: #262626;
+    font-size: 18px;
+    line-height: 1.8;
+    font-family: 'Montserrat', sans-serif;
+    padding-top: 70px;
+}
+
+.fa.fa-twitter::before {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    content: "";
+    background-color: currentColor;
+    -webkit-mask: url('data:image/svg+xml;utf8,<svg viewBox="0 -8 26 30" xmlns="http://www.w3.org/2000/svg"><g><path fill="white" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></g></svg>') no-repeat center;
+    mask: url('data:image/svg+xml;utf8,<svg viewBox="0 -8 26 30" xmlns="http://www.w3.org/2000/svg"><g><path fill="white" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></g></svg>') no-repeat center;
+    background-position: center 3px;
+  }
+
+
+/* Modal content styling */
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 1000;
+    left: 50%;
+    top: 50%;
+    overflow-y: auto;
+    height: auto;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+    margin-top: 160px;
+}
+
+/* Modal content box */
+.modal-content {
+    /* background-color: #fff; */
+    margin: 5% auto;
+    padding: 25px;
+    border: 1px solid #888;
+    max-width: 800px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Close button */
+.close-btn {
+    color: #e50f0f;
+    font-size: 32px;
+    font-weight: bold;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    cursor: pointer;
+}
+
+/* Close button hover */
+.close-btn:hover,
+.close-btn:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Bank Details Styling */
+.donation-details {
+    margin-top: 10px;
+}
+
+/* Bank and Momo Details */
+.bank-details, .momo-details {
+    margin-top: 10px;
+}
+
+.bank-item, .momo-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.bank-item p, .momo-item p {
+    margin: 0 10px;
+}
+
+/* Logos */
+.bank-logo, .momo-logo {
+    width: 40px;
+    height: auto;
+    margin-right: 15px;
+}
+
+/* Buttons inside modal */
+.other-items-btn {
+    justify-self: center;
+    margin-top: 15px;
+    display: inline-block;
+}
+
+/* Responsive styling for modals */
+@media (max-width: 992px) {
+    .modal-content {
+        width: 80%; /* Increase width for tablets */
+        padding: 20px;
+    }
+
+    .close-btn {
+        font-size: 24px; /* Reduce size of close button on smaller screens */
+    }
+
+    .bank-logo, .momo-logo {
+        width: 35px; /* Slightly smaller logos on medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .modal-content {
+        width: 90%; /* Modal takes up more space on smaller devices */
+        padding: 15px; /* Reduce padding to fit smaller screens */
+    }
+
+    .bank-logo, .momo-logo {
+        width: 30px; /* Even smaller logos on smaller screens */
+    }
+
+    .close-btn {
+        font-size: 22px; /* Smaller close button */
+    }
+
+    .modal .donation-details,
+    .modal .bank-details,
+    .modal .momo-details {
+        padding: 10px 0; /* Reduce padding inside sections */
+    }
+
+    .bank-item p, .momo-item p {
+        font-size: 0.9rem; /* Adjust font size for readability */
+    }
+
+    .other-items-btn {
+        width: 100%; /* Full width for buttons */
+        text-align: center;
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    .modal-content {
+        width: 95%; /* Take up almost the full width on mobile screens */
+        padding: 10px; /* Further reduce padding */
+    }
+
+    .close-btn {
+        font-size: 20px; /* Even smaller close button on mobile */
+    }
+
+    .bank-logo, .momo-logo {
+        width: 25px; /* Smaller logos on very small screens */
+    }
+
+    .modal .donation-details,
+    .modal .bank-details,
+    .modal .momo-details {
+        font-size: 0.8rem; /* Smaller font size for mobile */
+    }
+
+    .primary-button,
+    .btn.orange-border {
+        width: 100%; /* Make buttons full width for mobile */
+        font-size: 0.9rem;
+        padding: 10px;
+        text-align: center;
+
+    }
+}
+
+/*----------------------------*\
+	HEADER
+\*----------------------------*/
+  .site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;  /* Ensure it's above other content */
+    background-color: #fff;  /* Set the background to avoid transparency issues */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow for a better effect */
+  }
+
+.top-header-bar {
+  background: #14744F;
+  color: #fff;
+  margin-bottom: 0px;
+}
+
+/*----------------------------*\
+	Header Bar Email
+\*----------------------------*/
+.header-bar-email,
+.header-bar-text {
+  padding: 20px 0;
+  font-size: 18px;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.header-bar-email a,
+.header-bar-text span {
+  text-transform: lowercase;
+  color: #fff;
+  text-decoration: none;
+}
+
+/*----------------------------*\
+	Header Bar Text
+\*----------------------------*/
+.header-bar-text {
+  margin-left: 48px;
+}
+
+.header-bar-text p {
+  margin: 0;
+}
+
+/*Top Donate Button */
+
+.top-button {
+    position: relative;
+    display: inline-block;
+    background: #14744F;
+    color: #FFF;
+    font-weight: 400;
+    height: 45px;
+    line-height: 45px;
+    border: none;
+    border-radius: 25px;
+    overflow: hidden;
+    opacity: 0.9;
+    -webkit-transition: 0.6s all;
+    transition: 0.6s all;
+    margin-right: 10px;
+  }
+  
+  .top-button:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -50%;
+    width: 120%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.5);
+    -webkit-transform: scale3d(6, 2, 1) rotate(135deg) translate(0, -150%);
+    transform: scale3d(6, 2, 1) rotate(135deg) translate(0, -150%);
+    -webkit-transition: 0.6s all;
+    transition: 0.6s all;
+  }
+  
+  .top-button:hover:after, .top-button:focus:after {
+    -webkit-transform: scale3d(6, 2, 1) rotate(135deg) translate(0, 100%);
+    transform: scale3d(6, 2, 1) rotate(135deg) translate(0, 100%);
+  }
+  
+  .top-button:hover, .top-button:focus {
+    color: #FFF;
+    opacity: 1;
+  }
+  
+  .donate-btn a {
+    display: inline-block;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1;
+    color: #fff;
+    text-decoration: navajowhite;
+    background: #14744F;
+    border: 2px solid #ffff;
+    border-radius: 25px;
+  }
+  
+  .btn {
+    padding: 18px 40px;
+    border-radius: 24px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #14744F;
+    outline: none;
+    text-align: justify;
+    
+  }
+  
+  .btn:focus {
+    outline: none;
+  }
+  
+/*----------------------------*\
+	Site Branding
+\*----------------------------*/
+.site-branding {
+    width: calc(100% - 24px);
+    padding: px ;
+  }
+  .site-branding img {
+    width: 30%; 
+    height: auto;
+  }
+  
+  .site-branding a {
+    margin-top: 6px;
+  }
+
+
+  
+/*----------------------------*\
+	Main Menu
+\*----------------------------*/
+.site-navigation ul {
+    position: fixed;
+    top: 0;
+    left: -320px;
+    z-index: 9999;
+    width: 320px;
+    max-width: calc(100% - 120px);
+    height: 100%;
+    padding: 20px 10px;
+    margin: 0;
+    /* background: #fff; */
+    list-style: none;
+    overflow-x: scroll;
+    transition: all 0.35s;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  .site-navigation.show ul {
+    left: 0;
+  }
+  
+  .site-navigation ul li {
+    margin: 0 15px;
+  }
+  .site-navigation ul li a {
+    display: block;
+    padding: 16px 0;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1;
+    color: #262626;
+    text-decoration: none;
+    transition: color .35s;
+  }
+  
+  @media screen and (min-width: 992px) {
+    .site-navigation ul {
+        position: fixed;
+        top: auto;
+        left: auto;
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        padding: 0px;
+        overflow: auto;
+        background: transparent;
+    
+    }
+  
+    .site-navigation ul li a {
+        padding: 5px 0 10px;
+    }
+  }
+  
+  .site-navigation ul li a:hover,
+  .site-navigation ul li.current-menu-item a {
+    border-bottom: 3px solid #14744F;
+    color: #ff5a00;
+  }
+  
+  .hamburger-menu {
+    position: relative;
+    width: 24px;
+    height: 22px;
+    margin: 0 auto;
+    transition: .5s ease-in-out;
+    cursor: pointer;
+  }
+  
+  .hamburger-menu span {
+    display: block;
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background: #262626;
+    border-radius: 10px;
+    opacity: 1;
+    left: 0;
+    transition: .25s ease-in-out;
+  }
+  
+  .hamburger-menu span:nth-child(1) {
+    top: 2px;
+  }
+  
+  .hamburger-menu span:nth-child(2),
+  .hamburger-menu span:nth-child(3) {
+    top: 10px;
+  }
+  
+  .hamburger-menu span:nth-child(4) {
+    top: 18px;
+  }
+  
+  .hamburger-menu.open span:nth-child(1) {
+    top: 18px;
+    width: 0;
+    left: 50%;
+  }
+  
+  .hamburger-menu.open span:nth-child(2) {
+    transform: rotate(45deg);
+  }
+  
+  .hamburger-menu.open span:nth-child(3) {
+    transform: rotate(-45deg);
+  }
+  
+  .hamburger-menu.open span:nth-child(4) {
+    top: 18px;
+    width: 0;
+    left: 50%;
+  }
+  
+/*=========================================================
+	Buttons
+===========================================================*/
+
+/*=========================================================
+	Footer
+===========================================================*/
+
+#footer {
+    background-color: #f4f4f8;
+  }
+  
+  .footer {
+      background-color: #f4f4f8;
+     
+  }
+  
+  .footer .footer-title {
+    text-transform: capitalize;
+    margin-top: 10px;
+    text: black;
+  }
+  
+  /*----------------------------*\
+      logo
+  \*----------------------------*/
+  
+  .footer-logo {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
+    
+   
+}
+
+
+  
+  .footer-logo .logo {
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center;
+  }
+  
+  .footer-logo .logo img {
+    max-width: 80%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+  
+  /*----------------------------*\
+      contact
+  \*----------------------------*/
+  
+  .footer-contact {
+    margin-top: 10px;
+  }
+  
+  .footer-contact li {
+    margin-bottom: 10px;
+  }
+  
+  .footer-contact li i {
+    margin-right: 5px;
+  }
+  
+  /*----------------------------*\
+     Footer Volunteer
+  \*----------------------------*/
+  
+  .footer-volunteer {
+    margin: 0px;
+  }
+  
+  .footer-volunteer .primary-button {
+    margin-top: 15px;
+    display: block;
+    width: 100%;
+  }
+  
+  /*----------------------------*\
+      social
+  \*----------------------------*/
+ 
+  .footer-social li {
+    display: inline-block;
+    margin-right: 30px;
+    text-align: center;
+    
+      
+  }
+  
+   .footer-social {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+   
+}
+
+.footer-icon {
+    color: #666;
+    font-size: 1.7rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-icon:hover {
+    color: #ff5a00;
+    transform: translateY(-3px);
+}
+
+  
+  /*----------------------------*\
+      copyright & footer nav
+  \*----------------------------*/
+  
+  .footer .btn.btn-link {
+    display: block;
+    margin-bottom: 5px;
+    padding: 0;
+    text-align: left;
+    color: rgba(255,255,255,0.5);
+    font-weight: normal;
+    text-transform: capitalize;
+    transition: .3s;
+
+  }
+  
+  .footer-button {
+    /* margin-top: 50px; */
+    display: block;
+    width: 100%;
+
+    position: relative;
+    display: inline-block;
+    padding: 0px 30px;
+    background: #14744F;
+    color: #FFF;
+    font-weight: 400;
+    height: 45px;
+    line-height: 45px;
+    border: none;
+    border-radius: 25px;
+    overflow: hidden;
+    opacity: 0.9;
+    -webkit-transition: 0.6s all;
+    transition: 0.6s all;
+    margin-right: 10px;
+  }
+  
+  
+  
+  .footer .btn.btn-link:hover {
+    color: var(--light);
+    letter-spacing: 1px;
+    box-shadow: none;
+  }
+  
+  .footer .btn.btn-square {
+    color: rgba(255,255,255,0.5);
+    border: 1px solid rgba(255,255,255,0.5);
+  }
+  
+  
+  .footer .copyright {
+    padding-top: 20px;
+    padding-bottom: 10px;
+    font-size: 15px;
+    border-top: 10px;
+       
+        
+  }
+  
+  .footer .copyright a {
+    color: #7c7d7d;
+  }
+  
+  .footer .copyright a:hover {
+    color: #14744F;
+  }
+  
+  
+/*=========================================================
+BODY
+==========================================================*
+
+/*--------------------------------------------------------------
+# Hero Section
+--------------------------------------------------------------*/
+.hero-slider {
+    max-height: 768px;
+}
+
+.hero-content-wrap {
+    position: relative;
+    color: #fff;
+}
+
+.hero-content-overlay {
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,.5);
+}
+
+.hero-content-wrap img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    object-fit: cover;
+}
+
+.hero-content-overlay h1 {
+    margin: 0;
+    font-size: 102px;
+    font-weight: 600;
+    line-height: 1;
+}
+
+.hero-content-overlay h4 {
+    margin: 0;
+    font-size: 46px;
+    font-weight: 600;
+}
+
+.hero-content-overlay p {
+    font-weight: 500;
+    line-height: 1.8;
+}
+
+.hero-content-overlay .entry-footer a.btn {
+    color: #fff;
+}
+
+
+.carousel-inner {
+    position: relative;
+}
+
+.carousel-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.385); /* Black background with 50% opacity */
+    z-index: 1; /* Ensure the overlay sits above the image, but below the caption */
+}
+
+/* Adjusting carousel-caption to sit above the overlay */
+.carousel-caption .d-flex {
+    flex-wrap: wrap; 
+    justify-content: center; 
+}
+
+/* Position the previous button on the left */
+.carousel-control-prev {
+    left: 0;
+}
+
+/* Position the next button on the right */
+.carousel-control-next {
+    right: 0;
+}
+.carousel-caption .primary-button,
+.carousel-caption .btn.orange-border {
+    margin: 10px; /* Add space between the buttons */
+}
+
+@media screen and (max-width: 1200px) {
+    .carousel-caption h1 {
+        font-size: 2.5rem;
+    }
+
+    .carousel-caption h4 {
+        font-size: 1.25rem;
+    }
+
+    .carousel-caption p {
+        font-size: 0.9rem;
+    }
+
+    .primary-button,
+    .btn.orange-border {
+        padding: 8px 16px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .carousel-caption .d-flex {
+        flex-wrap: nowrap; /* Keep buttons on the same line */
+        justify-content: center; /* Center the buttons */
+    }
+
+    .primary-button,
+    .btn.orange-border {
+        margin: 5px; /* Ensure some spacing between the buttons */
+        padding: 8px 16px; /* Adjust padding for smaller screens */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .primary-button,
+    .btn.orange-border {
+        padding: 6px 12px; /* Smaller padding for even smaller screens */
+        font-size: 0.9rem; /* Adjust font size */
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .primary-button,
+    .btn.orange-border {
+        padding: 5px 10px; /* Further reduce padding for mobile */
+        font-size: 0.85rem; /* Adjust font size */
+    }
+}
+
+.carousel-item {
+    /* Use viewport height instead of fixed pixels */
+    height: 70vh; /* Default height for mobile */
+    min-height: 400px; /* Minimum height to prevent too small carousel */
+    max-height: 650px; /* Maximum height to prevent too large carousel */
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel-item img {
+    margin-top: 50px;
+    width: 100%; /* Make image take full width */
+    height: 100%;
+    object-fit: cover;
+    object-position: center; /* Center the image */
+}
+
+/* Media queries for different screen sizes */
+@media (min-width: 768px) {
+    .carousel-item {
+        height: 85vh; /* Slightly taller on tablets */
+    }
+}
+
+@media (min-width: 1200px) {
+    .carousel-item {
+        height: 85vh; /* Taller on desktop */
+    }
+}
+
+/* Optional: Add a dark overlay for better text readability */
+.carousel-item::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+    pointer-events: none;
+}
+
+
+/*
+# Accordion
+----------------------------------*/
+.accordion-wrap {
+    position: relative;
+}
+
+.accordion-wrap .entry-content {
+    margin: 0;
+}
+
+.accordion-wrap .entry-title {
+    padding: 12px 38px;
+    margin-bottom: 15px;
+    border-radius: 30px;
+    background: #ff5a00;
+    font-size: 14px;
+    font-weight: 600;
+    color: #262626;
+    cursor: pointer;
+}
+
+.accordion-wrap .entry-title.active {
+    border: 0;
+    background: -moz-linear-gradient(180deg, rgba(255,90,0,1) 0%, rgba(255,54,0,1) 100%); /* ff3.6+ */
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(255,90,0,1)), color-stop(100%, rgba(1255,54,0,1))); /* safari4+,chrome */
+    background: -webkit-linear-gradient(180deg, rgba(255,90,0,1) 0%, rgba(255,54,0,1) 100%); /* safari5.1+,chrome10+ */
+    background: -o-linear-gradient(180deg, rgba(255,90,0,1) 0%, rgba(255,54,0,1) 100%); /* opera 11.10+ */
+    background: -ms-linear-gradient(180deg, rgba(255,90,0,1) 0%, rgba(255,54,0,1) 100%); /* ie10+ */
+    background: linear-gradient(270deg, rgba(255,90,0,1) 0%, rgba(255,54,0,1) 100%); /* w3c */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff5a00', endColorstr='#ff3600',GradientType=1 ); /* ie6-9 */
+    color: #fff;
+}
+
+.accordion-wrap .entry-title .arrow-r::before,
+.accordion-wrap .entry-title .arrow-d::before {
+    content: "+";
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.accordion-wrap .entry-title .arrow-d::before {
+    content: "-";
+}
+
+/*
+# Content
+----------------------------------*/
+.accordion-wrap .entry-content {
+    display: none;
+}
+
+.accordion-wrap .entry-content p {
+    padding: 18px 38px;
+    font-size: 14px;
+    line-height: 2;
+    color: #929191;
+}
+
+/*
+# Tabs
+----------------------------------*/
+ul.tabs-nav {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+ul.tabs-nav .tab-nav {
+    padding: 12px 32px;
+    margin-right: 6px;
+    border-radius: 30px;
+    background: #f3f3f3;
+    font-size: 14px;
+    font-weight: 600;
+    color: #262626;
+    cursor: pointer;
+    transition: all .35s;
+}
+
+ul.tabs-nav .tab-nav.active {
+    border: 0;
+    background: -moz-linear-gradient(180deg, rgba(255,90,0,1) 0%, rgba(255,54,0,1) 100%); /* ff3.6+ */
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(255,90,0,1)), color-stop(100%, rgba(1255,54,0,1))); /* safari4+,chrome */
+    background: -webkit-linear-gradient(180deg, rgba(255,90,0,1) 0%, rgba(255,54,0,1) 100%); /* safari5.1+,chrome10+ */
+    background: -o-linear-gradient(180deg, rgba(255,90,0,1) 0%, rgba(255,54,0,1) 100%); /* opera 11.10+ */
+    background: -ms-linear-gradient(180deg, rgba(255,90,0,1) 0%, rgba(255,54,0,1) 100%); /* ie10+ */
+    background: linear-gradient(270deg, rgba(255,90,0,1) 0%, rgba(255,54,0,1) 100%); /* w3c */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff5a00', endColorstr='#ff3600',GradientType=1 ); /* ie6-9 */
+    color: #fff;
+}
+
+.tabs .tab-nav {
+    margin-bottom: -1px;
+    z-index: 99;
+}
+
+.tabs-container {
+    padding: 34px;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content p {
+    margin-bottom: 0;
+    font-size: 14px;
+    line-height: 2;
+    color: #929191;
+}
+.primary-button {
+    position: relative;
+    display: inline-block;
+    padding: 0px 30px;
+    background: #14744F;
+    color: #fff;
+    font-weight: 400;
+    height: 45px;
+    line-height: 45px;
+    border: none;
+    border-radius: 25px;
+    overflow: hidden;
+    opacity: 0.9;
+    -webkit-transition: 0.6s all;
+    transition: 0.6s all;
+    margin-right: 10px;
+    
+  }
+  
+  .primary-button:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -50%;
+    width: 120%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.5);
+    -webkit-transform: scale3d(6, 2, 1) rotate(135deg) translate(0, -150%);
+    transform: scale3d(6, 2, 1) rotate(135deg) translate(0, -150%);
+    -webkit-transition: 0.6s all;
+    transition: 0.6s all;
+  }
+  
+  .primary-button:hover:after, .primary-button:focus:after {
+    -webkit-transform: scale3d(6, 2, 1) rotate(135deg) translate(0, 100%);
+    transform: scale3d(6, 2, 1) rotate(135deg) translate(0, 100%);
+  }
+  
+  .primary-button:hover, .primary-button:focus {
+    color: #FFF;
+    opacity: 1;
+  }
+
+.btn {
+    padding: 18px 40px;
+    border: 2px solid #262626;
+    border-radius: 24px;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1;
+    color: #262626;
+    outline: none;
+}
+
+.btn:focus {
+    outline: none;
+}
+
+.btn.orange-border {
+    color: #fff;
+    border: 2px solid #ff5a00;
+    border-radius: 24px;
+}
+
+.btn.orange-border:hover,
+.btn.gradient-bg {
+    border-color: transparent;
+    background: -moz-linear-gradient(180deg, rgba(255,90,0,1) 0%, rgba(255,54,0,1) 100%); /* ff3.6+ */
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(255,90,0,1)), color-stop(100%, rgba(1255,54,0,1))); /* safari4+,chrome */
+    background: -webkit-linear-gradient(180deg, rgba(255,90,0,1) 0%, rgba(255,54,0,1) 100%); /* safari5.1+,chrome10+ */
+    background: -o-linear-gradient(180deg, rgba(255,90,0,1) 0%, rgba(255,54,0,1) 100%); /* opera 11.10+ */
+    background: -ms-linear-gradient(180deg, rgba(255,90,0,1) 0%, rgba(255,54,0,1) 100%); /* ie10+ */
+    background: linear-gradient(270deg, rgba(255,90,0,1) 0%, rgba(255,54,0,1) 100%); /* w3c */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff5a00', endColorstr='#ff3600',GradientType=1 ); /* ie6-9 */
+    color: #fff;
+    border-radius: 20px;
+}
+
+
+
+/*----------------------------*\
+	Counter Box
+\*----------------------------*/
+
+/*
+# Counter Box
+----------------------------------*/
+.counter-box {
+    margin: 30px 0;
+    text-align: center;
+    
+   
+}
+
+.counter-box img {
+    justify-content: center; /* Centers horizontally */
+    align-items: center;
+}
+
+.counter-box .start-counter {
+    margin-top: 10px;
+    font-size: 48px;
+    font-weight: 500;
+    color: #262626;
+}
+
+.counter-box .counter-k {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.counter-box .entry-title {
+    margin-top: 16px;
+    font-size: 14px;
+    color: #595858;
+}
+
+/*
+# Icon Box
+----------------------------------*/
+
+ .home-page-icon-boxes {
+    padding: 50px;
+    
+}
+
+
+.icon-box {
+    padding: 40px;
+    border-radius: 24px;
+    background: #ecf2f5;
+    text-align: center;
+    transition: all .35s;
+    
+}
+
+.icon-box:hover,
+.icon-box.active {
+    border: 0;
+/* For Firefox */
+background: -moz-linear-gradient(180deg, #14744F 0%, #3a9e8b 100%);
+
+/* For Safari 4+ and Chrome */
+background: -webkit-gradient(linear, left top, right top, color-stop(0%, #14744F), color-stop(100%, #3a9e8b));
+
+/* For Safari 5.1+ and Chrome 10+ */
+background: -webkit-linear-gradient(180deg, #14744F 0%, #3a9e8b 100%);
+
+/* For Opera 11.10+ */
+background: -o-linear-gradient(180deg, #14744F 0%, #3a9e8b 100%);
+
+/* For Internet Explorer 10+ */
+background: -ms-linear-gradient(180deg, #14744F 0%, #3a9e8b 100%);
+
+/* For W3C compliant browsers */
+background: linear-gradient(180deg, #14744F 0%, #3a9e8b 100%);
+
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff5a00', endColorstr='#ff3600',GradientType=1 ); /* ie6-9 */
+    color: #fff;
+}
+
+.icon-box figure img:nth-of-type(1) {
+    display: block;
+}
+
+.icon-box figure img:nth-of-type(2) {
+    display: none;
+}
+
+.icon-box:hover figure img:nth-of-type(1),
+.icon-box.active figure img:nth-of-type(1) {
+    display: none;
+}
+
+.icon-box:hover figure img:nth-of-type(2),
+.icon-box.active figure img:nth-of-type(2) {
+    display: block;
+}
+
+.icon-box .entry-title {
+    margin-top: 28px;
+    font-size: 24px;
+    font-weight: 600;
+    color: #262626;
+}
+
+.icon-box:hover .entry-title,
+.icon-box.active .entry-title {
+    color: #FFF; 
+}
+
+.icon-box .entry-content {
+    margin-top: 24px;
+}
+
+.icon-box .entry-content p {
+    margin: 0;
+    font-size: 14px;
+    color: #595858;
+}
+
+.icon-box:hover .entry-content p,
+.icon-box.active .entry-content p {
+    color: #fff;
+}
+
+  .home-page-milestone {
+    padding: 10px 0;
+  }
+  
+  .home-page-milestone .section-heading .entry-title {
+    padding-bottom: 10px;
+    line-height: 1.6;
+  }
+  
+  .home-page-milestone .section-heading p {
+    font-size: 14px;
+    color: #b91212;
+  }
+  
