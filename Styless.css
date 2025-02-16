@@ -2084,7 +2084,7 @@ background: linear-gradient(180deg, #14744F 0%, #3a9e8b 100%);
 
 .member-image {
     width: 100%;
-    aspect-ratio: ;
+    aspect-ratio: 1;
     overflow: hidden;
     
     
@@ -2095,6 +2095,7 @@ background: linear-gradient(180deg, #14744F 0%, #3a9e8b 100%);
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: top;
     transition: transform 0.3s ease;
 }
 
