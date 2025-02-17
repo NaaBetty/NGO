@@ -2539,4 +2539,127 @@ background: linear-gradient(180deg, #14744F 0%, #3a9e8b 100%);
     border-radius: 8px; /
     
 }
+
+
+/*--------------------------------------------------------------
+# Contact Page
+--------------------------------------------------------------*/
+.contact-page .page-header {
+    background: url(images/contact-bg.jpg) no-repeat center;
+}
+
+.contact-page-wrap {
+    padding: 0 0 30px;
+}
+
+.contact-page-wrap .entry-content {
+    margin-top: 50px;
+}
+
+.contact-page-wrap .entry-content h2 {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.contact-page-wrap .entry-content p {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #929191;
+}
+
+.contact-page-wrap .entry-content ul.contact-social {
+    padding: 20px 0 0;
+    margin: 0;
+    list-style: none;
+}
+
+.contact-page-wrap .entry-content ul.contact-social li {
+    margin-right: 28px;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.contact-page-wrap .entry-content ul.contact-social li a {
+    color: #ff3700;
+}
+
+.contact-page-wrap .entry-content ul.contact-info {
+    margin: 32px 0 0;
+}
+
+.contact-page-wrap .entry-content ul.contact-info li {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 15px;
+    font-size: 14px;
+    color: #9b9a9a;
+}
+
+.contact-page-wrap .entry-content ul.contact-info .fa {
+    width: 28px;
+    margin-right: 10px;
+    font-size: 18px;
+    color: #ff5a00;
+    text-align: center;
+}
+
+.contact-form {
+    padding: 35px 20px 55px;
+    margin-top: 50px;
+    background: #edf3f5;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form input[type="tel"],
+.contact-form textarea {
+    width: 100%;
+    padding: 12px 24px;
+    margin-bottom: 18px;
+    border: 1px solid #e0e0e0;
+    font-size: 14px;
+    line-height: 1;
+}
+
+.contact-form input[type="text"]:focus,
+.contact-form input[type="email"]:focus,
+.contact-form input[type="tel"]:focus,
+.contact-form textarea:focus {
+    outline: none;
+}
+
+.contact-form input[type="text"]::placeholder,
+.contact-form input[type="email"]::placeholder,
+.contact-form input[type="tel"]::placeholder,
+.contact-form textarea::placeholder {
+    color: #929191;
+}
+
+.contact-form span {
+    display: block;
+    margin-top: 16px;
+    text-align: center;
+}
+
+.contact-form input[type="submit"] {
+    cursor: pointer;
+}
+
+.contact-page .contact-gmap {
+    margin-top: 50px;
+}
+
+.contact-page .contact-gmap iframe {
+    display: block;
+    width: 100%;
+    height: 440px;
+}
+
+/*--------------------------------------------------------------
+# Contact Page
+--------------------------------------------------------------*/
+.elements-page .page-header {
+    background: url(images/elements-bg.jpg) no-repeat center;
+}
+
   
