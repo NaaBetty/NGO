@@ -111,6 +111,57 @@
     </div>
     <!-- .page-header -->
 
+    <!-- Modal for Donating 1 -->
+    <div id="donateModal1" class="modal">
+      <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <img
+          src="images/image__1_-removebg-preview.png"
+          style="height: 80px; width: 250px"
+        />
+        <p>Here are the details for making your donation:</p>
+
+        <div class="donation-details">
+          <h4>Mobile Money (MOMO) Details</h4>
+          <div class="momo-details">
+            <div class="momo-item">
+              <img
+                src="images/mtnlogo.png"
+                alt="MTN Mobile Money"
+                class="momo-logo"
+              />
+              <p><strong>Name:</strong> Le Shelter Foundation</p>
+
+              <p><strong>Mobile Money Number:</strong> 0530449325</p>
+
+              <p><strong>Merchant ID:</strong> 440792</p>
+            </div>
+          </div>
+          <h4>Other Items to donate</h4>
+          <div class="momo-details">
+            <div class="momo-item">
+              <img
+                src="images/food-donation.png"
+                alt="MTN Mobile Money"
+                class="momo-logo"
+              />
+              <p>Food items</p>
+              <p>Cloths</p>
+              <p>Stationary</p>
+              <p>Cloths</p>
+              <p>Toiletries etc.</p>
+            </div>
+            <div class="other-items-btn">
+              <a href="contact.html" class="primary-button donate-btn"
+                >Click Here</a
+              >
+            </div>
+          </div>
+        </div>
+        <p>Thank you for your support 🤝 🤗!</p>
+      </div>
+    </div>
+
     <div class="welcome-wrap">
       <div class="container">
         <div class="row">
@@ -301,7 +352,7 @@
               <!-- <a href="#" class="social-icon" aria-label="Twitter"
                 ><i class="fab fa-twitter"></i
               ></a> -->
-              <a href="#" class="social-icon" aria-label="Website"
+              <a href="https://www.instagram.com/hrh_prinnydoe?igsh=a3QwdDloN20xN3N4" target="blank" class="social-icon" aria-label="Website"
                 ><i class="fab fa-instagram"></i
               ></a>
             </div>
@@ -505,6 +556,7 @@
     </div>
   <!-- Footer End -->
   <!-- .site-footer -->
+
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -550,6 +602,54 @@
           },
         },
       });
+
+      // Get all "Donate Now" buttons and modals
+      var donateBtns = document.querySelectorAll(".donate-btn");
+      var modals = document.querySelectorAll(".modal");
+      var closeBtns = document.querySelectorAll(".close-btn");
+
+      // Loop through each button to add event listeners
+      donateBtns.forEach(function (button) {
+        button.addEventListener("click", function (event) {
+          var modalId = button.getAttribute("data-modal"); // Get the modal ID
+          var modal = document.getElementById(modalId); // Get the corresponding modal
+          modal.style.display = "block"; // Show the modal
+        });
+      });
+   
+      // Close modal when clicking on close button
+      closeBtns.forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          var modal = btn.closest(".modal");
+          modal.style.display = "none"; // Hide the modal
+        });
+      });
+
+      // Close modal when clicking outside of the modal
+      window.addEventListener("click", function (event) {
+        modals.forEach(function (modal) {
+          if (event.target === modal) {
+            modal.style.display = "none"; // Hide the modal if clicked outside
+          }
+        });
+      });
     </script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    document.getElementById("flyerModal").style.display = "none"; // Ensures it's hidden on load
+});
+
+function openFlyerModal() {
+    document.getElementById("flyerModal").style.display = "flex";
+    document.getElementById("fullFlyer").src = document.querySelector(".flyer").src;
+}
+
+function closeFlyerModal() {
+    document.getElementById("flyerModal").style.display = "none";
+}
+
+</script>
   </body>
 </html>
+

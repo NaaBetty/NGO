@@ -189,7 +189,7 @@ body {
     color: #262626;
     font-size: 18px;
     line-height: 1.8;
-    font-family: 'Montserrat', sans-serif;
+    /* font-family: 'Montserrat', sans-serif; */
     padding-top: 70px;
 }
 
@@ -530,12 +530,12 @@ body {
     max-width: calc(100% - 120px);
     height: 100%;
     padding: 20px 10px;
-    margin: 0;
+    margin-top: 0px;
     /* background: #fff; */
     list-style: none;
     overflow-x: scroll;
     transition: all 0.35s;
-    margin: 0;
+    margin: 0px;
     padding: 0;
     list-style: none;
   }
@@ -549,7 +549,7 @@ body {
   }
   .site-navigation ul li a {
     display: block;
-    padding: 16px 0;
+    padding: 16px 0px;
     font-size: 18px;
     font-weight: 600;
     line-height: 1;
@@ -566,7 +566,7 @@ body {
         width: 100%;
         max-width: 100%;
         height: auto;
-        padding: 0px;
+        padding: ;
         overflow: auto;
         background: transparent;
     
@@ -963,7 +963,7 @@ BODY
 }
 
 .carousel-item img {
-    margin-top: 50px;
+    margin-top: 40px;
     width: 100%; /* Make image take full width */
     height: 100%;
     object-fit: cover;
@@ -2261,4 +2261,265 @@ background: linear-gradient(180deg, #14744F 0%, #3a9e8b 100%);
 .help-us .btn:hover {
     border-color: #fff;
     color: #fff;
+}
+
+
+/* Content Layout */
+.content-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+}
+
+/* Text Content Styles */
+.text-content {
+    animation: fadeIn 1s ease-out;
+}
+
+.subtitle {
+    font-size: 1.8rem;
+    color: var(--secondary-color);
+    margin-bottom: 2rem;
+    line-height: 1.4;
+}
+
+.description {
+    color: var(--text-color);
+    line-height: 1.8;
+}
+
+.description p {
+    margin-bottom: 1.5rem;
+}
+
+/* Donate Button */
+.donate-button {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1rem 2.5rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.donate-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 104, 55, 0.3);
+}
+/*--------------------------------------------------------------
+# Causes
+--------------------------------------------------------------*/
+.causes-page .page-header {
+    background: url(images/causes-bg.jpg) no-repeat center;
+}
+
+.causes-page .featured-cause {
+ padding: 96px 0;
+}
+
+.causes-page .our-causes {
+    position: relative;
+    padding:  70px 0 96px;
+    background: none;
+}
+
+.causes-page .our-causes .cause-wrap {
+    margin-top: 36px;
+}
+
+.causes-page .our-causes::after {
+    display: none;
+}
+
+.causes-page .our-causes .cause-content-wrap {
+    border: 1px solid #e0e0e0;
+    border-top: 0;
+}
+
+.causes-page .highlighted-cause {
+    padding: 46px 0 96px;
+    background: #262626;
+}
+
+.causes-page .highlighted-cause .entry-title {
+    padding-right: 24px;
+    margin-top: 60px;
+    line-height: 1.6;
+    color: #fff;
+}
+
+.causes-page .highlighted-cause .entry-title::before {
+    display: none;
+}
+
+.causes-page .highlighted-cause .entry-content {
+    font-size: 14px;
+    line-height: 2;
+    color: #edf3f5;
+}
+
+.causes-page .highlighted-cause img {
+    width: 100%;
+    margin-top: 60px;
+}
+
+@media screen and (max-width: 1200px) and (min-width: 992px) {
+    .cause-wrap figure {
+        width: 100%;
+    }
+
+    .featured-cause .cause-content-wrap {
+        width: 100%;
+        margin-top: 40px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .cause-wrap figure {
+        width: 100%;
+    }
+
+    .featured-cause .cause-content-wrap {
+        width: 100%;
+        margin-top: 40px;
+    }
+}
+.cause-section {
+    padding: 5rem 2rem;
+    background-color: var(--background-color);
+}
+
+
+/* Event Poster Styles */
+.event-poster {
+    background-color: white;
+    overflow: hidden;
+}
+
+/* .event-poster:hover {
+    transform: translateY(-10px);
+} */
+
+.poster-image {
+    /* width: 100px;
+    height: auto;
+    display: block; */
+    width: 90%; /* Make image take full width */
+    height: 100%;
+    object-fit: cover;
+    object-position: center; /* Center the image */
+
+}
+
+
+/* article section */
+
+.article {
+    margin-bottom: 10px;
+    margin-top: 40px;
+  }
+  
+  .article .article-img {
+    overflow: hidden;
+    border-radius: 10px;
+  }
+  
+  .article .article-img a {
+    position: relative;
+    display: block;
+  }
+  
+  .article .article-img a:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: #25ac79be;
+    opacity: 0;
+    -webkit-transition: 0.3s opacity;
+    transition: 0.3s opacity;
+  }
+  
+  .article .article-img a:hover:after {
+    opacity: 0.6;
+  }
+  
+  .article .article-img img {
+    width: 100%;
+  }
+  
+  .article .article-content {
+    margin-top: 5px;
+  }
+  
+  .article .article-content .article-title {
+    text-transform: capitalize;
+    text-align: center;
+  }
+  
+  .article .article-content .article-title>a {
+    font-weight: 500;
+    
+  }
+  
+  .article .article-content .article-meta {
+    margin: 5px ;
+    font-size: 14px;
+    font-weight: 400;
+  }
+  
+  .article .article-content .article-meta li {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  
+  
+/*--------------------------------------------------------------
+# Single Cause
+--------------------------------------------------------------*/
+.single-cause .page-header {
+    background: url(images/single-cause-bg.jpg) no-repeat center;
+}
+
+.single-cause .highlighted-cause {
+    padding: 46px 0 96px;
+}
+
+.single-cause .highlighted-cause .entry-title {
+    padding-right: 24px;
+    margin-top: 60px;
+    line-height: 1.6;
+}
+
+.single-cause .highlighted-cause .entry-content {
+    color: #929191;
+}
+
+.single-cause .highlighted-cause img {
+    width: 100%;
+    margin-top: 60px;
+}
+
+/*
+# Short Content
+--------------------------------*/
+.short-content-wrap {
+    padding-bottom: 96px;
+}
+
+.short-content .entry-title {
+    font-size: 18px;
+    /* font-weight: 500; */
+}
+
+.short-content p {
+    margin-top: 40px;
+    font-size: 14px;
+    color: #929191;
 }
