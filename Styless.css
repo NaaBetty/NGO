@@ -1454,9 +1454,21 @@ background: linear-gradient(180deg, #14744F 0%, #3a9e8b 100%);
 
 .section-heading .entry-title {
     position: relative;
+    padding-top: 30px;
     padding-bottom: 20px;
     font-size: 36px;
     font-weight: 600;
+}
+
+.sectiona-heading  .entry-title::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 64px;
+    height: 4px;
+    border-radius: 2px;
+    background: #14744F;
 }
 
 .section-heading  .entry-title::before {
@@ -1555,8 +1567,12 @@ background: linear-gradient(180deg, #14744F 0%, #3a9e8b 100%);
     margin-right: 30px;
 }
 
+.project-page .welcome-wrap {
+    padding: 30px;
+}
+
 .featured-cause .cause-wrap {
-    padding: 15px 15px;
+    padding: 20px;
     background: #f3f5f6;
 }
 
@@ -2046,7 +2062,7 @@ background: linear-gradient(180deg, #14744F 0%, #3a9e8b 100%);
 }
 
 .about-page .welcome-wrap {
-    padding: 50px 0;
+    padding: 30px ;
 }
 
 .about-page .welcome-content .entry-title {
