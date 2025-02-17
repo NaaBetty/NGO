@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Hello World</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/icon/favicon-16x16.png">
+    <link rel="manifest" href="/images/icon/site.webmanifest">
+    <title>Le Shelter Foundation</title>
 
     <!-- Required meta tags -->
     <meta charset="utf-8" />
@@ -25,8 +29,9 @@
     <!-- Swiper CSS -->
     <link rel="stylesheet" href="css/swiper.min.css" />
 
+    
     <!-- Styles -->
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="/Styless.css" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
@@ -36,91 +41,67 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
   </head>
-  <body class="single-page single-cause">
+
+  <body class="single-page about-page">
     <header class="site-header">
       <div class="top-header-bar">
         <div class="container">
-          <div
-            class="row flex-wrap justify-content-center justify-content-lg-between align-items-lg-center"
-          >
-            <div
-              class="col-12 col-lg-8 d-none d-md-flex flex-wrap justify-content-center justify-content-lg-start mb-3 mb-lg-0"
-            >
-              <div class="header-bar-email">
-                MAIL: <i class="fa fa-envelope"></i>
-                <a>lesheltergh@gmail.com</a>
-              </div>
-              <!-- .header-bar-email -->
+            <div class="row flex-wrap justify-content-center justify-content-lg-between align-items-lg-center">
+                <div class="col-12 col-lg-8 d-none d-md-flex flex-wrap justify-content-center justify-content-lg-start mb-3 mb-lg-0">
+                    <div class="header-bar-email">
+                        MAIL: <i class="fa fa-envelope"></i> <a>lesheltergh@gmail.com</a>
+                    </div><!-- .header-bar-email -->
 
-              <div class="header-bar-text">
-                <p>PHONE: <i class="fa fa-phone"></i> 053 044 9325</p>
-              </div>
-              <!-- .header-bar-text -->
-            </div>
-            <!-- .col -->
+                    <div class="header-bar-text">
+                        <p>PHONE: <i class="fa fa-phone"></i> +233 53 044 9325</p>
+                    </div><!-- .header-bar-text -->
+                </div><!-- .col -->
 
-            <div
-              class="col-12 col-lg-4 d-flex flex-wrap justify-content-center justify-content-lg-end align-items-center"
-            >
-              <div class="donate-btn" data-modal="donateModal1">
-                <a>Donate Now</a>
-              </div>
-              <!-- .donate-btn -->
-            </div>
-            <!-- .col -->
-          </div>
-          <!-- .row -->
-        </div>
-        <!-- .container -->
-      </div>
-      <!-- .top-header-bar -->
+                <div class="col-12 col-lg-4 mt-1 mb-1 d-flex flex-wrap justify-content-center justify-content-lg-end align-items-center">
+                    <div class="top-button donate-btn" data-modal="donateModal1">
+                        <a href="#">Donate</a>
+                    </div><!-- .donate-btn -->
+                </div><!-- .col -->
+            </div><!-- .row -->
+        </div><!-- .container -->
+    </div><!-- .top-header-bar -->
 
       <!-- logo & navs -->
       <div class="nav-bar">
         <div class="container">
           <div class="row">
-            <div
-              class="col-12 d-flex flex-wrap justify-content-between align-items-center"
-            >
+            <div class="col-12 d-flex flex-wrap justify-content-between mb-2 align-items-center">
               <div class="site-branding d-flex align-items-center">
-                <a class="d-block" href="index.html" rel="home"
-                  ><img
-                    class="d-block"
-                    src="images/image__1_-removebg-preview.png"
-                    alt="logo"
-                /></a>
-              </div>
-              <!-- .site-branding -->
-
-              <nav
-                class="site-navigation d-flex justify-content-end align-items-center"
-              >
-                <ul
-                  class="d-flex flex-column flex-lg-row justify-content-lg-end align-content-center"
-                >
-                  <li class="current-menu-item">
-                    <a href="index.html">Home</a>
-                  </li>
+                <a class="d-block" href="index.html" rel="home"><img class="d-block" src="/images/image__1_-removebg-preview.png" href="index.html" alt="logo"></a>
+              </div><!-- .site-branding -->
+  
+              <nav  class="site-navigation d-flex justify-content-end align-items-center">
+                <ul class="d-flex flex-column flex-lg-row justify-content-lg-end align-content-center">
+                  <li><a href="index.html">Home</a></li>
                   <li><a href="about.html">About us</a></li>
-                  <li><a href="causes.html">Projects</a></li>
-                  <li><a href="portfolio.html">Gallery</a></li>
-                  <li><a href="contact.html">Contact</a></li>
+                  <li><a href="/Projects.html">Projects</a></li>
+                  <li><a href="portfolio.html">Portfolio</a></li>
+                  <li class="current-menu-item"><a href="contact.html">Contact</a></li>
                 </ul>
-              </nav>
-            </div>
-            <!-- .col -->
-          </div>
-          <!-- .row -->
-        </div>
-        <!-- .container -->
-      </div>
-      <!-- .nav-bar -->
-    </header>
+              </nav><!-- .site-navigation -->
+  
+              <div class="hamburger-menu d-lg-none">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+              </div><!-- .hamburger-menu -->
+            </div><!-- .col -->
+          </div><!-- .row -->
+        </div><!-- .container -->
+      </div><!-- .nav-bar -->
+    </header><!-- .site-header -->
+  
     <div class="page-header">
       <div class="container">
         <div class="row">
           <div class="col-12">
-            <h1>Events</h1>
+            <h1>Asiafo Amanfro M/A School</h1>
           </div>
           <!-- .col -->
         </div>
@@ -130,386 +111,301 @@
     </div>
     <!-- .page-header -->
 
-    <div class="section">
-      <!-- container -->
-      <div class="container">
-        <!-- row -->
-        <div class="row">
-          <!-- MAIN -->
-          <main id="main" class="col-md-9">
-            <!-- article -->
-            <div class="article causes-details">
-              <!-- article img -->
-              <div class="article-img mt-5">
-                <img src="images/1.jpg" alt="" />
-              </div>
-              <!-- article img -->
+    <!-- Modal for Donating 1 -->
+    <div id="donateModal1" class="modal">
+      <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <img
+          src="images/image__1_-removebg-preview.png"
+          style="height: 80px; width: 250px"
+        />
+        <p>Here are the details for making your donation:</p>
 
-              <!-- article content -->
-              <div class="article-content">
-                <!-- article title -->
-                <h2 class="article-title">Asutuare</h2>
-                <!-- /article title -->
+        <div class="donation-details">
+          <h4>Mobile Money (MOMO) Details</h4>
+          <div class="momo-details">
+            <div class="momo-item">
+              <img
+                src="images/mtnlogo.png"
+                alt="MTN Mobile Money"
+                class="momo-logo"
+              />
+              <p><strong>Name:</strong> Le Shelter Foundation</p>
 
-                <!-- article meta -->
-                <ul class="article-meta">
-                  <li>
-                    <i class="fa fa-calendar" aria-hidden="true"></i> March 1,
-                    2323
-                  </li>
-                  <li>
-                    <i class="fa fa-map-marker" aria-hidden="true"></i> Asutuare
-                  </li>
-                </ul>
-                <!-- /article meta -->
+              <p><strong>Mobile Money Number:</strong> 0530449325</p>
 
-                <p style="text-align: justify">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                  irure dolor in reprehenderit in voluptate velit esse cillum
-                  dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                  cupidatat non proident, sunt in culpa qui officia deserunt
-                  mollit anim id est laborum.
-                </p>
-                <p style="text-align: justify">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                  irure dolor in reprehenderit in voluptate velit esse cillum
-                  dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                  cupidatat non proident, sunt in culpa qui officia deserunt
-                  mollit anim id est laborum.
-                </p>
-                <p style="text-align: justify">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                  irure dolor in reprehenderit in voluptate velit esse cillum
-                  dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                  cupidatat non proident, sunt in culpa qui officia deserunt
-                  mollit anim id est laborum.
-                </p>
-              </div>
-              <!-- /article content -->
-
-              <!-- footer galery -->
-
-              <div>
-                <ul class="footer-galery">
-                  <li>
-                    <a href="#"><img src="images/20.jpg" alt="" /></a>
-                  </li>
-                  <li>
-                    <a href="#"><img src="images/2.jpg" alt="" /></a>
-                  </li>
-                  <li>
-                    <a href="#"><img src="images/3.jpg" alt="" /></a>
-                  </li>
-                </ul>
-              </div>
-
-              <!-- /footer galery -->
-
-              <!-- article tags share -->
-              <div class="article-tags-share">
-                <!-- article share -->
-                <ul class="share footer-social mt-3">
-                  <li>SHARE:</li>
-                  <li>
-                    <a
-                      href="https://www.facebook.com/profile.php?id=100067770571763"
-                    >
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        x="0px"
-                        y="0px"
-                        width="40"
-                        height="40"
-                        viewBox="0 0 50 50"
-                      >
-                        <path
-                          d="M 25 3 C 12.861562 3 3 12.861562 3 25 C 3 36.019135 11.127533 45.138355 21.712891 46.728516 L 22.861328 46.902344 L 22.861328 29.566406 L 17.664062 29.566406 L 17.664062 26.046875 L 22.861328 26.046875 L 22.861328 21.373047 C 22.861328 18.494965 23.551973 16.599417 24.695312 15.410156 C 25.838652 14.220896 27.528004 13.621094 29.878906 13.621094 C 31.758714 13.621094 32.490022 13.734993 33.185547 13.820312 L 33.185547 16.701172 L 30.738281 16.701172 C 29.349697 16.701172 28.210449 17.475903 27.619141 18.507812 C 27.027832 19.539724 26.84375 20.771816 26.84375 22.027344 L 26.84375 26.044922 L 32.966797 26.044922 L 32.421875 29.564453 L 26.84375 29.564453 L 26.84375 46.929688 L 27.978516 46.775391 C 38.71434 45.319366 47 36.126845 47 25 C 47 12.861562 37.138438 3 25 3 z M 25 5 C 36.057562 5 45 13.942438 45 25 C 45 34.729791 38.035799 42.731796 28.84375 44.533203 L 28.84375 31.564453 L 34.136719 31.564453 L 35.298828 24.044922 L 28.84375 24.044922 L 28.84375 22.027344 C 28.84375 20.989871 29.033574 20.060293 29.353516 19.501953 C 29.673457 18.943614 29.981865 18.701172 30.738281 18.701172 L 35.185547 18.701172 L 35.185547 12.009766 L 34.318359 11.892578 C 33.718567 11.811418 32.349197 11.621094 29.878906 11.621094 C 27.175808 11.621094 24.855567 12.357448 23.253906 14.023438 C 21.652246 15.689426 20.861328 18.170128 20.861328 21.373047 L 20.861328 24.046875 L 15.664062 24.046875 L 15.664062 31.566406 L 20.861328 31.566406 L 20.861328 44.470703 C 11.816995 42.554813 5 34.624447 5 25 C 5 13.942438 13.942438 5 25 5 z"
-                        ></path>
-                      </svg>
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="https://x.com/le_shelter?t=dWlkQidVKnRSYGSbFpbjHg&s=09"
-                    >
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        x="0px"
-                        y="0px"
-                        width="40"
-                        height="40"
-                        viewBox="0 0 35 30"
-                      >
-                        <path
-                          d="M26.37,26l-8.795-12.822l0.015,0.012L25.52,4h-2.65l-6.46,7.48L11.28,4H4.33l8.211,11.971L12.54,15.97L3.88,26h2.65 l7.182-8.322L19.42,26H26.37z M10.23,6l12.34,18h-2.1L8.12,6H10.23z"
-                        ></path>
-                      </svg>
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="https://www.instagram.com/le.shelter.foundation?igsh=bGxneno2OTN5NjF5"
-                    >
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        x="0px"
-                        y="0px"
-                        width="30"
-                        height="40"
-                        viewBox="0 0 50 45"
-                      >
-                        <path
-                          d="M 16 3 C 8.8324839 3 3 8.8324839 3 16 L 3 34 C 3 41.167516 8.8324839 47 16 47 L 34 47 C 41.167516 47 47 41.167516 47 34 L 47 16 C 47 8.8324839 41.167516 3 34 3 L 16 3 z M 16 5 L 34 5 C 40.086484 5 45 9.9135161 45 16 L 45 34 C 45 40.086484 40.086484 45 34 45 L 16 45 C 9.9135161 45 5 40.086484 5 34 L 5 16 C 5 9.9135161 9.9135161 5 16 5 z M 37 11 A 2 2 0 0 0 35 13 A 2 2 0 0 0 37 15 A 2 2 0 0 0 39 13 A 2 2 0 0 0 37 11 z M 25 14 C 18.936712 14 14 18.936712 14 25 C 14 31.063288 18.936712 36 25 36 C 31.063288 36 36 31.063288 36 25 C 36 18.936712 31.063288 14 25 14 z M 25 16 C 29.982407 16 34 20.017593 34 25 C 34 29.982407 29.982407 34 25 34 C 20.017593 34 16 29.982407 16 25 C 16 20.017593 20.017593 16 25 16 z"
-                        ></path>
-                      </svg>
-                    </a>
-                  </li>
-                </ul>
-                <!-- /article share -->
-              </div>
-              <!-- /article tags share -->
+              <p><strong>Merchant ID:</strong> 440792</p>
             </div>
-            <!-- /article -->
-          </main>
-          <!-- /MAIN -->
-
-          <!-- ASIDE -->
-          <aside id="aside" class="col-md-3">
-            <!-- posts widget -->
-            <div class="widget mt-5">
-              <h3 class="widget-title">Latest Posts</h3>
-              <!-- single post -->
-              <div class="widget-post">
-                <a href="#">
-                  <div class="widget-img">
-                    <img src="images/1.jpg" alt="" />
-                  </div>
-                  <div class="widget-content">
-                    Possit nostro aeterno eu vis, ut cum quem reque
-                  </div>
-                </a>
-                <ul class="article-meta">
-                  <li>
-                    <i class="fa fa-calendar" aria-hidden="true"></i> June 20, 2024
-                  </li>
-                  <li>
-                    <i class="fa fa-map-marker" aria-hidden="true"></i> Accra
-                  </li>
-                </ul>
-              </div>
-              <!-- /single post -->
-
-              <!-- single post -->
-              <div class="widget-post">
-                <a href="#">
-                  <div class="widget-img">
-                    <img src="images/2.jpg" alt="" />
-                  </div>
-                  <div class="widget-content">
-                    Vix fuisset tibique facilisis cu. Justo accusata ius at
-                  </div>
-                </a>
-                <ul class="article-meta">
-                  <li>
-                    <i class="fa fa-calendar" aria-hidden="true"></i> June 10, 2023
-                  </li>
-                  <li>
-                    <i class="fa fa-map-marker" aria-hidden="true"></i> Lapaz
-                  </li>
-                </ul>
-              </div>
-              <!-- /single post -->
-
-              <!-- single post -->
-              <div class="widget-post">
-                <a href="#">
-                  <div class="widget-img">
-                    <img src="images/20.jpg" alt="" />
-                  </div>
-                  <div class="widget-content">
-                    Vix fuisset tibique facilisis cu. Justo accusata ius at
-                  </div>
-                </a>
-                <ul class="article-meta">
-                  <li>
-                    <i class="fa fa-calendar" aria-hidden="true"></i> May 1, 1960
-                  </li>
-                  <li>
-                    <i class="fa fa-map-marker" aria-hidden="true"></i> Madina
-                  </li>
-                </ul>
-              </div>
-              <!-- /single post -->
-
-              <!-- single post -->
-              <div class="widget-post">
-                <a href="#">
-                  <div class="widget-img">
-                    <img src="images/1.jpg" alt="" />
-                  </div>
-                  <div class="widget-content">
-                    Possit nostro aeterno eu vis, ut cum quem reque
-                  </div>
-                </a>
-                <ul class="article-meta">
-                  <li>
-                    <i class="fa fa-calendar" aria-hidden="true"></i> May 1, 1960
-                  </li>
-                  <li>
-                    <i class="fa fa-map-marker" aria-hidden="true"></i> Madina
-                  </li>
-                </ul>
-              </div>
-              <!-- /single post -->
+          </div>
+          <h4>Other Items to donate</h4>
+          <div class="momo-details">
+            <div class="momo-item">
+              <img
+                src="images/food-donation.png"
+                alt="MTN Mobile Money"
+                class="momo-logo"
+              />
+              <p>Food items</p>
+              <p>Cloths</p>
+              <p>Stationary</p>
+              <p>Cloths</p>
+              <p>Toiletries etc.</p>
             </div>
-            <!-- /posts widget -->
-
-            <!-- causes widget -->
-          </aside>
-          <!-- /ASIDE -->
+            <div class="other-items-btn">
+              <a href="contact.html" class="primary-button donate-btn"
+                >Click Here</a
+              >
+            </div>
+          </div>
         </div>
-        <!-- /row -->
+        <p>Thank you for your support 🤝 🤗!</p>
       </div>
-      <!-- /container -->
     </div>
 
-    <footer id="footer" class="section">
-      <!-- container -->
+
+    
+    <div class="section">
       <div class="container">
-        <!-- row -->
         <div class="row">
-          <!-- footer contact -->
-          <div class="col-md-4">
-            <div class="footer">
-              <div class="footer-logo">
-                <a class="logo" href="#"
-                  ><img src="images/image__1_-removebg-preview.png" alt=""
-                /></a>
-                <ul class="footer-social">
-                  <li>
-                    <a
-                      href="https://www.facebook.com/profile.php?id=100067770571763"
-                    >
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        x="0px"
-                        y="0px"
-                        width="30"
-                        height="30"
-                        viewBox="0 0 50 50"
-                      >
-                        <path
-                          d="M 25 3 C 12.861562 3 3 12.861562 3 25 C 3 36.019135 11.127533 45.138355 21.712891 46.728516 L 22.861328 46.902344 L 22.861328 29.566406 L 17.664062 29.566406 L 17.664062 26.046875 L 22.861328 26.046875 L 22.861328 21.373047 C 22.861328 18.494965 23.551973 16.599417 24.695312 15.410156 C 25.838652 14.220896 27.528004 13.621094 29.878906 13.621094 C 31.758714 13.621094 32.490022 13.734993 33.185547 13.820312 L 33.185547 16.701172 L 30.738281 16.701172 C 29.349697 16.701172 28.210449 17.475903 27.619141 18.507812 C 27.027832 19.539724 26.84375 20.771816 26.84375 22.027344 L 26.84375 26.044922 L 32.966797 26.044922 L 32.421875 29.564453 L 26.84375 29.564453 L 26.84375 46.929688 L 27.978516 46.775391 C 38.71434 45.319366 47 36.126845 47 25 C 47 12.861562 37.138438 3 25 3 z M 25 5 C 36.057562 5 45 13.942438 45 25 C 45 34.729791 38.035799 42.731796 28.84375 44.533203 L 28.84375 31.564453 L 34.136719 31.564453 L 35.298828 24.044922 L 28.84375 24.044922 L 28.84375 22.027344 C 28.84375 20.989871 29.033574 20.060293 29.353516 19.501953 C 29.673457 18.943614 29.981865 18.701172 30.738281 18.701172 L 35.185547 18.701172 L 35.185547 12.009766 L 34.318359 11.892578 C 33.718567 11.811418 32.349197 11.621094 29.878906 11.621094 C 27.175808 11.621094 24.855567 12.357448 23.253906 14.023438 C 21.652246 15.689426 20.861328 18.170128 20.861328 21.373047 L 20.861328 24.046875 L 15.664062 24.046875 L 15.664062 31.566406 L 20.861328 31.566406 L 20.861328 44.470703 C 11.816995 42.554813 5 34.624447 5 25 C 5 13.942438 13.942438 5 25 5 z"
-                        ></path>
-                      </svg>
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="https://x.com/le_shelter?t=dWlkQidVKnRSYGSbFpbjHg&s=09"
-                    >
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        x="0px"
-                        y="0px"
-                        width="30"
-                        height="30"
-                        viewBox="0 0 30 30"
-                      >
-                        <path
-                          d="M26.37,26l-8.795-12.822l0.015,0.012L25.52,4h-2.65l-6.46,7.48L11.28,4H4.33l8.211,11.971L12.54,15.97L3.88,26h2.65 l7.182-8.322L19.42,26H26.37z M10.23,6l12.34,18h-2.1L8.12,6H10.23z"
-                        ></path>
-                      </svg>
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="https://www.tiktok.com/@le.shelter.founda?_t=ZM-8sl65FqR7XZ&_r=1"
-                    >
-                      <svg
-                        width="30px"
-                        height="30px"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M20 7.50414C18.5333 7.56942 15.52 6.75998 15.2 3H12.4V13.9666C12.4 17.0999 9.93253 18.4412 8.289 17.2507C6.20169 15.7389 7.60003 12.5958 10.2 12.9874V9.6583C8.20003 9.6583 4 10.4416 4 15.3374C4 21.6041 10.8146 21.4083 12.4 20.5824C14.9798 19.2385 15.6 17.7827 15.6 14.5541C15.6 11.6166 15.6 9.85413 15.6 9.0708C16.2667 9.39719 18.08 10.0891 20 10.2458"
-                          stroke="#000000"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
-                      </svg>
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="https://www.instagram.com/le.shelter.foundation?igsh=bGxneno2OTN5NjF5"
-                    >
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        x="0px"
-                        y="0px"
-                        width="30"
-                        height="30"
-                        viewBox="0 0 50 50"
-                      >
-                        <path
-                          d="M 16 3 C 8.8324839 3 3 8.8324839 3 16 L 3 34 C 3 41.167516 8.8324839 47 16 47 L 34 47 C 41.167516 47 47 41.167516 47 34 L 47 16 C 47 8.8324839 41.167516 3 34 3 L 16 3 z M 16 5 L 34 5 C 40.086484 5 45 9.9135161 45 16 L 45 34 C 45 40.086484 40.086484 45 34 45 L 16 45 C 9.9135161 45 5 40.086484 5 34 L 5 16 C 5 9.9135161 9.9135161 5 16 5 z M 37 11 A 2 2 0 0 0 35 13 A 2 2 0 0 0 37 15 A 2 2 0 0 0 39 13 A 2 2 0 0 0 37 11 z M 25 14 C 18.936712 14 14 18.936712 14 25 C 14 31.063288 18.936712 36 25 36 C 31.063288 36 36 31.063288 36 25 C 36 18.936712 31.063288 14 25 14 z M 25 16 C 29.982407 16 34 20.017593 34 25 C 34 29.982407 29.982407 34 25 34 C 20.017593 34 16 29.982407 16 25 C 16 20.017593 20.017593 16 25 16 z"
-                        ></path>
-                      </svg>
-                    </a>
-                  </li>
+          <main id="main" class="col-md-8 ">
+            <div class="article causes-details">
+              <div class="article-img mt-5">
+                <img src="/images/1.jpg" alt="" />
+              </div>
+              <div class="article-content">
+                <h2 class="article-title"><strong>Asiafo Amanfro M/A School</strong></h2> 
+                <ul class="article-meta">
+                  <li><i class="fa fa-calendar" aria-hidden="true"></i> October, 2024</li>
+                  <li><i class="fa fa-map-marker" aria-hidden="true"></i> Akaa</li>
                 </ul>
+                <p style="text-align: justify">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                  irure dolor in reprehenderit in voluptate velit esse cillum
+                  dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                  cupidatat non proident, sunt in culpa qui officia deserunt
+                  mollit anim id est laborum.
+                </p>
+                <p style="text-align: justify">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                  irure dolor in reprehenderit in voluptate velit esse cillum
+                  dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                  cupidatat non proident, sunt in culpa qui officia deserunt
+                  mollit anim id est laborum.
+                </p>
+              </div>
+
+              <!-- Lightbox -->
+              <div class="photo-viewer">
+                <img src="/images/1.jpg" alt="Image 1" onclick="openLightbox(0)">
+                <img src="/images/2.jpg" alt="Image 2" onclick="openLightbox(1)">
+                <img src="/images/3.jpg" alt="Image 3" onclick="openLightbox(2)">
+                <!-- <img src="/images/15.jpg" alt="Image 4" onclick="openLightbox(3)">
+                <img src="/images/20.jpg" alt="Image 5" onclick="openLightbox(4)">
+                <img src="/images/53.jpg" alt="Image 6" onclick="openLightbox(5)"> -->
+              </div>
+             
+              <div id="lightbox" class="lightbox">
+                <span class="close" onclick="closeLightbox()">&times;</span>
+                <img id="lightbox-img" class="lightbox-img">
+                <button class="prev" onclick="prevImage()">&#10094;</button>
+                <button class="next" onclick="nextImage()">&#10095;</button>
+              </div>
+
+              <script src="/js/photo.js"></script>
+
+              <!-- Lightbox -->
+
+
+              <div class="mt-3">
+                <div class="social-links">
+                  <a class="mt-1">SHARE:</a>
+                  <a href="https://www.facebook.com" target="_blank" class="social-icon" aria-label="LinkedIn"><i class="fab fa-facebook-f"></i></a>
+                  <a href="https://www.tiktok.com" target="_blank" class="social-icon" aria-label="LinkedIn"><i class="fab fa-tiktok"></i></a>
+                  <a href="https://x.com" target="_blank" class="social-icon" aria-label="LinkedIn"><i class="fa fa-twitter"></i></a>
+                  <a href="https://www.instagram.com" target="blank" class="social-icon" aria-label="Website"><i class="fab fa-instagram"></i></a>
+                </div>
+              </div>
+            </div>
+          </main>
+
+          
+          <!-- ASIDE -->
+          <aside id="aside" class="col-md-4">
+            <div class="widget mt-5 ">
+              <h3 class="widget-title">Latest Posts</h3>
+              <div class="widget-post">
+                <a href="Asutsuare.html">
+                  <div class="widget-img">
+                    <img src="/images/1.jpg" alt="" />
+                  </div>
+                  <div class="widget-content">
+                    <span>Asutsuare Estate D/A School</span>
+                  </div>
+                </a>
+                
+              </div>
+
+              <!-- single post -->
+              <div class="widget-post">
+                <a href="Pokrom.html">
+                  <div class="widget-img">
+                    <img src="/images/2.jpg" alt="" />
+                  </div>
+                  <div class="widget-content">
+                    <span>Pokrom M/A Junior High School</span>
+                  </div>
+                </a>
+              </div>
+
+              <!-- single post -->
+              <div class="widget-post">
+                <a href="Bunso.html">
+                  <div class="widget-img">
+                    <img src="/images/20.jpg" alt="" />
+                  </div>
+                  <div class="widget-content">
+                    <span>Bunso M/A School</span>
+                  </div>
+                </a>
+              </div>
+
+              <!-- single post -->
+              <div class="widget-post">
+                <a href="Ayensukrom.html">
+                  <div class="widget-img">
+                    <img src="/images/1.jpg" alt="" />
+                  </div>
+                  <div class="widget-content">
+                    <span>Ayensukrom M/A School</span>
+                  </div>
+                </a>
+              </div>
+
+              <div class="widget-post">
+                <a href="Dzita.html">
+                  <div class="widget-img">
+                    <img src="/images/1.jpg" alt="" />
+                  </div>
+                  <div class="widget-content">
+                    <span>Dzita Learning Comm. School</span>
+                  </div>
+                </a>
+              </div>
+
+
+              <div class="widget-post">
+                <a href="Kwamo.html">
+                  <div class="widget-img">
+                    <img src="/images/1.jpg" alt="" />
+                  </div>
+                  <div class="widget-content">
+                    <span>Kwamo M/A School</span>
+                  </div>
+                </a>
+              </div>
+
+          </aside>
+        </div>
+      </div>
+    </div>
+
+
+
+    
+    <!-- FOOTER -->
+    <!-- Footer Start -->
+    <div class="footer container-fluid  footer  mt-5 wow fadeIn" data-wow-delay="0.1s">
+      <div class="footer pt-2">
+        <div class="container ">
+          <div class="row">
+            <div class="col-12 col-lg-5 col-md-6">
+              <div class="footer-logo">
+                <a class="logo" href="#">
+                  <img src="/images/image__1_-removebg-preview.png" alt=""></a>
+              </div>
+              
+            </div>
+
+            <div class="col-12 col-lg-3 col-md-6 text-center text-md-start mb-md-0">
+              <div class="footer pt-2">
+                <div class="footext pt-3">
+                  <h6>
+                <p><i class="fa fa-map-marker me-2 "></i>Baatsona-Spintex</p>
+                <p><i class="fa fa-phone me-2"></i>+233 53 044 9325</p>
+                <p><i class="fa fa-envelope me-2"></i>lesheltergh@gmail.com</p>
+                  </h6>
+                  
+                </div>
+                
+              </div>
+            </div>
+            
+            <div class="col-12 col-lg-4 col-md-12 text-center text-md-start mb-3 mb-md-0">
+              <div class="footer pt-2">
+                <div>
+                  <ul class="footer-social">
+                    <strong>
+                    <li><h1><a class="footer-icon" href="https://www.facebook.com/profile.php?id=100067770571763" target="_blank"><i class="fab fa-facebook"></i></a></h1></li>
+                    <li><h1><a class="footer-icon" href="https://www.tiktok.com/@le.shelter.founda?_t=ZM-8sl65FqR7XZ&_r=1" target="_blank" ><i class="fab fa-tiktok"></i></a></h1></li>
+                    <li><h1><a class="footer-icon" href="https://x.com/le_shelter?t=dWlkQidVKnRSYGSbFpbjHg&s=09" target="_blank"><i class="fa fa-twitter"></i></a></h1></li>
+                    <li><h1><a class="footer-icon" href="https://www.instagram.com/le.shelter.foundation?igsh=bGxneno2OTN5NjF5" target="_blank"><i class="fab fa-instagram"></i></a></h1></li>
+                    </strong>
+                  </ul>
+                </div>
+                
+                
+                  <form class="footer-volunteer">
+                    <button class="footer-button">
+                      <a
+                        href="https://docs.google.com/forms/d/e/1FAIpQLSf8BNb_TOu1TX99yPvh-6kXlTA_dcG3nNBWbJJK5OmTPgmAxQ/viewform?usp=sharing"
+                        style="color: white; width: 60px">
+                        <h6><strong>❤️ Become A Volunteer ❤️</strong></h6></a>
+                    </button>
+                  </form>
               </div>
             </div>
           </div>
-          <!-- /footer contact -->
-
-          <!-- footer galery -->
-          <div class="col-md-4">
-            <ul class="footer-contact">
-              <li><i class="fa fa-map-marker"></i> Baatsona-Spintex Accra</li>
-              <li><i class="fa fa-phone"></i> 053 044 9325</li>
-              <li>
-                <i class="fa fa-envelope"></i> <a>lesheltergh@gmail.com</a>
-              </li>
-            </ul>
-          </div>
-          <!-- /footer galery -->
-
-          <!-- footer newsletter -->
-          <div class="col-md-4">
-            <div class="footer">
-              <h3 class="footer-title">Be a Volunteer</h3>
-              <p>
-                Join us and become a volunteer today! Fill out the form to get
-                started and help us make a lasting impact ❤️❤️❤️.
-              </p>
-              <button class="footer-button">
-                <a
-                  href="https://docs.google.com/forms/d/e/1FAIpQLSf8BNb_TOu1TX99yPvh-6kXlTA_dcG3nNBWbJJK5OmTPgmAxQ/viewform?usp=sharing"
-                  style="color: white; width: 80px"
-                  >Be Volunteer</a
-                >
-              </button>
+          <div class="container-fluid copyright">
+            <div class="container pt-2">
+              <div class="row">
+                <div class="col-md-6 text-center text-md-start ">
+                  <div class="footer-copyright">
+                    <span>
+                      Copyright &copy;<script>document.write(new Date().getFullYear());</script>
+                      All rights reserved by Le Shelter Foundation <i class="fa fa-globe" aria-hidden="true"></i></a>
+                    </span>
+                  </div>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                  <div class="footer-copyright">
+                    <span>
+                      Designed By <a href="#">IHAG <i class="fa fa-hand-peace-o" aria-hidden="true"></i></a>
+                    </span>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-          <!-- /footer newsletter -->
         </div>
-        <!-- /row -->
       </div>
-      <!-- /container -->
-    </footer>
+    </div>
+  <!-- Footer End -->
+  
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap Bundle with Popper (for carousel controls) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/jquery.collapsible.min.js"></script>
     <script type="text/javascript" src="js/swiper.min.js"></script>
@@ -518,5 +414,53 @@
     <script type="text/javascript" src="js/jquery.countTo.min.js"></script>
     <script type="text/javascript" src="js/jquery.barfiller.js"></script>
     <script type="text/javascript" src="js/custom.js"></script>
+    <script>
+      // Get all "Donate Now" buttons and modals
+      var donateBtns = document.querySelectorAll(".donate-btn");
+      var modals = document.querySelectorAll(".modal");
+      var closeBtns = document.querySelectorAll(".close-btn");
+
+      // Loop through each button to add event listeners
+      donateBtns.forEach(function (button) {
+        button.addEventListener("click", function (event) {
+          var modalId = button.getAttribute("data-modal"); // Get the modal ID
+          var modal = document.getElementById(modalId); // Get the corresponding modal
+          modal.style.display = "block"; // Show the modal
+        });
+      });
+   
+      // Close modal when clicking on close button
+      closeBtns.forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          var modal = btn.closest(".modal");
+          modal.style.display = "none"; // Hide the modal
+        });
+      });
+
+      // Close modal when clicking outside of the modal
+      window.addEventListener("click", function (event) {
+        modals.forEach(function (modal) {
+          if (event.target === modal) {
+            modal.style.display = "none"; // Hide the modal if clicked outside
+          }
+        });
+      });
+    </script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    document.getElementById("flyerModal").style.display = "none"; // Ensures it's hidden on load
+});
+
+function openFlyerModal() {
+    document.getElementById("flyerModal").style.display = "flex";
+    document.getElementById("fullFlyer").src = document.querySelector(".flyer").src;
+}
+
+function closeFlyerModal() {
+    document.getElementById("flyerModal").style.display = "none";
+}
+
+</script>
   </body>
 </html>
