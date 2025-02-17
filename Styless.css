@@ -2523,3 +2523,20 @@ background: linear-gradient(180deg, #14744F 0%, #3a9e8b 100%);
     font-size: 14px;
     color: #929191;
 }
+
+#lightgallery .item {
+    margin-bottom: 30px;
+    
+}
+
+#lightgallery img {
+    /* aspect-ratio: 1 / 1; */
+    object-fit: cover; /* Ensures images fill the container without distortion */
+    width: 100%; /* Ensures uniform width */
+    height: 100%; /* Ensures uniform height */
+    max-width: 500px; /* Adjust as needed */
+    max-height: 500px; /* Adjust as needed */
+    border-radius: 8px; /
+    
+}
+  
