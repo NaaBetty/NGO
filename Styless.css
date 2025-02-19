@@ -2654,6 +2654,8 @@ background: linear-gradient(180deg, #14744F 0%, #3a9e8b 100%);
     margin: 5px ;
     font-size: 14px;
     font-weight: 400;
+    align-items: center;
+
   }
   
   .article .article-content .article-meta li {
@@ -2661,7 +2663,7 @@ background: linear-gradient(180deg, #14744F 0%, #3a9e8b 100%);
     margin-right: 10px;
   }
   
-  
+
 /*--------------------------------------------------------------
 # Single Cause
 --------------------------------------------------------------*/
