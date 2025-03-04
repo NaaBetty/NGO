@@ -229,8 +229,8 @@ body {
   }
 
 /* Modal content styling */
-/* .modal {
-    display: none; 
+.modal {
+    /* display: flex; 
     position: fixed;
     z-index: 1000000;
     left: 0;
@@ -239,10 +239,11 @@ body {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.); 
     justify-content: center;
+    align-items: center;
     overflow-y: auto;
     height: auto;
-    
-} */
+     */
+}
 
 /* Modal content box */
 .modal-content {
@@ -252,18 +253,18 @@ body {
     max-width: 50%;
     max-height: 75%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
     display: flex;
     justify-content: center;
-    z-index: -1;
     width: 90%;
     align-items: center;
-    
+
+
+      
     
 }
 
-/* 
-.modal-content img {
+
+/* .modal-content img {
    justify-content: center;
    height: 80px; 
    width: 250px
@@ -345,6 +346,7 @@ body {
 @media (max-width: 768px) {
     .modal-content {
         width: 90%; /* Modal takes up more space on smaller devices */
+        max-width: 400px;
         padding: 15px; /* Reduce padding to fit smaller screens */
     }
 
@@ -403,6 +405,15 @@ body {
     }
 }
 
+
+@media (max-width: 480px) {
+    .modal-content {
+        width: 100%;
+        max-width: 90%;
+        padding: 10px;
+    }
+}
+
 /*----------------------------*\
 	HEADER
 \*----------------------------*/
@@ -427,10 +438,10 @@ body {
 \*----------------------------*/
 .header-bar-email,
 .header-bar-text {
-  padding: 20px 0;
-  font-size: 18px;
+  padding: 0px;
+  font-size: 1rem;
   line-height: 1;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 }
 
 .header-bar-email a,
@@ -444,7 +455,8 @@ body {
 	Header Bar Text
 \*----------------------------*/
 .header-bar-text {
-  margin-left: 48px;
+  margin-left: 0px;
+  
 }
 
 .header-bar-text p {
@@ -1038,15 +1050,15 @@ BODY
 
 @media screen and (max-width: 1200px) {
     .carousel-caption h1 {
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
 
     .carousel-caption h4 {
-        font-size: 1.25rem;
+        font-size: 1.2rem;
     }
 
     .carousel-caption p {
-        font-size: 0.9rem;
+        font-size: 0.6rem;
     }
 
     .primary-button,
