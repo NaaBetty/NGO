@@ -1486,7 +1486,7 @@ background: linear-gradient(180deg, #14744F 0%, #3a9e8b 100%);
     position: relative;
     padding: 48px 0; 
     background-color: rgba(0, 0, 0, 0.385); /* Black background with 50% opacity */
-    background: url("images/2023_09_29_10_36_IMG_6367.JPG") no-repeat center center;
+    background: url("images/1.jpg") no-repeat center center;
     background-size: cover; 
     z-index: 0;
     display: flex; 
@@ -1494,7 +1494,9 @@ background: linear-gradient(180deg, #14744F 0%, #3a9e8b 100%);
     justify-content: center;
     align-items: center;
 }
-
+.welcome-content{
+    margin: 30px;
+}
 .home-page-welcome::after {
     content: '';
     position: absolute;
@@ -1535,24 +1537,24 @@ background: linear-gradient(180deg, #14744F 0%, #3a9e8b 100%);
 
 @media screen and (max-width: 992px){
     .home-page-welcome img {
-        margin-bottom: 60px;
+        margin-bottom: 30px;
     }
 }
 
 .welcome-image {
     display: block;
-    max-width: 90%;
+    max-width: 85%;
     height: 70%;
-    max-height: 600px; /* Adjust this value as needed */
+    max-height: 600px; 
     object-fit: cover;
-    margin-left: 30px;
+    margin: 30px;
 }
 
-@media screen and (max-width: 992px){
+/* @media screen and (max-width: 992px){
     .home-page-welcome img {
         margin-bottom: 60px;
     }
-}
+} */
 /*
 # Upcoming Events
 --------------------------------*/
@@ -1669,6 +1671,7 @@ background: linear-gradient(180deg, #14744F 0%, #3a9e8b 100%);
 --------------------------------*/
 .home-page-events {
     padding: 20px 0;
+    margin: 30px;
 }
 
 .cause-wrap {
@@ -1968,8 +1971,8 @@ background: linear-gradient(180deg, #14744F 0%, #3a9e8b 100%);
 # Home Milestone
 --------------------------------*/
 .home-page-limestone {
-    /* padding: 50px 0; */
-    margin-bottom: 10px;
+    padding: 50px 0;
+    margin: 30px;
 }
 
 .home-page-limestone .section-heading .entry-title {
