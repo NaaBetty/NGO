@@ -259,6 +259,17 @@ body {
     align-items: center;
 
 
+  
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 500px;
+    
+    
+
+
       
     
 }
@@ -740,7 +751,7 @@ body {
   .footer .footer-title {
     text-transform: capitalize;
     margin-top: 10px;
-    text: #666;
+    text-color: #666;
   }
   
   .footer .footext  p  {
@@ -1687,13 +1698,17 @@ background: linear-gradient(180deg, #14744F 0%, #3a9e8b 100%);
 }
 
 .featured-cause .featured-cause .cause-wrap figure {
-    width: 150px;
+    width: auto;
     height: auto;
 }
 
 .cause-wrap figure img {
     display: block;
-    width: 10%; /* Make image take full width */
+    width: 246px;
+    height: 308px;
+    object-fit: cover;
+    /* width: 10%;  */
+    /* Make image take full width */
     /* height: 10%; */
     /* object-fit: contain; */
     /* object-position: center; */
