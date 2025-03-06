@@ -1,371 +1,515 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <title>Hello World</title>
+  <head>
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/icon/favicon-16x16.png">
+    <link rel="manifest" href="/images/icon/site.webmanifest">
+    <title>Le Shelter Foundation</title>
 
     <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
 
-    
     <!-- FontAwesome CSS -->
-    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
 
     <!-- ElegantFonts CSS -->
-    <link rel="stylesheet" href="css/elegant-fonts.css">
+    <link rel="stylesheet" href="css/elegant-fonts.css" />
 
     <!-- themify-icons CSS -->
-    <link rel="stylesheet" href="css/themify-icons.css">
+    <link rel="stylesheet" href="css/themify-icons.css" />
 
     <!-- Swiper CSS -->
-    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/swiper.min.css" />
 
+    
     <!-- Styles -->
-    <link rel="stylesheet" href="style.css">
-</head>
-<body class="single-page portfolio">
+    <link rel="stylesheet" href="Styless.css" />
+
+
+    <!-- <link rel="stylesheet" href="Gallery/css/style.css" /> -->
+
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+
+  <body class="single-page about-page">
     <header class="site-header">
-        <div class="top-header-bar">
-            <div class="container">
-                <div class="row flex-wrap justify-content-center justify-content-lg-between align-items-lg-center">
-                    <div class="col-12 col-lg-8 d-none d-md-flex flex-wrap justify-content-center justify-content-lg-start mb-3 mb-lg-0">
-                        <div class="header-bar-email">
-                            MAIL: <a href="#">contact@ourcharity.com</a>
-                        </div><!-- .header-bar-email -->
-
-                        <div class="header-bar-text">
-                            <p>PHONE: <span>+24 3772 120 091 / +56452 4567</span></p>
-                        </div><!-- .header-bar-text -->
-                    </div><!-- .col -->
-
-                    <div class="col-12 col-lg-4 d-flex flex-wrap justify-content-center justify-content-lg-end align-items-center">
-                        <div class="donate-btn">
-                            <a href="#">Donate Now</a>
-                        </div><!-- .donate-btn -->
-                    </div><!-- .col -->
-                </div><!-- .row -->
-            </div><!-- .container -->
-        </div><!-- .top-header-bar -->
-
-        <div class="nav-bar">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12 d-flex flex-wrap justify-content-between align-items-center">
-                        <div class="site-branding d-flex align-items-center">
-                            <a class="d-block" href="index.html" rel="home"><img class="d-block" src="images/logo.png" alt="logo"></a>
-                        </div><!-- .site-branding -->
-
-                        <nav class="site-navigation d-flex justify-content-end align-items-center">
-                            <ul class="d-flex flex-column flex-lg-row justify-content-lg-end align-content-center">
-                                <li class="current-menu-item"><a href="index.html">Home</a></li>
-                                <li><a href="about.html">About us</a></li>
-                                <li><a href="causes.html">Causes</a></li>
-                                <li><a href="portfolio.html">Gallery</a></li>
-                                <li><a href="news.html">News</a></li>
-                                <li><a href="contact.html">Contact</a></li>
-                            </ul>
-                        </nav><!-- .site-navigation -->
-
-                        <div class="hamburger-menu d-lg-none">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </div><!-- .hamburger-menu -->
-                    </div><!-- .col -->
-                </div><!-- .row -->
-            </div><!-- .container -->
-        </div><!-- .nav-bar -->
-    </header><!-- .site-header -->
-
-    <div class="page-header">
+      <div class="top-header-bar">
         <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <h1>Portfolio</h1>
+            <div class="row flex-wrap justify-content-center justify-content-lg-between align-items-lg-center">
+                <div class="col-12 col-lg-8 d-none d-md-flex flex-wrap justify-content-center justify-content-lg-start mb-3 mb-lg-0">
+                    <div class="header-bar-email">
+                        MAIL: <i class="fa fa-envelope"></i> <a>lesheltergh@gmail.com</a>
+                    </div><!-- .header-bar-email -->
+
+                    <div class="header-bar-text">
+                      <p>PHONE: <i class="fa fa-phone"></i> +233 53 044 9325 <i class="fa-brands fa-whatsapp"></i></p>
+                  </div><!-- .header-bar-text -->
+                </div><!-- .col -->
+
+                <div class="col-12 col-lg-4 mt-1 mb-1 d-flex flex-wrap justify-content-center justify-content-lg-end align-items-center">
+                  <div class="top-button donate-btn" data-modal="donateModal1">
+                      <a href="#">Donate <i class="fa-solid fa-hand-holding-heart"></i></a>
+                  </div><!-- .donate-btn -->
                 </div><!-- .col -->
             </div><!-- .row -->
         </div><!-- .container -->
-    </div><!-- .page-header -->
+    </div><!-- .top-header-bar -->
 
-    <div class="portfolio-wrap">
+      <!-- logo & navs -->
+      <div class="nav-bar">
         <div class="container">
-            <div class="row portfolio-container">
-                <div class="col-12 col-md-6 col-lg-4 portfolio-item">
-                    <div class="portfolio-cont">
-                        <a href="#"><img src="images/a.jpg" alt=""></a>
+          <div class="row">
+            <div class="col-12 d-flex flex-wrap justify-content-between mb-2 align-items-center">
+              <div class="site-branding d-flex align-items-center">
+                <a class="d-block" href="index.html" rel="home"><img class="d-block" src="/images/Logo.png" href="index.html" alt="logo"></a>
+              </div><!-- .site-branding -->
+  
+              <nav  class="site-navigation d-flex justify-content-end align-items-center">
+                <ul class="d-flex flex-column flex-lg-row justify-content-lg-end align-content-center">
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="about.html">About us</a></li>
+                  <li><a href="Projects.html">Projects</a></li>
+                  <li class="current-menu-item"><a href="portfolio.html">Portfolio</a></li>
+                  <li><a href="contact.html">Contact</a></li>
+                </ul>
+              </nav><!-- .site-navigation -->
+  
+              <div class="hamburger-menu d-lg-none">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+              </div><!-- .hamburger-menu -->
+            </div><!-- .col -->
+          </div><!-- .row -->
+        </div><!-- .container -->
+      </div><!-- .nav-bar -->
+    </header><!-- .site-header -->
+  
+    <div class="page-header">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <h1>Portfolio</h1>
+          </div>
+          <!-- .col -->
+        </div>
+        <!-- .row -->
+      </div>
+      <!-- .container -->
+    </div>
+    <!-- .page-header -->
 
-                        <h3 class="entry-title"><a href="#">Toys for Children Campaign</a></h3>
-                        <h4>2018 Causes</h4>
-                    </div>
-                </div>
+    <!-- Modal for Donating 1 -->
+    <div id="donateModal1" class="modal">
+      <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <img
+          src="images/Logo.png"
+          style="height: 80px; width: 250px"
+        />
+        <!-- <p>Here are the details for making your donation:</p> -->
 
-                <div class="col-12 col-md-6 col-lg-3 portfolio-item">
-                    <div class="portfolio-cont">
-                        <a href="#"><img src="images/b.jpg" alt=""></a>
+        <div class="donation-details">
+          <h4>Mobile Money (MOMO) Details</h4>
+          <div class="momo-details">
+            <div class="momo-item">
+              <img
+                src="images/mtnlogo.png"
+                alt="MTN Mobile Money"
+                class="momo-logo"
+              />
+              <p><strong>Name:</strong> Le Shelter Foundation</p>
 
-                        <h3 class="entry-title"><a href="#">Toys for Children Campaign</a></h3>
-                        <h4>2018 Causes</h4>
-                    </div>
-                </div>
+              <p><strong>Mobile Money Number:</strong> 0530449325</p>
 
-                <div class="col-12 col-md-6 col-lg-5 portfolio-item">
-                    <div class="portfolio-cont">
-                        <a href="#"><img src="images/c.jpg" alt=""></a>
-
-                        <h3 class="entry-title"><a href="#">Water for Children AID</a></h3>
-                        <h4>2018 Causes</h4>
-                    </div>
-                </div>
-
-                <div class="col-12 col-md-6 col-lg-5 portfolio-item">
-                    <div class="portfolio-cont">
-                        <a href="#"><img src="images/d.jpg" alt=""></a>
-
-                        <h3 class="entry-title"><a href="#">Water for Children AID</a></h3>
-                        <h4>2018 Causes</h4>
-                    </div>
-                </div>
-
-                <div class="col-12 col-md-6 col-lg-3 mt-48 portfolio-item">
-                    <div class="portfolio-cont">
-                        <a href="#"><img src="images/e.jpg" alt=""></a>
-
-                        <h3 class="entry-title"><a href="#">Toys for Children Campaign</a></h3>
-                        <h4>2018 Causes</h4>
-                    </div>
-                </div>
-
-                <div class="col-12 col-md-6 col-lg-4 mt-48 portfolio-item">
-                    <div class="portfolio-cont">
-                        <a href="#"><img src="images/f.jpg" alt=""></a>
-
-                        <h3 class="entry-title"><a href="#">Toys for Children Campaign</a></h3>
-                        <h4>2018 Causes</h4>
-                    </div>
-                </div>
-
-                <div class="col-12 col-md-6 col-lg-3 mt-72 portfolio-item">
-                    <div class="portfolio-cont">
-                        <a href="#"><img src="images/g.jpg" alt=""></a>
-
-                        <h3 class="entry-title"><a href="#">Toys for Children Campaign</a></h3>
-                        <h4>2018 Causes</h4>
-                    </div>
-                </div>
-
-                <div class="col-12 col-md-6 col-lg-6 mt-72 portfolio-item">
-                    <div class="portfolio-cont">
-                        <a href="#"><img src="images/h.jpg" alt=""></a>
-
-                        <h3 class="entry-title"><a href="#">Water for Children AI</a>D</h3>
-                        <h4>2018 Causes</h4>
-                    </div>
-                </div>
-
-                <div class="col-12 col-md-6 col-lg-3 mt-72 portfolio-item">
-                    <div class="portfolio-cont">
-                        <a href="#"><img src="images/i.jpg" alt=""></a>
-
-                        <h3 class="entry-title"><a href="#">Toys for Children Campaign</a></h3>
-                        <h4>2018 Causes</h4>
-                    </div>
-                </div>
-
-                <div class="col-12 col-md-6 col-lg-4 portfolio-item">
-                    <div class="portfolio-cont">
-                        <a href="#"><img src="images/a.jpg" alt=""></a>
-
-                        <h3 class="entry-title"><a href="#">Toys for Children Campaign</a></h3>
-                        <h4>2018 Causes</h4>
-                    </div>
-                </div>
-
-                <div class="col-12 col-md-6 col-lg-3 portfolio-item">
-                    <div class="portfolio-cont">
-                        <a href="#"><img src="images/b.jpg" alt=""></a>
-
-                        <h3 class="entry-title"><a href="#">Toys for Children Campaign</a></h3>
-                        <h4>2018 Causes</h4>
-                    </div>
-                </div>
-
-                <div class="col-12 col-md-6 col-lg-5 portfolio-item">
-                    <div class="portfolio-cont">
-                        <a href="#"><img src="images/c.jpg" alt=""></a>
-
-                        <h3 class="entry-title"><a href="#">Water for Children AID</a></h3>
-                        <h4>2018 Causes</h4>
-                    </div>
-                </div>
-
-                <div class="col-12 col-md-6 col-lg-5 portfolio-item">
-                    <div class="portfolio-cont">
-                        <a href="#"><img src="images/d.jpg" alt=""></a>
-
-                        <h3 class="entry-title"><a href="#">Water for Children AID</a></h3>
-                        <h4>2018 Causes</h4>
-                    </div>
-                </div>
-
-                <div class="col-12 col-md-6 col-lg-3 mt-48 portfolio-item">
-                    <div class="portfolio-cont">
-                        <a href="#"><img src="images/e.jpg" alt=""></a>
-
-                        <h3 class="entry-title"><a href="#">Toys for Children Campaign</a></h3>
-                        <h4>2018 Causes</h4>
-                    </div>
-                </div>
-
-                <div class="col-12 col-md-6 col-lg-4 mt-48 portfolio-item">
-                    <div class="portfolio-cont">
-                        <a href="#"><img src="images/f.jpg" alt=""></a>
-
-                        <h3 class="entry-title"><a href="#">Toys for Children Campaign</a></h3>
-                        <h4>2018 Causes</h4>
-                    </div>
-                </div>
-
-                <div class="col-12 col-md-6 col-lg-3 mt-72 portfolio-item">
-                    <div class="portfolio-cont">
-                        <a href="#"><img src="images/g.jpg" alt=""></a>
-
-                        <h3 class="entry-title"><a href="#">Toys for Children Campaign</a></h3>
-                        <h4>2018 Causes</h4>
-                    </div>
-                </div>
-
-                <div class="col-12 col-md-6 col-lg-6 mt-72 portfolio-item">
-                    <div class="portfolio-cont">
-                        <a href="#"><img src="images/h.jpg" alt=""></a>
-
-                        <h3 class="entry-title"><a href="#">Water for Children AI</a>D</h3>
-                        <h4>2018 Causes</h4>
-                    </div>
-                </div>
-
-                <div class="col-12 col-md-6 col-lg-3 mt-72 portfolio-item">
-                    <div class="portfolio-cont">
-                        <a href="#"><img src="images/i.jpg" alt=""></a>
-
-                        <h3 class="entry-title"><a href="#">Toys for Children Campaign</a></h3>
-                        <h4>2018 Causes</h4>
-                    </div>
-                </div>
+              <p><strong>Merchant ID:</strong> 440792</p>
             </div>
+          </div>
+          <h4>Other Items to donate</h4>
+          <div class="momo-details">
+            <div class="momo-item">
+              <img
+                src="images/food-donation.png"
+                alt="MTN Mobile Money"
+                class="momo-logo"
+              />
+              <p>Food items</p>
+              <p>Cloths</p>
+              <p>Stationary</p>
+              <p>Cloths</p>
+              <p>Toiletries etc.</p>
+            </div>
+            <div class="other-items-btn">
+              <a href="contact.html" class="primary-button donate-btn"
+                >Click Here</a
+              >
+            </div>
+          </div>
+        </div>
+        <p>🤝 Thank you for your support 🤗</p>
+      </div>
+    </div>
 
-            <div class="row">
-                <div class="col-12 d-flex justify-content-center mt-72">
-                    <a href="#" class="btn gradient-bg load-more-btn">Load More</a>
+
+    <div class="site-wrap">
+
+        <div class="site-mobile-menu">
+          <div class="site-mobile-menu-header">
+            <div class="site-mobile-menu-close mt-3">
+              <span class="icon-close2 js-menu-toggle"></span>
+            </div>
+          </div>
+          <div class="site-mobile-menu-body"></div>
+        </div>
+      </div>
+    </div>
+        
+    
+    <div class="container">
+        <div class="row">
+            <div class="site-section"  data-aos="fade">
+                <div class="container-fluid">
+                    <div class="container">
+                        <div class="row mt-3">
+                            <div class="row" id="lightgallery">
+                            <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3 item" data-aos="fade" data-src="images/big-images/1.jpg" data-sub-html="<h4>Fading Light</h4><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor doloremque hic excepturi fugit, sunt impedit fuga tempora, ad amet aliquid?</p>">
+                                <a href="#"><img src="/images/1.jpg" alt="IMage" class="img-fluid"></a>
+                            </div>
+                            <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3 item" data-aos="fade" data-src="images/big-images/2.jpg" data-sub-html="<h4>Fading Light</h4><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam omnis quaerat molestiae, praesentium. Ipsam, reiciendis. Aut molestiae animi earum laudantium.</p>">
+                                <a href="#"><img src="/images/2.jpg" alt="IMage" class="img-fluid"></a>
+                            </div>
+                            <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3 item" data-aos="fade" data-src="images/big-images/3.jpg" data-sub-html="<h4>Fading Light</h4><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem reiciendis, dolorum illo temporibus culpa eaque dolore rerum quod voluptate doloribus.</p>">
+                                <a href="#"><img src="/images/3.jpg" alt="IMage" class="img-fluid"></a>
+                            </div>
+                            <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3 item" data-aos="fade" data-src="images/big-images/4.jpg" data-sub-html="<h4>Fading Light</h4><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim perferendis quae iusto omnis praesentium labore tempore eligendi quo corporis sapiente.</p>">
+                                <a href="#"><img src="/images/15.jpg" alt="IMage" class="img-fluid"></a>
+                            </div>
+                            <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3 item" data-aos="fade" data-src="images/big-images/5.jpg" data-sub-html="<h4>Fading Light</h4><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, voluptatum voluptate tempore aliquam, dolorem distinctio. In quas maiores tenetur sequi.</p>">
+                                <a href="#"><img src="/images/20.jpg" alt="IMage" class="img-fluid"></a>
+                            </div>
+                            <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3 item" data-aos="fade" data-src="images/big-images/7.jpg" data-sub-html="<h4>Fading Light</h4><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum cum culpa blanditiis illum, voluptatum iusto quisquam mollitia debitis quaerat maiores?</p>">
+                                <a href="#"><img src="/images/34.jpg" alt="IMage" class="img-fluid"></a>
+                            </div>
+                            <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3 item" data-aos="fade" data-src="images/big-images/8.jpg" data-sub-html="<h4>Fading Light</h4><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores similique impedit possimus, laboriosam enim at placeat nihil voluptatibus voluptate hic!</p>">
+                                <a href="#"><img src="/images/53.jpg" alt="IMage" class="img-fluid"></a>
+                            </div>
+                            <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3 item" data-aos="fade" data-src="images/big-images/9.jpg" data-sub-html="<h4>Fading Light</h4><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam vitae sed cum mollitia itaque soluta laboriosam eaque sit ratione, aliquid.</p>">
+                                <a href="#"><img src="/images/49.jpg" alt="IMage" class="img-fluid"></a>
+                            </div>
+                            <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3 item" data-aos="fade" data-src="images/big-images/1.jpg" data-sub-html="<h4>Fading Light</h4><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor doloremque hic excepturi fugit, sunt impedit fuga tempora, ad amet aliquid?</p>">
+                                <a href="#"><img src="/images/1.jpg" alt="IMage" class="img-fluid"></a>
+                            </div>
+                            <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3 item" data-aos="fade" data-src="images/big-images/2.jpg" data-sub-html="<h4>Fading Light</h4><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam omnis quaerat molestiae, praesentium. Ipsam, reiciendis. Aut molestiae animi earum laudantium.</p>">
+                                <a href="#"><img src="/images/2.jpg" alt="IMage" class="img-fluid"></a>
+                            </div>
+                            <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3 item" data-aos="fade" data-src="images/big-images/3.jpg" data-sub-html="<h4>Fading Light</h4><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem reiciendis, dolorum illo temporibus culpa eaque dolore rerum quod voluptate doloribus.</p>">
+                                <a href="#"><img src="/images/3.jpg" alt="IMage" class="img-fluid"></a>
+                            </div>
+                            <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3 item" data-aos="fade" data-src="images/big-images/4.jpg" data-sub-html="<h4>Fading Light</h4><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim perferendis quae iusto omnis praesentium labore tempore eligendi quo corporis sapiente.</p>">
+                                <a href="#"><img src="/images/15.jpg" alt="IMage" class="img-fluid"></a>
+                            </div>
+                            <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3 item" data-aos="fade" data-src="images/big-images/5.jpg" data-sub-html="<h4>Fading Light</h4><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, voluptatum voluptate tempore aliquam, dolorem distinctio. In quas maiores tenetur sequi.</p>">
+                                <a href="#"><img src="/images/20.jpg" alt="IMage" class="img-fluid"></a>
+                            </div>
+                            <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3 item" data-aos="fade" data-src="images/big-images/7.jpg" data-sub-html="<h4>Fading Light</h4><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum cum culpa blanditiis illum, voluptatum iusto quisquam mollitia debitis quaerat maiores?</p>">
+                                <a href="#"><img src="/images/34.jpg" alt="IMage" class="img-fluid"></a>
+                            </div>
+                            <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3 item" data-aos="fade" data-src="images/big-images/8.jpg" data-sub-html="<h4>Fading Light</h4><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores similique impedit possimus, laboriosam enim at placeat nihil voluptatibus voluptate hic!</p>">
+                                <a href="#"><img src="/images/53.jpg" alt="IMage" class="img-fluid"></a>
+                            </div>
+                            <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3 item" data-aos="fade" data-src="images/big-images/9.jpg" data-sub-html="<h4>Fading Light</h4><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam vitae sed cum mollitia itaque soluta laboriosam eaque sit ratione, aliquid.</p>">
+                                <a href="#"><img src="/images/49.jpg" alt="IMage" class="img-fluid"></a>
+                            </div>
+                            <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3 item" data-aos="fade" data-src="images/big-images/1.jpg" data-sub-html="<h4>Fading Light</h4><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor doloremque hic excepturi fugit, sunt impedit fuga tempora, ad amet aliquid?</p>">
+                                <a href="#"><img src="/images/1.jpg" alt="IMage" class="img-fluid"></a>
+                            </div>
+                            <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3 item" data-aos="fade" data-src="images/big-images/2.jpg" data-sub-html="<h4>Fading Light</h4><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam omnis quaerat molestiae, praesentium. Ipsam, reiciendis. Aut molestiae animi earum laudantium.</p>">
+                                <a href="#"><img src="/images/2.jpg" alt="IMage" class="img-fluid"></a>
+                            </div>
+                            <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3 item" data-aos="fade" data-src="images/big-images/3.jpg" data-sub-html="<h4>Fading Light</h4><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem reiciendis, dolorum illo temporibus culpa eaque dolore rerum quod voluptate doloribus.</p>">
+                                <a href="#"><img src="/images/3.jpg" alt="IMage" class="img-fluid"></a>
+                            </div>
+                            <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3 item" data-aos="fade" data-src="images/big-images/4.jpg" data-sub-html="<h4>Fading Light</h4><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim perferendis quae iusto omnis praesentium labore tempore eligendi quo corporis sapiente.</p>">
+                                <a href="#"><img src="/images/15.jpg" alt="IMage" class="img-fluid"></a>
+                            </div>
+                            <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3 item" data-aos="fade" data-src="images/big-images/5.jpg" data-sub-html="<h4>Fading Light</h4><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, voluptatum voluptate tempore aliquam, dolorem distinctio. In quas maiores tenetur sequi.</p>">
+                                <a href="#"><img src="/images/20.jpg" alt="IMage" class="img-fluid"></a>
+                            </div>
+                            <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3 item" data-aos="fade" data-src="images/big-images/7.jpg" data-sub-html="<h4>Fading Light</h4><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum cum culpa blanditiis illum, voluptatum iusto quisquam mollitia debitis quaerat maiores?</p>">
+                                <a href="#"><img src="/images/34.jpg" alt="IMage" class="img-fluid"></a>
+                            </div>
+                            <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3 item" data-aos="fade" data-src="images/big-images/8.jpg" data-sub-html="<h4>Fading Light</h4><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores similique impedit possimus, laboriosam enim at placeat nihil voluptatibus voluptate hic!</p>">
+                                <a href="#"><img src="/images/53.jpg" alt="IMage" class="img-fluid"></a>
+                            </div>
+                            <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3 item" data-aos="fade" data-src="images/big-images/9.jpg" data-sub-html="<h4>Fading Light</h4><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam vitae sed cum mollitia itaque soluta laboriosam eaque sit ratione, aliquid.</p>">
+                                <a href="#"><img src="/images/49.jpg" alt="IMage" class="img-fluid"></a>
+                            </div>
+                            <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3 item" data-aos="fade" data-src="images/big-images/1.jpg" data-sub-html="<h4>Fading Light</h4><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor doloremque hic excepturi fugit, sunt impedit fuga tempora, ad amet aliquid?</p>">
+                                <a href="#"><img src="/images/1.jpg" alt="IMage" class="img-fluid"></a>
+                            </div>
+                            <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3 item" data-aos="fade" data-src="images/big-images/2.jpg" data-sub-html="<h4>Fading Light</h4><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam omnis quaerat molestiae, praesentium. Ipsam, reiciendis. Aut molestiae animi earum laudantium.</p>">
+                                <a href="#"><img src="/images/2.jpg" alt="IMage" class="img-fluid"></a>
+                            </div>
+                            <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3 item" data-aos="fade" data-src="images/big-images/3.jpg" data-sub-html="<h4>Fading Light</h4><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem reiciendis, dolorum illo temporibus culpa eaque dolore rerum quod voluptate doloribus.</p>">
+                                <a href="#"><img src="/images/3.jpg" alt="IMage" class="img-fluid"></a>
+                            </div>
+                            <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3 item" data-aos="fade" data-src="images/big-images/4.jpg" data-sub-html="<h4>Fading Light</h4><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim perferendis quae iusto omnis praesentium labore tempore eligendi quo corporis sapiente.</p>">
+                                <a href="#"><img src="/images/15.jpg" alt="IMage" class="img-fluid"></a>
+                            </div>
+                            <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3 item" data-aos="fade" data-src="images/big-images/5.jpg" data-sub-html="<h4>Fading Light</h4><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, voluptatum voluptate tempore aliquam, dolorem distinctio. In quas maiores tenetur sequi.</p>">
+                                <a href="#"><img src="/images/20.jpg" alt="IMage" class="img-fluid"></a>
+                            </div>
+                            <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3 item" data-aos="fade" data-src="images/big-images/7.jpg" data-sub-html="<h4>Fading Light</h4><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum cum culpa blanditiis illum, voluptatum iusto quisquam mollitia debitis quaerat maiores?</p>">
+                                <a href="#"><img src="/images/34.jpg" alt="IMage" class="img-fluid"></a>
+                            </div>
+                            <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3 item" data-aos="fade" data-src="images/big-images/8.jpg" data-sub-html="<h4>Fading Light</h4><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores similique impedit possimus, laboriosam enim at placeat nihil voluptatibus voluptate hic!</p>">
+                                <a href="#"><img src="/images/53.jpg" alt="IMage" class="img-fluid"></a>
+                            </div>
+                            <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3 item" data-aos="fade" data-src="images/big-images/9.jpg" data-sub-html="<h4>Fading Light</h4><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam vitae sed cum mollitia itaque soluta laboriosam eaque sit ratione, aliquid.</p>">
+                                <a href="#"><img src="/images/49.jpg" alt="IMage" class="img-fluid"></a>
+                            </div>
+                            <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3 item" data-aos="fade" data-src="images/big-images/1.jpg" data-sub-html="<h4>Fading Light</h4><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor doloremque hic excepturi fugit, sunt impedit fuga tempora, ad amet aliquid?</p>">
+                                <a href="#"><img src="/images/1.jpg" alt="IMage" class="img-fluid"></a>
+                            </div>
+                            <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3 item" data-aos="fade" data-src="images/big-images/2.jpg" data-sub-html="<h4>Fading Light</h4><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam omnis quaerat molestiae, praesentium. Ipsam, reiciendis. Aut molestiae animi earum laudantium.</p>">
+                                <a href="#"><img src="/images/2.jpg" alt="IMage" class="img-fluid"></a>
+                            </div>
+                            <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3 item" data-aos="fade" data-src="images/big-images/3.jpg" data-sub-html="<h4>Fading Light</h4><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem reiciendis, dolorum illo temporibus culpa eaque dolore rerum quod voluptate doloribus.</p>">
+                                <a href="#"><img src="/images/3.jpg" alt="IMage" class="img-fluid"></a>
+                            </div>
+                            <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3 item" data-aos="fade" data-src="images/big-images/4.jpg" data-sub-html="<h4>Fading Light</h4><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim perferendis quae iusto omnis praesentium labore tempore eligendi quo corporis sapiente.</p>">
+                                <a href="#"><img src="/images/15.jpg" alt="IMage" class="img-fluid"></a>
+                            </div>
+                            <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3 item" data-aos="fade" data-src="images/big-images/5.jpg" data-sub-html="<h4>Fading Light</h4><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, voluptatum voluptate tempore aliquam, dolorem distinctio. In quas maiores tenetur sequi.</p>">
+                                <a href="#"><img src="/images/20.jpg" alt="IMage" class="img-fluid"></a>
+                            </div>
+                            <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3 item" data-aos="fade" data-src="images/big-images/7.jpg" data-sub-html="<h4>Fading Light</h4><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum cum culpa blanditiis illum, voluptatum iusto quisquam mollitia debitis quaerat maiores?</p>">
+                                <a href="#"><img src="/images/34.jpg" alt="IMage" class="img-fluid"></a>
+                            </div>
+                            <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3 item" data-aos="fade" data-src="images/big-images/8.jpg" data-sub-html="<h4>Fading Light</h4><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores similique impedit possimus, laboriosam enim at placeat nihil voluptatibus voluptate hic!</p>">
+                                <a href="#"><img src="/images/53.jpg" alt="IMage" class="img-fluid"></a>
+                            </div>
+                            <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3 item" data-aos="fade" data-src="images/big-images/9.jpg" data-sub-html="<h4>Fading Light</h4><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam vitae sed cum mollitia itaque soluta laboriosam eaque sit ratione, aliquid.</p>">
+                                <a href="#"><img src="/images/49.jpg" alt="IMage" class="img-fluid"></a>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+    </div>    
+
+
+    <!-- FOOTER -->
+    <!-- Footer Start -->
+    <div class="footer container-fluid  footer  mt-5 wow fadeIn" data-wow-delay="0.1s">
+      <div class="footer pt-2">
+        <div class="container ">
+          <div class="row">
+            <div class="col-12 col-lg-5 col-md-6">
+              <div class="footer-logo">
+                <a class="logo" href="index.html">
+                  <img src="/images/Logo.png" alt=""></a>
+              </div>
+              
+            </div>
+
+            <div class="col-12 col-lg-3 col-md-6 text-center text-md-start mb-md-0">
+              <div class="footer pt-2">
+                <div class="footext pt-3">
+                  <h6>
+                <p><i class="fa fa-map-marker me-2 "></i>Baatsona-Spintex</p>
+                <p><i class="fa fa-phone me-2"></i>+233 53 044 9325</p>
+                <p><i class="fa fa-envelope me-2"></i>lesheltergh@gmail.com</p>
+                  </h6>
+                  
+                </div>
+                
+              </div>
+            </div>
+            
+            <div class="col-12 col-lg-4 col-md-12 text-center text-md-start mb-3 mb-md-0">
+              <div class="footer pt-2">
+                <div>
+                  <ul class="footer-social">
+                    <strong>
+                    <li><h1><a class="footer-icon" href="https://www.facebook.com/profile.php?id=100067770571763" target="_blank" rel="facebook"><i class="fab fa-facebook"></i></a></h1></li>
+                    <li><h1><a class="footer-icon" href="https://www.tiktok.com/@le.shelter.founda?_t=ZM-8sl65FqR7XZ&_r=1" target="_blank" rel="tiktok" ><i class="fab fa-tiktok"></i></a></h1></li>
+                    <li><h1><a class="footer-icon" href="https://x.com/le_shelter?t=dWlkQidVKnRSYGSbFpbjHg&s=09" target="_blank" rel="twitter"><i class="fa fa-twitter"></i></a></h1></li>
+                    <li><h1><a class="footer-icon" href="https://www.instagram.com/le.shelter.foundation?igsh=bGxneno2OTN5NjF5" target="_blank" rel="instagram"><i class="fab fa-instagram"></i></a></h1></li>
+                    </strong>
+                  </ul>
+                </div>
+                
+                
+                  <form class="footer-volunteer">
+                    <button class="footer-button">
+                      <h6 class="mt-2"><strong><a href="https://docs.google.com/forms/d/e/1FAIpQLSf8BNb_TOu1TX99yPvh-6kXlTA_dcG3nNBWbJJK5OmTPgmAxQ/viewform?pli=1" target="_blank" >
+                        ❤️ Become A Volunteer ❤️</a></strong></h6>
+                    </button>
+                  </form>
+              </div>
+            </div>
+          </div>
+          <div class="container-fluid copyright">
+            <div class="container pt-2">
+              <div class="row">
+                <div class="col-md-6 text-center text-md-start ">
+                  <div class="footer-copyright">
+                    <span>
+                      Copyright &copy;<script>document.write(new Date().getFullYear());</script> |
+                      All rights reserved by Le Shelter Foundation <i class="fa fa-globe" aria-hidden="true"></i></a>
+                    </span>
+                  </div>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                  <div class="footer-copyright">
+                    <span>
+                      Designed By <a href="#">IHAG <i class="fa fa-hand-peace-o" aria-hidden="true"></i></a>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+  <!-- Footer End -->
+  
+    <!-- Bootstrap CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet"/>
 
-    <footer class="site-footer">
-        <div class="footer-widgets">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12 col-md-6 col-lg-3">
-                        <div class="foot-about">
-                            <h2><a class="foot-logo" href="#"><img src="images/foot-logo.png" alt=""></a></h2>
+    <!-- Bootstrap Bundle with Popper (for carousel controls) -->
+    <script src="js/bootstrap.bundle.min.js"></script>
 
-                            <p>Lorem ipsum dolor sit amet, con sectetur adipiscing elit. Mauris temp us vestib ulum mauris.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempus vestib ulum mauris.Lorem ipsum dolo.</p>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/jquery.collapsible.min.js"></script>
+    <script type="text/javascript" src="js/swiper.min.js"></script>
+    <script type="text/javascript" src="js/jquery.countdown.min.js"></script>
+    <script type="text/javascript" src="js/circle-progress.min.js"></script>
+    <script type="text/javascript" src="js/jquery.countTo.min.js"></script>
+    <script type="text/javascript" src="js/jquery.barfiller.js"></script>
+    <script type="text/javascript" src="js/custom.js"></script>
+    <script>
+      // Get all "Donate Now" buttons and modals
+      var donateBtns = document.querySelectorAll(".donate-btn");
+      var modals = document.querySelectorAll(".modal");
+      var closeBtns = document.querySelectorAll(".close-btn");
 
-                            <ul class="d-flex flex-wrap align-items-center">
-                                <li><a href="#"><i class="fa fa-pinterest-p"></i></a></li>
-                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-                                <li><a href="#"><i class="fa fa-behance"></i></a></li>
-                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                            </ul>
-                        </div><!-- .foot-about -->
-                    </div><!-- .col -->
+      // Loop through each button to add event listeners
+      donateBtns.forEach(function (button) {
+        button.addEventListener("click", function (event) {
+          var modalId = button.getAttribute("data-modal"); // Get the modal ID
+          var modal = document.getElementById(modalId); // Get the corresponding modal
+          modal.style.display = "block"; // Show the modal
+        });
+      });
+   
+      // Close modal when clicking on close button
+      closeBtns.forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          var modal = btn.closest(".modal");
+          modal.style.display = "none"; // Hide the modal
+        });
+      });
 
-                    <div class="col-12 col-md-6 col-lg-3 mt-5 mt-md-0">
-                        <h2>Useful Links</h2>
+      // Close modal when clicking outside of the modal
+      window.addEventListener("click", function (event) {
+        modals.forEach(function (modal) {
+          if (event.target === modal) {
+            modal.style.display = "none"; // Hide the modal if clicked outside
+          }
+        });
+      });
+    </script>
 
-                        <ul>
-                            <li><a href="#">Privacy Polticy</a></li>
-                            <li><a href="#">Become  a Volunteer</a></li>
-                            <li><a href="#">Donate</a></li>
-                            <li><a href="#">Testimonials</a></li>
-                            <li><a href="#">Causes</a></li>
-                            <li><a href="#">Portfolio</a></li>
-                            <li><a href="#">News</a></li>
-                        </ul>
-                    </div><!-- .col -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    document.getElementById("flyerModal").style.display = "none"; // Ensures it's hidden on load
+});
 
-                    <div class="col-12 col-md-6 col-lg-3 mt-5 mt-md-0">
-                        <div class="foot-latest-news">
-                            <h2>Latest News</h2>
+function openFlyerModal() {
+    document.getElementById("flyerModal").style.display = "flex";
+    document.getElementById("fullFlyer").src = document.querySelector(".flyer").src;
+}
 
-                            <ul>
-                                <li>
-                                    <h3><a href="#">A new cause to help</a></h3>
-                                    <div class="posted-date">MArch 12, 2018</div>
-                                </li>
+function closeFlyerModal() {
+    document.getElementById("flyerModal").style.display = "none";
+}
 
-                                <li>
-                                    <h3><a href="#">We love to help people</a></h3>
-                                    <div class="posted-date">MArch 12, 2018</div>
-                                </li>
+</script>
 
-                                <li>
-                                    <h3><a href="#">The new ideas for helping</a></h3>
-                                    <div class="posted-date">MArch 12, 2018</div>
-                                </li>
-                            </ul>
-                        </div><!-- .foot-latest-news -->
-                    </div><!-- .col -->
+<link href="Gallery/css/aos.css" rel="stylesheet"/>
+<!-- <link href="Gallery/css/bootstrap-datepicker.css" rel="stylesheet"/> -->
+<!-- <link href="Gallery/css/bootstrap.min.css" rel="stylesheet"/> -->
+<link href="Gallery/css/jquery-ui.css" rel="stylesheet"/>
+<link href="Gallery/css/lightgallery.min.css" rel="stylesheet"/>
+<link href="Gallery/css/magnific-popup.css" rel="stylesheet"/>
+<link href="Gallery/css/owl.carousel.min.css" rel="stylesheet"/>
+<link href="Gallery/css/owl.theme.default.min.css" rel="stylesheet"/>
+<link href="Gallery/css/swiper.css" rel="stylesheet"/>
+<!-- <link href="Gallery/css/style.css"stylesheet"/> -->
 
-                    <div class="col-12 col-md-6 col-lg-3 mt-5 mt-md-0">
-                        <div class="foot-contact">
-                            <h2>Contact</h2>
 
-                            <ul>
-                                <li><i class="fa fa-phone"></i><span>+45 677 8993000 223</span></li>
-                                <li><i class="fa fa-envelope"></i><span>office@template.com</span></li>
-                                <li><i class="fa fa-map-marker"></i><span>Main Str. no 45-46, b3, 56832, Los Angeles, CA</span></li>
-                            </ul>
-                        </div><!-- .foot-contact -->
 
-                        <div class="subscribe-form">
-                            <form class="d-flex flex-wrap align-items-center">
-                                <input type="email" placeholder="Your email">
-                                <input type="submit" value="send">
-                            </form><!-- .flex -->
-                        </div><!-- .search-widget -->
-                    </div><!-- .col -->
-                </div><!-- .row -->
-            </div><!-- .container -->
-        </div><!-- .footer-widgets -->
 
-        <div class="footer-bar">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <p class="m-0"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
-                    </div><!-- .col-12 -->
-                </div><!-- .row -->
-            </div><!-- .container -->
-        </div><!-- .footer-bar -->
-    </footer><!-- .site-footer -->
 
-    <script type='text/javascript' src='js/jquery.js'></script>
-    <script type='text/javascript' src='js/jquery.collapsible.min.js'></script>
-    <script type='text/javascript' src='js/swiper.min.js'></script>
-    <script type='text/javascript' src='js/jquery.countdown.min.js'></script>
-    <script type='text/javascript' src='js/circle-progress.min.js'></script>
-    <script type='text/javascript' src='js/jquery.countTo.min.js'></script>
-    <script type='text/javascript' src='js/jquery.barfiller.js'></script>
-    <script type='text/javascript' src='js/custom.js'></script>
+<script src="Gallery/js/jquery-3.3.1.min.js"></script>
+<script src="Gallery/js/jquery-migrate-3.0.1.min.js"></script>
+<script src="Gallery/js/jquery-ui.js"></script>
+<script src="Gallery/js/popper.min.js"></script>
+<script src="Gallery/js/bootstrap.min.js"></script>
+<script src="Gallery/js/owl.carousel.min.js"></script>
+<script src="Gallery/js/jquery.stellar.min.js"></script>
+<script src="Gallery/js/jquery.countdown.min.js"></script>
+<script src="Gallery/js/jquery.magnific-popup.min.js"></script>
+<script src="Gallery/js/bootstrap-datepicker.min.js"></script>
+<script src="Gallery/js/swiper.min.js"></script>
+<script src="Gallery/js/aos.js"></script>
+<script src="Gallery/js/picturefill.min.js"></script>
+<script src="Gallery/js/lightgallery-all.min.js"></script>
+<script src="Gallery/js/jquery.mousewheel.min.js"></script>
+<script src="Gallery/js/main.js"></script>
 
+<script>
+  $(document).ready(function(){
+    $('#lightgallery').lightGallery();
+  });
+</script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-23581568-13');
+</script>
+
+
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"904a32804c807312","version":"2025.1.0","serverTiming":{"name":{"cfExtPri":true,"cfL4":true,"cfSpeedBrain":true,"cfCacheStatus":true}},"token":"cd0b4b3a733644fc843ef0b185f98241","b":1}' crossorigin="anonymous"></script>
 </body>
+
 </html>
+  
+
