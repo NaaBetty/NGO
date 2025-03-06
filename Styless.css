@@ -730,7 +730,6 @@ body {
   .footer .footer-title {
     text-transform: capitalize;
     margin-top: 10px;
-    text-color: #666;
   }
   
   .footer .footext  p  {
@@ -1782,15 +1781,30 @@ background: linear-gradient(180deg, #14744F 0%, #3a9e8b 100%);
 
 }
 
-/* Close button */
-#flyerModal .close {
-    position: absolute;
-    top: 10px;
-    right: 15px;
-    font-size: 24px;
-    color: rgb(32, 244, 16);
-    cursor: pointer;
+
+@media screen and (max-width: 1024px) {
+    #flyerModal .modal-content {
+        width: 50%;
+        max-width: 60%;
+    }
 }
+
+
+@media screen and (max-width: 768px) {
+    #flyerModal .modal-content {
+        width: 70%;
+        max-width: 80%;
+    }
+}
+
+
+@media screen and (max-width: 480px) {
+    #flyerModal .modal-content {
+        width: 90%;
+        max-width: 95%;
+    }
+}
+
 .flyer-primary-button {
     position: relative;
     display: inline-block;
@@ -2164,10 +2178,6 @@ background: linear-gradient(180deg, #14744F 0%, #3a9e8b 100%);
     }
 }
 
-/* Animation */
-.testimonial-card:hover {
-    /* transform: translateY(-5px); */
-}
 
 /* Smooth transitions */
 .swiper-slide {
@@ -2502,9 +2512,27 @@ background: linear-gradient(180deg, #14744F 0%, #3a9e8b 100%);
     outline: none;
 }
 /*--------------------------------------------------------------
-# Causes
+# Projects page
 --------------------------------------------------------------*/
-.causes-page .page-header {
+
+.featured-cause .row{
+    padding: 20px 10px;
+    text-align: justify;
+}
+
+/* Title Styling */
+.featured-cause .entry-title {
+    text-align: justify;
+    margin-bottom: 20px;
+    
+}
+
+.project-container{
+    margin: 30px;
+
+}
+
+/* .causes-page .page-header {
     background: url(images/causes-bg.jpg) no-repeat center;
 }
 
@@ -2540,7 +2568,7 @@ background: linear-gradient(180deg, #14744F 0%, #3a9e8b 100%);
     padding-right: 24px;
     margin-top: 60px;
     line-height: 1.6;
-    color: #fff;
+    color: #e60c0c;
 }
 
 .causes-page .highlighted-cause .entry-title::before {
@@ -2548,7 +2576,7 @@ background: linear-gradient(180deg, #14744F 0%, #3a9e8b 100%);
 }
 
 .causes-page .highlighted-cause .entry-content {
-    font-size: 14px;
+    font-size: 64px;
     line-height: 2;
     color: #edf3f5;
 }
@@ -2583,7 +2611,7 @@ background: linear-gradient(180deg, #14744F 0%, #3a9e8b 100%);
     padding: 5rem 2rem;
     background-color: var(--background-color);
 }
-
+ */
 
 /* Event Poster Styles */
 .event-poster {
@@ -2591,9 +2619,6 @@ background: linear-gradient(180deg, #14744F 0%, #3a9e8b 100%);
     overflow: hidden;
 }
 
-/* .event-poster:hover {
-    transform: translateY(-10px);
-} */
 
 .poster-image {
     /* width: 100px;
@@ -2755,7 +2780,7 @@ background: linear-gradient(180deg, #14744F 0%, #3a9e8b 100%);
 }
 
 .contact-page-wrap .entry-content p {
-    margin-top: 20px;
+    margin: 30px;
     font-size: 16px;
     text-align: justify;
     color: #929191;
@@ -2778,7 +2803,9 @@ background: linear-gradient(180deg, #14744F 0%, #3a9e8b 100%);
 }
 
 .contact-page-wrap .entry-content ul.contact-info {
-    margin: 32px 0 0;
+    /* margin: 32px 0 0; */
+    margin-left: 30px;
+    margin-top: 20px;
 }
 
 .contact-page-wrap .entry-content ul.contact-info li {
