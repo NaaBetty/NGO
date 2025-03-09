@@ -198,20 +198,24 @@
                 </div><!-- .col -->
   
                 <div class="col-12 col-lg-7">
-                    <form class="contact-form" action="https://formspree.io/f/xpwpadow"
-                    method="POST">
-                        <input type="text" placeholder="Name">
-                        <input type="email" placeholder="Email">
-                        <input type="tel" placeholder="Phone Number">
-                        <input type="text" placeholder="Subject">
-                        <textarea rows="10" cols="6" placeholder="Messages"></textarea>
-  
-                        <span>
-                            <input class="btn gradient-bg" type="submit" value="Submit">
-                        </span>
-                    </form><!-- .contact-form -->
-  
-                </div><!-- .col -->
+                  <form class="contact-form" id="contactForm" action="https://formspree.io/f/xpwpadow" method="POST">
+                      <input type="text" name="name" placeholder="Name" required>
+                      <input type="email" name="email" placeholder="Email" required>
+                      <input type="tel" name="phone" placeholder="Phone Number">
+                      <input type="text" name="subject" placeholder="Subject">
+                      <textarea name="message" rows="10" cols="6" placeholder="Message" required></textarea>
+              
+                      <input type="hidden" name="_subject" value="New Contact Form Submission">
+              
+                      <span>
+                          <input class="btn gradient-bg" type="submit" value="Submit Form">
+                      </span>
+                  </form>
+              
+                  <p id="successMessage" style="display: none; color: green; margin-top: 10px;">
+                      Thank you! Your message has been sent successfully.
+                  </p>
+              </div><!-- .col -->
   
               </div><!-- .row -->
         </div><!-- .container -->
@@ -358,5 +362,31 @@ function closeFlyerModal() {
 }
 
 </script>
+
+
+<script>
+  document.getElementById("contactForm").addEventListener("submit", function(event) {
+      event.preventDefault(); 
+      var form = this;
+      var formData = new FormData(form);
+  
+      fetch(form.action, {
+          method: form.method,
+          body: formData,
+          headers: {
+              "Accept": "application/json"
+          }
+      }).then(response => {
+          if (response.ok) {
+              form.reset(); 
+              document.getElementById("successMessage").style.display = "block";
+          } else {
+              alert("Oops! Something went wrong. Please try again.");
+          }
+      }).catch(error => {
+          alert("There was a problem submitting your form.");
+      });
+  });
+  </script>
   </body>
 </html>
