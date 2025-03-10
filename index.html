@@ -187,7 +187,7 @@
       <div class="modal-content">
         <span class="close-btn">&times;</span>
         <img
-          src="images/Logo.png"
+          src="images/Logo.png" alt="1"
           style="height: 80px; width: 250px"
         />
         <!-- <p>Here are the details for making your donation:</p> -->
@@ -238,7 +238,7 @@
         <div class="row align-items-end">
           <div class="col-12 col-lg-5">
             <!-- Wrap the entire content inside an anchor tag -->
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSf8BNb_TOu1TX99yPvh-6kXlTA_dcG3nNBWbJJK5OmTPgmAxQ/viewform?pli=1" target="_blank"
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSf8BNb_TOu1TX99yPvh-6kXlTA_dcG3nNBWbJJK5OmTPgmAxQ/viewform?pli=1" target="_blank" rel="noopener noreferrer"
               class="icon-box-link">
               <div class="icon-box ">
                 <figure class="d-flex justify-content-center">
@@ -381,7 +381,7 @@
               
               <div id="flyerModal" class="modal">
                 <span class="close" onclick="closeFlyerModal()">&times;</span>
-                <img class="modal-content" id="fullFlyer">
+                <img class="modal-content" id="fullFlyer" alt="">
             </div>
                 <div class="cause-content-wrap">
                   <header
@@ -688,10 +688,10 @@
                 <div>
                   <ul class="footer-social">
                     <strong>
-                    <li><h1><a class="footer-icon" href="https://www.facebook.com/profile.php?id=100067770571763" target="_blank" rel="facebook"><i class="fab fa-facebook"></i></a></h1></li>
-                    <li><h1><a class="footer-icon" href="https://www.tiktok.com/@le.shelter.founda?_t=ZM-8sl65FqR7XZ&_r=1" target="_blank" rel="tiktok" ><i class="fab fa-tiktok"></i></a></h1></li>
-                    <li><h1><a class="footer-icon" href="https://x.com/le_shelter?t=dWlkQidVKnRSYGSbFpbjHg&s=09" target="_blank" rel="twitter"><i class="fa fa-twitter"></i></a></h1></li>
-                    <li><h1><a class="footer-icon" href="https://www.instagram.com/le.shelter.foundation?igsh=bGxneno2OTN5NjF5" target="_blank" rel="instagram"><i class="fab fa-instagram"></i></a></h1></li>
+                    <li><h1><a class="footer-icon" href="https://www.facebook.com/profile.php?id=100067770571763" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i></a></h1></li>
+                    <li><h1><a class="footer-icon" href="https://www.tiktok.com/@le.shelter.founda?_t=ZM-8sl65FqR7XZ&_r=1" target="_blank" rel="noopener noreferrer"><i class="fab fa-tiktok"></i></a></h1></li>
+                    <li><h1><a class="footer-icon" href="https://x.com/le_shelter?t=dWlkQidVKnRSYGSbFpbjHg&s=09" target="_blank" rel="noopener noreferrer"><i class="fa fa-twitter"></i></a></h1></li>
+                    <li><h1><a class="footer-icon" href="https://www.instagram.com/le.shelter.foundation?igsh=bGxneno2OTN5NjF5" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a></h1></li>
                     </strong>
                   </ul>
                 </div>
@@ -699,7 +699,7 @@
                 
                   <form class="footer-volunteer">
                     <button class="footer-button">
-                      <h6 class="mt-2"><strong><a href="https://docs.google.com/forms/d/e/1FAIpQLSf8BNb_TOu1TX99yPvh-6kXlTA_dcG3nNBWbJJK5OmTPgmAxQ/viewform?pli=1" target="_blank" rel="">
+                      <h6 class="mt-2"><strong><a href="https://docs.google.com/forms/d/e/1FAIpQLSf8BNb_TOu1TX99yPvh-6kXlTA_dcG3nNBWbJJK5OmTPgmAxQ/viewform?pli=1" target="_blank" rel="noopener noreferrer">
                         ❤️ Become A Volunteer ❤️</a></strong></h6>
                     </button>
                   </form>
@@ -792,6 +792,12 @@ function openFlyerModal() {
 function closeFlyerModal() {
     document.getElementById("flyerModal").style.display = "none";
 }
+
+
+document.querySelectorAll('a[target="_blank"]').forEach(link => {
+    link.setAttribute('rel', 'noopener noreferrer');
+});
+
 
 </script>
   </body>
