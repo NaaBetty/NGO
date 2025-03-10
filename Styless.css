@@ -2993,9 +2993,9 @@ background: linear-gradient(180deg, #14744F 0%, #3a9e8b 100%);
 /* Photo Viewer Grid */
 .photo-viewer {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 10px;
-    max-width: 500px;
+    max-width: 800px;
     margin: auto;
 }
 
