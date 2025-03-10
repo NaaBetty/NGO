@@ -2995,7 +2995,7 @@ background: linear-gradient(180deg, #14744F 0%, #3a9e8b 100%);
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
-    max-width: 600px;
+    max-width: 500px;
     margin: auto;
 }
 
