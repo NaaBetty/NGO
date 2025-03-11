@@ -1476,7 +1476,7 @@ background: linear-gradient(180deg, #14744F 0%, #3a9e8b 100%);
     position: relative;
     padding: 48px 0; 
     background-color: rgba(0, 0, 0, 0.385); /* Black background with 50% opacity */
-    background: url("images/1.jpg") no-repeat center center;
+    background: url("images/image1.webp") no-repeat center center;
     background-size: cover; 
     z-index: 0;
     display: flex; 
