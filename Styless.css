@@ -1688,14 +1688,8 @@ background: linear-gradient(180deg, #14744F 0%, #3a9e8b 100%);
     width: 246px;
     height: 308px;
     object-fit: cover;
-    /* width: 10%;  */
-    /* Make image take full width */
-    /* height: 10%; */
-    /* object-fit: contain; */
-    /* object-position: center; */
-    /* overflow: hidden; */
+    
 }
-
 .featured-cause .cause-content-wrap {
     width: calc(100% - 280px);
 }
@@ -1747,8 +1741,52 @@ background: linear-gradient(180deg, #14744F 0%, #3a9e8b 100%);
     font-size: 14px;
     color: #929191;
 }
+/* Base styles remain the same */
 
+/* More specific media query targeting mobile devices */
+@media screen and (max-width: 768px) {
+    /* Force the container to use column layout */
+    .featured-cause,
+    .upcoming-event-wrap {
+        display: flex !important;
+        flex-direction: column !important;
+    }
+    
+    /* Make both image and content take full width */
+    .featured-cause .cause-content-wrap,
+    .upcoming-event-wrap .event-content-wrap {
+        width: 100% !important;
+        margin-top: 20px;
+        padding-left: 0 !important;
+    }
+    
+    /* Ensure image container is full width */
+    .featured-cause .cause-image,
+    .upcoming-event-wrap .event-image {
+        width: 100% !important;
+        max-width: 100% !important;
+        float: none !important;
+    }
+    
+    /* Fix any potential flex issues */
+    .featured-cause > *,
+    .upcoming-event-wrap > * {
+        flex: 0 0 100% !important;
+    }
+}
 
+/* iPhone-specific fixes */
+@media screen and (max-width: 414px) {
+    /* Additional iPhone-specific adjustments */
+    .upcoming-event-wrap {
+        display: block !important;
+    }
+    
+    .upcoming-event-wrap .event-image {
+        display: block;
+        margin-bottom: 15px;
+    }
+}
 /* Modal container */
 #flyerModal {
     display: none;
@@ -1805,7 +1843,8 @@ background: linear-gradient(180deg, #14744F 0%, #3a9e8b 100%);
     }
 }
 
-.flyer-primary-button {
+ 
+/* .flyer-primary-button {
     position: relative;
     display: inline-block;
     padding: 0px 30px;
@@ -1821,10 +1860,10 @@ background: linear-gradient(180deg, #14744F 0%, #3a9e8b 100%);
     -webkit-transition: 0.6s all;
     transition: 0.6s all;
     margin-top: -26px;
-}
+} */
 
 /* Adding hover animation effect */
-.flyer-primary-button::after {
+/* .flyer-primary-button::after {
     content: "";
     position: absolute;
     top: 0;
@@ -1836,20 +1875,20 @@ background: linear-gradient(180deg, #14744F 0%, #3a9e8b 100%);
     transform: scale3d(6, 2, 1) rotate(135deg) translate(0, -150%);
     -webkit-transition: 0.6s all;
     transition: 0.6s all;
-}
+} */
 
 /* Apply the same effect on hover */
-.flyer-primary-button:hover::after, 
+/* .flyer-primary-button:hover::after, 
 .flyer-primary-button:focus::after {
     -webkit-transform: scale3d(6, 2, 1) rotate(135deg) translate(0, 100%);
     transform: scale3d(6, 2, 1) rotate(135deg) translate(0, 100%);
-}
+} */
 
-.flyer-primary-button:hover, 
+/* .flyer-primary-button:hover, 
 .flyer-primary-button:focus {
     color: #FFF;
     opacity: 1;
-}
+} */
 
 /*
 # Home Causes
