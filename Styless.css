@@ -1627,8 +1627,8 @@ background: linear-gradient(180deg, #14744F 0%, #3a9e8b 100%);
 }
 
 .event-content-wrap .posted-date a {
-    padding-right: 14px;
-    margin-right: 14px;
+    padding-right: 10px;
+    margin-right: 10px;
 }
 
 .event-content-wrap .posted-date a::after {
@@ -1976,7 +1976,7 @@ background: linear-gradient(180deg, #14744F 0%, #3a9e8b 100%);
 # Home Milestone
 --------------------------------*/
 .home-page-limestone {
-    padding: 50px 0;
+    /* padding: 50px 0; */
     margin: 30px;
 }
 
