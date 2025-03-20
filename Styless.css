@@ -1549,7 +1549,7 @@ background: linear-gradient(180deg, #14744F 0%, #3a9e8b 100%);
 # Upcoming Events
 --------------------------------*/
 .home-page-events {
-    padding: 96px 0;
+    /* padding: px 0; */
 }
 
 .section-heading .entry-title {
@@ -1661,7 +1661,7 @@ background: linear-gradient(180deg, #14744F 0%, #3a9e8b 100%);
 # Featured Cause
 --------------------------------*/
 .home-page-events {
-    padding: 20px 0;
+    /* padding: 20px 0; */
     margin: 30px;
 }
 
@@ -2024,10 +2024,9 @@ background: linear-gradient(180deg, #14744F 0%, #3a9e8b 100%);
     padding-bottom: 10px;
     line-height: 1.6;
     display: flex;
-    justify-content: flex-end; /* Centers horizontally */
-    align-items: center;
-    height: 100%; 
-
+    justify-content: center; /* Centers horizontally */
+   align-items: center;
+   
 }
 
 .home-page-limestone .section-heading p {
@@ -2038,22 +2037,22 @@ background: linear-gradient(180deg, #14744F 0%, #3a9e8b 100%);
     width: 100%; /* Make image take full width */
     height: 100%;
     object-position: center;
-    object-fit: cover; /* Makes sure images cover the space without distorting */
+    object-fit: contain; /* Makes sure images cover the space without distorting */
     height: 200px;
 
 }
 .home-page-limestone .carousel-item{
     position: relative;
     overflow: hidden;
-    height: 200px;
+    height: 100%;
 }
 .home-page-limestone .carousel-item img {
     width: 100%; /* Make image take full width */
     height: 100%;
     object-position: center;
-    height: 100%; /* Make the image fill the container height */
+    height: auto; /* Make the image fill the container height */
     width: auto; /* Maintain aspect ratio */
-    object-fit: cover; /* Ensures the image covers the container */
+    object-fit: contain; /* Ensures the image covers the container */
 }
 
 
@@ -2237,7 +2236,7 @@ background: linear-gradient(180deg, #14744F 0%, #3a9e8b 100%);
 }
 
 .about-page .page-header {
-    background: url(images/about-bg.jpg) no-repeat center;
+    background: url(images/header.jpg) no-repeat center;
     
 }
 
