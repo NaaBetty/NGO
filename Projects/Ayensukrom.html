@@ -170,7 +170,7 @@
           <main id="main" class="col-md-8 ">
             <div class="article causes-details">
               <div class="article-img mt-5">
-                <img src="../images/image16.webp" alt="" />
+                <img src="../images/ay5.jpg" alt="" />
               </div>
               <div class="article-content">
                 <h2 class="article-title"><strong>Ayensukrom M/A School</strong></h2> 
@@ -179,33 +179,39 @@
                   <li><i class="fa fa-map-marker" aria-hidden="true"></i> Samraboi</li>
                 </ul>
                 <p style="text-align: justify">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                  irure dolor in reprehenderit in voluptate velit esse cillum
-                  dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                  cupidatat non proident, sunt in culpa qui officia deserunt
-                  mollit anim id est laborum.
+                  Tucked away in the heart of Samraboi, a remote cocoa farming village in Ghana’s Western Region, 
+                  Ayensukrom M/A School has long stood as a symbol of perseverance amid adversity. 
+                  For years, students and teachers braved crumbling classroom walls, sat on broken desks, 
+                  and studied without basic learning materials-determined to pursue education against all odds. 
+                  The journey to school itself, over deeply eroded, unpaved roads, was a daily struggle. 
+                  Yet despite these overwhelming challenges, the spirit of this school community remained unbroken.
                 </p>
                 <p style="text-align: justify">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                  irure dolor in reprehenderit in voluptate velit esse cillum
-                  dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                  cupidatat non proident, sunt in culpa qui officia deserunt
-                  mollit anim id est laborum.
+                  That resilience was recently rewarded through a gesture of compassion and solidarity. 
+                  Thanks to a significant and timely donation from our dedicated partners, 
+                  Ayensukrom M/A School has begun to witness a long-overdue transformation-one that has renewed hope, restored dignity, 
+                  and reignited dreams marking a turning point in the school’s journey. 
+                  Additionally, students received new books, writing supplies, and other essential educational resources, 
+                  while teachers were equipped with improved teaching materials. 
+                  This intervention has brought more than just physical changes-it has restored confidence, motivation, 
+                  and a renewed sense of pride within the school. We extend our deepest gratitude to the donors whose generosity has brought lasting change to Ayensukrom M/A School. 
+                  Your support has not only improved a school’s infrastructure but uplifted an entire community.
+                </p>
+                <p style="text-align: justify">
+                  As we celebrate this incredible milestone, we invite others to join us in uplifting rural education across Ghana. 
+                  The journey to equity in education is long, but with every act of giving, 
+                  we take one step closer to a future where no child is left behind-no matter where they are born. 
+                  We extend our heartfelt gratitude to the donors whose kindness has touched the lives of so many. 
+                  Your support has not only changed a school-you have changed a community.
                 </p>
               </div>
 
               <!-- Lightbox -->
               <div class="photo-viewer">
-                <img src="../images/image38.webp" alt="Image 1" onclick="openLightbox(0)">
-                <img src="../images/image36.webp" alt="Image 2" onclick="openLightbox(1)">
-                <img src="../images/image20.webp" alt="Image 3" onclick="openLightbox(2)">
-                <img src="../images/image13.webp" alt="Image 4" onclick="openLightbox(3)">
+                <img src="../images/ay1.jpg" alt="Image 1" onclick="openLightbox(0)">
+                <img src="../images/ay6.jpg" alt="Image 2" onclick="openLightbox(1)">
+                <img src="../images/ay3.jpg" alt="Image 3" onclick="openLightbox(2)">
+                <img src="../images/ay2.jpg" alt="Image 4" onclick="openLightbox(3)">
               </div>
              
               <div id="lightbox" class="lightbox">
@@ -217,12 +223,12 @@
 
               <script>
                 const images = [
-                    "../images/image38.webp",
-                    "../images/image36.webp",
-                    "../images/image20.webp",
-                    "../images/image13.webp",
-                    "../images/image26.webp",
-                    "../images/image18.webp"
+                    "../images/ay1.jpg",
+                    "../images/ay6.jpg",
+                    "../images/ay3.jpg",
+                    "../images/ay2.jpg",
+                    "../images/ay4.jpg",
+                    "../images/ay5.jpg"
                 ];
 
                   let currentIndex = 0;
@@ -255,10 +261,21 @@
               <div class="mt-3">
                 <div class="social-links">
                   <a class="mt-1">SHARE:</a>
-                  <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn"><i class="fab fa-facebook-f"></i></a>
-                  <a href="https://www.tiktok.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn"><i class="fab fa-tiktok"></i></a>
-                  <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn"><i class="fa fa-twitter"></i></a>
-                  <a href="https://www.instagram.com" target="blank" class="social-icon" aria-label="Website"><i class="fab fa-instagram"></i></a>
+                  <a id="fb-share" class="social-icon" href="#" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                  <a id="twitter-share" class="social-icon" href="#" target="_blank" rel="noopener noreferrer" aria-label="X"><i class="fab fa-twitter"></i></a>
+                  <a id="linkedin-share" class="social-icon" href="#" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                  <a id="whatsapp-share" class="social-icon" href="#" target="_blank" rel="noopener noreferrer" aria-label="Whatsapp"><i class="fab fa-whatsapp"></i></a>
+
+                  <script>
+                    const currentURL = encodeURIComponent(window.location.href);
+                    const text = encodeURIComponent("Check out this amazing article!");
+                
+                    document.getElementById("fb-share").href = `https://www.facebook.com/sharer/sharer.php?u=${currentURL}`;
+                    document.getElementById("twitter-share").href = `https://twitter.com/intent/tweet?url=${currentURL}&text=${text}`;
+                    document.getElementById("linkedin-share").href = `https://www.linkedin.com/sharing/share-offsite/?url=${currentURL}`;
+                    document.getElementById("whatsapp-share").href = `https://api.whatsapp.com/send?text=${text}%20${currentURL}`;
+                  </script>
+                
                 </div>
               </div>
             </div>

@@ -264,10 +264,21 @@
               <div class="mt-3">
                 <div class="social-links">
                   <a class="mt-1">SHARE:</a>
-                  <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn"><i class="fab fa-facebook-f"></i></a>
-                  <a href="https://www.tiktok.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn"><i class="fab fa-tiktok"></i></a>
-                  <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn"><i class="fa fa-twitter"></i></a>
-                  <a href="https://www.instagram.com" target="blank" class="social-icon" aria-label="Website"><i class="fab fa-instagram"></i></a>
+                  <a id="fb-share" class="social-icon" href="#" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                  <a id="twitter-share" class="social-icon" href="#" target="_blank" rel="noopener noreferrer" aria-label="X"><i class="fab fa-twitter"></i></a>
+                  <a id="linkedin-share" class="social-icon" href="#" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                  <a id="whatsapp-share" class="social-icon" href="#" target="_blank" rel="noopener noreferrer" aria-label="Whatsapp"><i class="fab fa-whatsapp"></i></a>
+
+                  <script>
+                    const currentURL = encodeURIComponent(window.location.href);
+                    const text = encodeURIComponent("Check out this amazing article!");
+                
+                    document.getElementById("fb-share").href = `https://www.facebook.com/sharer/sharer.php?u=${currentURL}`;
+                    document.getElementById("twitter-share").href = `https://twitter.com/intent/tweet?url=${currentURL}&text=${text}`;
+                    document.getElementById("linkedin-share").href = `https://www.linkedin.com/sharing/share-offsite/?url=${currentURL}`;
+                    document.getElementById("whatsapp-share").href = `https://api.whatsapp.com/send?text=${text}%20${currentURL}`;
+                  </script>
+                
                 </div>
               </div>
             </div>
