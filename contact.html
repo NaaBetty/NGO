@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="apple-touch-icon" sizes="180x180" href="/images/icon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/images/icon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/images/icon/favicon-16x16.png">
-    <link rel="manifest" href="/images/icon/site.webmanifest">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/icon/favicon-16x16.png">
+    <link rel="manifest" href="images/icon/site.webmanifest">
     <title>Le Shelter Foundation</title>
 
     <!-- Required meta tags -->
@@ -72,7 +72,7 @@
           <div class="row">
             <div class="col-12 d-flex flex-wrap justify-content-between mb-2 align-items-center">
               <div class="site-branding d-flex align-items-center">
-                <a class="d-block" href="index.html" rel="home"><img class="d-block" src="/images/Logo.png" href="index.html" alt="logo"></a>
+                <a class="d-block" href="#" rel="home"><img class="d-block" src="images/Logo.png"  alt="logo"></a>
               </div><!-- .site-branding -->
   
               <nav  class="site-navigation d-flex justify-content-end align-items-center">
@@ -173,7 +173,8 @@
                     </header></div>
                     <div class="entry-content  mr-5">
                           
-                        <p>By fostering partnerships with local leaders, international organizations, and compassionate individuals, we continue to expand our reach and deepen our impact. We’d love to hear from you!</p>
+                        <p>By fostering partnerships with local leaders, international organizations, and compassionate individuals, we continue to expand our reach and deepen our impact. </p>
+                        <p>We’d love to hear from you!</p>
   
                         <p>If you’re interested in learning more about our work, collaborating with us, or supporting our mission, feel free to reach out. Together, we can make a meaningful difference in the lives of those we serve.</p>
                          
@@ -198,20 +199,24 @@
                 </div><!-- .col -->
   
                 <div class="col-12 col-lg-7">
-                    <form class="contact-form" action="https://formspree.io/f/xpwpadow"
-                    method="POST">
-                        <input type="text" placeholder="Name">
-                        <input type="email" placeholder="Email">
-                        <input type="tel" placeholder="Phone Number">
-                        <input type="text" placeholder="Subject">
-                        <textarea rows="10" cols="6" placeholder="Messages"></textarea>
-  
-                        <span>
-                            <input class="btn gradient-bg" type="submit" value="Submit">
-                        </span>
-                    </form><!-- .contact-form -->
-  
-                </div><!-- .col -->
+                  <form class="contact-form" id="contactForm" action="https://formspree.io/f/xpwpadow" method="POST">
+                      <input type="text" name="name" placeholder="Name" required>
+                      <input type="email" name="email" placeholder="Email" required>
+                      <input type="tel" name="phone" placeholder="Phone Number">
+                      <input type="text" name="subject" placeholder="Subject">
+                      <textarea name="message" rows="10" cols="6" placeholder="Message" required></textarea>
+              
+                      <input type="hidden" name="_subject" value="New Contact Form Submission">
+              
+                      <span>
+                          <input class="btn gradient-bg" type="submit" value="Submit Form">
+                      </span>
+                  </form>
+              
+                  <p id="successMessage" style="display: none; color: green; margin-top: 10px;">
+                      Thank you! Your message has been sent successfully.
+                  </p>
+              </div><!-- .col -->
   
               </div><!-- .row -->
         </div><!-- .container -->
@@ -228,7 +233,7 @@
             <div class="col-12 col-lg-5 col-md-6">
               <div class="footer-logo">
                 <a class="logo" href="index.html">
-                  <img src="/images/Logo.png" alt=""></a>
+                  <img src="images/Logo.png" alt=""></a>
               </div>
               
             </div>
@@ -358,5 +363,31 @@ function closeFlyerModal() {
 }
 
 </script>
+
+
+<script>
+  document.getElementById("contactForm").addEventListener("submit", function(event) {
+      event.preventDefault(); 
+      var form = this;
+      var formData = new FormData(form);
+  
+      fetch(form.action, {
+          method: form.method,
+          body: formData,
+          headers: {
+              "Accept": "application/json"
+          }
+      }).then(response => {
+          if (response.ok) {
+              form.reset(); 
+              document.getElementById("successMessage").style.display = "block";
+          } else {
+              alert("Oops! Something went wrong. Please try again.");
+          }
+      }).catch(error => {
+          alert("There was a problem submitting your form.");
+      });
+  });
+  </script>
   </body>
 </html>
