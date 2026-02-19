@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Le Shelter Foundation</title>
+  <meta name="description" content="Le Shelter Foundation provides equal educational opportunities for underprivileged children in rural Ghana through school supplies, mentorship, clean water access, and community support. Founded 2017 by Ruby Offeibea Adu."/>
+  <meta name="keywords" content="Le Shelter Foundation, rural education Ghana, donate school supplies, children charity, mentorship programs, Asiafo Amanfro, Asutsuare, Pokrom, etc"/>
+  <meta name="author" content="Le Shelter Foundation"/>
+  
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:title" content="Le Shelter Foundation - Equal Opportunity For All"/>
+  <meta property="og:description" content="Equal educational opportunities, school supplies, mentorship and hope for children in rural Ghana."/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://www.leshelterfoundation.org"/>
+  <meta property="og:image" content="images/icon/favicon-32x32.png"/>
+  <meta property="og:site_name" content="Le Shelter Foundation"/>
+
+  <!-- Tailwind CDN (for development – replace with built CSS in production) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/style.css">
+  
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/themify-icons.css" />  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="images/icon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/icon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/icon/favicon-16x16.png">
+  <link rel="manifest" href="images/icon/site.webmanifest">
+  <link rel="canonical" href="https://www.leshelterfoundation.org/index.html">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/add-to-calendar-button@2.13.5/dist/add-to-calendar-button.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/add-to-calendar-button@2.13.5/dist/add-to-calendar-button.min.js" async defer></script>
+  <script src="Javascript/eventtimer.js"></script>
+  
+  <title>Le Shelter Foundation - Equal Opportunity For All</title>
+
+</head>
+<body>
+
+  <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="fixed inset-0 bg-white/60 backdrop-blur-sm z-50 hidden flex items-center justify-center">
+        <div class="bg-white rounded-2xl p-8 max-w-sm w-full text-center space-y-6">
+            <button id="close-menu" class="absolute top-4 right-4 text-3xl font-bold text-gray-500">&times;</button>
+            <a href="index.html" class="nav-link block text-2xl">Home</a>
+            <a href="about.html" class="nav-link block text-2xl">About</a>
+            <a href="projects.html" class="nav-link block text-2xl">Projects</a>
+            <a href="shop.html" class="nav-link block text-2xl">Shop</a>
+            <a href="contact.html" class="nav-link active block text-2xl">Contact Us</a>
+            <button id="donate-btn-mobile" class="btn-primary inline-block px-10 py-4 rounded-xl text-lg font-bold w-full">Donate Now</button>
+        </div>
+    </div>
+
+  <!-- Donation Modal -->
+    <div id="donate-modal" class="donate-modal">
+      <div class="donate-modal-content relative">
+        <button id="close-donate-modal" class="donate-modal-close">&times;</button>
+            
+        <h2 class="text-3xl font-bold text-[var(--primary)] mb-2">Ways to Support Us</h2>
+        <p class="text-gray-700 mb-5 text-lg">Your generosity makes a direct impact on children's lives in rural Ghana. Choose how you'd like to help:</p>
+
+        <!-- Direct Donation -->
+        <div class="mb-3 pb-3 border-b border-orange-500">
+          <h3 class="text-xl font-bold text-[var(--primary)] mb-1">💝 Direct Donation</h3>
+          <p class="text-gray-700 mb-2 text-lg">Make a monetary contribution to support our programs.</p>
+          <h4>MTN Mobile Money (MOMO) Details;</h4>
+          <div class="flex  sm:flex-row gap-2 justify-left items-center mb-1">
+            <img src="images/mtnlogo.png" alt="MTN Mobile Money" class="h-20  w-auto"></p>
+            <ul>
+              <li><strong>Name:</strong> Le Shelter Foundation</li>
+              <li><strong>Mobile Money Number:</strong> 0530449325</li>
+              <li><strong>Merchant ID:</strong> 440792</li>
+            </ul>
+          </div>
+          <!-- <a href="donate.html" class="inline-block bg-[var(--primary)] text-white px-6 py-3 rounded-xl font-bold hover:bg-[var(--primary)]/90 transition">Donate Money Today</a> -->
+        </div>
+
+        <!-- Shop Support -->
+          <div class="mb-1 pb-1 ">
+            <h3 class="text-xl font-bold text-[var(--primary)] mb-1">🛍️ Shop & Support</h3>
+            <p class="text-gray-700 mb-2 text-lg">Purchase meaningful merchandise. 100% of profits goes to support our mission.</p>
+            <ul class="text-sm text-gray-600 mb-4 space-y-2">
+              <li>✓ Organic T-Shirts & Hoodies</li>
+              <li>✓ Canvas Tote Bags & Caps</li>
+              <li>✓ Coffee Mugs & Water Bottles</li>
+              <li>✓ Notebooks & Accessories</li>
+            </ul>
+            <a href="shop.html" class="inline-block bg-[var(--primary)] text-white px-6 py-3 rounded-xl font-bold hover:bg-[var(--primary)] transition">Browse Shop</a>
+          </div>
+      </div>
+    </div>
+
+  <!-- Header / Navigation -->
+    <header class="site-header">
+        <!-- Top Header Bar -->
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3 sm:py-2">
+            <div class="flex flex-col md:flex-row items-center justify-center md:justify-between gap-3 sm:gap-4">
+                <div class="flex items-center justify-center gap-2 w-full md:w-auto">
+                    <i class="fa fa-envelope text-[var(--secondary)]"></i>
+                    <p class="text-xs sm:text-sm md:text-base"><a href="mailto:lesheltergh@gmail.com" class=" hover:text-[var(--secondary)]">Lesheltergh@gmail.com</a></p>
+                </div>
+
+                <div class="flex items-center justify-center gap-2 w-full md:w-auto">
+                    <i class="fa fa-phone text-[var(--secondary)]"></i>
+                    <p class="text-xs sm:text-sm md:text-base"><a href="tel:+233530449325" class="text-xs sm:text-sm md:text-base hover:text-[var(--secondary)] transition">+233 53 044 9325</a></p>
+                </div>
+
+                <button id="donate-btn" class="border-2 border-orange-500 btn-primary px-6 sm:px-8 py-2 sm:py-3 rounded-xl font-bold shadow-lg hover:shadow-xl transition w-full sm:w-auto">Donate Now <i class="fa-solid fa-hand-holding-heart ml-2"></i></button>
+            </div>
+        </div>
+
+        <!-- Navigation -->
+        <nav class="max-w-7xl mx-auto px-5 sm:px-6 py-3 flex items-center justify-between">
+            <a href="index.html" class="block">
+                <img src="images/Logo.png" alt="Le Shelter Foundation" class="h-8 sm:h-5 md:h-10 w-auto">
+            </a>
+        
+            <div class="hidden md:flex items-center space-x-10">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="projects.html" class="nav-link">Projects</a>
+                <a href="shop.html" class="nav-link">Shop</a>
+                <a href="contact.html" class="nav-link active">Contact Us</a>
+            </div>
+            <button id="menu-btn" class="md:hidden text-3xl focus:outline-none text-[var(--primary)]">☰</button>
+        </nav>
+    </header>
+
+    <div class="home-page-welcome relative overflow-hidden ">
+      <div class="max-w-6xl mx-auto ">
+        <!-- Greyed-out background image -->
+        <img src="images/header.jpg" alt="Volunteers" class="relative inset-0  object-contain object-top brightness-80 opacity-80"aria-hidden="true"/>
+      </div>
+    </div>
+
+    
+    <!-- Contact Information -->
+  <section class="mt-2 bg-white">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid md:grid-cols-3 gap-10 ">
+        <!-- Location -->
+        <div class="p-5 rounded-2xl text-center card-hover">
+          <p class="text-3xl mb-2">📍</p>
+          <h3 class="text-2xl font-bold text-[var(--primary)] mb-2">Location</h3>
+          <p class="text-lg text-gray-700">Baatsona-Spintex<br/>Accra, Ghana</p>
+          <a href="https://www.google.com/maps/search/Baatsona-Spintex+Accra+Ghana" target="_blank" class="text-orange-500 font-bold hover:text-[var(--primary)] transition inline-block">View on Map →</a>
+        </div>
+
+        <!-- Phone -->
+        <div class="p-5 rounded-2xl text-center card-hover">
+          <p class="text-3xl mb-2">📱</p>
+          <h3 class="text-2xl font-bold text-[var(--primary)] mb-2">Phone</h3>
+          <a href="tel:+233530449325" class="text-lg text-gray-700 font-semibold hover:text-orange-500 transition">+233 53 044 9325</a>
+          <p class="text-sm text-gray-600 mt-3">Available Mon-Fri, 9AM-5PM GMT</p>
+        </div>
+
+        <!-- Email -->
+        <div class="p-5 rounded-2xl text-center card-hover ">
+          <p class="text-3xl mb-2">📧</p>
+          <h3 class="text-2xl font-bold text-[var(--primary)] mb-2">Email</h3>
+          <a href="mailto:lesheltergh@gmail.com" class="text-lg text-gray-700 font-semibold hover:text-orange-500 transition">lesheltergh@gmail.com</a>
+          <p class="text-sm text-gray-600 mt-3">We respond within 24 hours</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+      
+
+      <!-- Social Media Section -->
+  <section class="bg-white text-black-500">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold text-[var(--primary)] mt-2 mb-1">Connect With Us</h2>
+      <div class="h-1 w-32 bg-[var(--primary)] mx-auto rounded-full mb-6"></div>
+      <div class="flex justify-center gap-8 flex-wrap">
+        <a href="https://www.facebook.com/profile.php?id=100067770571763" target="_blank" rel="noopener noreferrer" class="w-12 h-12 bg-orange-500 text-white hover:bg-white hover:text-[var(--primary)] rounded-full flex items-center justify-center text-3xl transition-all duration-300 shadow-md hover:shadow-lg" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.tiktok.com/@le.shelter.founda?_t=ZM-8sl65FqR7XZ&_r=1" target="_blank" rel="noopener noreferrer" class="w-12 h-12 bg-orange-500 text-white hover:bg-white hover:text-[var(--primary)] rounded-full flex items-center justify-center text-3xl transition-all duration-300 shadow-md hover:shadow-lg" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+            <a href="https://x.com/le_shelter?t=dWlkQidVKnRSYGSbFpbjHg&s=09" target="_blank" rel="noopener noreferrer" class="w-12 h-12 bg-orange-500 text-white hover:bg-white hover:text-[var(--primary)] rounded-full flex items-center justify-center text-3xl transition-all duration-300 shadow-md hover:shadow-lg" aria-label="X (Twitter)"><i class="fab fa-x-twitter"></i></a>
+            <a href="https://www.instagram.com/le.shelter.foundation?igsh=bGxneno2OTN5NjF5" target="_blank" rel="noopener noreferrer" class="w-12 h-12 bg-orange-500 text-white hover:bg-white hover:text-[var(--primary)] rounded-full flex items-center justify-center text-3xl transition-all duration-300 shadow-md hover:shadow-lg" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://wa.me/233530449325?text=Hello%20Le%20Shelter%20Foundation" target="_blank" rel="noopener"class="w-12 h-12 bg-orange-500 text-white hover:bg-white hover:text-[var(--primary)] rounded-full flex items-center justify-center text-3xl transition-all duration-300 shadow-md hover:shadow-lg" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      </div>
+      <p class="text-gray-600 mt-5 text-lg mb-3">Follow us for regular updates on our impact, school visits, and student success stories</p>
+    </div>
+      <div class="max-w-6xl mx-auto px-6 text-center">
+       
+        <div>
+          <p class="text-gray-600  text-lg">By fostering partnerships with local leaders, international organizations, and compassionate individuals, we continue to expand our reach and deepen our impact.
+          We’d love to hear from you! 
+          If you’re interested in learning more about our work, collaborating with us, or supporting our mission, feel free to reach out. Together, we can make a meaningful difference in the lives of those we serve.</p>
+        </div>
+      </div>
+  </section>
+
+  
+
+ <section class="py-5 bg-white">
+    <div class="max-w-6xl mx-auto px-6">
+      <!-- Contact Form & Newsletter -->
+      <div class="grid md:grid-cols-2 gap-12">
+<div class="bg-white border-2 border-gray-200 p-10 rounded-2xl">
+            <!-- FAQ -->
+        <div class="space-y-10">
+        
+          <h3 class="text-2xl font-bold text-orange-500 mb-5">Frequently Asked Questions</h3>
+            
+          <div class="space-y-6">
+            <div>
+              <p class="font-bold text-[var(--primary)] mb-2">❓ How are donations used?</p>
+              <p class="text-gray-700 text-sm">100% of donations support school supplies, infrastructure, water systems, and mentorship programs directly in our partner schools.</p>
+            </div>
+
+            <div>
+              <p class="font-bold text-[var(--primary)] mb-2">❓ How can I volunteer?</p>
+              <p class="text-gray-700 text-sm">We welcome volunteers for school visits, mentorship, fundraising, and community engagement. Contact us to discuss opportunities.</p>
+            </div>
+
+            <div>
+              <p class="font-bold text-[var(--primary)] mb-2">❓ Are donations tax-deductible?</p>
+              <p class="text-gray-700 text-sm">Donations may be tax-deductible depending on your country. Please retain your receipt and check with local authorities.</p>
+            </div>
+
+            <div>
+              <p class="font-bold text-[var(--primary)] mb-2">❓ Can organizations partner with LSF?</p>
+              <p class="text-gray-700 text-sm">Yes! We welcome corporate partnerships, CSR initiatives, and institutional collaborations. Let's discuss tailored programs.</p>
+            </div>
+
+            <div>
+              <p class="font-bold text-[var(--primary)] mb-2">❓ How often do you revisit schools?</p>
+              <p class="text-gray-700 text-sm">We conduct annual assessments and major revisits (like Sept 2025) to track progress and adapt our support based on needs.</p>
+            </div>
+
+            
+          </div>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="bg-white border-2 border-gray-200 p-10 rounded-2xl">
+          <h3 class="text-2xl font-bold text-[var(--primary)] mb-5">Send us a Message</h3>
+          <form id="contact-form" class="space-y-6">
+            <div>
+              <label class="block text-sm font-bold text-gray-700">Your Name *</label>
+              <input type="text" name="name" required class="w-full px-5 py-4 border-2 border-gray-300 rounded-xl focus:border-[var(--primary)] focus:outline-none text-sm" placeholder="Your full name"/>
+            </div>
+            
+            <div>
+              <label class="block text-sm font-bold text-gray-700">Email Address *</label>
+              <input type="email" name="email" required class="w-full px-5 py-4 border-2 border-gray-300 rounded-xl focus:border-[var(--primary)] focus:outline-none text-sm" placeholder="your@email.com"/>
+            </div>
+
+            <div>
+              <label class="block text-sm font-bold text-gray-700">Subject *</label>
+              <select name="subject" required class="w-full px-5 py-4 border-2 border-gray-300 rounded-xl focus:border-[var(--primary)] focus:outline-none text-sm bg-white">
+                <option value="">Select a subject</option>
+                <option value="donation">Donation Inquiry</option>
+                <option value="volunteer">Volunteer Opportunity</option>
+                <option value="partnership">Partnership Opportunity</option>
+                <option value="question">General Question</option>
+                <option value="feedback">Feedback</option>
+              </select>
+            </div>
+
+            <div>
+              <label class="block text-sm font-bold text-gray-700">Message *</label>
+              <textarea name="message" rows="5" required class="w-full px-5 py-4 border-2 border-gray-300 rounded-xl focus:border-[var(--primary)] focus:outline-none text-sm" placeholder="Tell us how we can help..."></textarea>
+            </div>
+
+            <button type="submit" class="btn-primary w-full py-4 rounded-xl text-lg font-bold shadow-lg hover:shadow-xl transition ">Send Message</button>
+          </form>
+        </div>
+      
+        
+      </div>
+    </div>
+  </section>
+
+
+
+
+  
+
+  
+
+  
+  <!-- Footer -->
+  <footer class="bg-[var(--dark)] text-black py-5">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid md:grid-cols-4 gap-12 mb-5">
+        <div>
+          <h4 class="text-xl font-bold text-[var(--primary)] mb-4">About LSF</h4>
+          <p class="text-sm opacity-90 leading-relaxed">
+            Le Shelter Foundation provides equal educational opportunities to underprivileged children in rural Ghana.
+          </p>
+        </div>
+        <div class="flex flex-col items-start">
+          <h4 class="text-xl font-bold text-[var(--primary)] mb-4">Socials</h4>
+          <div class="flex items-center gap-6">
+            <a href="https://www.facebook.com/profile.php?id=100067770571763" target="_blank" rel="noopener noreferrer" class="w-12 h-12 bg-[var(--primary)]/10 text-[var(--primary)] hover:bg-[var(--primary)] hover:text-white rounded-full flex items-center justify-center text-2xl transition-all duration-300 shadow-md hover:shadow-lg" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.tiktok.com/@le.shelter.founda?_t=ZM-8sl65FqR7XZ&_r=1" target="_blank" rel="noopener noreferrer" class="w-12 h-12 bg-[var(--primary)]/10 text-[var(--primary)] hover:bg-[var(--primary)] hover:text-white rounded-full flex items-center justify-center text-2xl transition-all duration-300 shadow-md hover:shadow-lg" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+            <a href="https://x.com/le_shelter?t=dWlkQidVKnRSYGSbFpbjHg&s=09" target="_blank" rel="noopener noreferrer" class="w-12 h-12 bg-[var(--primary)]/10 text-[var(--primary)] hover:bg-[var(--primary)] hover:text-white rounded-full flex items-center justify-center text-2xl transition-all duration-300 shadow-md hover:shadow-lg" aria-label="X (Twitter)"><i class="fab fa-x-twitter"></i></a>
+            <a href="https://www.instagram.com/le.shelter.foundation?igsh=bGxneno2OTN5NjF5" target="_blank" rel="noopener noreferrer" class="w-12 h-12 bg-[var(--primary)]/10 text-[var(--primary)] hover:bg-[var(--primary)] hover:text-white rounded-full flex items-center justify-center text-2xl transition-all duration-300 shadow-md hover:shadow-lg" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+        <div>
+          <h4 class="text-xl font-bold text-[var(--primary)] mb-4">Contact</h4>
+          <div class="space-y-2 text-sm opacity-90">
+            <p>📍 Baatsona-Spintex, Ghana</p>
+            <p>📱 +233 53 044 9325</p>
+            <p>📧 lesheltergh@gmail.com</p>
+          </div>
+        </div>
+        <div>
+          <h4 class="text-xl font-bold text-[var(--primary)] mb-4">Newsletter</h4>
+          <form class="flex gap-2">
+            <input type="email" placeholder="Your email" class="flex-1 px-3 py-2 rounded text-gray-800 text-sm focus:outline-none" required/>
+            <button type="submit" class="px-4 py-2 bg-[var(--primary)] rounded hover:bg-orange-500 text-white font-bold transition">Sign Up</button>
+          </form>
+        </div>
+      </div>
+      <div class="border-t border-gray-700 pt-5 text-center">
+        <p class="text-sm opacity-50 mb-1">Copyright &copy;<script>document.write(new Date().getFullYear());</script> |
+          All rights reserved by Le Shelter Foundation <i class="fas fa-globe" aria-hidden="true"></i></a>
+        </p>
+        <p class="text-sm opacity-50"> Designed By <a href="#">IHAG <i class="far fa-hand-peace" aria-hidden="true"></i></a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const closeMenu = document.getElementById('close-menu');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuBtn?.addEventListener('click', () => mobileMenu.classList.remove('hidden'));
+    closeMenu?.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+    mobileMenu?.addEventListener('click', e => {
+      if (e.target === mobileMenu) mobileMenu.classList.add('hidden');
+    });
+
+    document.querySelectorAll('#mobile-menu a').forEach(link => {
+      link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+    });
+
+    // Hero Slider Only (cleaned – no unused carousel code)
+  let heroCurrentSlide = 0;
+  const heroSliderWrapper = document.getElementById('hero-slider-wrapper');
+  const heroPrevBtn = document.getElementById('hero-prev');
+  const heroNextBtn = document.getElementById('hero-next');
+  const heroDots = document.querySelectorAll('.hero-dot');
+  const heroTotalSlides = document.querySelectorAll('.hero-slide').length;
+  let heroAutoPlay;
+
+  function updateHeroSlider() {
+    heroSliderWrapper.style.transform = `translateX(-${heroCurrentSlide * 100}%)`;
+
+    heroDots.forEach((dot, i) => {
+      dot.classList.toggle('bg-white', i === heroCurrentSlide);
+      dot.classList.toggle('bg-white/50', i !== heroCurrentSlide);
+    });
+  }
+
+  function nextHeroSlide() {
+    heroCurrentSlide = (heroCurrentSlide + 1) % heroTotalSlides;
+    updateHeroSlider();
+  }
+
+  heroPrevBtn.addEventListener('click', () => {
+    heroCurrentSlide = heroCurrentSlide > 0 ? heroCurrentSlide - 1 : heroTotalSlides - 1;
+    updateHeroSlider();
+    resetHeroAutoPlay();
+  });
+
+  heroNextBtn.addEventListener('click', () => {
+    nextHeroSlide();
+    resetHeroAutoPlay();
+  });
+
+  heroDots.forEach(dot => {
+    dot.addEventListener('click', () => {
+      heroCurrentSlide = parseInt(dot.dataset.slide);
+      updateHeroSlider();
+      resetHeroAutoPlay();
+    });
+  });
+
+  function startHeroAutoPlay() {
+    heroAutoPlay = setInterval(nextHeroSlide, 6000);
+  }
+
+  function resetHeroAutoPlay() {
+    clearInterval(heroAutoPlay);
+    startHeroAutoPlay();
+  }
+
+  // Pause on hover
+  const heroSection = document.querySelector('section.relative.h-96');
+  heroSection.addEventListener('mouseenter', () => clearInterval(heroAutoPlay));
+  heroSection.addEventListener('mouseleave', startHeroAutoPlay);
+
+  // Start
+  updateHeroSlider();
+  startHeroAutoPlay();
+
+  </script>
+
+  <script>
+   document.querySelectorAll('.start-counter').forEach(counter => {
+  let started = false;
+  function animateCounter() {
+    if (started) return;
+    started = true;
+    const target = parseInt(counter.dataset.to, 10);
+    const speed = parseInt(counter.dataset.speed, 10);
+    let current = 0;
+    const increment = Math.max(1, Math.ceil(target / (speed / 16)));
+    function update() {
+      current += increment;
+      if (current >= target) {
+        counter.textContent = target;
+      } else {
+        counter.textContent = current;
+        requestAnimationFrame(update);
+      }
+    }
+    update();
+  }
+  // Optional: Start when in viewport (for performance)
+  function onScroll() {
+    const rect = counter.getBoundingClientRect();
+    if (rect.top < window.innerHeight && rect.bottom > 0) {
+      animateCounter();
+      window.removeEventListener('scroll', onScroll);
+    }
+  }
+  window.addEventListener('scroll', onScroll);
+  // For immediately visible counters:
+  onScroll();
+});
+</script>
+ 
+  <script>
+      // Donation Modal Logic
+    const donateBtn = document.getElementById('donate-btn');
+    const donateBtnMobile = document.getElementById('donate-btn-mobile');
+    const donateModal = document.getElementById('donate-modal');
+    const closeDonateModal = document.getElementById('close-donate-modal');
+
+    function openDonateModal() {
+      donateModal.classList.add('active');
+    }
+
+    function closeDonateModalFunc() {
+      donateModal.classList.remove('active');
+    }
+
+    donateBtn?.addEventListener('click', openDonateModal);
+    donateBtnMobile?.addEventListener('click', () => {
+      openDonateModal();
+      mobileMenu.classList.add('hidden');
+    });
+    closeDonateModal?.addEventListener('click', closeDonateModalFunc);
+    
+    // Close modal when clicking outside
+    donateModal?.addEventListener('click', (e) => {
+      if (e.target === donateModal) {
+        closeDonateModalFunc();
+      }
+    });
+
+    // Close modal with Escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        closeDonateModalFunc();
+      }
+    });
+ 
+  </script>
+
+  <script>
+  // Event date in UTC (April 15, 2026 at 14:00 GMT / Africa/Accra time)
+  const eventDate = new Date(Date.UTC(2026, 3, 15, 14, 0, 0)); // Month is 0-based (3 = April)
+
+  function updateCountdown() {
+    const now = new Date().getTime();
+    const distance = eventDate.getTime() - now;
+
+    if (distance < 0) {
+      document.getElementById('countdown').innerHTML = 
+        '<p class="text-3xl md:text-4xl font-bold text-[var(--primary)]">The event is happening now!</p>';
+      return;
+    }
+
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    document.getElementById('days').textContent = days.toString().padStart(2, '0');
+    document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+    document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+    document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+  }
+
+  // Run immediately and every second
+  updateCountdown();
+  setInterval(updateCountdown, 1000);
+</script>
+
+  <a href="https://wa.me/233530449325?text=Hello%20Le%20Shelter%20Foundation" 
+    target="_blank" rel="noopener"
+    class="fixed bottom-6 left-6 bg-green-500 text-white w-12 h-12 rounded-full shadow-2xl flex items-center justify-center hover:bg-green-600 hover:scale-110 transition z-40"
+    aria-label="Chat on WhatsApp">
+    <i class="fa-brands fa-whatsapp text-2xl"></i>
+  </a>
+
+</body>
+</html>

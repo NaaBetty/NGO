@@ -1,0 +1,934 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Le Shelter Foundation</title>
+  <meta name="description" content="Le Shelter Foundation provides equal educational opportunities for underprivileged children in rural Ghana through school supplies, mentorship, clean water access, and community support. Founded 2017 by Ruby Offeibea Adu."/>
+  <meta name="keywords" content="Le Shelter Foundation, rural education Ghana, donate school supplies, children charity, mentorship programs, Asiafo Amanfro, Asutsuare, Pokrom, etc"/>
+  <meta name="author" content="Le Shelter Foundation"/>
+  
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:title" content="Le Shelter Foundation - Equal Opportunity For All"/>
+  <meta property="og:description" content="Equal educational opportunities, school supplies, mentorship and hope for children in rural Ghana."/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://www.leshelterfoundation.org"/>
+  <meta property="og:image" content="images/icon/favicon-32x32.png"/>
+  <meta property="og:site_name" content="Le Shelter Foundation"/>
+
+  <!-- Tailwind CDN (for development – replace with built CSS in production) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/style.css">
+  
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/themify-icons.css" />  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="images/icon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/icon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/icon/favicon-16x16.png">
+  <link rel="manifest" href="images/icon/site.webmanifest">
+  <link rel="canonical" href="https://www.leshelterfoundation.org/index.html">
+  
+  <title>Le Shelter Foundation - Equal Opportunity For All</title>
+
+</head>
+<body>
+
+  <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="fixed inset-0 bg-white/60 backdrop-blur-sm z-50 hidden flex items-center justify-center">
+        <div class="bg-white rounded-2xl p-8 max-w-sm w-full text-center space-y-6">
+            <button id="close-menu" class="absolute top-4 right-4 text-3xl font-bold text-gray-500">&times;</button>
+            <a href="index.html" class="nav-link block text-2xl">Home</a>
+            <a href="about.html" class="nav-link block text-2xl">About</a>
+            <a href="projects.html" class="nav-link active block text-2xl">Projects</a>
+            <a href="shop.html" class="nav-link block text-2xl">Shop</a>
+            <a href="contact.html" class="nav-link block text-2xl">Contact Us</a>
+            <button id="donate-btn-mobile" class="btn-primary inline-block px-10 py-4 rounded-xl text-lg font-bold w-full">Donate Now</button>
+        </div>
+    </div>
+
+  <!-- Donation Modal -->
+    <div id="donate-modal" class="donate-modal">
+      <div class="donate-modal-content relative">
+        <button id="close-donate-modal" class="donate-modal-close">&times;</button>
+            
+        <h2 class="text-3xl font-bold text-[var(--primary)] mb-2">Ways to Support Us</h2>
+        <p class="text-gray-700 mb-5 text-lg">Your generosity makes a direct impact on children's lives in rural Ghana. Choose how you'd like to help:</p>
+
+        <!-- Direct Donation -->
+        <div class="mb-3 pb-3 border-b border-orange-500">
+          <h3 class="text-xl font-bold text-[var(--primary)] mb-1">💝 Direct Donation</h3>
+          <p class="text-gray-700 mb-2 text-lg">Make a monetary contribution to support our programs.</p>
+          <h4>MTN Mobile Money (MOMO) Details;</h4>
+          <div class="flex  sm:flex-row gap-2 justify-left items-center mb-1">
+            <img src="images/mtnlogo.png" alt="MTN Mobile Money" class="h-20  w-auto"></p>
+            <ul>
+              <li><strong>Name:</strong> Le Shelter Foundation</li>
+              <li><strong>Mobile Money Number:</strong> 0530449325</li>
+              <li><strong>Merchant ID:</strong> 440792</li>
+            </ul>
+          </div>
+          <!-- <a href="donate.html" class="inline-block bg-[var(--primary)] text-white px-6 py-3 rounded-xl font-bold hover:bg-[var(--primary)]/90 transition">Donate Money Today</a> -->
+        </div>
+
+        <!-- Shop Support -->
+          <div class="mb-1 pb-1 ">
+            <h3 class="text-xl font-bold text-[var(--primary)] mb-1">🛍️ Shop & Support</h3>
+            <p class="text-gray-700 mb-2 text-lg">Purchase meaningful merchandise. 100% of profits goes to support our mission.</p>
+            <ul class="text-sm text-gray-600 mb-4 space-y-2">
+              <li>✓ Organic T-Shirts & Hoodies</li>
+              <li>✓ Canvas Tote Bags & Caps</li>
+              <li>✓ Coffee Mugs & Water Bottles</li>
+              <li>✓ Notebooks & Accessories</li>
+            </ul>
+            <a href="shop.html" class="inline-block bg-[var(--primary)] text-white px-6 py-3 rounded-xl font-bold hover:bg-[var(--primary)] transition">Browse Shop</a>
+          </div>
+      </div>
+    </div>
+
+  <!-- Header / Navigation -->
+    <header class="site-header">
+        <!-- Top Header Bar -->
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3 sm:py-2">
+            <div class="flex flex-col md:flex-row items-center justify-center md:justify-between gap-3 sm:gap-4">
+                <div class="flex items-center justify-center gap-2 w-full md:w-auto">
+                    <i class="fa fa-envelope text-[var(--secondary)]"></i>
+                    <p class="text-xs sm:text-sm md:text-base"><a href="mailto:lesheltergh@gmail.com" class=" hover:text-[var(--secondary)]">Lesheltergh@gmail.com</a></p>
+                </div>
+
+                <div class="flex items-center justify-center gap-2 w-full md:w-auto">
+                    <i class="fa fa-phone text-[var(--secondary)]"></i>
+                    <p class="text-xs sm:text-sm md:text-base"><a href="tel:+233530449325" class="text-xs sm:text-sm md:text-base hover:text-[var(--secondary)] transition">+233 53 044 9325</a></p>
+                </div>
+
+                <button id="donate-btn" class="border-2 border-orange-500 btn-primary px-6 sm:px-8 py-2 sm:py-3 rounded-xl font-bold shadow-lg hover:shadow-xl transition w-full sm:w-auto">Donate Now <i class="fa-solid fa-hand-holding-heart ml-2"></i></button>
+            </div>
+        </div>
+
+        <!-- Navigation -->
+        <nav class="max-w-7xl mx-auto px-5 sm:px-6 py-3 flex items-center justify-between">
+            <a href="index.html" class="block">
+                <img src="images/Logo.png" alt="Le Shelter Foundation" class="h-8 sm:h-5 md:h-10 w-auto">
+            </a>
+        
+            <div class="hidden md:flex items-center space-x-10">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="projects.html" class="nav-link active">Projects</a>
+                <a href="shop.html" class="nav-link">Shop</a>
+                <a href="contact.html" class="nav-link">Contact Us</a>
+            </div>
+            <button id="menu-btn" class="md:hidden text-3xl focus:outline-none text-[var(--primary)]">☰</button>
+        </nav>
+    </header>
+
+    <div class="home-page-welcome relative overflow-hidden ">
+      <div class="max-w-6xl mx-auto ">
+        <!-- Greyed-out background image -->
+        <img src="images/image1banner.jpg" alt="Volunteers" class="relative inset-0  object-contain object-top brightness-80 opacity-80"aria-hidden="true"/>
+      </div>
+    </div>
+
+
+
+<!-- Upcoming Event Section with Countdown Timer -->
+<section class="py-5 md:py-5 bg-gradient-to-b from-gray-100 to-white">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8 text-center">
+    <h2 class="text-2xl md:text-4xl font-extrabold text-[var(--primary)] mb-3">
+      Upcoming Event: Annual School Supplies Drive & Mentorship Day
+    </h2>
+    <p class="text-xl md:text-2xl text-gray-700 mb-2">
+      Join us on <strong>March 6 - 8, 2026</strong> at <strong>2:00 PM GMT</strong>
+    </p>
+    <p class="text-lg text-gray-600 mb-5 max-w-3xl mx-auto">
+      Location: Asiafo Amanfro Community Center, Greater Accra Region, Ghana.<br>
+      Help us distribute school supplies, mentor young learners, and make a lasting impact.
+    </p>
+
+    <!-- Countdown Timer -->
+    <div id="countdown" class="flex flex-wrap justify-center gap-6 md:gap-12 mb-5">
+      <div class="bg-white rounded-2xl shadow-2xl px-8 py-10 min-w-[140px]">
+        <div id="days" class="text-6xl md:text-7xl font-extrabold text-[var(--primary)]">00</div>
+        <div class="text-lg font-medium text-gray-600 mt-2">Days</div>
+      </div>
+      <div class="bg-white rounded-2xl shadow-2xl px-8 py-10 min-w-[140px]">
+        <div id="hours" class="text-6xl md:text-7xl font-extrabold text-[var(--primary)]">00</div>
+        <div class="text-lg font-medium text-gray-600 mt-2">Hours</div>
+      </div>
+      <div class="bg-white rounded-2xl shadow-2xl px-8 py-10 min-w-[140px]">
+        <div id="minutes" class="text-6xl md:text-7xl font-extrabold text-[var(--primary)]">00</div>
+        <div class="text-lg font-medium text-gray-600 mt-2">Minutes</div>
+      </div>
+      <div class="bg-white rounded-2xl shadow-2xl px-8 py-10 min-w-[140px]">
+        <div id="seconds" class="text-6xl md:text-7xl font-extrabold text-[var(--primary)]">00</div>
+        <div class="text-lg font-medium text-gray-600 mt-2">Seconds</div>
+      </div>
+    </div>
+
+    <div class="text-center ">
+        <div class="entry-footer">
+          <a href="contact.html" class="inline-block border-2 border-orange-500 px-10 py-2 bg-orange-500 text-white rounded-xl font-bold text-lg lg:text-xl hover:bg-white hover:text-[var(--primary)] transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-1 whitespace-nowrap">Join Us</a>
+        </div>
+    </div>
+</section>
+
+  
+
+
+    
+  
+ 
+<!-- New Slider Section for More Projects -->
+<section class="py-5  bg-gray-50">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8">
+    <div class="text-center mb-3">
+      <h2 class="text-4xl md:text-5xl font-extrabold text-[var(--primary)] mb-4">
+        Our Projects & Impact Stories
+      </h2>
+      <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+        Swipe through additional projects and community transformations we've supported across Ghana.
+      </p>
+      <div class="h-1 w-24 bg-[var(--primary)] mx-auto mt-3 rounded-full"></div>
+    </div>
+
+    <!-- Slider Container -->
+    <div class="relative">
+      <!-- Slider Wrapper -->
+      <div id="projects-slider" class="overflow-hidden">
+        <div id="slider-inner" class="flex transition-transform duration-500 ease-out py-5">
+          
+          <!-- Project Card 1 (duplicate of your style) -->
+          <div class="flex-shrink-0 w-full sm:w-1/2 lg:w-1/3 px-3 ">
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300 h-full">
+              <div class="article">
+                <div class="article-img mb-3">
+                  <a href="Projects/example1.html">
+                    <img src="images/image26.webp" alt="Project" class="w-full h-48 object-cover">
+                  </a>
+                </div>
+                <div class="article-content text-center">
+                  <h4 class="text-xl font-bold text-[var(--primary)] mb-2"><strong>Blood Donation Drive</strong></h4>
+                  <div class="text-gray-600 font-medium mb-3 flex justify-center gap-6 ">
+                    <span><i class="fa fa-calendar" aria-hidden="true"></i> May, 2024</span>
+                    <span><i class="fa fa-map-marker" aria-hidden="true"></i> Asutsuare</span>
+                  </div>
+                  <p class="text-base text-gray-600 mb-5 text-justify px-3">              
+                    <a href="Projects/Asutsuare.html">With insufficient access to books, school supplies, and even basic hygiene resources, many students are left to navigate their education in challenging circumstances...</a>
+                  </p> 
+                  <a href="Projects/Asiafo.html" class="inline-block bg-[var(--primary)] text-white px-6 py-3 rounded-xl font-bold hover:bg-[var(--primary)]/90 transition mb-3">Read Full Story</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project Card 2 -->
+          <div class="flex-shrink-0 w-full sm:w-1/2 lg:w-1/3 px-3 ">
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300 h-full">
+              <div class="article">
+                <div class="article-img mb-3">
+                  <a href="Projects/example1.html">
+                    <img src="images/image26.webp" alt="Project" class="w-full h-48 object-cover">
+                  </a>
+                </div>
+                <div class="article-content text-center">
+                  <h4 class="text-xl font-bold text-[var(--primary)] mb-2"><strong>Asutsuare M/A School</strong></h4>
+                  <div class="text-gray-600 font-medium mb-3 flex justify-center gap-6 ">
+                    <span><i class="fa fa-calendar" aria-hidden="true"></i> May, 2024</span>
+                    <span><i class="fa fa-map-marker" aria-hidden="true"></i> Asutsuare</span>
+                  </div>
+                  <p class="text-base text-gray-600 mb-5 text-justify px-3">              
+                    <a href="Projects/Asutsuare.html">With insufficient access to books, school supplies, and even basic hygiene resources, many students are left to navigate their education in challenging circumstances...</a>
+                  </p> 
+                  <a href="Projects/Asiafo.html" class="inline-block bg-[var(--primary)] text-white px-6 py-3 rounded-xl font-bold hover:bg-[var(--primary)]/90 transition mb-3">Read Full Story</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project Card 3 -->
+          <div class="flex-shrink-0 w-full sm:w-1/2 lg:w-1/3 px-3 ">
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300 h-full">
+              <div class="article">
+                <div class="article-img mb-3">
+                  <a href="Projects/example1.html">
+                    <img src="images/image26.webp" alt="Project" class="w-full h-48 object-cover">
+                  </a>
+                </div>
+                <div class="article-content text-center">
+                  <h4 class="text-xl font-bold text-[var(--primary)] mb-2"><strong>Asutsuare M/A School</strong></h4>
+                  <div class="text-gray-600 font-medium mb-3 flex justify-center gap-6 ">
+                    <span><i class="fa fa-calendar" aria-hidden="true"></i> May, 2024</span>
+                    <span><i class="fa fa-map-marker" aria-hidden="true"></i> Asutsuare</span>
+                  </div>
+                  <p class="text-base text-gray-600 mb-5 text-justify px-3">              
+                    <a href="Projects/Asutsuare.html">With insufficient access to books, school supplies, and even basic hygiene resources, many students are left to navigate their education in challenging circumstances...</a>
+                  </p> 
+                  <a href="Projects/Asiafo.html" class="inline-block bg-[var(--primary)] text-white px-6 py-3 rounded-xl font-bold hover:bg-[var(--primary)]/90 transition mb-3">Read Full Story</a>               
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Add more cards here as needed (they will slide in) -->
+          <div class="flex-shrink-0 w-full sm:w-1/2 lg:w-1/3 px-3 ">
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300 h-full">
+              <div class="article">
+                <div class="article-img mb-3">
+                  <a href="Projects/example1.html">
+                    <img src="images/image26.webp" alt="Project" class="w-full h-48 object-cover">
+                  </a>
+                </div>
+                <div class="article-content text-center">
+                  <h4 class="text-xl font-bold text-[var(--primary)] mb-2"><strong>Asutsuare M/A School</strong></h4>
+                  <div class="text-gray-600 font-medium mb-3 flex justify-center gap-6 ">
+                    <span><i class="fa fa-calendar" aria-hidden="true"></i> May, 2024</span>
+                    <span><i class="fa fa-map-marker" aria-hidden="true"></i> Asutsuare</span>
+                  </div>
+                  <p class="text-base text-gray-600 mb-5 text-justify px-3">              
+                    <a href="Projects/Asutsuare.html">With insufficient access to books, school supplies, and even basic hygiene resources, many students are left to navigate their education in challenging circumstances...</a>
+                  </p> 
+                  <a href="Projects/Asiafo.html" class="inline-block bg-[var(--primary)] text-white px-6 py-3 rounded-xl font-bold hover:bg-[var(--primary)]/90 transition mb-3">Read Full Story</a>               
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex-shrink-0 w-full sm:w-1/2 lg:w-1/3 px-3 ">
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300 h-full">
+              <div class="article">
+                <div class="article-img mb-3">
+                  <a href="Projects/example1.html">
+                    <img src="images/image26.webp" alt="Project" class="w-full h-48 object-cover">
+                  </a>
+                </div>
+                <div class="article-content text-center">
+                  <h4 class="text-xl font-bold text-[var(--primary)] mb-2"><strong>Asutsuare M/A School</strong></h4>
+                  <div class="text-gray-600 font-medium mb-3 flex justify-center gap-6 ">
+                    <span><i class="fa fa-calendar" aria-hidden="true"></i> May, 2024</span>
+                    <span><i class="fa fa-map-marker" aria-hidden="true"></i> Asutsuare</span>
+                  </div>
+                  <p class="text-base text-gray-600 mb-5 text-justify px-3">              
+                    <a href="Projects/Asutsuare.html">With insufficient access to books, school supplies, and even basic hygiene resources, many students are left to navigate their education in challenging circumstances...</a>
+                  </p> 
+                  <a href="Projects/Asiafo.html" class="inline-block bg-[var(--primary)] text-white px-6 py-3 rounded-xl font-bold hover:bg-[var(--primary)]/90 transition mb-3">Read Full Story</a>               
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex-shrink-0 w-full sm:w-1/2 lg:w-1/3 px-3 ">
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300 h-full">
+              <div class="article">
+                <div class="article-img mb-3">
+                  <a href="Projects/example1.html">
+                    <img src="images/image26.webp" alt="Project" class="w-full h-48 object-cover">
+                  </a>
+                </div>
+                <div class="article-content text-center">
+                  <h4 class="text-xl font-bold text-[var(--primary)] mb-2"><strong>Asutsuare M/A School</strong></h4>
+                  <div class="text-gray-600 font-medium mb-3 flex justify-center gap-6 ">
+                    <span><i class="fa fa-calendar" aria-hidden="true"></i> May, 2024</span>
+                    <span><i class="fa fa-map-marker" aria-hidden="true"></i> Asutsuare</span>
+                  </div>
+                  <p class="text-base text-gray-600 mb-5 text-justify px-3">              
+                    <a href="Projects/Asutsuare.html">With insufficient access to books, school supplies, and even basic hygiene resources, many students are left to navigate their education in challenging circumstances...</a>
+                  </p> 
+                  <a href="Projects/Asiafo.html" class="inline-block bg-[var(--primary)] text-white px-6 py-3 rounded-xl font-bold hover:bg-[var(--primary)]/90 transition mb-3">Read Full Story</a>               
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+
+      <!-- Navigation Arrows -->
+      <button id="prev-btn" class="absolute left-0 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-orange-500 text-[var(--primary)] p-3 rounded-full shadow-lg focus:outline-none z-10 text-2xl">
+        ←
+      </button>
+      <button id="next-btn" class="absolute right-0 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-orange-500 text-[var(--primary)] p-3 rounded-full shadow-lg focus:outline-none z-10 text-2xl">
+        →
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- JavaScript for slider (click + swipe) -->
+<script type="module">
+  const slider = document.getElementById('slider-inner');
+  const prevBtn = document.getElementById('prev-btn');
+  const nextBtn = document.getElementById('next-btn');
+  const cards = slider.children;
+  const totalCards = cards.length;
+
+  let currentIndex = 0;
+  let startX = 0;
+  let currentTranslate = 0;
+  let prevTranslate = 0;
+  let isDragging = false;
+
+  function updateSlider() {
+    const cardWidth = cards[0].offsetWidth + 24; // includes px-3 gap
+    currentTranslate = -currentIndex * cardWidth;
+    slider.style.transform = `translateX(${currentTranslate}px)`;
+  }
+
+  prevBtn.addEventListener('click', () => {
+    if (currentIndex > 0) {
+      currentIndex--;
+      updateSlider();
+    }
+  });
+
+  nextBtn.addEventListener('click', () => {
+    if (currentIndex < totalCards - getVisibleCards()) {
+      currentIndex++;
+      updateSlider();
+    }
+  });
+
+  // Swipe support
+  slider.addEventListener('touchstart', (e) => {
+    startX = e.touches[0].clientX;
+    isDragging = true;
+  });
+
+  slider.addEventListener('touchmove', (e) => {
+    if (!isDragging) return;
+    const currentX = e.touches[0].clientX;
+    const diff = currentX - startX;
+    slider.style.transform = `translateX(${prevTranslate + diff}px)`;
+  });
+
+  slider.addEventListener('touchend', (e) => {
+    isDragging = false;
+    const movedBy = e.changedTouches[0].clientX - startX;
+
+    if (movedBy < -80 && currentIndex < totalCards - getVisibleCards()) {
+      currentIndex++;
+    } else if (movedBy > 80 && currentIndex > 0) {
+      currentIndex--;
+    }
+
+    updateSlider();
+    prevTranslate = currentTranslate;
+  });
+
+  // Helper: how many cards visible (responsive)
+  function getVisibleCards() {
+    if (window.innerWidth >= 1024) return 3;      // lg
+    if (window.innerWidth >= 640) return 2;       // sm
+    return 1;
+  }
+
+  // Handle resize
+  window.addEventListener('resize', updateSlider);
+
+  // Initial setup
+  updateSlider();
+</script>
+
+<!-- Mission Section -->
+<div class="py-10 md:py-15 bg-white text-center ">
+  <div class="max-w-4xl mx-auto px-6 ">
+    <h2 class="text-3xl md:text-3xl font-semibold  text-gray-700 ">
+      The foundation seeks to create opportunities and improve the lives of individuals, particularly underprivileged children in rural communities across Ghana.</h2>
+  </div>
+</div>
+
+
+  
+
+<section class="gallery-section bg-gray-50">
+  <div class="inner py-5 ">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+    <div class="text-center mb-3">
+      <h2 class="text-4xl md:text-5xl font-extrabold text-[var(--primary)] mb-4">
+        Gallery of Impact
+      </h2>
+      <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+        These images capture moments of hope, resilience, and transformation made possible through collective effort, local leadership, and generous hearts like yours.</p>
+      <div class="h-1 w-24 bg-[var(--primary)] mx-auto mt-3 mb-2 rounded-full"></div>
+    </div>
+
+    
+
+    <!-- Main Stage -->
+    <div class="stage-wrap" id="stage">
+      <div class="stage-slides" id="stage-slides">
+
+        <div class="stage-slide active" data-index="0">
+          <img src="images/image26.webp" alt="Project 1"
+            onerror="this.src='images/image26.webp'">
+          <div class="caption-overlay">
+            <div class="caption-tag">Education</div>
+            <div class="caption-title">Rebuilding Futures in Tamale</div>
+            <div class="caption-desc">New classrooms and learning materials reached over 400 children in underserved communities.</div>
+          </div>
+        </div>
+
+        <div class="stage-slide" data-index="1">
+          <img src="images/image27.webp" alt="Project 2"
+            onerror="this.src='images/image27.webp'">
+          <div class="caption-overlay">
+            <div class="caption-tag">Water & Sanitation</div>
+            <div class="caption-title">Clean Water for Bolgatanga</div>
+            <div class="caption-desc">A new borehole system now serves 1,200 residents with safe drinking water year-round.</div>
+          </div>
+        </div>
+
+        <div class="stage-slide" data-index="2">
+          <img src="images/image28.webp" alt="Project 3"
+            onerror="this.src='images/image28.webp'">
+          <div class="caption-overlay">
+            <div class="caption-tag">Healthcare</div>
+            <div class="caption-title">Mobile Clinics in the North</div>
+            <div class="caption-desc">Our mobile health units conducted 3,000+ free consultations across remote villages.</div>
+          </div>
+        </div>
+
+        <div class="stage-slide" data-index="3">
+          <img src="images/image29.webp" alt="Project 4"
+            onerror="this.src='images/image29.webp'">
+          <div class="caption-overlay">
+            <div class="caption-tag">Women Empowerment</div>
+            <div class="caption-title">Skills for Tomorrow</div>
+            <div class="caption-desc">200 women completed vocational training, launching small businesses across Kumasi.</div>
+          </div>
+        </div>
+
+        <div class="stage-slide" data-index="4">
+          <img src="images/image30.webp" alt="Project 5"
+            onerror="this.src='images/image30.webp'">
+          <div class="caption-overlay">
+            <div class="caption-tag">Agriculture</div>
+            <div class="caption-title">Feeding Families in the Volta Region</div>
+            <div class="caption-desc">Irrigation upgrades helped 80 farming families triple their harvest output.</div>
+          </div>
+        </div>
+
+        <div class="stage-slide" data-index="5">
+          <img src="images/image31.webp" alt="Project 6"
+            onerror="this.src='images/image31.webp'">
+          <div class="caption-overlay">
+            <div class="caption-tag">Infrastructure</div>
+            <div class="caption-title">Bridges That Connect Communities</div>
+            <div class="caption-desc">A new footbridge in the Brong-Ahafo region now connects two villages for the first time.</div>
+          </div>
+        </div>
+
+        <div class="stage-slide" data-index="6">
+          <img src="images/image32.webp" alt="Project 6"
+            onerror="this.src='images/image31.webp'">
+          <div class="caption-overlay">
+            <div class="caption-tag">Infrastructure</div>
+            <div class="caption-title">Bridges That Connect Communities</div>
+            <div class="caption-desc">A new footbridge in the Brong-Ahafo region now connects two villages for the first time.</div>
+          </div>
+        </div>
+
+        <div class="stage-slide" data-index="7">
+          <img src="images/image33.webp" alt="Project 7"
+            onerror="this.src='images/image31.webp'">
+          <div class="caption-overlay">
+            <div class="caption-tag">Infrastructure</div>
+            <div class="caption-title">Bridges That Connect Communities</div>
+            <div class="caption-desc">A new footbridge in the Brong-Ahafo region now connects two villages for the first time.</div>
+          </div>
+        </div>
+
+        <div class="stage-slide" data-index="8">
+          <img src="images/image34.webp" alt="Project 8"
+            onerror="this.src='images/image31.webp'">
+          <div class="caption-overlay">
+            <div class="caption-tag">Infrastructure</div>
+            <div class="caption-title">Bridges That Connect Communities</div>
+            <div class="caption-desc">A new footbridge in the Brong-Ahafo region now connects two villages for the first time.</div>
+          </div>
+        </div>
+
+        <div class="stage-slide" data-index="9">
+          <img src="images/image35.webp" alt="Project 9"
+            onerror="this.src='images/image31.webp'">
+          <div class="caption-overlay">
+            <div class="caption-tag">Infrastructure</div>
+            <div class="caption-title">Bridges That Connect Communities</div>
+            <div class="caption-desc">A new footbridge in the Brong-Ahafo region now connects two villages for the first time.</div>
+          </div>
+        </div>
+
+        <div class="stage-slide" data-index="10">
+          <img src="images/image36.webp" alt="Project 10"
+            onerror="this.src='images/image31.webp'">
+          <div class="caption-overlay">
+            <div class="caption-tag">Infrastructure</div>
+            <div class="caption-title">Bridges That Connect Communities</div>
+            <div class="caption-desc">A new footbridge in the Brong-Ahafo region now connects two villages for the first time.</div>
+          </div>
+        </div>
+
+        <div class="stage-slide" data-index="11">
+          <img src="images/image37.webp" alt="Project 11"
+            onerror="this.src='images/image31.webp'">
+          <div class="caption-overlay">
+            <div class="caption-tag">Infrastructure</div>
+            <div class="caption-title">Bridges That Connect Communities</div>
+            <div class="caption-desc">A new footbridge in the Brong-Ahafo region now connects two villages for the first time.</div>
+          </div>
+        </div>
+
+        <div class="stage-slide" data-index="12">
+          <img src="images/image38.webp" alt="Project 12"
+            onerror="this.src='images/image31.webp'">
+          <div class="caption-overlay">
+            <div class="caption-tag">Infrastructure</div>
+            <div class="caption-title">Bridges That Connect Communities</div>
+            <div class="caption-desc">A new footbridge in the Brong-Ahafo region now connects two villages for the first time.</div>
+          </div>
+        </div>
+
+        <div class="stage-slide" data-index="13">
+          <img src="images/image39.webp" alt="Project 13"
+            onerror="this.src='images/image31.webp'">
+          <div class="caption-overlay">
+            <div class="caption-tag">Infrastructure</div>
+            <div class="caption-title">Bridges That Connect Communities</div>
+            <div class="caption-desc">A new footbridge in the Brong-Ahafo region now connects two villages for the first time.</div>
+          </div>
+        </div>
+
+        <div class="stage-slide" data-index="14">
+          <img src="images/image40.webp" alt="Project 14"
+            onerror="this.src='images/image31.webp'">
+          <div class="caption-overlay">
+            <div class="caption-tag">Infrastructure</div>
+            <div class="caption-title">Bridges That Connect Communities</div>
+            <div class="caption-desc">A new footbridge in the Brong-Ahafo region now connects two villages for the first time.</div>
+          </div>
+        </div>
+
+        <div class="stage-slide" data-index="15">
+          <img src="images/image41.webp" alt="Project 15"
+            onerror="this.src='images/image31.webp'">
+          <div class="caption-overlay">
+            <div class="caption-tag">Infrastructure</div>
+            <div class="caption-title">Bridges That Connect Communities</div>
+            <div class="caption-desc">A new footbridge in the Brong-Ahafo region now connects two villages for the first time.</div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Arrows -->
+      <button class="nav-btn" id="prev-btn" aria-label="Previous">&#8592;</button>
+      <button class="nav-btn" id="next-btn" aria-label="Next">&#8594;</button>
+
+      <!-- Counter -->
+      <div class="slide-counter" id="counter">1 / 15</div>
+
+      <!-- Progress bar -->
+      <div class="progress-bar" id="progress-bar"></div>
+    </div>
+
+    <!-- Thumbnails -->
+    <div class="thumbs-wrap">
+      <div class="thumbs-scroll" id="thumbs-scroll">
+        <!-- generated by JS -->
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<script type="module">
+  const slides = Array.from(document.querySelectorAll('.stage-slide'));
+  const slidesInner = document.getElementById('stage-slides');
+  const stage = document.getElementById('stage');
+  const prevBtn = document.getElementById('prev-btn');
+  const nextBtn = document.getElementById('next-btn');
+  const counter = document.getElementById('counter');
+  const progressBar = document.getElementById('progress-bar');
+  const thumbsScroll = document.getElementById('thumbs-scroll');
+  const autoplayBtn = document.getElementById('autoplay-btn');
+  const slideLabel = document.getElementById('slide-label');
+  const AUTOPLAY_DURATION = 4000;
+
+  const labels = [
+    'Education — Tamale',
+    'Water & Sanitation — Bolgatanga',
+    'Healthcare — Northern Region',
+    'Empowerment — Kumasi',
+    'Agriculture — Volta Region',
+    'Infrastructure — Brong-Ahafo',
+  ];
+
+  let current = 0;
+  let autoplayTimer = null;
+  let progressTimer = null;
+  let isPlaying = true;
+
+  // Build thumbnails
+  slides.forEach((slide, i) => {
+    const img = slide.querySelector('img');
+    const thumb = document.createElement('div');
+    thumb.className = 'thumb' + (i === 0 ? ' active' : '');
+    thumb.setAttribute('aria-label', `Go to slide ${i + 1}`);
+    const tImg = document.createElement('img');
+    tImg.src = img.src;
+    tImg.alt = img.alt;
+    tImg.onerror = () => { tImg.src = img.src; }; // fallback same
+    thumb.appendChild(tImg);
+    thumb.addEventListener('click', () => goTo(i));
+    thumbsScroll.appendChild(thumb);
+  });
+
+  const thumbs = Array.from(thumbsScroll.querySelectorAll('.thumb'));
+
+  function goTo(idx, restart = true) {
+    slides[current].classList.remove('active');
+    thumbs[current].classList.remove('active');
+    current = (idx + slides.length) % slides.length;
+    slides[current].classList.add('active');
+    thumbs[current].classList.add('active');
+    slidesInner.style.transform = `translateX(-${current * 100}%)`;
+    counter.textContent = `${current + 1} / ${slides.length}`;
+    slideLabel.textContent = labels[current];
+    // scroll thumb into view
+    startAutoplay();
+  }
+
+  function startAutoplay() {
+    clearInterval(autoplayTimer);
+    clearInterval(progressTimer);
+    progressBar.style.transition = 'none';
+    progressBar.style.width = '0%';
+    requestAnimationFrame(() => {
+      progressBar.style.transition = `width ${AUTOPLAY_DURATION}ms linear`;
+      progressBar.style.width = '100%';
+    });
+    autoplayTimer = setInterval(() => goTo(current + 1), AUTOPLAY_DURATION);
+  }
+
+  function stopAutoplay() {
+    clearInterval(autoplayTimer);
+    clearInterval(progressTimer);
+    progressBar.style.transition = 'none';
+    progressBar.style.width = '0%';
+  }
+
+  // Arrow buttons
+  prevBtn.addEventListener('click', () => goTo(current - 1));
+  nextBtn.addEventListener('click', () => goTo(current + 1));
+
+  
+
+  // ── SWIPE / DRAG ──
+  let dragStartX = 0;
+  let dragStartY = 0;
+  let dragging = false;
+  let dragDelta = 0;
+  let isHorizontal = null;
+
+  function onDragStart(x, y) {
+    dragStartX = x;
+    dragStartY = y;
+    dragging = true;
+    dragDelta = 0;
+    isHorizontal = null;
+    slidesInner.style.transition = 'none';
+    stopAutoplay();
+  }
+
+  function onDragMove(x, y) {
+    if (!dragging) return;
+    const dx = x - dragStartX;
+    const dy = y - dragStartY;
+    if (isHorizontal === null) {
+      isHorizontal = Math.abs(dx) > Math.abs(dy);
+    }
+    if (!isHorizontal) return;
+    dragDelta = dx;
+    const offset = -current * 100 + (dx / stage.offsetWidth) * 100;
+    slidesInner.style.transform = `translateX(${offset}%)`;
+  }
+
+  function onDragEnd() {
+    if (!dragging) return;
+    dragging = false;
+    slidesInner.style.transition = '';
+    if (isHorizontal) {
+      if (dragDelta < -60) goTo(current + 1);
+      else if (dragDelta > 60) goTo(current - 1);
+      else goTo(current);
+    }
+    isHorizontal = null;
+  }
+
+  // Touch
+  stage.addEventListener('touchstart', e => onDragStart(e.touches[0].clientX, e.touches[0].clientY), { passive: true });
+  stage.addEventListener('touchmove', e => { if (isHorizontal) e.preventDefault(); onDragMove(e.touches[0].clientX, e.touches[0].clientY); }, { passive: false });
+  stage.addEventListener('touchend', e => onDragEnd());
+
+  // Mouse drag
+  stage.addEventListener('mousedown', e => { e.preventDefault(); onDragStart(e.clientX, e.clientY); });
+  window.addEventListener('mousemove', e => onDragMove(e.clientX, e.clientY));
+  window.addEventListener('mouseup', () => onDragEnd());
+
+  // Keyboard
+  document.addEventListener('keydown', e => {
+    if (e.key === 'ArrowLeft') goTo(current - 1);
+    if (e.key === 'ArrowRight') goTo(current + 1);
+  });
+
+  // Pause on hover
+  stage.addEventListener('mouseenter', () => { if (isPlaying) stopAutoplay(); });
+  stage.addEventListener('mouseleave', () => { if (isPlaying) startAutoplay(); });
+
+  // Init
+  startAutoplay();
+</script>
+
+
+  <!-- Footer -->
+  <footer class="bg-[var(--dark)] text-black py-5">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid md:grid-cols-4 gap-12 mb-5">
+        <div>
+          <h4 class="text-xl font-bold text-[var(--primary)] mb-4">About LSF</h4>
+          <p class="text-sm opacity-90 leading-relaxed">
+            Le Shelter Foundation provides equal educational opportunities to underprivileged children in rural Ghana.
+          </p>
+        </div>
+        <div class="flex flex-col items-start">
+          <h4 class="text-xl font-bold text-[var(--primary)] mb-4">Socials</h4>
+          <div class="flex items-center gap-6">
+            <a href="https://www.facebook.com/profile.php?id=100067770571763" target="_blank" rel="noopener noreferrer" class="w-12 h-12 bg-[var(--primary)]/10 text-[var(--primary)] hover:bg-[var(--primary)] hover:text-white rounded-full flex items-center justify-center text-2xl transition-all duration-300 shadow-md hover:shadow-lg" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.tiktok.com/@le.shelter.founda?_t=ZM-8sl65FqR7XZ&_r=1" target="_blank" rel="noopener noreferrer" class="w-12 h-12 bg-[var(--primary)]/10 text-[var(--primary)] hover:bg-[var(--primary)] hover:text-white rounded-full flex items-center justify-center text-2xl transition-all duration-300 shadow-md hover:shadow-lg" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+            <a href="https://x.com/le_shelter?t=dWlkQidVKnRSYGSbFpbjHg&s=09" target="_blank" rel="noopener noreferrer" class="w-12 h-12 bg-[var(--primary)]/10 text-[var(--primary)] hover:bg-[var(--primary)] hover:text-white rounded-full flex items-center justify-center text-2xl transition-all duration-300 shadow-md hover:shadow-lg" aria-label="X (Twitter)"><i class="fab fa-x-twitter"></i></a>
+            <a href="https://www.instagram.com/le.shelter.foundation?igsh=bGxneno2OTN5NjF5" target="_blank" rel="noopener noreferrer" class="w-12 h-12 bg-[var(--primary)]/10 text-[var(--primary)] hover:bg-[var(--primary)] hover:text-white rounded-full flex items-center justify-center text-2xl transition-all duration-300 shadow-md hover:shadow-lg" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+        <div>
+          <h4 class="text-xl font-bold text-[var(--primary)] mb-4">Contact</h4>
+          <div class="space-y-2 text-sm opacity-90">
+            <p>📍 Baatsona-Spintex, Ghana</p>
+            <p>📱 +233 53 044 9325</p>
+            <p>📧 lesheltergh@gmail.com</p>
+          </div>
+        </div>
+        <div>
+          <h4 class="text-xl font-bold text-[var(--primary)] mb-4">Newsletter</h4>
+          <form class="flex gap-2">
+            <input type="email" placeholder="Your email" class="flex-1 px-3 py-2 rounded text-gray-800 text-sm focus:outline-none" required/>
+            <button type="submit" class="px-4 py-2 bg-[var(--primary)] rounded hover:bg-orange-500 text-white font-bold transition">Sign Up</button>
+          </form>
+        </div>
+      </div>
+      <div class="border-t border-gray-700 pt-5 text-center">
+        <p class="text-sm opacity-50 mb-1">Copyright &copy;<script>document.write(new Date().getFullYear());</script> |
+          All rights reserved by Le Shelter Foundation <i class="fas fa-globe" aria-hidden="true"></i></a>
+        </p>
+        <p class="text-sm opacity-50"> Designed By <a href="#">IHAG <i class="far fa-hand-peace" aria-hidden="true"></i></a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module">
+    const menuBtn = document.getElementById('menu-btn');
+    const closeMenu = document.getElementById('close-menu');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuBtn?.addEventListener('click', () => mobileMenu.classList.remove('hidden'));
+    closeMenu?.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+    mobileMenu?.addEventListener('click', e => {
+      if (e.target === mobileMenu) mobileMenu.classList.add('hidden');
+    });
+
+    document.querySelectorAll('#mobile-menu a').forEach(link => {
+      link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+    });
+
+      
+  </script>
+
+  <script type="module">
+    // Donation Modal Logic
+    const donateBtn = document.getElementById('donate-btn');
+    const donateBtnMobile = document.getElementById('donate-btn-mobile');
+    const donateModal = document.getElementById('donate-modal');
+    const closeDonateModal = document.getElementById('close-donate-modal');
+
+    function openDonateModal() {
+      donateModal.classList.add('active');
+    }
+
+    function closeDonateModalFunc() {
+      donateModal.classList.remove('active');
+    }
+
+    donateBtn?.addEventListener('click', openDonateModal);
+    donateBtnMobile?.addEventListener('click', () => {
+      openDonateModal();
+      mobileMenu.classList.add('hidden');
+    });
+    closeDonateModal?.addEventListener('click', closeDonateModalFunc);
+    
+    // Close modal when clicking outside
+    donateModal?.addEventListener('click', (e) => {
+      if (e.target === donateModal) {
+        closeDonateModalFunc();
+      }
+    });
+
+    // Close modal with Escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        closeDonateModalFunc();
+      }
+    });
+  </script>
+
+  <script type="module">
+  // Event date in UTC (March 6, 2026 at 14:00 GMT / Africa/Accra time)
+  const eventDate = new Date(Date.UTC(2026, 2, 0o6, 8, 0, 0)); // Month is 0-based (3 = April)
+
+  function updateCountdown() {
+    const now = new Date().getTime();
+    const distance = eventDate.getTime() - now;
+
+    if (distance < 0) {
+      document.getElementById('countdown').innerHTML = 
+        '<p class="text-3xl md:text-4xl font-bold text-[var(--primary)]">The event is happening now!</p>';
+      return;
+    }
+
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    document.getElementById('days').textContent = days.toString().padStart(2, '0');
+    document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+    document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+    document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+  }
+
+  // Run immediately and every second
+  updateCountdown();
+  setInterval(updateCountdown, 1000);
+</script>
+
+
+  <a href="https://wa.me/233530449325?text=Hello%20Le%20Shelter%20Foundation" 
+    target="_blank" rel="noopener"
+    class="fixed bottom-6 left-6 bg-green-500 text-white w-12 h-12 rounded-full shadow-2xl flex items-center justify-center hover:bg-green-600 hover:scale-110 transition z-40"
+    aria-label="Chat on WhatsApp">
+    <i class="fa-brands fa-whatsapp text-2xl"></i>
+  </a>
+
+</body>
+</html>

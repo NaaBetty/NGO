@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Le Shelter Foundation</title>
+  <meta name="description" content="Le Shelter Foundation provides equal educational opportunities for underprivileged children in rural Ghana through school supplies, mentorship, clean water access, and community support. Founded 2017 by Ruby Offeibea Adu."/>
+  <meta name="keywords" content="Le Shelter Foundation, rural education Ghana, donate school supplies, children charity, mentorship programs, Asiafo Amanfro, Asutsuare, Pokrom, etc"/>
+  <meta name="author" content="Le Shelter Foundation"/>
+  
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:title" content="Le Shelter Foundation - Equal Opportunity For All"/>
+  <meta property="og:description" content="Equal educational opportunities, school supplies, mentorship and hope for children in rural Ghana."/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://www.leshelterfoundation.org"/>
+  <meta property="og:image" content="images/icon/favicon-32x32.png"/>
+  <meta property="og:site_name" content="Le Shelter Foundation"/>
+
+  <!-- Tailwind CDN (for development – replace with built CSS in production) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/style.css">
+  
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/themify-icons.css" />  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="images/icon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/icon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/icon/favicon-16x16.png">
+  <link rel="manifest" href="images/icon/site.webmanifest">
+  <link rel="canonical" href="https://www.leshelterfoundation.org/index.html">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/add-to-calendar-button@2.13.5/dist/add-to-calendar-button.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/add-to-calendar-button@2.13.5/dist/add-to-calendar-button.min.js" async defer></script>
+  <script src="Javascript/eventtimer.js"></script>
+  
+  <title>Le Shelter Foundation - Equal Opportunity For All</title>
+
+</head>
+<body>
+
+  <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="fixed inset-0 bg-white/60 backdrop-blur-sm z-50 hidden flex items-center justify-center">
+        <div class="bg-white rounded-2xl p-8 max-w-sm w-full text-center space-y-6">
+            <button id="close-menu" class="absolute top-4 right-4 text-3xl font-bold text-gray-500">&times;</button>
+            <a href="index.html" class="nav-link active block text-2xl">Home</a>
+            <a href="about.html" class="nav-link block text-2xl">About</a>
+            <a href="projects.html" class="nav-link block text-2xl">Projects</a>
+            <a href="shop.html" class="nav-link block text-2xl">Shop</a>
+            <a href="contact.html" class="nav-link block text-2xl">Contact Us</a>
+            <button id="donate-btn-mobile" class="btn-primary inline-block px-10 py-4 rounded-xl text-lg font-bold w-full">Donate Now</button>
+        </div>
+    </div>
+
+  <!-- Donation Modal -->
+    <div id="donate-modal" class="donate-modal">
+      <div class="donate-modal-content relative">
+        <button id="close-donate-modal" class="donate-modal-close">&times;</button>
+            
+        <h2 class="text-3xl font-bold text-[var(--primary)] mb-2">Ways to Support Us</h2>
+        <p class="text-gray-700 mb-5 text-lg">Your generosity makes a direct impact on children's lives in rural Ghana. Choose how you'd like to help:</p>
+
+        <!-- Direct Donation -->
+        <div class="mb-3 pb-3 border-b border-orange-500">
+          <h3 class="text-xl font-bold text-[var(--primary)] mb-1">💝 Direct Donation</h3>
+          <p class="text-gray-700 mb-2 text-lg">Make a monetary contribution to support our programs.</p>
+          <h4>MTN Mobile Money (MOMO) Details;</h4>
+          <div class="flex  sm:flex-row gap-2 justify-left items-center mb-1">
+            <img src="images/mtnlogo.png" alt="MTN Mobile Money" class="h-20  w-auto"></p>
+            <ul>
+              <li><strong>Name:</strong> Le Shelter Foundation</li>
+              <li><strong>Mobile Money Number:</strong> 0530449325</li>
+              <li><strong>Merchant ID:</strong> 440792</li>
+            </ul>
+          </div>
+          <a href="donate.html" class="inline-block mt-2 bg-[var(--primary)] text-white px-6 py-3 rounded-xl font-bold hover:bg-orange-500 transition">Contribute to Project</a>
+        </div>
+
+        <!-- Shop Support -->
+          <div class="mb-1 pb-1 ">
+            <h3 class="text-xl font-bold text-[var(--primary)] mb-1">🛍️ Shop & Support</h3>
+            <p class="text-gray-700 mb-2 text-lg">Purchase meaningful merchandise. 100% of profits goes to support our mission.</p>
+            <ul class="text-sm text-gray-600 mb-4 space-y-2">
+              <li>✓ Organic T-Shirts & Hoodies</li>
+              <li>✓ Canvas Tote Bags & Caps</li>
+              <li>✓ Coffee Mugs & Water Bottles</li>
+              <li>✓ Notebooks & Accessories</li>
+            </ul>
+            <a href="donate.html" class="inline-block bg-[var(--primary)] text-white px-6 py-3 rounded-xl font-bold hover:bg-orange-500 transition">Browse Shop</a>
+          </div>
+      </div>
+    </div>
+
+  <!-- Header / Navigation -->
+    <header class="site-header">
+        <!-- Top Header Bar -->
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3 sm:py-2">
+            <div class="flex flex-col md:flex-row items-center justify-center md:justify-between gap-3 sm:gap-4">
+                <div class="flex items-center justify-center gap-2 w-full md:w-auto">
+                    <i class="fa fa-envelope text-[var(--secondary)]"></i>
+                    <p class="text-xs sm:text-sm md:text-base"><a href="mailto:lesheltergh@gmail.com" class=" hover:text-[var(--secondary)]">Lesheltergh@gmail.com</a></p>
+                </div>
+
+                <div class="flex items-center justify-center gap-2 w-full md:w-auto">
+                    <i class="fa fa-phone text-[var(--secondary)]"></i>
+                    <p class="text-xs sm:text-sm md:text-base"><a href="tel:+233530449325" class="text-xs sm:text-sm md:text-base hover:text-[var(--secondary)] transition">+233 53 044 9325</a></p>
+                </div>
+
+                <button id="donate-btn" class="border-2 border-orange-500 btn-primary px-6 sm:px-8 py-2 sm:py-3 rounded-xl font-bold shadow-lg hover:shadow-xl transition w-full sm:w-auto">Donate Now <i class="fa-solid fa-hand-holding-heart ml-2"></i></button>
+            </div>
+        </div>
+
+        <!-- Navigation -->
+        <nav class="max-w-7xl mx-auto px-5 sm:px-6 py-3 flex items-center justify-between">
+            <a href="index.html" class="block">
+                <img src="images/Logo.png" alt="Le Shelter Foundation" class="h-8 sm:h-5 md:h-10 w-auto">
+            </a>
+        
+            <div class="hidden md:flex items-center space-x-10">
+                <a href="index.html" class="nav-link active">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="projects.html" class="nav-link">Projects</a>
+                <a href="shop.html" class="nav-link">Shop</a>
+                <a href="contact.html" class="nav-link">Contact Us</a>
+            </div>
+            <button id="menu-btn" class="md:hidden text-3xl focus:outline-none text-[var(--primary)]">☰</button>
+        </nav>
+    </header>
+
+  <!-- Hero Section with Image Slider -->
+  <section class="relative h-96 md:h-[500px] lg:h-[600px] flex items-end justify-center overflow-hidden">
+    <!-- Image Slider Container -->
+    <div class="absolute inset-0 w-full h-full">
+      <div id="hero-slider-wrapper" class="flex transition-transform duration-800 ease-out h-full">
+        <div class="hero-slide w-full flex-shrink-0 h-full"><img src="images/s1.jpg" alt="Hero Image 1" class="w-full h-full object-cover object-top"></div>
+        <div class="hero-slide w-full flex-shrink-0 h-full"><img src="images/s2.jpg" alt="Hero Image 2" class="w-full h-full object-cover object-top"></div>
+        <div class="hero-slide w-full flex-shrink-0 h-full"><img src="images/s3.jpg" alt="Hero Image 3" class="w-full h-full object-cover object-top"></div>
+        <div class="hero-slide w-full flex-shrink-0 h-full"><img src="images/s4.jpg" alt="Hero Image 4" class="w-full h-full object-cover object-top"></div>
+
+      </div>
+      <!-- Dark Overlay -->
+      <div class="absolute inset-0 bg-black/50"></div>
+    </div>
+
+    <!-- Content Overlay -->
+     <div class="relative z-10 w-full max-w-5xl mx-auto px-6 py-8 text-white text-center">
+      <h1 class="text-lg sm:text-sm md:text-lg lg:text-3xl xl:text-4xl font-extrabold mb-1 sm:mb-2 leading-tight">Providing Equal Educational Opportunities for Rural Children in Ghana</h1>
+      <p class="text-[15px] sm:text-xs md:text-sm lg:text-base xl:text-lg mb-2 sm:mb-3 md:mb-5 max-w-2xl mx-auto opacity-95 leading-relaxed">
+        By donating learning materials, providing guidance, and engaging students to inspire hope and representation.
+      </p>
+      
+      <div class="flex  sm:flex-row gap-4 justify-center items-center">
+          
+       <!-- <a href="donate.html" class="btn-primary px-4 py-2 rounded-xl text-lg font-bold shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300 ">Donate Today ♡</a> -->
+       <a href="about.html" class="btn-secondary text-[var(--primary)] px-4 py-2 rounded-xl text-lg font-bold shadow-xl hover:shadow-2xl hover:text-[var(--secondary)] transform hover:-translate-y-1 transition-all duration-300">Learn Our Story</a>
+      </div>
+     
+    </div>
+
+    
+    <!-- Hero Slider Navigation Buttons -->
+    <button id="hero-prev" class="absolute left-2 sm:left-4 md:left-6 top-1/2 -translate-y-1/2 z-20 bg-white/30 hover:bg-white/50 text-white rounded-full p-2 sm:p-3 transition backdrop-blur shadow-md">
+      <svg class="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+      </svg>
+    </button>
+
+    <button id="hero-next" class="absolute right-2 sm:right-4 md:right-6 top-1/2 -translate-y-1/2 z-20 bg-white/30 hover:bg-white/50 text-white rounded-full p-2 sm:p-3 transition backdrop-blur shadow-md">
+      <svg class="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+      </svg>
+    </button>
+
+    <!-- Hero Slider Dots -->
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex justify-center gap-3 hidden">
+      <button class="hero-dot w-3 h-3 rounded-full bg-white transition-all cursor-pointer" data-slide="0"></button>
+      <button class="hero-dot w-3 h-3 rounded-full bg-white/50 transition-all cursor-pointer" data-slide="1"></button>
+      <button class="hero-dot w-3 h-3 rounded-full bg-white/50 transition-all cursor-pointer" data-slide="2"></button>
+      <button class="hero-dot w-3 h-3 rounded-full bg-white/50 transition-all cursor-pointer" data-slide="3"></button>
+      <button class="hero-dot w-3 h-3 rounded-full bg-white/50 transition-all cursor-pointer" data-slide="4"></button>
+    </div>
+  </section>
+
+  <!-- Impact Stats -->
+  <section class="py-8 bg-white">
+  <div class="max-w-7xl mx-auto">
+    <div class="container mx-auto px-5 items-center">
+      <div class="flex flex-col lg:flex-row items-end gap-8 items-center">
+        <!-- Volunteer CTA Box -->
+        <div class="w-full lg:w-2/5">
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSf8BNb_TOu1TX99yPvh-6kXlTA_dcG3nNBWbJJK5OmTPgmAxQ/viewform?pli=1" target="_blank" rel="noopener noreferrer"
+            class="block bg-gray-100 rounded-xl shadow-lg hover:bg-orange-500 hover:shadow-2xl transition-all duration-300 border border-gray-200 p-6 group cursor-pointer">
+            <div class="flex flex-col items-center">
+              <div class="flex justify-center mb-3">
+                <img 
+                  src="images/hands-gray.png" 
+                  alt="Gray hands" 
+                  class="w-10 h-10 mr-2 transition-all duration-300 group-hover:brightness-0 group-hover:invert" 
+                />
+              </div>
+              <h3 class="text-2xl font-bold mb-2 text-center text-pink-600 group-hover:text-white transition-colors duration-300">
+                Become A Volunteer
+              </h3>
+              <p class="text-base text-gray-600 mb-3 text-center group-hover:text-white transition-colors duration-300">
+                Are you passionate about making a difference? Join us and become a volunteer today! Click to fill out the form to get started and help us make a lasting impact.
+              </p>
+              <h4 class="text-lg font-semibold text-center text-pink-600 group-hover:text-white transition-colors duration-300">
+                ❤️ Join Us Today ❤️
+              </h4>
+            </div>
+          </a>
+        </div>
+        <!-- Spacer (hidden on small screens) -->
+        <div class="hidden lg:block w-1/12"></div>
+        <!-- Milestones/Counters -->
+        <div class="w-full lg:w-3/5 items-center">
+          <div class="flex flex-row justify-between gap-6">
+            <!-- Counter 1 -->
+            <div class="w-1/3 bg-white rounded-lg p-3 flex flex-col items-center">
+              <img src="images/dove.png" alt="Dove" class="w-55 h-55 mb-2" />
+              <div class="flex items-baseline justify-center">
+                <span
+                  class="text-3xl font-extrabold text-pink-600 start-counter"
+                  data-to="500"
+                  data-speed="2000"
+                >500</span>
+                <span class="text-2xl text-pink-600 font-bold ml-1">+</span>
+              </div>
+              <h3 class="mt-2 text-lg font-medium text-center text-gray-600">Children helped</h3>
+            </div>
+            <!-- Counter 2 -->
+            <div class="w-1/3 bg-white rounded-lg p-3 flex flex-col items-center">
+              <img src="images/olive.png" alt="Olive branch" class="w-55 h-55 mb-2" />
+              <div class="flex items-baseline justify-center">
+                <span
+                  class="text-3xl font-extrabold text-pink-600 start-counter"
+                  data-to="50"
+                  data-speed="2000"
+                >50</span>
+                <span class="text-2xl text-pink-600 font-bold ml-1">+</span>
+              </div>
+              <h3 class="mt-2 text-lg font-medium text-center text-gray-600">Donors and Sponsors</h3>
+            </div>
+            <!-- Counter 3 -->
+            <div class="w-1/3 bg-white rounded-lg p-3 flex flex-col items-center">
+              <img src="images/teamwork.png" alt="Teamwork" class="w-55 h-55 mb-2" />
+              <div class="flex items-baseline justify-center">
+                <span
+                  class="text-3xl font-extrabold text-pink-600 start-counter"
+                  data-to="30"
+                  data-speed="2000"
+                >30</span>
+                <span class="text-2xl text-pink-600 font-bold ml-1">+</span>
+              </div>
+              <h3 class="mt-2 text-lg font-medium text-center text-gray-600">Volunteers</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</section>
+
+<section class="home-page-welcome py-5 md:py-12 lg:py-5 relative overflow-hidden ">
+  <!-- Greyed-out background image -->
+  <img src="images/mission.webp" alt="" class="absolute inset-0 w-full h-full object-cover grayscale brightness-80 opacity-40"aria-hidden="true"/>
+  
+  <!-- Dark gray overlay for better text readability -->
+  <div class="absolute inset-0 bg-gray-900/60"></div>
+
+  <div class="relative z-10 container max-w-7xl mx-auto px-6">
+    <div class="flex flex-col items-center justify-center min-h-[60vh] lg:min-h-[70vh] text-center">
+      
+      <!-- Centered Text Content -->
+      <div class="welcome-content max-w-4xl">
+        <header class="entry-header mb-8 lg:mb-12">
+          <h2 class="text-5xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight drop-shadow-2xl">
+            Our Mission
+          </h2>
+        </header>
+
+        <div class="entry-content mt-6 lg:mt-10">
+          <p class="text-lg md:text-xl lg:text-2xl text-gray-50 leading-relaxed drop-shadow-lg">
+            <strong>
+              <em>
+                The mission of the Foundation is to provide equal educational opportunities for all, focusing mainly on students in rural areas by donating learning materials, providing guidance, and engaging students to inspire hope and representation.
+              </em>
+            </strong>
+          </p>
+        </div>
+
+        <div class="entry-footer mt-10 lg:mt-14">
+          <a 
+            href="about.html" 
+            class="inline-block px-10 py-5 border-2 border-white text-white rounded-xl font-bold text-lg lg:text-xl hover:bg-white hover:text-[var(--primary)] transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-1"
+          >
+            Read More
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Upcoming Events -->
+  <section class="py-15 bg-gray-100">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-5">        
+        <h2 class="py-5 text-4xl md:text-4xl font-bold text-[var(--primary)] ">Upcoming Project</h2>
+        <p class="text-lg text-gray-700 max-w-3xl mx-auto">Don't miss our upcoming initiative designed to create lasting impact in rural communities.</p>
+      </div>
+
+      <div class=" rounded-2xl  overflow-hidden">
+        <div class="bg-orange-500 text-white p-8 text-center">
+          <h3 class="text-4xl font-bold">Revisiting Our Partner Schools</h3>
+        </div>
+
+        <div class="p-5 md:p-5 ">
+          <div class="grid md:grid-cols-2 gap-8 mb-5">
+            <div class="rounded-2xl  overflow-hidden">
+              <img src="images/fly.jpg" alt="Upcoming" class="object-contain mx-auto"/>
+            </div>
+        
+            <div class="space-y-3 mb-5">
+              <p class="text-gray-700 mb-8 text-lg leading-relaxed text-justify">
+                We're organizing a major distribution of school supplies to all three partner schools. Students will receive exercise books, pens, educational materials, and learning aids. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum assumenda cumque nesciunt dolorum similique! Qui tenetur magnam sunt dignissimos laudantium odio est sapiente libero. Esse iusto voluptas quasi deleniti veniam.
+              </p>
+              <div class="flex items-center gap-3">
+                <span class="text-2xl">📅</span>
+                <p class="text-gray-700"><strong>Date:</strong> March 15-22, 2026</p>
+              </div>
+              <div class="flex items-center gap-3">
+                <span class="text-2xl">📍</span>
+                <p class="text-gray-700"><strong>Locations:</strong> Asiafo Amanfro, Asutsuare, Pokrom</p>
+              </div>
+              <div class="flex items-center gap-3">
+                <span class="text-2xl">👥</span>
+                <p class="text-gray-700"><strong>Impact:</strong> 200+ students will benefit</p>
+              </div>
+              <div class="flex items-center gap-3">
+                <span class="text-2xl">🎯</span>
+                <p class="text-gray-700"><strong>Goal:</strong> GH₵10,000 needed to complete supplies</p>
+              </div>
+
+              <div class="flex  sm:flex-row gap-4 justify-center items-center">
+              <a href="shop.html" class="btn-primary px-4 py-2 rounded-xl text-lg font-bold shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300 whitespace-nowrap ">Donate Today</a>
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLSf8BNb_TOu1TX99yPvh-6kXlTA_dcG3nNBWbJJK5OmTPgmAxQ/viewform?pli=1" target="_blank" rel="noopener noreferrer" class="border-2 border-[var(--primary)] px-4 py-2 bg-[var(--secondary)] text-[var(--primary)] rounded-xl font-bold text-lg lg:text-xl hover:bg-[var(--highlight)] hover:text-[var(--secondary)] transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-1 whitespace-nowrap ">Get Involved</a>
+            </div>
+
+            <div class="text-center py-5">
+                <p class="text-gray-700 text-lg mb-4">Want to help with any other service for the project? Get in touch with us today!</p>
+                <div class="entry-footer">
+              <a href="contact.html" class="inline-block border-2 border-orange-500 px-4 py-2 bg-orange-500 text-white rounded-xl font-bold text-lg lg:text-xl hover:bg-white hover:text-[var(--primary)] transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-1 whitespace-nowrap">Contact Us</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>  
+  </div>
+</section>  
+
+
+    
+
+<section class="relative h-96 md:h-[500px] lg:h-[600px] flex items-end justify-center overflow-hidden">
+    <!-- Background Image -->
+  <div 
+    class="absolute inset-0 bg-cover bg-center bg-no-repeat "
+    style="background-image: url('images/image15.webp');"
+    aria-hidden="true"
+  ></div>
+  
+  <!-- Dark overlay for text readability -->
+  <div class="absolute inset-0 bg-black/60"></div>
+
+  <!-- Content -->
+
+  <div class="relative z-10 w-full max-w-5xl mx-auto px-6 py-8 text-white text-center">
+    <header class="entry-header mb-8 lg:mb-12">
+      <h2 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight drop-shadow-2xl">
+        Your Support Creates Change
+      </h2>
+    </header>
+      <p class="text-[15px] sm:text-xs md:text-sm lg:text-base xl:text-lg mb-3 sm:mb-4 md:mb-6 max-w-2xl mx-auto opacity-95 leading-relaxed">
+        With years of dedication and hard work, we’ve achieved significant milestones in education, healthcare, and community support.
+      </p>
+      
+      <div class="flex  sm:flex-row gap-4 justify-center items-center">
+       <a href="shop.html" class="bg-[var(--accent)] text-[var(--dark)] inline-block px-12 py-5 rounded-2xl text-xl font-bold hover:bg-orange-500 transition shadow-lg hover:shadow-2xl transform hover:-translate-y-1">Buy to Support</a> 
+  
+       
+      </div>
+</section>
+
+  <!-- Footer -->
+  <footer class="bg-[var(--dark)] text-black py-5">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid md:grid-cols-4 gap-12 mb-5">
+        <div>
+          <h4 class="text-xl font-bold text-[var(--primary)] mb-4">About LSF</h4>
+          <p class="text-sm opacity-90 leading-relaxed">
+            Le Shelter Foundation provides equal educational opportunities to underprivileged children in rural Ghana.
+          </p>
+        </div>
+        <div class="flex flex-col items-start">
+          <h4 class="text-xl font-bold text-[var(--primary)] mb-4">Socials</h4>
+          <div class="flex items-center gap-6">
+            <a href="https://www.facebook.com/profile.php?id=100067770571763" target="_blank" rel="noopener noreferrer" class="w-12 h-12 bg-[var(--primary)]/10 text-[var(--primary)] hover:bg-[var(--primary)] hover:text-white rounded-full flex items-center justify-center text-2xl transition-all duration-300 shadow-md hover:shadow-lg" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.tiktok.com/@le.shelter.founda?_t=ZM-8sl65FqR7XZ&_r=1" target="_blank" rel="noopener noreferrer" class="w-12 h-12 bg-[var(--primary)]/10 text-[var(--primary)] hover:bg-[var(--primary)] hover:text-white rounded-full flex items-center justify-center text-2xl transition-all duration-300 shadow-md hover:shadow-lg" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+            <a href="https://x.com/le_shelter?t=dWlkQidVKnRSYGSbFpbjHg&s=09" target="_blank" rel="noopener noreferrer" class="w-12 h-12 bg-[var(--primary)]/10 text-[var(--primary)] hover:bg-[var(--primary)] hover:text-white rounded-full flex items-center justify-center text-2xl transition-all duration-300 shadow-md hover:shadow-lg" aria-label="X (Twitter)"><i class="fab fa-x-twitter"></i></a>
+            <a href="https://www.instagram.com/le.shelter.foundation?igsh=bGxneno2OTN5NjF5" target="_blank" rel="noopener noreferrer" class="w-12 h-12 bg-[var(--primary)]/10 text-[var(--primary)] hover:bg-[var(--primary)] hover:text-white rounded-full flex items-center justify-center text-2xl transition-all duration-300 shadow-md hover:shadow-lg" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+        <div>
+          <h4 class="text-xl font-bold text-[var(--primary)] mb-4">Contact</h4>
+          <div class="space-y-2 text-sm opacity-90">
+            <p>📍 Baatsona-Spintex, Ghana</p>
+            <p>📱 +233 53 044 9325</p>
+            <p>📧 lesheltergh@gmail.com</p>
+          </div>
+        </div>
+        <div>
+          <h4 class="text-xl font-bold text-[var(--primary)] mb-4">Newsletter</h4>
+          <form class="flex gap-2">
+            <input type="email" placeholder="Your email" class="flex-1 px-3 py-2 rounded text-gray-800 text-sm focus:outline-none" required/>
+            <button type="submit" class="px-4 py-2 bg-[var(--primary)] rounded hover:bg-orange-500 text-white font-bold transition">Sign Up</button>
+          </form>
+        </div>
+      </div>
+      <div class="border-t border-gray-700 pt-5 text-center">
+        <p class="text-sm opacity-50 mb-1">Copyright &copy;<script>document.write(new Date().getFullYear());</script> |
+          All rights reserved by Le Shelter Foundation <i class="fas fa-globe" aria-hidden="true"></i></a>
+        </p>
+        <p class="text-sm opacity-50"> Designed By <a href="#">IHAG <i class="far fa-hand-peace" aria-hidden="true"></i></a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const closeMenu = document.getElementById('close-menu');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuBtn?.addEventListener('click', () => mobileMenu.classList.remove('hidden'));
+    closeMenu?.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+    mobileMenu?.addEventListener('click', e => {
+      if (e.target === mobileMenu) mobileMenu.classList.add('hidden');
+    });
+
+    document.querySelectorAll('#mobile-menu a').forEach(link => {
+      link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+    });
+
+    // Hero Slider Only (cleaned – no unused carousel code)
+  let heroCurrentSlide = 0;
+  const heroSliderWrapper = document.getElementById('hero-slider-wrapper');
+  const heroPrevBtn = document.getElementById('hero-prev');
+  const heroNextBtn = document.getElementById('hero-next');
+  const heroDots = document.querySelectorAll('.hero-dot');
+  const heroTotalSlides = document.querySelectorAll('.hero-slide').length;
+  let heroAutoPlay;
+
+  function updateHeroSlider() {
+    heroSliderWrapper.style.transform = `translateX(-${heroCurrentSlide * 100}%)`;
+
+    heroDots.forEach((dot, i) => {
+      dot.classList.toggle('bg-white', i === heroCurrentSlide);
+      dot.classList.toggle('bg-white/50', i !== heroCurrentSlide);
+    });
+  }
+
+  function nextHeroSlide() {
+    heroCurrentSlide = (heroCurrentSlide + 1) % heroTotalSlides;
+    updateHeroSlider();
+  }
+
+  heroPrevBtn.addEventListener('click', () => {
+    heroCurrentSlide = heroCurrentSlide > 0 ? heroCurrentSlide - 1 : heroTotalSlides - 1;
+    updateHeroSlider();
+    resetHeroAutoPlay();
+  });
+
+  heroNextBtn.addEventListener('click', () => {
+    nextHeroSlide();
+    resetHeroAutoPlay();
+  });
+
+  heroDots.forEach(dot => {
+    dot.addEventListener('click', () => {
+      heroCurrentSlide = parseInt(dot.dataset.slide);
+      updateHeroSlider();
+      resetHeroAutoPlay();
+    });
+  });
+
+  function startHeroAutoPlay() {
+    heroAutoPlay = setInterval(nextHeroSlide, 6000);
+  }
+
+  function resetHeroAutoPlay() {
+    clearInterval(heroAutoPlay);
+    startHeroAutoPlay();
+  }
+
+  // Pause on hover
+  const heroSection = document.querySelector('section.relative.h-96');
+  heroSection.addEventListener('mouseenter', () => clearInterval(heroAutoPlay));
+  heroSection.addEventListener('mouseleave', startHeroAutoPlay);
+
+  // Start
+  updateHeroSlider();
+  startHeroAutoPlay();
+
+  </script>
+
+  <script>
+   document.querySelectorAll('.start-counter').forEach(counter => {
+  let started = false;
+  function animateCounter() {
+    if (started) return;
+    started = true;
+    const target = parseInt(counter.dataset.to, 10);
+    const speed = parseInt(counter.dataset.speed, 10);
+    let current = 0;
+    const increment = Math.max(1, Math.ceil(target / (speed / 16)));
+    function update() {
+      current += increment;
+      if (current >= target) {
+        counter.textContent = target;
+      } else {
+        counter.textContent = current;
+        requestAnimationFrame(update);
+      }
+    }
+    update();
+  }
+  // Optional: Start when in viewport (for performance)
+  function onScroll() {
+    const rect = counter.getBoundingClientRect();
+    if (rect.top < window.innerHeight && rect.bottom > 0) {
+      animateCounter();
+      window.removeEventListener('scroll', onScroll);
+    }
+  }
+  window.addEventListener('scroll', onScroll);
+  // For immediately visible counters:
+  onScroll();
+});
+</script>
+ 
+  <script>
+      // Donation Modal Logic
+    const donateBtn = document.getElementById('donate-btn');
+    const donateBtnMobile = document.getElementById('donate-btn-mobile');
+    const donateModal = document.getElementById('donate-modal');
+    const closeDonateModal = document.getElementById('close-donate-modal');
+
+    function openDonateModal() {
+      donateModal.classList.add('active');
+    }
+
+    function closeDonateModalFunc() {
+      donateModal.classList.remove('active');
+    }
+
+    donateBtn?.addEventListener('click', openDonateModal);
+    donateBtnMobile?.addEventListener('click', () => {
+      openDonateModal();
+      mobileMenu.classList.add('hidden');
+    });
+    closeDonateModal?.addEventListener('click', closeDonateModalFunc);
+    
+    // Close modal when clicking outside
+    donateModal?.addEventListener('click', (e) => {
+      if (e.target === donateModal) {
+        closeDonateModalFunc();
+      }
+    });
+
+    // Close modal with Escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        closeDonateModalFunc();
+      }
+    });
+ 
+  </script>
+
+  <script>
+  // Event date in UTC (April 15, 2026 at 14:00 GMT / Africa/Accra time)
+  const eventDate = new Date(Date.UTC(2026, 3, 15, 14, 0, 0)); // Month is 0-based (3 = April)
+
+  function updateCountdown() {
+    const now = new Date().getTime();
+    const distance = eventDate.getTime() - now;
+
+    if (distance < 0) {
+      document.getElementById('countdown').innerHTML = 
+        '<p class="text-3xl md:text-4xl font-bold text-[var(--primary)]">The event is happening now!</p>';
+      return;
+    }
+
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    document.getElementById('days').textContent = days.toString().padStart(2, '0');
+    document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+    document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+    document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+  }
+
+  // Run immediately and every second
+  updateCountdown();
+  setInterval(updateCountdown, 1000);
+</script>
+
+  <a href="https://wa.me/233530449325?text=Hello%20Le%20Shelter%20Foundation" 
+    target="_blank" rel="noopener"
+    class="fixed bottom-6 left-6 bg-green-500 text-white w-12 h-12 rounded-full shadow-2xl flex items-center justify-center hover:bg-green-600 hover:scale-110 transition z-40"
+    aria-label="Chat on WhatsApp">
+    <i class="fa-brands fa-whatsapp text-2xl"></i>
+  </a>
+
+</body>
+</html>
