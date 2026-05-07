@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Asiafo Amanfro Project - Le Shelter Foundation</title>
+  <meta name="description" content="Le Shelter Foundation provides equal educational opportunities for underprivileged children in rural Ghana through school supplies, mentorship, clean water access, and community support. Founded 2017 by Ruby Offeibea Adu."/>
+  <meta name="keywords" content="Le Shelter Foundation, rural education Ghana, donate school supplies, children charity, mentorship programs, Asiafo Amanfro, Asutsuare, Pokrom, etc"/>
+  <meta name="author" content="Le Shelter Foundation"/>
+  
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:title" content="Le Shelter Foundation - Equal Opportunity For All"/>
+  <meta property="og:description" content="Equal educational opportunities, school supplies, mentorship and hope for children in rural Ghana."/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://www.leshelterfoundation.org"/>
+  <meta property="og:image" content="images/icon/favicon-32x32.png"/>
+  <meta property="og:site_name" content="Le Shelter Foundation"/>
+
+  <link rel="stylesheet" href="../css/tailwind.css">
+  <!-- <link href="output.css" rel="stylesheet"> -->
+  <link rel="stylesheet" href="/css/style.css">
+  
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/themify-icons.css" />  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/icon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/icon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/icon/favicon-16x16.png">
+  <link rel="manifest" href="/images/icon/site.webmanifest">
+  <link rel="canonical" href="https://www.leshelterfoundation.org/index.html">
+  
+
+</head>
+<body>
+
+  <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="fixed inset-0 bg-white/60 backdrop-blur-sm z-50 hidden flex items-center justify-center">
+        <div class="bg-white rounded-2xl p-8 max-w-sm w-full text-center space-y-6">
+            <button id="close-menu" class="absolute top-4 right-4 text-3xl font-bold text-gray-500">&times;</button>
+            <a href="/index.html" class="nav-link block text-2xl">Home</a>
+            <a href="/about.html" class="nav-link active block text-2xl">About</a>
+            <a href="/projects.html" class="nav-link block text-2xl">Projects</a>
+            <a href="/shop.html" class="nav-link block text-2xl">Shop</a>
+            <a href="/contact.html" class="nav-link block text-2xl">Contact Us</a>
+            <button id="donate-btn-mobile" class="btn-primary inline-block px-10 py-4 rounded-xl text-lg font-bold w-full">Donate Now</button>
+        </div>
+    </div>
+
+  <!-- Donation Modal -->
+    <div id="donate-modal" class="donate-modal">
+      <div class="donate-modal-content relative">
+        <button id="close-donate-modal" class="donate-modal-close">&times;</button>
+            
+        <h2 class="text-3xl font-bold text-[var(--primary)] mb-2">Ways to Support Us</h2>
+        <p class="text-gray-700 mb-5 text-lg">Your generosity makes a direct impact on children's lives in rural Ghana. Choose how you'd like to help:</p>
+
+        <!-- Direct Donation -->
+        <div class="mb-3 pb-3 border-b border-orange-500">
+          <h3 class="text-xl font-bold text-[var(--primary)] mb-1">💝 Direct Donation</h3>
+          <p class="text-gray-700 mb-2 text-lg">Make a monetary contribution to support our programs.</p>
+          <h4>MTN Mobile Money (MOMO) Details;</h4>
+          <div class="flex  sm:flex-row gap-2 justify-start items-center mb-1">
+            <img src="/images/mtnlogo.png" alt="MTN Mobile Money" class="h-20 w-auto">
+            <ul>
+              <li><strong>Name:</strong> Le Shelter Foundation</li>
+              <li><strong>Mobile Money Number:</strong> 0530449325</li>
+              <li><strong>Merchant ID:</strong> 440792</li>
+            </ul>
+          </div>
+          <!-- <a href="donate.html" class="inline-block bg-[var(--primary)] text-white px-6 py-3 rounded-xl font-bold hover:bg-[var(--primary)]/90 transition">Donate Money Today</a> -->
+        </div>
+
+        <!-- Shop Support -->
+          <div class="mb-1 pb-1 ">
+            <h3 class="text-xl font-bold text-[var(--primary)] mb-1">🛍️ Shop & Support</h3>
+            <p class="text-gray-700 mb-2 text-lg">Purchase meaningful merchandise. 100% of profits goes to support our mission.</p>
+            <ul class="text-sm text-gray-600 mb-4 space-y-2">
+              <li>✓ Organic T-Shirts & Hoodies</li>
+              <li>✓ Canvas Tote Bags & Caps</li>
+              <li>✓ Coffee Mugs & Water Bottles</li>
+              <li>✓ Notebooks & Accessories</li>
+            </ul>
+            <a href="/shop.html" class="inline-block bg-[var(--primary)] text-white px-6 py-3 rounded-xl font-bold hover:bg-[var(--primary)] transition">Browse Shop</a>
+          </div>
+      </div>
+    </div>
+
+  <!-- Header / Navigation -->
+    <header class="site-header">
+        <!-- Top Header Bar -->
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3 sm:py-2">
+            <div class="flex flex-col md:flex-row items-center justify-center md:justify-between gap-3 sm:gap-4">
+                <div class="flex items-center justify-center gap-2 w-full md:w-auto">
+                    <i class="fa fa-envelope text-[var(--secondary)]"></i>
+                    <p class="text-xs sm:text-sm md:text-base"><a href="mailto:lesheltergh@gmail.com" class=" hover:text-[var(--secondary)]">Lesheltergh@gmail.com</a></p>
+                </div>
+
+                <div class="flex items-center justify-center gap-2 w-full md:w-auto">
+                    <i class="fa fa-phone text-[var(--secondary)]"></i>
+                    <p class="text-xs sm:text-sm md:text-base"><a href="tel:+233530449325" class="text-xs sm:text-sm md:text-base hover:text-[var(--secondary)] transition">+233 53 044 9325</a></p>
+                </div>
+
+                <button id="donate-btn" class="border-2 border-orange-500 btn-primary px-6 sm:px-8 py-2 sm:py-3 rounded-xl font-bold shadow-lg hover:shadow-xl transition w-full sm:w-auto">Donate Now <i class="fa-solid fa-hand-holding-heart ml-2"></i></button>
+            </div>
+        </div>
+
+        <!-- Navigation -->
+        <nav class="max-w-7xl mx-auto px-5 sm:px-6 py-3 flex items-center justify-between">
+            <a href="/index.html" class="block">
+                <img src="/images/Logo.png" alt="Le Shelter Foundation" class="h-8 sm:h-5 md:h-10 w-auto">
+            </a>
+        
+            <div class="hidden md:flex items-center space-x-10">
+                <a href="/index.html" class="nav-link">Home</a>
+                <a href="/about.html" class="nav-link active">About</a>
+                <a href="/projects.html" class="nav-link">Projects</a>
+                <a href="/shop.html" class="nav-link">Shop</a>
+                <a href="/contact.html" class="nav-link">Contact Us</a>
+            </div>
+            <button id="menu-btn" class="md:hidden text-3xl focus:outline-none text-[var(--primary)]">☰</button>
+        </nav>
+    </header>
+
+ 
+
+
+
+<!-- Welcome Section -->
+<section class="py-5 md:py-5 lg:py-5 bg-gradient-to-b from-gray-100 to-white">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8">
+    <div class="flex flex-col lg:flex-row gap-10">
+
+      <!-- Main Article -->
+      <article class="flex-1 min-w-0">
+        <!-- Featured Image -->
+        <div class="mb-10 rounded-3xl overflow-hidden shadow-2xl">
+          <img src="/images/big-images/image13.webp"
+               alt="Asiafo Amanfro M/A School"
+               class="w-full h-[450px] md:h-[550px] object-cover cursor-pointer gallery-img"
+               data-src="/images/big-images/image13.webp"
+               data-caption="Asiafo Amanfro M/A School – October 2024">
+        </div>
+
+        <!-- Meta -->
+        <div class="flex flex-wrap gap-4 text-sm text-gray-500 mb-8">
+          <span><i class="fa-solid fa-calendar mr-1"></i> October, 2024</span>
+          <span><i class="fa-solid fa-user mr-1"></i> Asiafo Amanfro M/A School</span>
+          <span><i class="fa-solid fa-tag mr-1"></i> Akaa • Eastern Region</span>
+        </div>
+
+        <h1 class="text-4xl md:text-5xl font-extrabold leading-tight text-gray-900 mb-6">
+          A New Chapter in Asiafo Amanfro M/A School
+        </h1>
+
+        <p class="text-xl text-gray-600 leading-relaxed mb-5 border-l-4 border-[var(--primary)] pl-6">
+          How one outreach is transforming lives, health, and education in a rural community.
+        </p>
+
+        <div class="prose prose-lg max-w-none mx-auto text-gray-700 leading-relaxed">
+          <p class="text-xl mb-3 text-justify">
+            Asiafo Amanfro M/A School, situated in a growing peri-urban community, faces challenges such as its distance from residential areas,
+            limited educational resources, and inadequate infrastructure. As the area continues to develop,
+            the school must adapt to the evolving needs of students while depending on government support.
+            Recognizing these challenges, Le Shelter Foundation initiated an intervention to enhance learning conditions,
+            promote student development, and improve the overall educational experience.
+          </p>
+
+          <p class="text-xl mb-3 text-justify">
+            Le Shelter Foundation’s visit to Asiafo Amanfro M/A School featured a series of impactful interventions aimed
+            at enhancing education and school facilities. Through interactive workshops—including science experiments,
+            creative arts, and soap-making—students were encouraged to develop creativity, teamwork, and critical thinking.
+            Educational discussions on hygiene and academic success provided essential life skills,
+            while motivational talks by industry professionals inspired students to broaden their career aspirations.
+            Additionally, minor infrastructure repairs, such as toilet refurbishments, improved the school’s facilities.
+            To ensure long-term benefits, Le Shelter Foundation donated educational kits,
+            provided a fuel-powered grass-cutting machine for school maintenance, and introduced a structured mentorship program to support students
+            in their academic and personal growth.
+          </p>
+
+          <p class="text-xl mb-3 text-justify">
+            Le Shelter Foundation’s intervention at Asiafo Amanfro M/A School led to significant improvements in both academic and infrastructural aspects.
+            Increased access to educational materials enhanced student learning, while infrastructure upgrades and improved hygiene facilities created a more
+            conducive school environment. Motivational sessions and mentorship programs empowered students with confidence and ambition,
+            encouraging them to set and achieve their goals. This initiative reaffirmed the foundation’s commitment to supporting underserved communities,
+            equipping students with the resources and guidance needed to succeed academically and beyond.
+          </p>
+
+          <div class="grid md:grid-cols-2 gap-8 my-12">
+            <img src="/images/big-images/image15.webp"
+                 alt="Students at Asiafo Amanfro"
+                 class="w-full rounded-2xl shadow cursor-pointer gallery-img"
+                 data-src="/images/big-images/image15.webp"
+                 data-caption="Students engaging in the learning activities">
+            <div class="flex flex-col justify-center">
+              <p class="italic text-lg">"This intervention changed everything for us. Our children are more motivated and we now have proper facilities to support their learning."</p>
+              <p class="mt-4 font-medium">— Community Leader, Asiafo Amanfro</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Share -->
+        <div class="mt-16 pt-10 border-t flex flex-wrap gap-6 items-center">
+          <p class="text-gray-500">Share this story:</p>
+          <div class="flex gap-5 text-2xl text-gray-400">
+            <a href="#" class="hover:text-[var(--primary)]"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#" class="hover:text-[var(--primary)]"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#" class="hover:text-[var(--primary)]"><i class="fa-brands fa-linkedin"></i></a>
+          </div>
+          <a href="/projects.html" class="ml-auto text-[var(--primary)] hover:underline font-medium">← Back to All Stories</a>
+        </div>
+      </article>
+
+      <!-- Sidebar: Other Projects -->
+      <aside class="lg:w-72 shrink-0">
+        <div class="sticky top-6 space-y-6">
+          <div class="bg-white rounded-2xl shadow-md overflow-hidden">
+            <div class="bg-[var(--primary)] px-5 py-4">
+              <h3 class="text-white font-bold text-lg">Other Projects</h3>
+            </div>
+            <ul class="divide-y divide-gray-100">
+              <li>
+                <a href="/Projects/Asutsuare.html" class="flex items-center gap-3 px-5 py-4 hover:bg-orange-50 transition group">
+                  <span class="w-2 h-2 rounded-full bg-[var(--primary)] shrink-0"></span>
+                  <div>
+                    <p class="font-semibold text-gray-800 group-hover:text-[var(--primary)] transition text-sm">Asutsuare Estate D/A School</p>
+                    <p class="text-xs text-gray-400 mt-0.5">Eastern Region</p>
+                  </div>
+                  <i class="fa-solid fa-chevron-right ml-auto text-gray-300 group-hover:text-[var(--primary)] text-xs transition"></i>
+                </a>
+              </li>
+              <li>
+                <a href="/Projects/Ayensukrom.html" class="flex items-center gap-3 px-5 py-4 hover:bg-orange-50 transition group">
+                  <span class="w-2 h-2 rounded-full bg-[var(--primary)] shrink-0"></span>
+                  <div>
+                    <p class="font-semibold text-gray-800 group-hover:text-[var(--primary)] transition text-sm">Ayensukrom M/A School</p>
+                    <p class="text-xs text-gray-400 mt-0.5">Eastern Region</p>
+                  </div>
+                  <i class="fa-solid fa-chevron-right ml-auto text-gray-300 group-hover:text-[var(--primary)] text-xs transition"></i>
+                </a>
+              </li>
+              <li>
+                <a href="/Projects/Bunso.html" class="flex items-center gap-3 px-5 py-4 hover:bg-orange-50 transition group">
+                  <span class="w-2 h-2 rounded-full bg-[var(--primary)] shrink-0"></span>
+                  <div>
+                    <p class="font-semibold text-gray-800 group-hover:text-[var(--primary)] transition text-sm">Bunso M/A School</p>
+                    <p class="text-xs text-gray-400 mt-0.5">Eastern Region</p>
+                  </div>
+                  <i class="fa-solid fa-chevron-right ml-auto text-gray-300 group-hover:text-[var(--primary)] text-xs transition"></i>
+                </a>
+              </li>
+              <li>
+                <a href="/Projects/Dzita.html" class="flex items-center gap-3 px-5 py-4 hover:bg-orange-50 transition group">
+                  <span class="w-2 h-2 rounded-full bg-[var(--primary)] shrink-0"></span>
+                  <div>
+                    <p class="font-semibold text-gray-800 group-hover:text-[var(--primary)] transition text-sm">Dzita Learning Comm. School</p>
+                    <p class="text-xs text-gray-400 mt-0.5">Volta Region</p>
+                  </div>
+                  <i class="fa-solid fa-chevron-right ml-auto text-gray-300 group-hover:text-[var(--primary)] text-xs transition"></i>
+                </a>
+              </li>
+              <li>
+                <a href="/Projects/Kwamo.html" class="flex items-center gap-3 px-5 py-4 hover:bg-orange-50 transition group">
+                  <span class="w-2 h-2 rounded-full bg-[var(--primary)] shrink-0"></span>
+                  <div>
+                    <p class="font-semibold text-gray-800 group-hover:text-[var(--primary)] transition text-sm">Kwamo M/A JHS</p>
+                    <p class="text-xs text-gray-400 mt-0.5">Ashanti Region</p>
+                  </div>
+                  <i class="fa-solid fa-chevron-right ml-auto text-gray-300 group-hover:text-[var(--primary)] text-xs transition"></i>
+                </a>
+              </li>
+              <li>
+                <a href="/Projects/Pokrom.html" class="flex items-center gap-3 px-5 py-4 hover:bg-orange-50 transition group">
+                  <span class="w-2 h-2 rounded-full bg-[var(--primary)] shrink-0"></span>
+                  <div>
+                    <p class="font-semibold text-gray-800 group-hover:text-[var(--primary)] transition text-sm">Pokrom M/A Junior High School</p>
+                    <p class="text-xs text-gray-400 mt-0.5">Greater Accra Region</p>
+                  </div>
+                  <i class="fa-solid fa-chevron-right ml-auto text-gray-300 group-hover:text-[var(--primary)] text-xs transition"></i>
+                </a>
+              </li>
+            </ul>
+            <div class="px-5 py-4 bg-gray-50">
+              <a href="/projects.html" class="text-sm text-[var(--primary)] hover:underline font-medium">View all projects →</a>
+            </div>
+          </div>
+
+           <!-- Photo Gallery -->
+          <div class="bg-orange-50 border border-orange-100 rounded-2xl p-5">
+            <div class="mt-5 mb-10">
+              <div class="text-center mb-10">
+                <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-3">Project Gallery</h2>
+                <p class="text-gray-500 text-lg">Moments captured from our visit to Asiafo Amanfro</p>
+              </div>
+              <div class="grid grid-cols-3 gap-3 md:gap-4">
+                <div class="overflow-hidden rounded-xl shadow cursor-pointer gallery-thumb group" data-src="/images/big-images/image13.webp" data-caption="Asiafo Amanfro M/A School – October 2024">
+                  <img src="/images/big-images/image13.webp" alt="Gallery image 1" class="w-full h-40 md:h-52 object-cover group-hover:scale-105 transition duration-300">
+                </div>
+                <div class="overflow-hidden rounded-xl shadow cursor-pointer gallery-thumb group" data-src="/images/big-images/image14.webp" data-caption="Students participating in workshops">
+                  <img src="/images/big-images/image14.webp" alt="Gallery image 2" class="w-full h-40 md:h-52 object-cover group-hover:scale-105 transition duration-300">
+                </div>
+                <div class="overflow-hidden rounded-xl shadow cursor-pointer gallery-thumb group" data-src="/images/big-images/image15.webp" data-caption="Educational materials distribution">
+                  <img src="/images/big-images/image15.webp" alt="Gallery image 3" class="w-full h-40 md:h-52 object-cover group-hover:scale-105 transition duration-300">
+                </div>
+                <div class="overflow-hidden rounded-xl shadow cursor-pointer gallery-thumb group" data-src="/images/big-images/image16.webp" data-caption="Science experiments with students">
+                  <img src="/images/big-images/image16.webp" alt="Gallery image 4" class="w-full h-40 md:h-52 object-cover group-hover:scale-105 transition duration-300">
+                </div>
+                <div class="overflow-hidden rounded-xl shadow cursor-pointer gallery-thumb group" data-src="/images/big-images/image17.webp" data-caption="Creative arts and soap-making workshop">
+                  <img src="/images/big-images/image17.webp" alt="Gallery image 5" class="w-full h-40 md:h-52 object-cover group-hover:scale-105 transition duration-300">
+                </div>
+                <div class="overflow-hidden rounded-xl shadow cursor-pointer gallery-thumb group" data-src="/images/big-images/image18.webp" data-caption="Motivational talks by industry professionals">
+                  <img src="/images/big-images/image18.webp" alt="Gallery image 6" class="w-full h-40 md:h-52 object-cover group-hover:scale-105 transition duration-300">
+                </div>
+                <div class="overflow-hidden rounded-xl shadow cursor-pointer gallery-thumb group" data-src="/images/big-images/image19.webp" data-caption="Infrastructure upgrades in progress">
+                  <img src="/images/big-images/image19.webp" alt="Gallery image 7" class="w-full h-40 md:h-52 object-cover group-hover:scale-105 transition duration-300">
+                </div>
+                <div class="overflow-hidden rounded-xl shadow cursor-pointer gallery-thumb group" data-src="/images/big-images/image20.webp" data-caption="Hygiene education sessions">
+                  <img src="/images/big-images/image20.webp" alt="Gallery image 8" class="w-full h-40 md:h-52 object-cover group-hover:scale-105 transition duration-300">
+                </div>
+                <div class="overflow-hidden rounded-xl shadow cursor-pointer gallery-thumb group" data-src="/images/big-images/image21.webp" data-caption="Mentorship program kickoff">
+                  <img src="/images/big-images/image21.webp" alt="Gallery image 9" class="w-full h-40 md:h-52 object-cover group-hover:scale-105 transition duration-300">
+                </div>
+                <div class="overflow-hidden rounded-xl shadow cursor-pointer gallery-thumb group" data-src="/images/big-images/image22.webp" data-caption="Donated educational kits">
+                  <img src="/images/big-images/image22.webp" alt="Gallery image 10" class="w-full h-40 md:h-52 object-cover group-hover:scale-105 transition duration-300">
+                </div>
+                <div class="overflow-hidden rounded-xl shadow cursor-pointer gallery-thumb group" data-src="/images/big-images/image23.webp" data-caption="Community engagement and teamwork">
+                  <img src="/images/big-images/image23.webp" alt="Gallery image 11" class="w-full h-40 md:h-52 object-cover group-hover:scale-105 transition duration-300">
+                </div>
+                <div class="overflow-hidden rounded-xl shadow cursor-pointer gallery-thumb group" data-src="/images/big-images/image24.webp" data-caption="Students and volunteers together">
+                  <img src="/images/big-images/image24.webp" alt="Gallery image 12" class="w-full h-40 md:h-52 object-cover group-hover:scale-105 transition duration-300">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+    </div><!-- end flex row -->
+
+   
+
+  </div><!-- end max-w-7xl -->
+</section>
+
+<!-- Lightbox Modal -->
+<div id="lightbox-overlay" class="fixed inset-0 bg-black/90 z-[999] hidden items-center justify-center p-4" role="dialog" aria-modal="true" aria-label="Image lightbox">
+  <button id="lightbox-close" class="absolute top-4 right-5 text-white text-4xl leading-none hover:text-orange-400 transition z-10" aria-label="Close">&times;</button>
+  <button id="lightbox-prev" class="absolute left-4 top-1/2 -translate-y-1/2 text-white text-4xl hover:text-orange-400 transition z-10 bg-black/30 rounded-full w-12 h-12 flex items-center justify-center" aria-label="Previous">&#8249;</button>
+  <button id="lightbox-next" class="absolute right-4 top-1/2 -translate-y-1/2 text-white text-4xl hover:text-orange-400 transition z-10 bg-black/30 rounded-full w-12 h-12 flex items-center justify-center" aria-label="Next">&#8250;</button>
+  <div class="max-w-4xl w-full flex flex-col items-center gap-4">
+    <img id="lightbox-img" src="" alt="" class="max-h-[80vh] max-w-full rounded-xl shadow-2xl object-contain">
+    <p id="lightbox-caption" class="text-white/80 text-center text-sm"></p>
+    <p id="lightbox-counter" class="text-white/50 text-xs"></p>
+  </div>
+</div>
+
+
+  
+ 
+
+
+  
+
+  <!-- Footer -->
+  <footer class="bg-[var(--dark)] text-black py-5">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid md:grid-cols-4 gap-12 mb-5">
+        <div>
+          <h4 class="text-xl font-bold text-[var(--primary)] mb-4">About LSF</h4>
+          <p class="text-sm opacity-90 leading-relaxed">
+            Le Shelter Foundation provides equal educational opportunities to underprivileged children in rural Ghana.
+          </p>
+        </div>
+        <div class="flex flex-col items-start">
+          <h4 class="text-xl font-bold text-[var(--primary)] mb-4">Socials</h4>
+          <div class="flex items-center gap-6">
+            <a href="https://www.facebook.com/profile.php?id=100067770571763" target="_blank" rel="noopener noreferrer" class="w-12 h-12 bg-[var(--primary)]/10 text-[var(--primary)] hover:bg-[var(--primary)] hover:text-white rounded-full flex items-center justify-center text-2xl transition-all duration-300 shadow-md hover:shadow-lg" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.tiktok.com/@le.shelter.founda?_t=ZM-8sl65FqR7XZ&_r=1" target="_blank" rel="noopener noreferrer" class="w-12 h-12 bg-[var(--primary)]/10 text-[var(--primary)] hover:bg-[var(--primary)] hover:text-white rounded-full flex items-center justify-center text-2xl transition-all duration-300 shadow-md hover:shadow-lg" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+            <a href="https://x.com/le_shelter?t=dWlkQidVKnRSYGSbFpbjHg&s=09" target="_blank" rel="noopener noreferrer" class="w-12 h-12 bg-[var(--primary)]/10 text-[var(--primary)] hover:bg-[var(--primary)] hover:text-white rounded-full flex items-center justify-center text-2xl transition-all duration-300 shadow-md hover:shadow-lg" aria-label="X (Twitter)"><i class="fab fa-x-twitter"></i></a>
+            <a href="https://www.instagram.com/le.shelter.foundation?igsh=bGxneno2OTN5NjF5" target="_blank" rel="noopener noreferrer" class="w-12 h-12 bg-[var(--primary)]/10 text-[var(--primary)] hover:bg-[var(--primary)] hover:text-white rounded-full flex items-center justify-center text-2xl transition-all duration-300 shadow-md hover:shadow-lg" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+        <div>
+          <h4 class="text-xl font-bold text-[var(--primary)] mb-4">Contact</h4>
+          <div class="space-y-2 text-sm opacity-90">
+            <p>📍 Baatsona-Spintex, Ghana</p>
+            <p>📱 +233 53 044 9325</p>
+            <p>📧 lesheltergh@gmail.com</p>
+          </div>
+        </div>
+        <div>
+          <h4 class="text-xl font-bold text-[var(--primary)] mb-4">Newsletter</h4>
+          <form class="flex gap-2">
+            <input type="email" placeholder="Your email" class="flex-1 px-3 py-2 rounded text-gray-800 text-sm focus:outline-none" required/>
+            <button type="submit" class="px-4 py-2 bg-[var(--primary)] rounded hover:bg-orange-500 text-white font-bold transition">Sign Up</button>
+          </form>
+        </div>
+      </div>
+      <div class="border-t border-gray-700 pt-5 text-center">
+        <p class="text-sm opacity-50 mb-1">Copyright &copy;<script>document.write(new Date().getFullYear());</script> |
+          All rights reserved by Le Shelter Foundation <i class="fas fa-globe" aria-hidden="true"></i>
+        </p>
+        <p class="text-sm opacity-50"> Designed By <a href="#">IHAG <i class="far fa-hand-peace" aria-hidden="true"></i></a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const closeMenu = document.getElementById('close-menu');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuBtn?.addEventListener('click', () => mobileMenu.classList.remove('hidden'));
+    closeMenu?.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+    mobileMenu?.addEventListener('click', e => {
+      if (e.target === mobileMenu) mobileMenu.classList.add('hidden');
+    });
+
+    document.querySelectorAll('#mobile-menu a').forEach(link => {
+      link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+    });
+
+    // Lightbox
+    const overlay = document.getElementById('lightbox-overlay');
+    const lbImg = document.getElementById('lightbox-img');
+    const lbCaption = document.getElementById('lightbox-caption');
+    const lbCounter = document.getElementById('lightbox-counter');
+    const lbClose = document.getElementById('lightbox-close');
+    const lbPrev = document.getElementById('lightbox-prev');
+    const lbNext = document.getElementById('lightbox-next');
+
+    const galleryItems = Array.from(document.querySelectorAll('.gallery-thumb'));
+    let currentIndex = 0;
+
+    function openLightbox(index) {
+      currentIndex = index;
+      const item = galleryItems[index];
+      lbImg.src = item.dataset.src;
+      lbImg.alt = item.querySelector('img').alt;
+      lbCaption.textContent = item.dataset.caption || '';
+      lbCounter.textContent = `${index + 1} / ${galleryItems.length}`;
+      overlay.classList.remove('hidden');
+      overlay.classList.add('flex');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      overlay.classList.add('hidden');
+      overlay.classList.remove('flex');
+      document.body.style.overflow = '';
+    }
+
+    function showPrev() {
+      openLightbox((currentIndex - 1 + galleryItems.length) % galleryItems.length);
+    }
+
+    function showNext() {
+      openLightbox((currentIndex + 1) % galleryItems.length);
+    }
+
+    galleryItems.forEach((item, i) => item.addEventListener('click', () => openLightbox(i)));
+
+    // Also allow clicking the featured/inline images
+    document.querySelectorAll('.gallery-img').forEach(img => {
+      img.addEventListener('click', () => {
+        lbImg.src = img.dataset.src;
+        lbImg.alt = img.alt;
+        lbCaption.textContent = img.dataset.caption || '';
+        lbCounter.textContent = '';
+        overlay.classList.remove('hidden');
+        overlay.classList.add('flex');
+        document.body.style.overflow = 'hidden';
+      });
+    });
+
+    lbClose.addEventListener('click', closeLightbox);
+    lbPrev.addEventListener('click', showPrev);
+    lbNext.addEventListener('click', showNext);
+
+    overlay.addEventListener('click', e => {
+      if (e.target === overlay) closeLightbox();
+    });
+
+    document.addEventListener('keydown', e => {
+      if (!overlay.classList.contains('hidden')) {
+        if (e.key === 'Escape') closeLightbox();
+        if (e.key === 'ArrowLeft') showPrev();
+        if (e.key === 'ArrowRight') showNext();
+      }
+    });
+  </script>
+
+  <script>
+    // Donation Modal Logic
+    const donateBtn = document.getElementById('donate-btn');
+    const donateBtnMobile = document.getElementById('donate-btn-mobile');
+    const donateModal = document.getElementById('donate-modal');
+    const closeDonateModal = document.getElementById('close-donate-modal');
+
+    function openDonateModal() {
+      donateModal.classList.add('active');
+    }
+
+    function closeDonateModalFunc() {
+      donateModal.classList.remove('active');
+    }
+
+    donateBtn?.addEventListener('click', openDonateModal);
+    donateBtnMobile?.addEventListener('click', () => {
+      openDonateModal();
+      mobileMenu.classList.add('hidden');
+    });
+    closeDonateModal?.addEventListener('click', closeDonateModalFunc);
+    
+    // Close modal when clicking outside
+    donateModal?.addEventListener('click', (e) => {
+      if (e.target === donateModal) {
+        closeDonateModalFunc();
+      }
+    });
+
+    // Close modal with Escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        closeDonateModalFunc();
+      }
+    });
+  </script>
+
+  <a href="https://wa.me/233530449325?text=Hello%20Le%20Shelter%20Foundation" 
+    target="_blank" rel="noopener"
+    class="fixed bottom-6 left-6 bg-green-500 text-white w-12 h-12 rounded-full shadow-2xl flex items-center justify-center hover:bg-green-600 hover:scale-110 transition z-40"
+    aria-label="Chat on WhatsApp">
+    <i class="fa-brands fa-whatsapp text-2xl"></i>
+  </a>
+
+</body>
+</html>

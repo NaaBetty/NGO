@@ -1,42 +1,84 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Le Shelter Foundation</title>
-  <meta name="description" content="Le Shelter Foundation provides equal educational opportunities for underprivileged children in rural Ghana through school supplies, mentorship, clean water access, and community support. Founded 2017 by Ruby Offeibea Adu."/>
-  <meta name="keywords" content="Le Shelter Foundation, rural education Ghana, donate school supplies, children charity, mentorship programs, Asiafo Amanfro, Asutsuare, Pokrom, etc"/>
-  <meta name="author" content="Le Shelter Foundation"/>
-  
-  <!-- Open Graph / Social Sharing -->
-  <meta property="og:title" content="Le Shelter Foundation - Equal Opportunity For All"/>
-  <meta property="og:description" content="Equal educational opportunities, school supplies, mentorship and hope for children in rural Ghana."/>
-  <meta property="og:type" content="website"/>
-  <meta property="og:url" content="https://www.leshelterfoundation.org"/>
-  <meta property="og:image" content="images/icon/favicon-32x32.png"/>
-  <meta property="og:site_name" content="Le Shelter Foundation"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Le Shelter Foundation provides equal educational opportunities for underprivileged children in rural Ghana through school supplies, mentorship, clean water access, and community support. Founded 2017 by Ruby Offeibea Adu.">
+  <meta name="keywords" content="Le Shelter Foundation, rural education Ghana, donate school supplies, children charity, mentorship programs, Asiafo Amanfro, Asutsuare, Pokrom">
+  <meta name="author" content="Le Shelter Foundation">
 
-  <!-- Tailwind CDN (for development – replace with built CSS in production) -->
-  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:title" content="Le Shelter Foundation - Equal Opportunity For All">
+  <meta property="og:description" content="Equal educational opportunities, school supplies, mentorship and hope for children in rural Ghana.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.leshelterfoundation.org">
+  <meta property="og:image" content="https://www.leshelterfoundation.org/images/Logo.png">
+  <meta property="og:site_name" content="Le Shelter Foundation">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Le Shelter Foundation - Equal Opportunity For All">
+  <meta name="twitter:description" content="Equal educational opportunities, school supplies, mentorship and hope for children in rural Ghana.">
+  <meta name="twitter:image" content="https://www.leshelterfoundation.org/images/Logo.png">
+
+  <!-- Preconnect to external origins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+
+  <link rel="stylesheet" href="css/tailwind.css">
   <link rel="stylesheet" href="css/style.css">
-  
+
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/themify-icons.css" />  
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="css/themify-icons.css">  
+  <!-- <link rel="stylesheet" href="css/fontawesome7.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
    
   <!-- Favicon -->
   <link rel="apple-touch-icon" sizes="180x180" href="images/icon/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="images/icon/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="images/icon/favicon-16x16.png">
   <link rel="manifest" href="images/icon/site.webmanifest">
-  <link rel="canonical" href="https://www.leshelterfoundation.org/index.html">
+  <link rel="canonical" href="https://www.leshelterfoundation.org/">
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/add-to-calendar-button@2.13.5/dist/add-to-calendar-button.min.css">
-  <script src="https://cdn.jsdelivr.net/npm/add-to-calendar-button@2.13.5/dist/add-to-calendar-button.min.js" async defer></script>
-  <script src="Javascript/eventtimer.js"></script>
-  
   <title>Le Shelter Foundation - Equal Opportunity For All</title>
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "NGO",
+    "name": "Le Shelter Foundation",
+    "url": "https://www.leshelterfoundation.org",
+    "logo": "https://www.leshelterfoundation.org/images/Logo.png",
+    "description": "Le Shelter Foundation provides equal educational opportunities for underprivileged children in rural Ghana through school supplies, mentorship, and community support.",
+    "foundingDate": "2017",
+    "founder": {
+      "@type": "Person",
+      "name": "Ruby Offeibea Adu"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Baatsona-Spintex",
+      "addressRegion": "Greater Accra",
+      "addressCountry": "GH"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+233530449325",
+      "email": "lesheltergh@gmail.com",
+      "contactType": "customer service"
+    },
+    "sameAs": [
+      "https://www.facebook.com/profile.php?id=100067770571763",
+      "https://www.instagram.com/le.shelter.foundation",
+      "https://x.com/le_shelter",
+      "https://www.tiktok.com/@le.shelter.founda"
+    ]
+  }
+  </script>
 
 </head>
 <body>
@@ -67,8 +109,8 @@
           <h3 class="text-xl font-bold text-[var(--primary)] mb-1">💝 Direct Donation</h3>
           <p class="text-gray-700 mb-2 text-lg">Make a monetary contribution to support our programs.</p>
           <h4>MTN Mobile Money (MOMO) Details;</h4>
-          <div class="flex  sm:flex-row gap-2 justify-left items-center mb-1">
-            <img src="images/mtnlogo.png" alt="MTN Mobile Money" class="h-20  w-auto"></p>
+          <div class="flex  sm:flex-row gap-2 justify-start items-center mb-1">
+            <img src="images/mtnlogo.png" alt="MTN Mobile Money" class="h-20  w-auto">
             <ul>
               <li><strong>Name:</strong> Le Shelter Foundation</li>
               <li><strong>Mobile Money Number:</strong> 0530449325</li>
@@ -134,10 +176,10 @@
     <!-- Image Slider Container -->
     <div class="absolute inset-0 w-full h-full">
       <div id="hero-slider-wrapper" class="flex transition-transform duration-800 ease-out h-full">
-        <div class="hero-slide w-full flex-shrink-0 h-full"><img src="images/s1.jpg" alt="Hero Image 1" class="w-full h-full object-cover object-top"></div>
-        <div class="hero-slide w-full flex-shrink-0 h-full"><img src="images/s2.jpg" alt="Hero Image 2" class="w-full h-full object-cover object-top"></div>
-        <div class="hero-slide w-full flex-shrink-0 h-full"><img src="images/s3.jpg" alt="Hero Image 3" class="w-full h-full object-cover object-top"></div>
-        <div class="hero-slide w-full flex-shrink-0 h-full"><img src="images/s4.jpg" alt="Hero Image 4" class="w-full h-full object-cover object-top"></div>
+        <div class="hero-slide w-full flex-shrink-0 h-full"><img src="images/gallery/s1.jpg" alt="Le Shelter Foundation volunteers distributing school supplies to children in rural Ghana" class="w-full h-full object-cover object-top" fetchpriority="high"></div>
+        <div class="hero-slide w-full flex-shrink-0 h-full"><img src="images/gallery/s2.jpg" alt="Students receiving educational materials from Le Shelter Foundation" class="w-full h-full object-cover object-top" loading="lazy"></div>
+        <div class="hero-slide w-full flex-shrink-0 h-full"><img src="images/gallery/s3.jpg" alt="Le Shelter Foundation mentorship program in rural Ghana schools" class="w-full h-full object-cover object-top" loading="lazy"></div>
+        <div class="hero-slide w-full flex-shrink-0 h-full"><img src="images/gallery/s4.jpg" alt="Community engagement event by Le Shelter Foundation" class="w-full h-full object-cover object-top" loading="lazy"></div>
 
       </div>
       <!-- Dark Overlay -->
@@ -153,7 +195,7 @@
       
       <div class="flex  sm:flex-row gap-4 justify-center items-center">
           
-       <!-- <a href="donate.html" class="btn-primary px-4 py-2 rounded-xl text-lg font-bold shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300 ">Donate Today ♡</a> -->
+       <a href="donate.html" class="btn-primary px-4 py-2 rounded-xl text-lg font-bold shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300 "> Make a Donation</a>
        <a href="about.html" class="btn-secondary text-[var(--primary)] px-4 py-2 rounded-xl text-lg font-bold shadow-xl hover:shadow-2xl hover:text-[var(--secondary)] transform hover:-translate-y-1 transition-all duration-300">Learn Our Story</a>
       </div>
      
@@ -194,11 +236,7 @@
             class="block bg-gray-100 rounded-xl shadow-lg hover:bg-orange-500 hover:shadow-2xl transition-all duration-300 border border-gray-200 p-6 group cursor-pointer">
             <div class="flex flex-col items-center">
               <div class="flex justify-center mb-3">
-                <img 
-                  src="images/hands-gray.png" 
-                  alt="Gray hands" 
-                  class="w-10 h-10 mr-2 transition-all duration-300 group-hover:brightness-0 group-hover:invert" 
-                />
+                <img src="images/hands-gray.png" alt="Gray hands" class="w-10 h-10 mr-2 transition-all duration-300 group-hover:brightness-0 group-hover:invert">
               </div>
               <h3 class="text-2xl font-bold mb-2 text-center text-pink-600 group-hover:text-white transition-colors duration-300">
                 Become A Volunteer
@@ -219,39 +257,39 @@
           <div class="flex flex-row justify-between gap-6">
             <!-- Counter 1 -->
             <div class="w-1/3 bg-white rounded-lg p-3 flex flex-col items-center">
-              <img src="images/dove.png" alt="Dove" class="w-55 h-55 mb-2" />
+              <img src="images/dove.png" alt="Dove" class="w-[55px] h-[55px] mb-2">
               <div class="flex items-baseline justify-center">
                 <span
                   class="text-3xl font-extrabold text-pink-600 start-counter"
                   data-to="500"
-                  data-speed="2000"
-                >500</span>
+                  data-speed="2000">
+                500</span>
                 <span class="text-2xl text-pink-600 font-bold ml-1">+</span>
               </div>
               <h3 class="mt-2 text-lg font-medium text-center text-gray-600">Children helped</h3>
             </div>
             <!-- Counter 2 -->
             <div class="w-1/3 bg-white rounded-lg p-3 flex flex-col items-center">
-              <img src="images/olive.png" alt="Olive branch" class="w-55 h-55 mb-2" />
+              <img src="images/olive.png" alt="Olive branch" class="w-[55px] h-[55px] mb-2">
               <div class="flex items-baseline justify-center">
                 <span
                   class="text-3xl font-extrabold text-pink-600 start-counter"
                   data-to="50"
-                  data-speed="2000"
-                >50</span>
+                  data-speed="2000">
+                50</span>
                 <span class="text-2xl text-pink-600 font-bold ml-1">+</span>
               </div>
               <h3 class="mt-2 text-lg font-medium text-center text-gray-600">Donors and Sponsors</h3>
             </div>
             <!-- Counter 3 -->
             <div class="w-1/3 bg-white rounded-lg p-3 flex flex-col items-center">
-              <img src="images/teamwork.png" alt="Teamwork" class="w-55 h-55 mb-2" />
+              <img src="images/teamwork.png" alt="Teamwork" class="w-[55px] h-[55px] mb-2">
               <div class="flex items-baseline justify-center">
                 <span
                   class="text-3xl font-extrabold text-pink-600 start-counter"
                   data-to="30"
-                  data-speed="2000"
-                >30</span>
+                  data-speed="2000">
+                30</span>
                 <span class="text-2xl text-pink-600 font-bold ml-1">+</span>
               </div>
               <h3 class="mt-2 text-lg font-medium text-center text-gray-600">Volunteers</h3>
@@ -267,7 +305,7 @@
 
 <section class="home-page-welcome py-5 md:py-12 lg:py-5 relative overflow-hidden ">
   <!-- Greyed-out background image -->
-  <img src="images/mission.webp" alt="" class="absolute inset-0 w-full h-full object-cover grayscale brightness-80 opacity-40"aria-hidden="true"/>
+  <img src="images/mission.webp" alt="" class="absolute inset-0 w-full h-full object-cover grayscale brightness-80 opacity-40" aria-hidden="true" loading="lazy">
   
   <!-- Dark gray overlay for better text readability -->
   <div class="absolute inset-0 bg-gray-900/60"></div>
@@ -307,59 +345,67 @@
 </section>
 
 <!-- Upcoming Events -->
-  <section class="py-15 bg-gray-100">
-    <div class="max-w-6xl mx-auto px-6">
-      <div class="text-center mb-5">        
-        <h2 class="py-5 text-4xl md:text-4xl font-bold text-[var(--primary)] ">Upcoming Project</h2>
-        <p class="text-lg text-gray-700 max-w-3xl mx-auto">Don't miss our upcoming initiative designed to create lasting impact in rural communities.</p>
+<section class="py-15 bg-gray-100">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="text-center mb-5">        
+      <h2 class="py-5 text-4xl md:text-4xl font-bold text-[var(--primary)] ">Upcoming Project</h2>
+      <p class="text-lg text-gray-700 max-w-3xl mx-auto">Don't miss our upcoming initiative designed to create lasting impact in rural communities.</p>
+    </div>
+
+    <div class=" rounded-2xl  overflow-hidden">
+      <div class="bg-orange-500 text-white p-8 text-center">
+        <h3 class="text-4xl font-bold">Revisiting Our Partner Schools</h3>
       </div>
 
-      <div class=" rounded-2xl  overflow-hidden">
-        <div class="bg-orange-500 text-white p-8 text-center">
-          <h3 class="text-4xl font-bold">Revisiting Our Partner Schools</h3>
-        </div>
-
-        <div class="p-5 md:p-5 ">
-          <div class="grid md:grid-cols-2 gap-8 mb-5">
-            <div class="rounded-2xl  overflow-hidden">
-              <img src="images/fly.jpg" alt="Upcoming" class="object-contain mx-auto"/>
-            </div>
+      <div class="p-5 md:p-5 ">
+        <div class="grid md:grid-cols-2 gap-8 mb-5">
+          <div class="rounded-2xl  overflow-hidden">
+            <img src="images/fly.jpg" alt="Le Shelter Foundation upcoming school supply distribution event" class="object-contain mx-auto" loading="lazy">
+          </div>
         
-            <div class="space-y-3 mb-5">
-              <p class="text-gray-700 mb-8 text-lg leading-relaxed text-justify">
-                We're organizing a major distribution of school supplies to all three partner schools. Students will receive exercise books, pens, educational materials, and learning aids. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum assumenda cumque nesciunt dolorum similique! Qui tenetur magnam sunt dignissimos laudantium odio est sapiente libero. Esse iusto voluptas quasi deleniti veniam.
-              </p>
-              <div class="flex items-center gap-3">
-                <span class="text-2xl">📅</span>
-                <p class="text-gray-700"><strong>Date:</strong> March 15-22, 2026</p>
-              </div>
-              <div class="flex items-center gap-3">
-                <span class="text-2xl">📍</span>
-                <p class="text-gray-700"><strong>Locations:</strong> Asiafo Amanfro, Asutsuare, Pokrom</p>
-              </div>
-              <div class="flex items-center gap-3">
-                <span class="text-2xl">👥</span>
-                <p class="text-gray-700"><strong>Impact:</strong> 200+ students will benefit</p>
-              </div>
-              <div class="flex items-center gap-3">
-                <span class="text-2xl">🎯</span>
-                <p class="text-gray-700"><strong>Goal:</strong> GH₵10,000 needed to complete supplies</p>
-              </div>
+          <div class="space-y-3 mb-5">
+            <p class="text-gray-700 mb-8 text-lg leading-relaxed text-justify">
+              We're organizing a major distribution of school supplies to all three partner schools. Students will receive exercise books, pens, educational materials, and learning aids. 
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum assumenda cumque nesciunt dolorum similique! Qui tenetur magnam sunt dignissimos laudantium odio est sapiente libero. 
+              Esse iusto voluptas quasi deleniti veniam.
+            </p>
 
-              <div class="flex  sm:flex-row gap-4 justify-center items-center">
+            <div class="flex items-center gap-3">
+              <span class="text-2xl">📅</span>
+              <p class="text-gray-700"><strong>Date:</strong> March 15-22, 2026</p>
+            </div>
+              
+            <div class="flex items-center gap-3">
+              <span class="text-2xl">📍</span>
+              <p class="text-gray-700"><strong>Locations:</strong> Asiafo Amanfro, Asutsuare, Pokrom</p>
+            </div>
+              
+            <div class="flex items-center gap-3">
+              <span class="text-2xl">👥</span>
+              <p class="text-gray-700"><strong>Impact:</strong> 200+ students will benefit</p>
+            </div>
+
+            <div class="flex items-center gap-3">
+              <span class="text-2xl">🎯</span>
+              <p class="text-gray-700"><strong>Goal:</strong> GH₵10,000 needed to complete supplies</p>
+            </div>
+
+            <div class="flex  sm:flex-row gap-4 justify-center items-center">
               <a href="shop.html" class="btn-primary px-4 py-2 rounded-xl text-lg font-bold shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300 whitespace-nowrap ">Donate Today</a>
               <a href="https://docs.google.com/forms/d/e/1FAIpQLSf8BNb_TOu1TX99yPvh-6kXlTA_dcG3nNBWbJJK5OmTPgmAxQ/viewform?pli=1" target="_blank" rel="noopener noreferrer" class="border-2 border-[var(--primary)] px-4 py-2 bg-[var(--secondary)] text-[var(--primary)] rounded-xl font-bold text-lg lg:text-xl hover:bg-[var(--highlight)] hover:text-[var(--secondary)] transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-1 whitespace-nowrap ">Get Involved</a>
             </div>
 
             <div class="text-center py-5">
-                <p class="text-gray-700 text-lg mb-4">Want to help with any other service for the project? Get in touch with us today!</p>
-                <div class="entry-footer">
-              <a href="contact.html" class="inline-block border-2 border-orange-500 px-4 py-2 bg-orange-500 text-white rounded-xl font-bold text-lg lg:text-xl hover:bg-white hover:text-[var(--primary)] transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-1 whitespace-nowrap">Contact Us</a>
+              <p class="text-gray-700 text-lg mb-4">Want to help with any other service for the project? Get in touch with us today!</p>
+              <div class="entry-footer">
+                <a href="contact.html" class="inline-block border-2 border-orange-500 px-4 py-2 bg-orange-500 text-white rounded-xl font-bold text-lg lg:text-xl hover:bg-white hover:text-[var(--primary)] transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-1 whitespace-nowrap">Contact Us</a>
+              </div>
             </div>
+
           </div>
         </div>
-      </div>
-    </div>  
+      </div>  
+    </div>
   </div>
 </section>  
 
@@ -370,7 +416,7 @@
     <!-- Background Image -->
   <div 
     class="absolute inset-0 bg-cover bg-center bg-no-repeat "
-    style="background-image: url('images/image15.webp');"
+    style="background-image: url('images/gallery/image15.webp');"
     aria-hidden="true"
   ></div>
   
@@ -385,15 +431,16 @@
         Your Support Creates Change
       </h2>
     </header>
-      <p class="text-[15px] sm:text-xs md:text-sm lg:text-base xl:text-lg mb-3 sm:mb-4 md:mb-6 max-w-2xl mx-auto opacity-95 leading-relaxed">
-        With years of dedication and hard work, we’ve achieved significant milestones in education, healthcare, and community support.
-      </p>
+    <p class="text-[15px] sm:text-xs md:text-sm lg:text-base xl:text-lg mb-3 sm:mb-4 md:mb-6 max-w-2xl mx-auto opacity-95 leading-relaxed">
+      With years of dedication and hard work, we’ve achieved significant milestones in education, healthcare, and community support.
+    </p>
       
-      <div class="flex  sm:flex-row gap-4 justify-center items-center">
-       <a href="shop.html" class="bg-[var(--accent)] text-[var(--dark)] inline-block px-12 py-5 rounded-2xl text-xl font-bold hover:bg-orange-500 transition shadow-lg hover:shadow-2xl transform hover:-translate-y-1">Buy to Support</a> 
+    <div class="flex  sm:flex-row gap-4 justify-center items-center">
+      <a href="shop.html" class="bg-[var(--accent)] text-[var(--dark)] inline-block px-12 py-5 rounded-2xl text-xl font-bold hover:bg-orange-500 transition shadow-lg hover:shadow-2xl transform hover:-translate-y-1">Buy to Support</a> 
   
        
-      </div>
+    </div>
+  </div>
 </section>
 
   <!-- Footer -->
@@ -426,21 +473,21 @@
         <div>
           <h4 class="text-xl font-bold text-[var(--primary)] mb-4">Newsletter</h4>
           <form class="flex gap-2">
-            <input type="email" placeholder="Your email" class="flex-1 px-3 py-2 rounded text-gray-800 text-sm focus:outline-none" required/>
+            <input type="email" placeholder="Your email" class="flex-1 px-3 py-2 rounded text-gray-800 text-sm focus:outline-none" required>
             <button type="submit" class="px-4 py-2 bg-[var(--primary)] rounded hover:bg-orange-500 text-white font-bold transition">Sign Up</button>
           </form>
         </div>
       </div>
       <div class="border-t border-gray-700 pt-5 text-center">
         <p class="text-sm opacity-50 mb-1">Copyright &copy;<script>document.write(new Date().getFullYear());</script> |
-          All rights reserved by Le Shelter Foundation <i class="fas fa-globe" aria-hidden="true"></i></a>
+          All rights reserved by Le Shelter Foundation <i class="fas fa-globe" aria-hidden="true"></i>
         </p>
         <p class="text-sm opacity-50"> Designed By <a href="#">IHAG <i class="far fa-hand-peace" aria-hidden="true"></i></a></p>
       </div>
     </div>
   </footer>
 
-  <script>
+  <script type ="module">
     const menuBtn = document.getElementById('menu-btn');
     const closeMenu = document.getElementById('close-menu');
     const mobileMenu = document.getElementById('mobile-menu');
@@ -517,7 +564,7 @@
 
   </script>
 
-  <script>
+  <script type="module">
    document.querySelectorAll('.start-counter').forEach(counter => {
   let started = false;
   function animateCounter() {
@@ -552,7 +599,7 @@
 });
 </script>
  
-  <script>
+  <script type="module">
       // Donation Modal Logic
     const donateBtn = document.getElementById('donate-btn');
     const donateBtnMobile = document.getElementById('donate-btn-mobile');
@@ -590,35 +637,7 @@
  
   </script>
 
-  <script>
-  // Event date in UTC (April 15, 2026 at 14:00 GMT / Africa/Accra time)
-  const eventDate = new Date(Date.UTC(2026, 3, 15, 14, 0, 0)); // Month is 0-based (3 = April)
-
-  function updateCountdown() {
-    const now = new Date().getTime();
-    const distance = eventDate.getTime() - now;
-
-    if (distance < 0) {
-      document.getElementById('countdown').innerHTML = 
-        '<p class="text-3xl md:text-4xl font-bold text-[var(--primary)]">The event is happening now!</p>';
-      return;
-    }
-
-    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-    document.getElementById('days').textContent = days.toString().padStart(2, '0');
-    document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
-    document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
-    document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
-  }
-
-  // Run immediately and every second
-  updateCountdown();
-  setInterval(updateCountdown, 1000);
-</script>
+  
 
   <a href="https://wa.me/233530449325?text=Hello%20Le%20Shelter%20Foundation" 
     target="_blank" rel="noopener"
