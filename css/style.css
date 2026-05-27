@@ -38,7 +38,7 @@ h1, h2, h3, h4 {
 
 .btn-secondary {
   background-color: var(--secondary);
-  color: white;
+  color: var(--primary);
   transition: all 0.3s ease;
 }
 
@@ -174,17 +174,17 @@ h1, h2, h3, h4 {
 }
 
 /* Top Header Bar Responsive Styling */
-.site-header > div:first-child > div {
+.site-header > div:first-child > div > div {
   flex-wrap: wrap;
 }
 
-.site-header > div:first-child > div > div {
+.site-header > div:first-child > div > div > div {
   width: 100%;
   justify-content: center;
 }
 
 @media (min-width: 768px) {
-  .site-header > div:first-child > div > div {
+  .site-header > div:first-child > div > div > div {
     width: auto;
     justify-content: flex-start;
   }
@@ -196,14 +196,14 @@ h1, h2, h3, h4 {
     padding: 1rem 0;
   }
 
-  .site-header > div:first-child > div {
+  .site-header > div:first-child > div > div {
     flex-direction: column;
     align-items: center;
     text-align: center;
     gap: 1rem;
   }
 
-  .site-header > div:first-child > div > div {
+  .site-header > div:first-child > div > div > div {
     display: flex;
     justify-content: center;
     width: 100%;
@@ -269,10 +269,10 @@ h1, h2, h3, h4 {
 
   /* Mobile Header Optimization */
   .site-header > div:first-child {
-    padding: 0.75rem 1rem;
+    padding: 0.75rem 0;
   }
 
-  .site-header > div:first-child > div > div {
+  .site-header > div:first-child > div > div > div {
     gap: 0.5rem;
     font-size: 0.875rem;
   }
@@ -344,13 +344,13 @@ img {
 }
 
 /* Navigation Bar Responsive */
-.site-header nav {
+.site-header nav > div {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
 }
 
 @media (max-width: 767px) {
-  .site-header nav {
+  .site-header nav > div {
     padding-left: 0.25rem;
     padding-right: 0.25rem;
   }
