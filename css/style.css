@@ -51,15 +51,15 @@ h1, h2, h3, h4 {
 .nav-link {
   font-size: 1.125rem;
   font-weight: 500;
-  transition: color 0.3s;
+  transition: color 0.3s, background-color 0.3s;
   color: var(--primary);
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
 }
 
 .nav-link:hover {
   color: var(--secondary);
   background-color: var(--primary);
-  padding: 0.5rem 1rem;
-  border-radius: 0.5rem;
 }
 
 .nav-link.active {
@@ -747,7 +747,7 @@ img {
     box-shadow: var(--shadow);
     background: #111;
     aspect-ratio: 16/9;
-    cursor: grab;
+    cursor: pointer;
     user-select: none;
   }
 

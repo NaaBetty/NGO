@@ -92,7 +92,7 @@
     <header class="site-header">
         <!-- Top Header Bar -->
         <div class="w-full">
-          <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3 sm:py-2">
+          <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 py-3 sm:py-2">
             <div class="flex flex-col md:flex-row items-center justify-center md:justify-between gap-3 sm:gap-4">
                 <div class="flex items-center justify-center gap-2 w-full md:w-auto">
                     <i class="fa fa-envelope text-[var(--secondary)]"></i>
@@ -111,7 +111,7 @@
 
         <!-- Navigation -->
         <nav class="w-full">
-          <div class="max-w-7xl mx-auto px-5 sm:px-6 py-3 flex items-center justify-between">
+          <div class="max-w-screen-2xl mx-auto px-5 sm:px-6 py-3 flex items-center justify-between">
             <a href="index.html" class="block">
                 <img src="images/Logo.png" alt="Le Shelter Foundation" class="h-8 sm:h-5 md:h-10 w-auto">
             </a>
@@ -129,7 +129,7 @@
     </header>
 
     <div class="home-page-welcome relative overflow-hidden ">
-      <div class="max-w-6xl mx-auto ">
+      <div class="max-w-7xl mx-auto ">
         <!-- Greyed-out background image -->
         <img src="images/image1banner.jpg" alt="Volunteers" class="relative inset-0  object-contain object-top brightness-80 opacity-80"aria-hidden="true"/>
       </div>
@@ -139,7 +139,7 @@
 
 <!-- Upcoming Event Section with Countdown Timer -->
 <section class="py-5 md:py-5 bg-gradient-to-b from-gray-100 to-white">
-  <div class="max-w-7xl mx-auto px-6 lg:px-8 text-center">
+  <div class="max-w-screen-2xl mx-auto px-6 lg:px-8 text-center">
     <h2 class="text-2xl md:text-4xl font-extrabold text-[var(--primary)] mb-3">
       Upcoming Event: Annual School Supplies Drive & Mentorship Day
     </h2>
@@ -185,7 +185,7 @@
  
 <!-- New Slider Section for More Projects -->
 <section class="py-5  bg-gray-50">
-  <div class="max-w-7xl mx-auto px-6 lg:px-8">
+  <div class="max-w-screen-2xl mx-auto px-6 lg:px-8">
     <div class="text-center mb-3">
       <h2 class="text-4xl md:text-5xl font-extrabold text-[var(--primary)] mb-4">
         Our Projects & Impact Stories
@@ -447,7 +447,7 @@
 
 <section class="gallery-section bg-gray-50">
   <div class="inner py-5 ">
-    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+    <div class="max-w-screen-2xl mx-auto px-6 lg:px-8">
     <div class="text-center mb-3">
       <h2 class="text-4xl md:text-5xl font-extrabold text-[var(--primary)] mb-4">
         Gallery of Impact
@@ -646,6 +646,15 @@
   </div>
 </section>
 
+<!-- Lightbox Overlay -->
+<div id="gallery-lightbox" class="hidden fixed inset-0 z-50 items-center justify-center bg-black/90 backdrop-blur-sm" style="cursor: zoom-out;">
+  <button id="lightbox-close" class="absolute top-4 right-4 text-white text-4xl font-light hover:text-gray-300 transition z-10 w-12 h-12 flex items-center justify-center" aria-label="Close">&times;</button>
+  <button id="lightbox-prev" class="absolute left-4 top-1/2 -translate-y-1/2 text-white bg-white/20 hover:bg-white/40 rounded-full w-12 h-12 flex items-center justify-center text-2xl transition z-10" aria-label="Previous">&#8592;</button>
+  <button id="lightbox-next" class="absolute right-4 top-1/2 -translate-y-1/2 text-white bg-white/20 hover:bg-white/40 rounded-full w-12 h-12 flex items-center justify-center text-2xl transition z-10" aria-label="Next">&#8594;</button>
+  <img id="lightbox-img" src="" alt="" class="max-w-[90vw] max-h-[85vh] object-contain rounded-lg shadow-2xl select-none" />
+  <div id="lightbox-counter" class="absolute bottom-6 left-1/2 -translate-x-1/2 text-white text-sm bg-black/50 px-4 py-2 rounded-full"></div>
+</div>
+
 <script type="module">
   const slides = Array.from(document.querySelectorAll('.stage-slide'));
   const slidesInner = document.getElementById('stage-slides');
@@ -780,8 +789,9 @@
   window.addEventListener('mousemove', e => onDragMove(e.clientX, e.clientY));
   window.addEventListener('mouseup', () => onDragEnd());
 
-  // Keyboard
+  // Keyboard (skip when lightbox is open)
   document.addEventListener('keydown', e => {
+    if (!document.getElementById('gallery-lightbox').classList.contains('hidden')) return;
     if (e.key === 'ArrowLeft') goTo(current - 1);
     if (e.key === 'ArrowRight') goTo(current + 1);
   });
@@ -792,12 +802,80 @@
 
   // Init
   startAutoplay();
+
+  // ── LIGHTBOX ──
+  const lightbox = document.getElementById('gallery-lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+  const lightboxClose = document.getElementById('lightbox-close');
+  const lightboxPrev = document.getElementById('lightbox-prev');
+  const lightboxNext = document.getElementById('lightbox-next');
+  const lightboxCounter = document.getElementById('lightbox-counter');
+
+  function openLightbox(idx) {
+    stopAutoplay();
+    current = idx;
+    updateLightbox();
+    lightbox.classList.remove('hidden');
+    lightbox.classList.add('flex');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeLightbox() {
+    lightbox.classList.add('hidden');
+    lightbox.classList.remove('flex');
+    document.body.style.overflow = '';
+    startAutoplay();
+  }
+
+  function updateLightbox() {
+    const img = slides[current].querySelector('img');
+    lightboxImg.src = img.src;
+    lightboxImg.alt = img.alt;
+    lightboxCounter.textContent = `${current + 1} / ${slides.length}`;
+  }
+
+  // Click on slide to open lightbox
+  slides.forEach((slide, i) => {
+    slide.style.cursor = 'zoom-in';
+    slide.addEventListener('click', (e) => {
+      if (Math.abs(dragDelta) < 10) openLightbox(i);
+    });
+  });
+
+  // Click on thumbnail to open lightbox
+  thumbs.forEach((thumb, i) => {
+    thumb.addEventListener('dblclick', () => openLightbox(i));
+  });
+
+  lightboxClose.addEventListener('click', closeLightbox);
+  lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox) closeLightbox();
+  });
+
+  lightboxPrev.addEventListener('click', (e) => {
+    e.stopPropagation();
+    current = (current - 1 + slides.length) % slides.length;
+    updateLightbox();
+  });
+
+  lightboxNext.addEventListener('click', (e) => {
+    e.stopPropagation();
+    current = (current + 1) % slides.length;
+    updateLightbox();
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (lightbox.classList.contains('hidden')) return;
+    if (e.key === 'Escape') closeLightbox();
+    if (e.key === 'ArrowLeft') { current = (current - 1 + slides.length) % slides.length; updateLightbox(); }
+    if (e.key === 'ArrowRight') { current = (current + 1) % slides.length; updateLightbox(); }
+  });
 </script>
 
 
   <!-- Footer -->
   <footer class="bg-[var(--dark)] text-black py-5">
-    <div class="max-w-7xl mx-auto px-6">
+    <div class="max-w-screen-2xl mx-auto px-6">
       <div class="grid md:grid-cols-4 gap-12 mb-5">
         <div>
           <h4 class="text-xl font-bold text-[var(--primary)] mb-4">About LSF</h4>
