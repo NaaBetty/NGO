@@ -487,12 +487,22 @@ img {
 .donate-modal-content {
   background: white;
   border-radius: 1.5rem;
-  padding: 2rem;
+  padding: 1.5rem;
   max-width: 600px;
   width: 90%;
   max-height: 90vh;
   overflow-y: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
   animation: slideUp 0.3s ease;
+  font-size: 0.875rem;
+}
+.donate-modal-content h2 { font-size: 1.4rem; }
+.donate-modal-content h3 { font-size: 1rem; }
+.donate-modal-content p { font-size: 0.85rem; }
+.donate-modal-content li { font-size: 0.8rem; }
+.donate-modal-content::-webkit-scrollbar {
+  display: none;
 }
 
 @keyframes slideUp {
