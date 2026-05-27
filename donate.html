@@ -31,7 +31,6 @@
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/themify-icons.css" />  
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
    
   <!-- Favicon -->
@@ -302,217 +301,6 @@
 
     
 
-  <script>
-    const menuBtn = document.getElementById('menu-btn');
-    const closeMenu = document.getElementById('close-menu');
-    const mobileMenu = document.getElementById('mobile-menu');
-
-    menuBtn?.addEventListener('click', () => mobileMenu.classList.remove('hidden'));
-    closeMenu?.addEventListener('click', () => mobileMenu.classList.add('hidden'));
-    mobileMenu?.addEventListener('click', e => {
-      if (e.target === mobileMenu) mobileMenu.classList.add('hidden');
-    });
-
-    document.querySelectorAll('#mobile-menu button').forEach(btn => {
-      btn.addEventListener('click', () => mobileMenu.classList.add('hidden'));
-    });
-
-    // Donation Modal Logic
-    const donateBtn = document.getElementById('donate-btn');
-    const donateBtnMobile = document.getElementById('donate-btn-mobile');
-    const donateModal = document.getElementById('donate-modal');
-    const closeDonateModal = document.getElementById('close-donate-modal');
-
-    function openDonateModal() {
-      donateModal.classList.add('active');
-    }
-
-    function closeDonateModalFunc() {
-      donateModal.classList.remove('active');
-    }
-
-    donateBtn?.addEventListener('click', openDonateModal);
-    donateBtnMobile?.addEventListener('click', () => {
-      openDonateModal();
-      mobileMenu.classList.add('hidden');
-    });
-    closeDonateModal?.addEventListener('click', closeDonateModalFunc);
-    
-    // Close modal when clicking outside
-    donateModal?.addEventListener('click', (e) => {
-      if (e.target === donateModal) {
-        closeDonateModalFunc();
-      }
-    });
-
-    // Close modal with Escape key
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') {
-        closeDonateModalFunc();
-      }
-    });
-
-    // Shopping Cart Logic
-    let cart = JSON.parse(localStorage.getItem('shop-cart')) || [];
-
-    function addToCart(productId, productName, productPrice) {
-      const existingItem = cart.find(item => item.id === productId);
-      
-      if (existingItem) {
-        existingItem.quantity += 1;
-      } else {
-        cart.push({
-          id: productId,
-          name: productName,
-          price: parseFloat(productPrice),
-          quantity: 1
-        });
-      }
-      
-      localStorage.setItem('shop-cart', JSON.stringify(cart));
-      updateCartDisplay();
-      showAddedNotification(productName);
-    }
-
-    function removeFromCart(productId) {
-      cart = cart.filter(item => item.id !== productId);
-      localStorage.setItem('shop-cart', JSON.stringify(cart));
-      updateCartDisplay();
-    }
-
-    function updateQuantity(productId, quantity) {
-      const item = cart.find(item => item.id === productId);
-      if (item) {
-        item.quantity = quantity;
-        if (item.quantity <= 0) {
-          removeFromCart(productId);
-        } else {
-          localStorage.setItem('shop-cart', JSON.stringify(cart));
-          updateCartDisplay();
-        }
-      }
-    }
-
-    function updateCartDisplay() {
-      const cartItemsDiv = document.getElementById('cart-items');
-      const cartSummary = document.getElementById('cart-summary');
-      
-      if (cart.length === 0) {
-        cartItemsDiv.innerHTML = '<p class="text-gray-600 font-bold text-center py-8">Your cart is empty. Browse our collection above to add items!</p>';
-        cartSummary.classList.add('hidden');
-        return;
-      }
-
-      cartSummary.classList.remove('hidden');
-      let cartHTML = '';
-      let subtotal = 0;
-
-      cart.forEach(item => {
-        const itemTotal = item.price * item.quantity;
-        subtotal += itemTotal;
-        cartHTML += `
-          <div class="flex items-center justify-between gap-4 bg-white p-4 rounded-xl border border-gray-200">
-            <div class="flex-1">
-              <p class="font-bold text-lg text-[var(--primary)]">${item.name}</p>
-              <p class="text-gray-600 text-sm ">GH₵${item.price.toFixed(2)} each</p>
-            </div>
-            <div class="flex items-center gap-2  py-2 rounded-lg">
-              <button class="px-2 py-1 text-lg font-bold text-[var(--primary)] hover:bg-white rounded" onclick="updateQuantity('${item.id}', ${item.quantity - 1})">−</button>
-              <span class="px-2 font-bold text-2xl text-[var(--primary)]">${item.quantity}</span>
-              <button class="px-2 py-1 text-lg font-bold text-[var(--primary)] hover:bg-white rounded" onclick="updateQuantity('${item.id}', ${item.quantity + 1})">+</button>
-            </div>
-            <div class="flex-1 text-justify-end text-right">
-              <p class="font-bold text-lg text-[var(--primary)]">GH₵${itemTotal.toFixed(2)}</p>
-              <button class="text-xs text-red-500 hover:text-red-700 font-bold mt-1" onclick="removeFromCart('${item.id}')">Remove</button>
-            </div>
-          </div>
-        `;
-      });
-
-      cartItemsDiv.innerHTML = cartHTML;
-      
-      const shipping = 30.00;
-      const total = subtotal + shipping;
-      
-      document.getElementById('subtotal').textContent = `GH₵${subtotal.toFixed(2)}`;
-      document.getElementById('total').textContent = `GH₵${total.toFixed(2)}`;
-    }
-
-    function showAddedNotification(productName) {
-      const notification = document.createElement('div');
-      notification.className = 'fixed top-6 right-6 bg-[var(--primary)] text-white px-6 py-4 rounded-xl font-bold shadow-2xl z-50 animate-bounce';
-      notification.textContent = `✓ ${productName} added to cart!`;
-      document.body.appendChild(notification);
-      
-      setTimeout(() => {
-        notification.remove();
-      }, 2500);
-    }
-
-    // Add to Cart Button Listeners
-    document.querySelectorAll('.add-to-cart').forEach(btn => {
-      btn.addEventListener('click', (e) => {
-        e.preventDefault();
-        const productId = btn.dataset.product;
-        const productName = btn.dataset.name;
-        const productPrice = btn.dataset.price;
-        addToCart(productId, productName, productPrice);
-      });
-    });
-
-    // Category Filter
-    document.querySelectorAll('.category-btn').forEach(btn => {
-      btn.addEventListener('click', (e) => {
-        e.preventDefault();
-        document.querySelectorAll('.category-btn').forEach(b => b.classList.remove('active', 'border-[var(--primary)]', 'text-[var(--primary)]', 'bg-[var(--primary)]'));
-        btn.classList.add('active', 'border-[var(--primary)]', 'text-[var(--primary)]', 'bg-[var(--primary)]');
-        btn.classList.remove('border-gray-300', 'text-black');
-
-        const category = btn.dataset.category;
-        document.querySelectorAll('.product-card').forEach(card => {
-          if (category === 'all' || card.classList.contains(category)) {
-            card.style.display = 'block';
-          } else {
-            card.style.display = 'none';
-          }
-        });
-      });
-    });
-
-    
-
-
-    // Clear Cart Button
-document.getElementById('clear-cart-btn')?.addEventListener('click', () => {
-  if (cart.length === 0) {
-    alert("Your cart is already empty!");
-    return;
-  }
-
-  if (confirm("Are you sure you want to remove ALL items from your cart? This cannot be undone.")) {
-    cart = [];
-    localStorage.removeItem('shop-cart');
-    updateCartDisplay();
- 
-  }
-});
-
-
-    // Checkout Button
-    document.getElementById('checkout-btn')?.addEventListener('click', () => {
-      const cartTotal = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0) + 5;
-      const cartDetails = cart.map(item => `${item.quantity}x ${item.name} (GH₵${(item.price * item.quantity).toFixed(2)})`).join('\n');
-      
-      alert(`Checkout Summary:\n\n${cartDetails}\n\nShipping: GH₵30.00\nTotal: GH₵${cartTotal.toFixed(2)}\n\n✓ In production, this would redirect to Paystack, Stripe, or another payment processor.\n\n100% of proceeds support Le Shelter Foundation's mission in rural Ghana. Thank you for your support! ♡`);
-    });
-
-    // Initialize cart display on page load
-    updateCartDisplay();
-  </script>
-
-
-   
-
   <!-- Footer -->
   <footer class="bg-[var(--dark)] text-black py-5">
     <div class="max-w-screen-2xl mx-auto px-6">
@@ -572,10 +360,6 @@ document.getElementById('clear-cart-btn')?.addEventListener('click', () => {
       link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
     });
 
-      
-  </script>
-
-  <script>
     // Donation Modal Logic
     const donateBtn = document.getElementById('donate-btn');
     const donateBtnMobile = document.getElementById('donate-btn-mobile');
@@ -596,52 +380,15 @@ document.getElementById('clear-cart-btn')?.addEventListener('click', () => {
       mobileMenu.classList.add('hidden');
     });
     closeDonateModal?.addEventListener('click', closeDonateModalFunc);
-    
-    // Close modal when clicking outside
+
     donateModal?.addEventListener('click', (e) => {
-      if (e.target === donateModal) {
-        closeDonateModalFunc();
-      }
+      if (e.target === donateModal) closeDonateModalFunc();
     });
 
-    // Close modal with Escape key
     document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') {
-        closeDonateModalFunc();
-      }
+      if (e.key === 'Escape') closeDonateModalFunc();
     });
   </script>
-
-  <script>
-  // Event date in UTC (March 6, 2026 at 14:00 GMT / Africa/Accra time)
-  const eventDate = new Date(Date.UTC(2026, 2, 06, 08, 0, 0)); // Month is 0-based (3 = April)
-
-  function updateCountdown() {
-    const now = new Date().getTime();
-    const distance = eventDate.getTime() - now;
-
-    if (distance < 0) {
-      document.getElementById('countdown').innerHTML = 
-        '<p class="text-3xl md:text-4xl font-bold text-[var(--primary)]">The event is happening now!</p>';
-      return;
-    }
-
-    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-    document.getElementById('days').textContent = days.toString().padStart(2, '0');
-    document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
-    document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
-    document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
-  }
-
-  // Run immediately and every second
-  updateCountdown();
-  setInterval(updateCountdown, 1000);
-</script>
-
 
   <a href="https://wa.me/233530449325?text=Hello%20Le%20Shelter%20Foundation" 
     target="_blank" rel="noopener"

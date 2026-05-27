@@ -79,11 +79,6 @@ h1, h2, h3, h4 {
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
 }
 
-/* Gradient Background */
-.gradient-bg {
-  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
-}
-
 /* Section Title */
 .section-title {
   font-size: 3rem;
@@ -91,30 +86,6 @@ h1, h2, h3, h4 {
   margin-bottom: 3rem;
   text-align: center;
 }
-
-/* Animations */
-.fade-in {
-  animation: fadeIn 0.8s ease-in;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Header */
-.sticky-header {
-  position: sticky;
-  top: 0;
-  z-index: 40;
-}
-
 
 /*----------------------------*\
 	HEADER
@@ -135,42 +106,6 @@ h1, h2, h3, h4 {
 
 .site-header nav {
   background-color: var(--secondary);
-}
-
-.top-header-bar {
-  background: var(--primary);
-  color: #fff;
-  margin-bottom: 0px;
-}
-
-/*----------------------------*\
-	Header Bar Email
-\*----------------------------*/
-.header-bar-email,
-.header-bar-text {
-  padding: 0px;
-  font-size: 1rem;
-  line-height: 1;
-  /* text-transform: uppercase; */
-}
-
-.header-bar-email a,
-.header-bar-text span {
-  text-transform: lowercase;
-  color: #fff;
-  text-decoration: none;
-}
-
-/*----------------------------*\
-	Header Bar Text
-\*----------------------------*/
-.header-bar-text {
-  margin-left: 10px;
-  
-}
-
-.header-bar-text p {
-  margin: 0;
 }
 
 /* Top Header Bar Responsive Styling */
@@ -217,25 +152,6 @@ h1, h2, h3, h4 {
 
 
  
-/*----------------------------*\
-	Site Branding
-\*----------------------------*/
-.site-branding {
-    width: calc(100% - 24px);
-    padding: px ;
-  }
-  .site-branding img {
-    width: 30%; 
-    height: auto;
-  }
-  
-  .site-branding a {
-    margin-top: 6px;
-  }
-
-
-
-
 /* Responsive Design - Mobile First Approach */
 
 /* Extra Small Phones (320px - 480px) */
@@ -257,10 +173,6 @@ h1, h2, h3, h4 {
   .btn-secondary {
     padding: 0.75rem 1rem;
     font-size: 0.875rem;
-  }
-
-  .sticky-header {
-    padding: 0.5rem 0;
   }
 
   .nav-link {
@@ -454,18 +366,6 @@ img {
 .filter-btn.active {
   background-color: var(--primary);
   color: white;
-}
-
-/* Amount Buttons (Shop) */
-.amount-btn {
-  transition: all 0.3s ease;
-  border: 2px solid #ddd;
-}
-
-.amount-btn.active {
-  background-color: var(--primary);
-  color: white;
-  border-color: var(--primary);
 }
 
 /* Donation Modal */
