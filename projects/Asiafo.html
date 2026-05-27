@@ -31,7 +31,12 @@
   <link rel="icon" type="image/png" sizes="16x16" href="/images/icon/favicon-16x16.png">
   <link rel="manifest" href="/images/icon/site.webmanifest">
   <link rel="canonical" href="https://www.leshelterfoundation.org/index.html">
-  
+
+  <style>
+    #featured-img { height: 280px; }
+    @media (min-width: 768px) { #featured-img { height: 400px; } }
+    @media (min-width: 1024px) { #featured-img { height: 500px; } }
+  </style>
 
 </head>
 <body>
@@ -141,9 +146,9 @@
       <article class="flex-1 min-w-0">
         <!-- Featured Image -->
         <div class="mb-10 rounded-3xl overflow-hidden shadow-2xl">
-          <img src="/images/gallery/image17.webp"
+          <img id="featured-img" src="/images/gallery/image17.webp"
                alt="Asiafo Amanfro M/A School"
-               class="w-full h-[450px] md:h-[550px] object-cover cursor-pointer gallery-img"
+               class="w-full object-cover cursor-pointer gallery-img"
                data-src="/images/gallery/image17.webp"
                data-caption="Asiafo Amanfro M/A School – October 2024">
         </div>
@@ -155,11 +160,11 @@
           <span><i class="fa-solid fa-tag mr-1"></i> Akaa • Eastern Region</span>
         </div>
 
-        <h1 class="text-4xl md:text-5xl font-extrabold leading-tight text-gray-900 mb-6">
+        <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight text-gray-900 mb-6">
           A New Chapter in Asiafo Amanfro M/A School
         </h1>
 
-        <p class="text-xl text-gray-600 leading-relaxed mb-5 border-l-4 border-[var(--primary)] pl-6">
+        <p class="text-base md:text-xl text-gray-600 leading-relaxed mb-5 border-l-4 border-[var(--primary)] pl-4 md:pl-6">
           How one outreach is transforming lives, health, and education in a rural community.
         </p>
 
@@ -195,11 +200,11 @@
           <div class="flex flex-col md:flex-row gap-8 my-5">
             <img src="/images/gallery/image15.webp"
                  alt="Students at Asiafo Amanfro"
-                 class="rounded-2xl shadow cursor-pointer gallery-img object-cover"
-                 style="height: 350px; width: 66%; min-width: 0;"
+                 class="w-full md:w-2/3 rounded-2xl shadow cursor-pointer gallery-img object-cover"
+                 style="max-height: 350px;"
                  data-src="/images/gallery/image15.webp"
                  data-caption="Students engaging in the learning activities">
-            <div class="flex flex-col justify-center" style="width: 34%;">
+            <div class="flex flex-col justify-center w-full md:w-1/3">
               <p class="italic text-lg">"This intervention changed everything for us. Our children are more motivated and we now have proper facilities to support their learning."</p>
               <p class="mt-4 font-medium"><strong>— Community Leader, Asiafo Amanfro </strong></p>
             </div>
@@ -249,34 +254,34 @@
         </div>
 
         <!-- Previous / Next Post Navigation -->
-        <div class="border-t flex flex-wrap items-center justify-between mb-5 gap-4">
-          <a href="/projects/Ayensukrom.html" class="flex items-center gap-3 group">
-            <img src="/images/gallery/image1.webp" alt="Previous project" class="w-12 h-12 rounded-md object-cover mt-5">
-            <div>
-              <p class="text-sm text-[var(--primary)] font-semibold">‹‹ Previous Post</p>
-              <p class="text-sm text-gray-600 font-medium">Ayensukrom M/A School</p>
-              <p class="text-xs text-gray-400">September, 2021</p>
-            </div>
-          </a>
-
-          <div class="flex items-center gap-3">
+        <div class="border-t pt-5 mb-5">
+          <div class="flex items-center justify-center gap-3 mb-5">
             <p class="text-gray-500 text-sm">Share this story:</p>
             <div class="flex gap-3 text-xl text-gray-400">
-              <a href="#" class="hover:text-[var(--primary)]"><i class="fa-brands fa-facebook"></i></a>
-              <a href="#" class="hover:text-[var(--primary)]"><i class="fa-brands fa-x-twitter"></i></a>
-              <a href="#" class="hover:text-[var(--primary)]"><i class="fa-brands fa-linkedin"></i></a>
-              <a href="#" class="hover:text-[var(--primary)]"><i class="fa-brands fa-whatsapp"></i></a>
+              <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.leshelterfoundation.org/projects/Asiafo.html" target="_blank" rel="noopener noreferrer" class="hover:text-[var(--primary)]"><i class="fa-brands fa-facebook"></i></a>
+              <a href="https://x.com/intent/tweet?url=https://www.leshelterfoundation.org/projects/Asiafo.html&text=A%20New%20Chapter%20in%20Asiafo%20Amanfro%20M/A%20School" target="_blank" rel="noopener noreferrer" class="hover:text-[var(--primary)]"><i class="fa-brands fa-x-twitter"></i></a>
+              <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://www.leshelterfoundation.org/projects/Asiafo.html" target="_blank" rel="noopener noreferrer" class="hover:text-[var(--primary)]"><i class="fa-brands fa-linkedin"></i></a>
+              <a href="https://wa.me/?text=A%20New%20Chapter%20in%20Asiafo%20Amanfro%20M/A%20School%20https://www.leshelterfoundation.org/projects/Asiafo.html" target="_blank" rel="noopener noreferrer" class="hover:text-[var(--primary)]"><i class="fa-brands fa-whatsapp"></i></a>
             </div>
           </div>
-
-          <a href="/projects/Asutsuare.html" class="flex items-center gap-3 text-right group">
-            <div>
-              <p class="text-sm text-[var(--primary)] font-semibold">Next Post ››</p>
-              <p class="text-sm text-gray-600 font-medium">Asutsuare Estate D/A School</p>
-              <p class="text-xs text-gray-400">May, 2024</p>
-            </div>
-            <img src="/images/gallery/image26.webp" alt="Next project" class="w-12 h-12 rounded-md object-cover mt-5">
-          </a>
+          <div class="flex items-center justify-between gap-4">
+            <a href="/projects/Ayensukrom.html" class="flex items-center gap-3 group">
+              <img src="/images/gallery/image1.webp" alt="Previous project" class="w-10 h-10 md:w-12 md:h-12 rounded-md object-cover">
+              <div>
+                <p class="text-xs md:text-sm text-[var(--primary)] font-semibold">‹‹ Previous Post</p>
+                <p class="text-xs md:text-sm text-gray-600 font-medium">Ayensukrom M/A School</p>
+                <p class="text-xs text-gray-400 hidden sm:block">September, 2021</p>
+              </div>
+            </a>
+            <a href="/projects/Asutsuare.html" class="flex items-center gap-3 text-right group">
+              <div>
+                <p class="text-xs md:text-sm text-[var(--primary)] font-semibold">Next Post ››</p>
+                <p class="text-xs md:text-sm text-gray-600 font-medium">Asutsuare Estate D/A School</p>
+                <p class="text-xs text-gray-400 hidden sm:block">May, 2024</p>
+              </div>
+              <img src="/images/gallery/image26.webp" alt="Next project" class="w-10 h-10 md:w-12 md:h-12 rounded-md object-cover">
+            </a>
+          </div>
         </div>
       </article>
 
