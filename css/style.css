@@ -53,7 +53,7 @@ h1, h2, h3, h4 {
   font-weight: 500;
   transition: color 0.3s, background-color 0.3s;
   color: var(--primary);
-  padding: 0.5rem 1rem;
+  padding: 0.5rem;
   border-radius: 0.5rem;
 }
 
@@ -448,9 +448,7 @@ img {
     padding: 0.75rem 1.5rem;
   }
 
-  .nav-link {
-    padding: 0.5rem 0;
-  }
+
 
   /* Remove hover effects on touch devices, use active instead */
   .card-hover:active {
