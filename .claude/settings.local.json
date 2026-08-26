@@ -8,7 +8,24 @@
       "Bash(python -c \"\nimport os, re\n\nroot_files = ['projects.html', 'about.html', 'index.html', 'd.html', 'donate.html', 'contact.html', 'shop.html']\nproj_files = ['projects/Asutsuare.html', 'projects/Asiafo.html']\n\ncdn_pattern = re.compile\\(r'[ \\\\t]*<!-- Tailwind CDN \\\\\\(for development.*?-->\\\\r?\\\\n[ \\\\t]*<script src=\\\\\"https://cdn\\\\.tailwindcss\\\\.com\\\\\"></script>', re.DOTALL\\)\n\nbase = r'C:/Users/HP/Documents/Shelter'\n\nfor fname, css_path in [\\(f, 'css/tailwind.css'\\) for f in root_files] + [\\(f, '../css/tailwind.css'\\) for f in proj_files]:\n    path = os.path.join\\(base, fname\\)\n    with open\\(path, 'r', encoding='utf-8'\\) as f:\n        content = f.read\\(\\)\n    new = cdn_pattern.sub\\(f'  <link rel=\\\\\"stylesheet\\\\\" href=\\\\\"{css_path}\\\\\">', content\\)\n    if new != content:\n        with open\\(path, 'w', encoding='utf-8'\\) as f:\n            f.write\\(new\\)\n        print\\(f'Updated: {fname}'\\)\n    else:\n        print\\(f'No match: {fname}'\\)\n\")",
       "Bash(git add:*)",
       "Bash(git commit:*)",
-      "Bash(find \"C:/Users/HP/Documents/Shelter\" -name \"*.html\" -not -path \"*/node_modules/*\" -exec sed -i 's|https://www.tiktok.com/@le.shelter.founda?_t=ZM-8sl65FqR7XZ\\\\&_r=1|https://www.tiktok.com/@leshelterfoundation?_r=1\\\\&_t=ZS-96iModsrefg|g' {} + && find \"C:/Users/HP/Documents/Shelter\" -name \"*.html\" -not -path \"*/node_modules/*\" -exec sed -i 's|https://www.tiktok.com/@le.shelter.founda|https://www.tiktok.com/@leshelterfoundation?_r=1\\\\&_t=ZS-96iModsrefg|g' {} +)"
+      "Bash(find \"C:/Users/HP/Documents/Shelter\" -name \"*.html\" -not -path \"*/node_modules/*\" -exec sed -i 's|https://www.tiktok.com/@le.shelter.founda?_t=ZM-8sl65FqR7XZ\\\\&_r=1|https://www.tiktok.com/@leshelterfoundation?_r=1\\\\&_t=ZS-96iModsrefg|g' {} + && find \"C:/Users/HP/Documents/Shelter\" -name \"*.html\" -not -path \"*/node_modules/*\" -exec sed -i 's|https://www.tiktok.com/@le.shelter.founda|https://www.tiktok.com/@leshelterfoundation?_r=1\\\\&_t=ZS-96iModsrefg|g' {} +)",
+      "Bash(grep -c \"sm\\\\\\\\\\\\\\\\:\" css/tailwind.css)",
+      "Bash(npm run *)",
+      "Bash(grep -o \"sm\\\\\\\\\\\\\\\\:text-5xl\\\\|sm\\\\\\\\\\\\\\\\:p-5\\\\|sm\\\\\\\\\\\\\\\\:flex-row\\\\|min-w-0\" css/tailwind.css)",
+      "Bash(ls \"/c/Program Files/Google/Chrome/Application/chrome.exe\" \"/c/Program Files \\(x86\\)/Google/Chrome/Application/chrome.exe\" \"/c/Program Files \\(x86\\)/Microsoft/Edge/Application/msedge.exe\")",
+      "Bash(ls node_modules/.bin/playwright*)",
+      "Bash(\"/c/Program Files/Google/Chrome/Application/chrome.exe\" --headless=new --disable-gpu --hide-scrollbars --force-device-scale-factor=1 --window-size=390,2400 --screenshot=\"C:/Users/HP/Documents/Shelter/Le-Shelter/_render_390.png\" \"file:///C:/Users/HP/Documents/Shelter/Le-Shelter/index.html\")",
+      "Bash(echo \"exit=$?\")",
+      "Bash(cp index.html _debug.html)",
+      "Bash(node -e ' *)",
+      "Bash(\"/c/Program Files/Google/Chrome/Application/chrome.exe\" --headless=new --disable-gpu --hide-scrollbars --force-device-scale-factor=1 --virtual-time-budget=4000 --window-size=390,700 --screenshot=\"C:/Users/HP/Documents/Shelter/Le-Shelter/_debug_390.png\" \"file:///C:/Users/HP/Documents/Shelter/Le-Shelter/_debug.html\")",
+      "Bash(\"/c/Program Files/Google/Chrome/Application/chrome.exe\" --headless=new --disable-gpu --virtual-time-budget=3000 --window-size=390,700 --dump-dom \"file:///C:/Users/HP/Documents/Shelter/Le-Shelter/_debug.html\")",
+      "Bash(rm -rf _chrome_tmp)",
+      "Bash(\"/c/Program Files/Google/Chrome/Application/chrome.exe\" --headless=new --disable-gpu --force-device-scale-factor=1 --user-data-dir=\"C:/Users/HP/Documents/Shelter/Le-Shelter/_chrome_tmp\" --virtual-time-budget=3000 --window-size=375,700 --dump-dom \"file:///C:/Users/HP/Documents/Shelter/Le-Shelter/_debug.html\")",
+      "Bash(\"/c/Program Files/Google/Chrome/Application/chrome.exe\" --headless=new --disable-gpu --force-device-scale-factor=2 --user-data-dir=\"C:/Users/HP/Documents/Shelter/Le-Shelter/_chrome_tmp\" --virtual-time-budget=3000 --window-size=780,1400 --dump-dom \"file:///C:/Users/HP/Documents/Shelter/Le-Shelter/_debug.html\")",
+      "Bash(\"/c/Program Files/Google/Chrome/Application/chrome.exe\" --headless=new --disable-gpu --force-device-scale-factor=2 --user-data-dir=\"C:/Users/HP/Documents/Shelter/Le-Shelter/_chrome_tmp2\" --virtual-time-budget=3000 --window-size=780,1000 --screenshot=\"C:/Users/HP/Documents/Shelter/Le-Shelter/_true390.png\" \"file:///C:/Users/HP/Documents/Shelter/Le-Shelter/index.html\")",
+      "Bash(rm -rf _cdp_tmp)",
+      "Bash(node _cdpshot.mjs)"
     ]
   }
 }

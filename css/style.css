@@ -12,6 +12,13 @@
   padding: 0;
 }
 
+html, body {
+  /* Prevent stray-wide elements from expanding the layout viewport,
+     which makes mobile browsers zoom the whole page out. */
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
 body {
   font-family: 'Inter', sans-serif;
   /* background-color: var(--light); */
