@@ -388,6 +388,35 @@
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape') closeDonateModalFunc();
     });
+
+    function handleDonationSubmit(e) {
+      e.preventDefault();
+      const form = e.target;
+      const submitBtn = form.querySelector('button[type="submit"]');
+      const originalText = submitBtn ? submitBtn.textContent : '';
+      if (submitBtn) { submitBtn.textContent = 'Sending...'; submitBtn.disabled = true; }
+      const data = new FormData(form);
+      const params = new URLSearchParams();
+      for (const [key, val] of data) params.append(key, val);
+      // Contact form — sends to the same Google Apps Script endpoint
+      const DONATION_FORM_URL = 'https://script.google.com/macros/s/AKfycbx9ezmcIaWcBf6mQAFycFu89JtRGOKq16ymYIN7Z94LJmJQJ3s66xHouWgvlfQLczF-/exec';
+      fetch(DONATION_FORM_URL, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: params.toString()
+      })
+      .then(() => {
+        alert('Thank you! Your message has been received. We will be in touch shortly.');
+        form.reset();
+      })
+      .catch(() => {
+        alert('There was an error sending your message. Please email us directly at lesheltergh@gmail.com.');
+      })
+      .finally(() => {
+        if (submitBtn) { submitBtn.textContent = originalText; submitBtn.disabled = false; }
+      });
+    }
   </script>
 
   <a href="https://wa.me/233530449325?text=Hello%20Le%20Shelter%20Foundation" 
