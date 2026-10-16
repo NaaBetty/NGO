@@ -40,62 +40,14 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
-  </head>
+  <link rel="stylesheet" href="../css/redesign.css">
+</head>
 
   <body class="single-page about-page">
-    <header class="site-header">
-      <div class="top-header-bar">
-        <div class="container">
-            <div class="row flex-wrap justify-content-center justify-content-lg-between align-items-lg-center">
-                <div class="col-12 col-lg-8 d-none d-md-flex flex-wrap justify-content-center justify-content-lg-start mb-3 mb-lg-0">
-                    <div class="header-bar-email">
-                        MAIL: <i class="fa fa-envelope"></i> <a>lesheltergh@gmail.com</a>
-                    </div><!-- .header-bar-email -->
-
-                    <div class="header-bar-text">
-                      <p>PHONE: <i class="fa fa-phone"></i> +233 53 044 9325 <i class="fa-brands fa-whatsapp"></i></p>
-                  </div><!-- .header-bar-text -->
-              </div><!-- .col -->
-
-                <div class="col-12 col-lg-4 mt-1 mb-1 d-flex flex-wrap justify-content-center justify-content-lg-end align-items-center">
-                  <div class="top-button donate-btn" data-modal="donateModal1">
-                      <a href="#">Donate <i class="fa-solid fa-hand-holding-heart"></i></a>
-                  </div><!-- .donate-btn -->
-                </div><!-- .col -->
-            </div><!-- .row -->
-        </div><!-- .container -->
-    </div><!-- .top-header-bar -->
-
-      <!-- logo & navs -->
-      <div class="nav-bar">
-        <div class="container">
-          <div class="row">
-            <div class="col-12 d-flex flex-wrap justify-content-between mb-2 align-items-center">
-              <div class="site-branding d-flex align-items-center">
-                <a class="d-block" href="../index.html" rel="home"><img class="d-block" src="../images/Logo.png" href="../index.html" alt="logo"></a>
-              </div><!-- .site-branding -->
-  
-              <nav  class="site-navigation d-flex justify-content-end align-items-center">
-                <ul class="d-flex flex-column flex-lg-row justify-content-lg-end align-content-center">
-                  <li><a href="../index.html">Home</a></li>
-                  <li><a href="../about.html">About us</a></li>
-                  <li class="current-menu-item"><a href="../Projects.html">Projects</a></li>
-                  <li><a href="../portfolio.html">Portfolio</a></li>
-                  <li><a href="../contact.html">Contact</a></li>
-                </ul>
-              </nav><!-- .site-navigation -->
-  
-              <div class="hamburger-menu d-lg-none">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-              </div><!-- .hamburger-menu -->
-            </div><!-- .col -->
-          </div><!-- .row -->
-        </div><!-- .container -->
-      </div><!-- .nav-bar -->
-    </header><!-- .site-header -->
+    <header class="site-header redesign-header">
+    <div class="utility-bar"><span>Equal opportunity. Every child. Every community.</span><a href="mailto:lesheltergh@gmail.com">lesheltergh@gmail.com ↗</a></div>
+    <nav aria-label="Main navigation" class="main-navigation"><a href="../index.html" class="brand"><img src="../images/Logo.png" alt="Le Shelter Foundation" width="556" height="143"></a><div class="desktop-links"><a href="../index.html" class="nav-link " >Home</a><a href="../about.html" class="nav-link " >Our story</a><a href="../projects.html" class="nav-link active" aria-current=page>Our projects</a><a href="../shop.html" class="nav-link " >Shop</a><a href="../contact.html" class="nav-link " >Contact</a></div><a class="give-button" href="../donate.html">Make a difference <span aria-hidden="true">↗</span></a><button id="menu-btn" type="button" aria-label="Open navigation" aria-controls="mobile-menu" aria-expanded="false">☰</button></nav>
+    <button id="donate-btn" hidden aria-hidden="true" tabindex="-1">Donate</button></header><div id="page-content"></div><!-- .site-header -->
   
     <div class="page-header">
       <div class="container">
@@ -507,5 +459,6 @@ function closeFlyerModal() {
 }
 
 </script>
-  </body>
+  <script src="../Javascript/redesign.js" defer></script>
+</body>
 </html>
