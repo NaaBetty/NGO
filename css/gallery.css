@@ -1,0 +1,49 @@
+.gallery-page{background:#fff}.gallery-intro{padding:65px 0;background:linear-gradient(#103e31d9,#103e31e8),url('../images/mission.webp') center/cover;color:#fff}.gallery-intro .eyebrow{color:#f6da7c;font-size:10px}.gallery-intro h1{font-size:clamp(45px,5vw,70px);font-weight:600;line-height:1.05;letter-spacing:-.045em;margin:22px 0}.gallery-intro h1 em{color:#f6da7c}.gallery-intro p:not(.eyebrow){max-width:500px;font-size:14px;line-height:1.85;color:#e4ede7}.gallery-intro a{display:inline-block;margin-top:25px;border-bottom:1px solid #d9e4da;padding-bottom:4px;font-size:12px}
+.gallery-page .gallery-section{padding-top:45px;padding-bottom:45px}.gallery-heading{display:flex;justify-content:space-between;align-items:flex-end;gap:25px;margin-bottom:30px}.gallery-heading h2{font-size:35px;font-weight:600;margin-top:8px}.gallery-heading>p{font-size:12px;color:#6e7d73}.gallery-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}.gallery-photo{position:relative;display:block;width:100%;padding:0;border:0;aspect-ratio:1.15;overflow:hidden;border-radius:7px;background:#e7eee9;cursor:zoom-in;text-align:left}.gallery-photo>img{width:100%;height:100%;object-fit:cover;transition:transform .35s}.gallery-photo:hover>img,.gallery-photo:focus-visible>img{transform:scale(1.04)}.gallery-photo>span{position:absolute;bottom:0;left:0;right:0;display:flex;justify-content:space-between;align-items:center;background:linear-gradient(transparent,#0c2b22b5);color:white;padding:35px 18px 15px;font-size:11px}.gallery-photo>span>span:last-child{font-size:22px}.gallery-load{text-align:center;padding-top:30px}.gallery-load p{font-size:11px;color:#79877c;margin-bottom:18px}.gallery-load button{border:0;cursor:pointer}.gallery-invitation{background:#edf3e6;padding:35px 0}.gallery-invitation>.reference-container{display:flex;align-items:center;justify-content:space-between;gap:25px}.gallery-invitation .eyebrow{font-size:9px;color:#58835b}.gallery-invitation h2{font-size:33px;margin:10px 0}.gallery-invitation p:not(.eyebrow){font-size:13px;color:#6e7d72}
+.gallery-viewer{position:fixed;inset:0;margin:0;width:100vw;height:100dvh;max-width:none;max-height:none;padding:65px 80px 45px;background:rgba(5,19,13,.98);border:0;color:white;overflow:hidden}.gallery-viewer[open]{display:flex;align-items:center;justify-content:center}.gallery-viewer::backdrop{background:#000b}.gallery-viewer figure{margin:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;width:100%;height:100%;min-height:0}.gallery-viewer figure img{object-fit:contain;max-width:100%;max-height:calc(100% - 45px);width:auto;height:auto}.gallery-viewer figcaption{font-size:12px;line-height:1.5;color:#dae4dc;text-align:center}.gallery-viewer button{position:absolute;border:1px solid #ffffff60;background:#fff;color:#193d31;cursor:pointer;border-radius:50%;width:44px;height:44px;display:grid;place-items:center;font-size:22px}.gallery-viewer button:hover{background:#ffd44f}.gallery-viewer .gallery-close{top:15px;right:20px;border-radius:4px;width:auto;height:36px;padding:0 15px;font-size:13px}.gallery-prev{left:18px;top:50%}.gallery-next{right:18px;top:50%}.gallery-position{position:absolute;bottom:12px;left:0;right:0;text-align:center;font-size:11px;color:#d5e2d8}
+@media(max-width:850px){.gallery-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.gallery-heading h2{font-size:31px}}
+@media(max-width:600px){.gallery-intro{padding:40px 0}.gallery-intro h1{font-size:48px}.gallery-heading{display:block}.gallery-heading>p{margin-top:15px}.gallery-heading h2{font-size:29px}.gallery-page .gallery-section{padding-block:30px}.gallery-grid{gap:12px}.gallery-photo{aspect-ratio:.95}.gallery-photo>span{font-size:9px;padding:25px 10px 10px}.gallery-photo>span>span:last-child{font-size:18px}.gallery-invitation>.reference-container{flex-direction:column;align-items:flex-start}.gallery-invitation h2{font-size:29px}.gallery-viewer{padding:60px 12px 65px}.gallery-viewer .gallery-prev{top:auto;bottom:13px;left:calc(50% - 90px)}.gallery-viewer .gallery-next{top:auto;bottom:13px;right:calc(50% - 90px)}.gallery-position{bottom:26px}.gallery-viewer figcaption{font-size:10px}}
+
+/* Reference layout: category toolbar, split volunteer feature and event stories. */
+.gallery-intro{padding-block:55px}
+.gallery-page .gallery-section{padding-block:30px}
+.gallery-heading{align-items:center;margin-bottom:25px}
+.gallery-heading .script-label{font-size:18px}
+.gallery-heading h2{font-size:32px}
+.gallery-categories h3{font-family:Inter,Arial,sans-serif;font-size:15px;font-weight:750;letter-spacing:-.02em;margin-bottom:12px}
+.gallery-categories>div{display:flex;gap:18px;flex-wrap:wrap}
+.gallery-categories button{border:0;background:none;padding:4px 0;font-size:11px;color:#7a877d;cursor:pointer;border-bottom:1px solid transparent}
+.gallery-categories button[aria-pressed=true]{color:#176147;border-bottom-color:#176147;font-weight:700}
+.gallery-categories button:hover{color:#176147}
+.gallery-grid{gap:18px}
+.gallery-photo{aspect-ratio:1.17;border-radius:4px}
+.gallery-photo>span{font-size:9px;padding:25px 12px 10px}
+.gallery-load{padding-top:23px}
+.gallery-load button{padding:12px 20px;font-size:11px}
+.gallery-volunteer{padding-top:0;padding-bottom:35px}
+.gallery-volunteer-panel{display:grid;grid-template-columns:1fr 1fr;background:#193d31;color:#fff;border-radius:4px;overflow:hidden}
+.gallery-volunteer-panel>img{width:100%;height:100%;min-height:340px;object-fit:cover}
+.gallery-volunteer-panel>div{padding:40px 45px}
+.gallery-volunteer-panel .eyebrow{font-size:9px;color:#cddfc3}
+.gallery-volunteer-panel h2{font-size:38px;font-weight:600;margin:18px 0}
+.gallery-volunteer-panel em{color:#d7e5ba}
+.gallery-volunteer-panel p:not(.eyebrow){color:#d3ded6;font-size:13px;line-height:1.9}
+.gallery-volunteer-button{display:flex;justify-content:space-between;align-items:center;background:#d7e5ba;color:#193d31;font-size:12px;font-weight:600;padding:15px 20px;max-width:245px;margin-top:23px;border-radius:3px}
+.gallery-volunteer-button:hover{background:#fff}
+.gallery-partner-link{display:inline-block;font-size:10px;color:#d7e2d8;margin-top:17px}
+.gallery-events{position:relative;padding:55px 0;background:linear-gradient(90deg,#f8f5e9ed 0%,#f8f5e9ed 68%,#193d31 68%),url('../images/mission.webp') center/cover}
+.gallery-events-layout{display:grid;grid-template-columns:1fr 1.1fr;gap:90px;align-items:center}
+.gallery-events-intro h2{font-family:Inter,Arial,sans-serif;font-size:34px;font-weight:750;letter-spacing:-.04em;line-height:1.1;margin:10px 0 23px}
+.gallery-events-intro>p:not(.script-label){font-size:13px;line-height:1.9;color:#7b867a;max-width:400px}
+.gallery-events-intro .yellow-button{margin-top:23px}
+.gallery-events-list{display:flex;flex-direction:column;gap:22px}
+.gallery-event-card{display:grid;grid-template-columns:38% 30px 1fr;min-height:165px;background:#fff;border-radius:18px;overflow:hidden;box-shadow:0 5px 20px #193d3114}
+.gallery-event-card>img{width:100%;height:100%;object-fit:cover;max-height:200px}
+.gallery-event-date{writing-mode:vertical-rl;transform:rotate(180deg);text-align:center;background:var(--sunflower);font-size:10px;font-weight:700;color:#315a42;padding:10px 5px}
+.gallery-event-card>div{padding:20px 18px}
+.gallery-event-card p{font-size:9px;line-height:1.6;color:#aa963f;margin-bottom:10px}
+.gallery-event-card h3{font-family:Inter,Arial,sans-serif;font-size:21px;font-weight:750;letter-spacing:-.03em;line-height:1.15}
+.gallery-event-card>div>span{font-size:10px;display:block;color:#728075;margin-top:15px}
+.gallery-event-card:hover h3{color:#16846b}
+@media(max-width:1000px){.gallery-heading{gap:20px}.gallery-categories>div{gap:12px}.gallery-volunteer-panel>div{padding:30px}.gallery-volunteer-panel h2{font-size:32px}.gallery-events-layout{gap:40px}.gallery-event-card{grid-template-columns:35% 25px 1fr}.gallery-event-card>div{padding:17px 14px}.gallery-event-card h3{font-size:18px}}
+@media(max-width:700px){.gallery-heading{display:block}.gallery-categories{margin-top:22px}.gallery-categories>div{gap:12px 17px}.gallery-heading h2{font-size:29px}.gallery-volunteer-panel{grid-template-columns:1fr}.gallery-volunteer-panel>img{height:260px;min-height:0}.gallery-volunteer-panel>div{padding:28px 25px}.gallery-volunteer-panel h2{font-size:34px}.gallery-events{padding-block:35px;background:linear-gradient(#f8f5e9ed 0%,#f8f5e9ed 56%,#193d31 56%),url('../images/mission.webp') center/cover}.gallery-events-layout{grid-template-columns:1fr;gap:30px}.gallery-events-intro h2{font-size:30px}.gallery-event-card{min-height:155px}.gallery-event-card>img{max-height:180px}.gallery-event-card h3{font-size:19px}.gallery-grid{gap:12px}}

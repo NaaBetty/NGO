@@ -2,6 +2,7 @@
   "name": "le-shelter-foundation",
   "version": "1.0.0",
   "scripts": {
+    "admin": "node admin/server/server.mjs",
     "build:css": "tailwindcss -i css/tailwind-input.css -o css/tailwind.css --minify",
     "watch:css": "tailwindcss -i css/tailwind-input.css -o css/tailwind.css --watch"
   },

@@ -1,61 +1,460 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Learn about Le Shelter Foundation, a humanitarian NGO founded in 2017 by Ruby Offeibea Adu. Meet our team of dedicated volunteers working to improve education for rural children in Ghana."/>
-  <meta name="keywords" content="Le Shelter Foundation, about us, team, Ruby Offeibea Adu, rural education Ghana, NGO Ghana, volunteer"/>
-  <meta name="author" content="Le Shelter Foundation"/>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="Learn about Le Shelter Foundation, a humanitarian NGO founded in 2017 by Ruby Offeibea Adu. Meet our team of dedicated volunteers working to improve education for rural children in Ghana."/>
+    <meta name="keywords" content="Le Shelter Foundation, about us, team, Ruby Offeibea Adu, rural education Ghana, NGO Ghana, volunteer"/>
+    <meta name="author" content="Le Shelter Foundation"/>
 
-  <!-- Open Graph / Social Sharing -->
-  <meta property="og:title" content="About Us - Le Shelter Foundation"/>
-  <meta property="og:description" content="Meet the team behind Le Shelter Foundation and learn about our mission to provide equal educational opportunities for rural children in Ghana."/>
-  <meta property="og:type" content="website"/>
-  <meta property="og:url" content="https://www.leshelterfoundation.org/about.html"/>
-  <meta property="og:image" content="https://www.leshelterfoundation.org/images/Logo.png"/>
-  <meta property="og:site_name" content="Le Shelter Foundation"/>
+    <!-- Open Graph / Social Sharing -->
+    <meta property="og:title" content="About Us - Le Shelter Foundation"/>
+    <meta property="og:description" content="Meet the team behind Le Shelter Foundation and learn about our mission to provide equal educational opportunities for rural children in Ghana."/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="https://www.leshelterfoundation.org/about.html"/>
+    <meta property="og:image" content="https://www.leshelterfoundation.org/images/Logo.png"/>
+    <meta property="og:site_name" content="Le Shelter Foundation"/>
 
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image"/>
-  <meta name="twitter:title" content="About Us - Le Shelter Foundation"/>
-  <meta name="twitter:description" content="Meet the team behind Le Shelter Foundation and learn about our mission to provide equal educational opportunities for rural children in Ghana."/>
-  <meta name="twitter:image" content="https://www.leshelterfoundation.org/images/Logo.png"/>
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:title" content="About Us - Le Shelter Foundation"/>
+    <meta name="twitter:description" content="Meet the team behind Le Shelter Foundation and learn about our mission to provide equal educational opportunities for rural children in Ghana."/>
+    <meta name="twitter:image" content="https://www.leshelterfoundation.org/images/Logo.png"/>
 
-  <!-- Preconnect to external origins -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <!-- Preconnect to external origins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
 
-  <link rel="stylesheet" href="css/tailwind.css">
-  <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/tailwind.css">
+    <link rel="stylesheet" href="css/style.css">
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-   
-  <!-- Favicon -->
-  <link rel="apple-touch-icon" sizes="180x180" href="images/icon/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="images/icon/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="images/icon/favicon-16x16.png">
-  <link rel="manifest" href="images/icon/site.webmanifest">
-  <link rel="canonical" href="https://www.leshelterfoundation.org/about.html">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="images/icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/icon/favicon-16x16.png">
+    <link rel="manifest" href="images/icon/site.webmanifest">
+    <link rel="canonical" href="https://www.leshelterfoundation.org/about.html">
 
-  <title>Our Story | Le Shelter Foundation</title>
+    <title>Our Story | Le Shelter Foundation</title>
 
-<link rel="stylesheet" href="css/redesign.css">
-<link rel="stylesheet" href="css/home.css">
-<link rel="stylesheet" href="css/story.css">
-</head>
-<body class="home-redesign story-page"><a class="skip-link" href="#main-content">Skip to content</a><header class="site-header redesign-header">
-    <div class="utility-bar"><span>Equal opportunity. Every child. Every community.</span><a href="mailto:lesheltergh@gmail.com">lesheltergh@gmail.com ↗</a></div>
-    <nav aria-label="Main navigation" class="main-navigation"><a href="index.html" class="brand"><img src="images/Logo.png" alt="Le Shelter Foundation" width="556" height="143"></a><div class="desktop-links"><a href="index.html" class="nav-link">Home</a><a href="about.html" class="nav-link active" aria-current="page">Our story</a><a href="projects.html" class="nav-link " >Our projects</a><a href="shop.html" class="nav-link " >Shop</a><a href="contact.html" class="nav-link " >Contact</a></div><a class="give-button" href="donate.html">Make a difference <span aria-hidden="true">↗</span></a><button id="menu-btn" type="button" aria-label="Open navigation" aria-controls="mobile-menu" aria-expanded="false">☰</button></nav>
-    <button id="donate-btn" hidden aria-hidden="true" tabindex="-1">Donate</button></header><div id="mobile-menu" class="mobile-navigation hidden"><button id="close-menu" aria-label="Close navigation">×</button><a href="index.html">Home</a><a href="about.html" aria-current="page">Our story</a><a href="projects.html">Our projects</a><a href="shop.html">Shop</a><a href="contact.html">Contact</a><a href="donate.html">Donate ↗</a></div>
-<main id="main-content">
-<section class="story-intro story-container"><div class="story-intro-copy"><p class="script-label">Join us and start dreaming</p><h1>A shared belief.<br>A brighter future<br>for every child.</h1><p>Le Shelter Foundation is a humanitarian NGO founded in 2017 by Ruby Offeibea Adu. We believe a child's location should never limit their opportunity to learn.</p><p>Working alongside rural communities in Ghana, we provide school supplies, mentorship and practical support. Together, we help young people build confidence and imagine what comes next.</p><div class="story-stats"><div><strong>2017</strong><span>Our story began</span></div><div><strong>500+</strong><span>Children helped</span></div><div><strong>50+</strong><span>Donors &amp; sponsors</span></div><div><strong>30+</strong><span>Volunteers</span></div></div></div><div class="story-intro-art"><img class="story-main-photo" src="images/gallery/image43.webp" alt="Children learning in a classroom in Ghana" fetchpriority="high"><img class="story-small-photo" src="images/gallery/s4.jpg" alt="Le Shelter volunteers sharing guidance with students"><div class="story-impact-badge"><strong>Equal</strong><span>opportunity.<br>For every child.</span></div><span class="story-orbit" aria-hidden="true"></span></div></section>
-<section class="story-goals" id="our-vision"><div class="story-container"><div class="story-section-heading"><p class="eyebrow">LOCAL ACTION. A SHARED FUTURE.</p><h2>Our Commitment to a Sustainable Future</h2><p>Education opens doors to opportunity, dignity and stronger communities. Our mission connects with the Sustainable Development Goals through learning, inclusion, well-being and working together.</p></div><ul class="goal-grid" aria-label="Sustainable Development Goals connected to our mission"><li style="--goal-color:#e5243b"><div><strong>1</strong><h3>No poverty</h3></div><svg viewBox="0 0 80 80" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="26" cy="18" r="6"/><circle cx="54" cy="18" r="6"/><path d="M15 57V36q11-13 22 0v21M43 57V36q11-13 22 0v21M26 41v25M54 41v25"/></svg></li><li style="--goal-color:#4c9f38"><div><strong>3</strong><h3>Good health<br>and well-being</h3></div><svg viewBox="0 0 80 80" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 42h15l8-23 13 43 10-31 7 11h17"/></svg></li><li style="--goal-color:#c5192d"><div><strong>4</strong><h3>Quality<br>education</h3></div><svg viewBox="0 0 80 80" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 17q16-6 32 3 16-9 32-3v46q-16-6-32 3-16-9-32-3ZM40 20v46"/></svg></li><li style="--goal-color:#ff3a21"><div><strong>5</strong><h3>Gender<br>equality</h3></div><svg viewBox="0 0 80 80" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="40" cy="28" r="19"/><path d="M40 47v26M29 62h22M30 24h20M30 32h20"/></svg></li><li style="--goal-color:#3f7e44"><div><strong>13</strong><h3>Climate<br>action</h3></div><svg viewBox="0 0 80 80" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 40q35-42 70 0-35 42-70 0Z"/><circle cx="40" cy="40" r="17"/><path d="m32 26 8 10-7 11 9 9 7-10 7-4"/></svg></li><li style="--goal-color:#19486a"><div><strong>17</strong><h3>Partnerships<br>for the goals</h3></div><svg viewBox="0 0 80 80" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="40" cy="24" r="14"/><circle cx="25" cy="35" r="14"/><circle cx="31" cy="53" r="14"/><circle cx="50" cy="52" r="14"/><circle cx="55" cy="34" r="14"/></svg></li><li style="--goal-color:#dd1367"><div><strong>10</strong><h3>Reduced<br>inequalities</h3></div><svg viewBox="0 0 80 80" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M25 34h30M25 46h30M31 21l9-10 9 10M31 59l9 10 9-10M16 31 6 40l10 9M64 31l10 9-10 9"/></svg></li></ul><p class="story-mission-statement">With a clear mission aligned with global development goals, we strive to be a beacon of hope for those in need while fostering dignity and empowerment.</p></div></section>
-<section class="story-team story-container" id="team"><div class="story-section-heading"><p class="eyebrow">THE PEOPLE BEHIND THE PURPOSE</p><h2>Meet The Team</h2></div><div class="story-team-grid"><article class="story-person"><img src="images/gallery/Ruby1.jpg" alt="Ruby Offeibea Adu, Founder / President" loading="lazy" width="400" height="460"><h3>Ruby Offeibea Adu</h3><p>Founder / President</p><div class="person-socials"><a href="https://www.linkedin.com/in/ing-ruby-offeibea-adu-86756754" target="_blank" rel="noopener noreferrer" aria-label="Ruby Offeibea Adu LinkedIn">in</a><a href="https://www.instagram.com/ruby.offeibea" target="_blank" rel="noopener noreferrer" aria-label="Ruby Offeibea Adu Instagram">&#9678;</a></div></article><article class="story-person"><img src="images/gallery/Bene1.jpg" alt="Benedicta Safo, Vice President" loading="lazy" width="400" height="460"><h3>Benedicta Safo</h3><p>Vice President</p><div class="person-socials"><a href="https://www.linkedin.com/in/benedicta-safo-225291108" target="_blank" rel="noopener noreferrer" aria-label="Benedicta Safo LinkedIn">in</a><a href="https://www.instagram.com/ser___waa" target="_blank" rel="noopener noreferrer" aria-label="Benedicta Safo Instagram">&#9678;</a></div></article><article class="story-person"><img src="images/gallery/Joana.jpg" alt="Joana Attafuah, General Secretary" loading="lazy" width="400" height="460"><h3>Joana Attafuah</h3><p>General Secretary</p><div class="person-socials"><a href="https://www.linkedin.com/in/joana-attafuah-b67686103" target="_blank" rel="noopener noreferrer" aria-label="Joana Attafuah LinkedIn">in</a><a href="https://www.instagram.com/jaka_word" target="_blank" rel="noopener noreferrer" aria-label="Joana Attafuah Instagram">&#9678;</a></div></article><article class="story-person"><img src="images/gallery/Solomon1.jpg" alt="Solomon Paa Larweh, Organizing Secretary" loading="lazy" width="400" height="460"><h3>Solomon Paa Larweh</h3><p>Organizing Secretary</p><div class="person-socials"><a href="https://www.linkedin.com/in/solomon-paa-799374285?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank" rel="noopener noreferrer" aria-label="Solomon Paa Larweh LinkedIn">in</a><a href="https://www.instagram.com/pappy_solo07?igsh=NDllOXZ3cjVmdmg1" target="_blank" rel="noopener noreferrer" aria-label="Solomon Paa Larweh Instagram">&#9678;</a></div></article><article class="story-person"><img src="images/gallery/Adelaide1.jpg" alt="Adelaide Bosrotsi, Sponsorship Coordinator" loading="lazy" width="400" height="460"><h3>Adelaide Bosrotsi</h3><p>Sponsorship Coordinator</p><div class="person-socials"><a href="https://www.linkedin.com/in/adelaide-bosrotsi-91aaabb0?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank" rel="noopener noreferrer" aria-label="Adelaide Bosrotsi LinkedIn">in</a></div></article><article class="story-person"><img src="images/gallery/princess1.jpg" alt="Princess Zara Doe, Mentorship Coordinator" loading="lazy" width="400" height="460"><h3>Princess Zara Doe</h3><p>Mentorship Coordinator</p><div class="person-socials"><a href="https://www.instagram.com/hrh_prinnydoe?igsh=a3QwdDloN20xN3N4" target="_blank" rel="noopener noreferrer" aria-label="Princess Zara Doe Instagram">&#9678;</a></div></article><article class="story-person"><img src="images/gallery/Cindy1.jpg" alt="Cindy Monica Agbeme, Mentorship Coordinator" loading="lazy" width="400" height="460"><h3>Cindy Monica Agbeme</h3><p>Mentorship Coordinator</p><div class="person-socials"><a href="https://www.linkedin.com/in/cindy-agbeme-41a46b314?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank" rel="noopener noreferrer" aria-label="Cindy Monica Agbeme LinkedIn">in</a><a href="https://www.instagram.com/unikmoniq?igsh=dWh0ZGZ3ZzA0a3Rn" target="_blank" rel="noopener noreferrer" aria-label="Cindy Monica Agbeme Instagram">&#9678;</a></div></article><article class="story-person"><img src="images/gallery/Daniel1.jpg" alt="Daniel Mireku Osei, Media/Publicity" loading="lazy" width="400" height="460"><h3>Daniel Mireku Osei</h3><p>Media/Publicity</p><div class="person-socials"><a href="https://www.linkedin.com/in/ing-daniel-mireku-osei-pe-ghie-57220b75?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank" rel="noopener noreferrer" aria-label="Daniel Osei LinkedIn">in</a><a href="https://www.instagram.com/darnyelo?igsh=MTh5ZGc2Zm5hamlhbA==" target="_blank" rel="noopener noreferrer" aria-label="Daniel Osei Instagram">&#9678;</a></div></article></div></section>
-<section class="story-testimonials" id="volunteer-stories"><div class="story-container testimonial-layout"><div class="testimonial-intro"><p class="script-label">Our volunteers</p><h2>What they are saying<br>about our work</h2><p>School visits, shared skills and small acts of care. Hear from the people who help bring our purpose to life.</p><a class="yellow-button pill" href="contact.html">Become a volunteer</a></div><div class="testimonial-carousel" role="region" aria-roledescription="carousel" aria-label="Volunteer stories"><div class="testimonial-quotes" aria-live="polite"><figure class="volunteer-quote" ><figcaption><img src="images/gallery/Ivy.jpg" alt="Ivy" loading="lazy"><div><h3>Ivy</h3><span>Le Shelter volunteer</span></div></figcaption><blockquote>Through our school supply donation drives, I&#x27;ve witnessed firsthand the joy on children&#x27;s faces when they receive the tools they need to succeed in their education. It&#x27;s heartwarming to know that we&#x27;re not only providing tangible resources but also inspiring hope in these young minds.</blockquote></figure><figure class="volunteer-quote" hidden><figcaption><img src="images/gallery/Isaac.jpg" alt="Isaac" loading="lazy"><div><h3>Isaac</h3><span>Le Shelter volunteer</span></div></figcaption><blockquote>Joining Le Shelter Foundation as a volunteer has been an eye-opening experience. Le Shelter Foundation has not only empowered the communities we serve but has also empowered me with a renewed sense of purpose and a deeper understanding of how small efforts can create significant change.</blockquote></figure><figure class="volunteer-quote" hidden><figcaption><img src="images/gallery/Priscilla.jpg" alt="Priscilla" loading="lazy"><div><h3>Priscilla</h3><span>Le Shelter volunteer</span></div></figcaption><blockquote>I’ve had the chance to connect with students from rural areas and help guide them in making informed decisions about their futures. LSF has not only benefited the communities but has also given me the opportunity to grow as a mentor and leader.</blockquote></figure><figure class="volunteer-quote" hidden><figcaption><img src="images/gallery/elikem.webp" alt="Elikem" loading="lazy"><div><h3>Elikem</h3><span>Le Shelter volunteer</span></div></figcaption><blockquote>LSF is more than just an NGO, it is a family of people united by a shared mission to bring hope and support to those in need. Volunteering here has opened my eyes to the challenges many communities face and has inspired me to become more compassionate and socially responsible.</blockquote></figure><figure class="volunteer-quote" hidden><figcaption><img src="images/gallery/Naa.jpg" alt="Naa" loading="lazy"><div><h3>Naa</h3><span>Le Shelter volunteer</span></div></figcaption><blockquote>Volunteering with Le Shelter Foundation has been a truly transformative experience for me. From the very first outreach program I participated in, I could see the genuine passion and commitment the organization has towards helping vulnerable communities.</blockquote></figure></div><span class="quote-mark" aria-hidden="true">&#8221;</span><div class="testimonial-controls"><button type="button" data-quote-prev aria-label="Previous volunteer story">&#8592;</button><span data-quote-count>1 / 5</span><button type="button" data-quote-pause aria-label="Pause volunteer stories">Pause</button><button type="button" data-quote-next aria-label="Next volunteer story">&#8594;</button></div></div></div></section>
-<section class="story-closing story-container"><p class="eyebrow">TURN CARE INTO OPPORTUNITY</p><h2>The next chapter<br>could begin <em>with you.</em></h2><p>Help put learning materials, encouragement and possibility into a child's hands.</p><a class="solid-link" href="donate.html">Support our work <span aria-hidden="true">&#8599;</span></a></section>
-<section class="reference-values story-values" aria-label="Find your place with Le Shelter"><div class="values-slider-viewport"><div class="values-slider-track"><a class="value-tile" href="contact.html"><div><img src="images/gallery/s1.jpg" alt="Children and volunteers coming together" loading="lazy"><h2>Partner</h2></div><span>Join us &#8599;</span></a><a class="value-tile" href="#main-content"><div><img src="images/gallery/s3.jpg" alt="Our education outreach" loading="lazy"><h2>Mission</h2></div><span>Our purpose &#8599;</span></a><a class="value-tile" href="#our-vision"><div><img src="images/gallery/s4.jpg" alt="Mentorship in the community" loading="lazy"><h2>Vision</h2></div><span>Our future &#8599;</span></a><a class="value-tile" href="contact.html"><div><img src="images/gallery/s2.jpg" alt="Le Shelter volunteers during outreach" loading="lazy"><h2>Volunteer</h2></div><span>Give your time &#8599;</span></a><a class="value-tile" href="projects.html"><div><img src="images/gallery/image15.webp" alt="Students taking part in learning activities" loading="lazy"><h2>Projects</h2></div><span>See our work &#8599;</span></a><a class="value-tile" href="donate.html"><div><img src="images/gallery/image43.webp" alt="Children learning together in Ghana" loading="lazy"><h2>Donate</h2></div><span>Make a difference &#8599;</span></a></div></div><div class="story-container values-slider-controls"><button type="button" data-values-pause aria-label="Pause thumbnail slider">Pause slider</button></div></section>
-</main>
-<footer class="reference-footer"><div class="reference-container reference-footer-grid"><div><a href="index.html"><img class="footer-brand" src="images/Logo.png" alt="Le Shelter Foundation" width="556" height="143"></a><p>Le Shelter Foundation provides equal educational opportunities for children in rural Ghana.</p></div><div><h2>Socials</h2><div class="social-links"><a href="https://www.facebook.com/profile.php?id=100067770571763" target="_blank" rel="noopener noreferrer" aria-label="Facebook">f</a><a href="https://www.instagram.com/le.shelter.foundation" target="_blank" rel="noopener noreferrer" aria-label="Instagram">&#9678;</a><a href="https://x.com/le_shelter" target="_blank" rel="noopener noreferrer" aria-label="X">X</a><a href="https://wa.me/233530449325" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">W</a></div></div><div><h2>Contact</h2><p>Baatsona-Spintex, Ghana</p><a href="tel:+233530449325">+233 53 044 9325</a><a href="mailto:lesheltergh@gmail.com">lesheltergh@gmail.com</a></div><div><h2>Stay connected</h2><p>Find your place in our next chapter.</p><a class="footer-contact" href="contact.html">Get in touch <span aria-hidden="true">&#8599;</span></a></div></div><div class="reference-container reference-copyright">Copyright &copy; <span data-year>2026</span> Le Shelter Foundation. All rights reserved.</div></footer><script src="Javascript/redesign.js" defer></script><script src="Javascript/story.js" defer></script></body></html>
+    <link rel="stylesheet" href="css/redesign.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/story.css">
+  </head>
+  <body class="home-redesign story-page">
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <header class="site-header redesign-header">
+      <div class="utility-bar">
+        <span>Equal opportunity. Every child. Every community.</span>
+        <a href="mailto:lesheltergh@gmail.com">lesheltergh@gmail.com</a>
+      </div>
+      <nav aria-label="Main navigation" class="main-navigation">
+        <a href="index.html" class="brand">
+          <img src="images/Logo.png" alt="Le Shelter Foundation" width="556" height="143">
+        </a>
+        <div class="desktop-links">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="about.html" class="nav-link active" aria-current="page">Our story</a>
+          <a href="projects.html" class="nav-link " >Projects</a>
+          <a href="gallery.html" class="nav-link">Gallery</a>
+          <a href="shop.html" class="nav-link " >Shop</a>
+          <a href="contact.html" class="nav-link " >Contact Us</a>
+        </div>
+        <a class="give-button" href="donate.html">Make a difference</a>
+        <button id="menu-btn" type="button" aria-label="Open navigation" aria-controls="mobile-menu" aria-expanded="false">☰</button>
+      </nav>
+      <button id="donate-btn" hidden aria-hidden="true" tabindex="-1">Donate</button>
+    </header>
+    <div id="mobile-menu" class="mobile-navigation hidden">
+      <button id="close-menu" aria-label="Close navigation">×</button>
+      <a href="index.html">Home</a>
+      <a href="about.html" aria-current="page">Our story</a>
+      <a href="projects.html">Projects</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="shop.html">Shop</a>
+      <a href="contact.html">Contact Us</a>
+      <a href="donate.html">Donate  </a>
+    </div>
+    <main id="main-content">
+    <div class="story-intro-backdrop">
+      <section class="story-intro story-container">
+        <div class="story-intro-copy">
+          <p class="script-label">Join us and start dreaming</p>
+          <h1>A shared belief.<br>A brighter future<br>for every child.</h1>
+          <p>Le Shelter Foundation is a humanitarian NGO founded in 2017 by Ruby Offeibea Adu. We believe a child's location should never limit their opportunity to learn.</p>
+          <p>Working alongside rural communities in Ghana, we provide school supplies, mentorship and practical support. Together, we help young people build confidence and imagine what comes next.</p>
+          <div class="story-stats">
+            <div><strong data-story-count="2017" data-suffix="" aria-label="2017">2017</strong>
+              <span>Our story began</span>
+            </div>
+            <div><strong data-story-count="500" data-suffix="+" aria-label="500+">500+</strong>
+              <span>Children helped</span>
+            </div>
+            <div><strong data-story-count="50" data-suffix="+" aria-label="50+">50+</strong>
+              <span>Donors &amp; sponsors</span>
+            </div>
+            <div><strong data-story-count="30" data-suffix="+" aria-label="30+">30+</strong>
+              <span>Volunteers</span>
+            </div>
+          </div>
+        </div>
+        <div class="story-intro-art">
+          <img class="story-main-photo" src="images/gallery/image43.webp" alt="Children learning in a classroom in Ghana" fetchpriority="high">
+          <img class="story-small-photo" src="images/gallery/s4.jpg" alt="Le Shelter volunteers sharing guidance with students">
+          <img class="story-round-photo story-round-top" src="images/gallery/s2.jpg" alt="Volunteers supporting students with educational supplies" loading="lazy">
+          <img class="story-round-photo story-round-bottom" src="images/gallery/s1.jpg" alt="Children and volunteers celebrating together" loading="lazy">
+        </div>
+      </section>
+    </div>
+    <section class="story-purpose" aria-labelledby="purpose-title">
+      <div class="story-container purpose-layout">
+        <div class="purpose-introduction">
+          <p class="eyebrow">OUR HEART. OUR PURPOSE.</p>
+          <h2 id="purpose-title">A world where<br>no child is<br><em>left behind.</em></h2>
+          <a class="solid-link" href="donate.html">Help make it happen <span aria-hidden="true">&#8599;</span></a>
+        </div>
+        <div class="purpose-content">
+          <div class="purpose-tabs" role="tablist" aria-label="Our purpose">
+            <button type="button" role="tab" id="mission-tab" data-purpose-tab aria-selected="true" aria-controls="mission-panel">Our mission</button>
+            <button type="button" role="tab" id="vision-tab" data-purpose-tab aria-selected="false" aria-controls="vision-panel" tabindex="-1">Our vision</button>
+          </div>
+          <div role="tabpanel" id="mission-panel" aria-labelledby="mission-tab" tabindex="0">
+            <h3>Learning today. Opportunity tomorrow.</h3>
+            <p>Our mission is to provide equal educational opportunities for all, focusing on children in rural Ghana through learning materials, guidance and meaningful engagement.</p>
+            <p>By working alongside schools and communities, we help students build confidence, find encouragement and see new possibilities for their futures.</p>
+          </div>
+          <div role="tabpanel" id="vision-panel" aria-labelledby="vision-tab" tabindex="0" hidden>
+            <h3>Every child seen. Every dream supported.</h3>
+            <p>We envision a future where a child's background or location does not limit their opportunity to learn, grow and thrive.</p>
+            <p>Through inclusion, empathy and community service, we work towards stronger communities where children can pursue their potential with dignity and support.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="story-goals" id="our-vision">
+      <div class="story-container">
+        <div class="story-section-heading">
+          <p class="eyebrow">LOCAL ACTION. A SHARED FUTURE.</p>
+          <h2>Our Commitment to a Sustainable Future</h2>
+          <p>Education opens doors to opportunity, dignity and stronger communities. Our mission connects with the Sustainable Development Goals through learning, inclusion, well-being and working together.</p>
+        </div>
+        <ul class="goal-grid goal-image-grid" aria-label="Sustainable Development Goals connected to our mission">
+          <li><img src="images/gallery/e-goal-01.png" alt="Goal 1: No poverty" width="1024" height="1024" loading="lazy"></li>
+          <li><img src="images/gallery/e-goal-03.png" alt="Goal 3: Good health and well-being" width="1024" height="1024" loading="lazy"></li>
+          <li><img src="images/gallery/e-goal-04.png" alt="Goal 4: Quality education" width="1024" height="1024" loading="lazy"></li>
+          <li><img src="images/gallery/e-goal-05.png" alt="Goal 5: Gender equality" width="1024" height="1024" loading="lazy"></li>
+        </ul>
+        <p class="story-mission-statement">With a clear mission aligned with global development goals, we strive to be a beacon of hope for those in need while fostering dignity and empowerment.</p>
+      </div>
+    </section>
+    <section class="story-team story-container" id="team">
+      <div class="story-section-heading">
+        <p class="eyebrow">THE PEOPLE BEHIND THE PURPOSE</p>
+        <h2>Meet The Team</h2>
+      </div>
+      <div class="story-team-grid">
+        <article class="story-person">
+          <img src="images/gallery/Ruby1.jpg" alt="Ruby Offeibea Adu, Founder / President" loading="lazy" width="400" height="460">
+          <h3>Ruby Offeibea Adu</h3>
+          <p>Founder / President</p>
+          <div class="person-socials">
+            <a href="https://www.linkedin.com/in/ing-ruby-offeibea-adu-86756754" target="_blank" rel="noopener noreferrer" aria-label="Ruby Offeibea Adu LinkedIn">in</a>
+            <a href="https://www.instagram.com/ruby.offeibea" target="_blank" rel="noopener noreferrer" aria-label="Ruby Offeibea Adu Instagram">&#9678;</a>
+          </div>
+        </article>
+        <article class="story-person">
+          <img src="images/gallery/Bene1.jpg" alt="Benedicta Safo, Vice President" loading="lazy" width="400" height="460">
+          <h3>Benedicta Safo</h3>
+          <p>Vice President</p>
+          <div class="person-socials">
+            <a href="https://www.linkedin.com/in/benedicta-safo-225291108" target="_blank" rel="noopener noreferrer" aria-label="Benedicta Safo LinkedIn">in</a>
+            <a href="https://www.instagram.com/ser___waa" target="_blank" rel="noopener noreferrer" aria-label="Benedicta Safo Instagram">&#9678;</a>
+          </div>
+        </article>
+        <article class="story-person">
+          <img src="images/gallery/Joana.jpg" alt="Joana Attafuah, General Secretary" loading="lazy" width="400" height="460">
+          <h3>Joana Attafuah</h3>
+          <p>General Secretary</p>
+          <div class="person-socials">
+            <a href="https://www.linkedin.com/in/joana-attafuah-b67686103" target="_blank" rel="noopener noreferrer" aria-label="Joana Attafuah LinkedIn">in</a>
+            <a href="https://www.instagram.com/jaka_word" target="_blank" rel="noopener noreferrer" aria-label="Joana Attafuah Instagram">&#9678;</a>
+          </div>
+        </article>
+        <article class="story-person">
+          <img src="images/gallery/Solomon1.jpg" alt="Solomon Paa Larweh, Organizing Secretary" loading="lazy" width="400" height="460">
+          <h3>Solomon Paa Larweh</h3>
+          <p>Organizing Secretary</p>
+          <div class="person-socials">
+            <a href="https://www.linkedin.com/in/solomon-paa-799374285?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank" rel="noopener noreferrer" aria-label="Solomon Paa Larweh LinkedIn">in</a>
+            <a href="https://www.instagram.com/pappy_solo07?igsh=NDllOXZ3cjVmdmg1" target="_blank" rel="noopener noreferrer" aria-label="Solomon Paa Larweh Instagram">&#9678;</a>
+          </div>
+        </article>
+        <article class="story-person">
+          <img src="images/gallery/Adelaide1.jpg" alt="Adelaide Bosrotsi, Sponsorship Coordinator" loading="lazy" width="400" height="460">
+          <h3>Adelaide Bosrotsi</h3>
+          <p>Sponsorship Coordinator</p>
+          <div class="person-socials">
+            <a href="https://www.linkedin.com/in/adelaide-bosrotsi-91aaabb0?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank" rel="noopener noreferrer" aria-label="Adelaide Bosrotsi LinkedIn">in</a>
+          </div>
+        </article>
+        <article class="story-person">
+          <img src="images/gallery/princess1.jpg" alt="Princess Zara Doe, Mentorship Coordinator" loading="lazy" width="400" height="460">
+          <h3>Princess Zara Doe</h3>
+          <p>Mentorship Coordinator</p>
+          <div class="person-socials">
+            <a href="https://www.instagram.com/hrh_prinnydoe?igsh=a3QwdDloN20xN3N4" target="_blank" rel="noopener noreferrer" aria-label="Princess Zara Doe Instagram">&#9678;</a>
+          </div>
+        </article>
+        <article class="story-person">
+          <img src="images/gallery/Cindy1.jpg" alt="Cindy Monica Agbeme, Mentorship Coordinator" loading="lazy" width="400" height="460">
+          <h3>Cindy Monica Agbeme</h3>
+          <p>Mentorship Coordinator</p>
+          <div class="person-socials">
+            <a href="https://www.linkedin.com/in/cindy-agbeme-41a46b314?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank" rel="noopener noreferrer" aria-label="Cindy Monica Agbeme LinkedIn">in</a>
+            <a href="https://www.instagram.com/unikmoniq?igsh=dWh0ZGZ3ZzA0a3Rn" target="_blank" rel="noopener noreferrer" aria-label="Cindy Monica Agbeme Instagram">&#9678;</a>
+          </div>
+        </article>
+        <article class="story-person">
+          <img src="images/gallery/Daniel1.jpg" alt="Daniel Mireku Osei, Media/Publicity" loading="lazy" width="400" height="460">
+          <h3>Daniel Mireku Osei</h3>
+          <p>Media/Publicity</p>
+          <div class="person-socials">
+            <a href="https://www.linkedin.com/in/ing-daniel-mireku-osei-pe-ghie-57220b75?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank" rel="noopener noreferrer" aria-label="Daniel Osei LinkedIn">in</a>
+            <a href="https://www.instagram.com/darnyelo?igsh=MTh5ZGc2Zm5hamlhbA==" target="_blank" rel="noopener noreferrer" aria-label="Daniel Osei Instagram">&#9678;</a>
+          </div>
+        </article>
+      </div>
+    </section>
+    <section class="story-testimonials" id="volunteer-stories">
+      <div class="story-container testimonial-layout">
+        <div class="testimonial-intro">
+          <p class="script-label">Our volunteers</p>
+          <h2>What they are saying<br>about our work</h2>
+          <p>School visits, shared skills and small acts of care. Hear from the people who help bring our purpose to life.</p>
+          <a class="yellow-button pill" href="contact.html">Become a volunteer</a>
+        </div>
+        <div class="testimonial-carousel" role="region" aria-roledescription="carousel" aria-label="Volunteer stories">
+          <div class="testimonial-quotes" aria-live="polite">
+            <figure class="volunteer-quote is-current">
+              <figcaption><img src="images/gallery/Ivy.jpg" alt="Ivy" loading="lazy">
+                <div><h3>Ivy</h3><span>Le Shelter volunteer</span></div>
+              </figcaption>
+              <blockquote>Through our school supply donation drives, I've witnessed firsthand the joy on childrens faces when they receive the tools they need to succeed in their education. It's heartwarming to know that we're not only providing tangible resources but also inspiring hope in these young minds.</blockquote>
+              <div class="quote-gallery" aria-label="Testimonial photos">
+                <button type="button" data-testimonial-photo="images/gallery/Ivy.jpg" aria-label="Open volunteer portrait">
+                <img src="images/gallery/Ivy.jpg" alt="Volunteer portrait" loading="lazy"></button>
+                <button type="button" data-testimonial-photo="images/gallery/s1.jpg" aria-label="Open le shelter children and volunteers">
+                <img src="images/gallery/s1.jpg" alt="Le Shelter children and volunteers" loading="lazy"></button>
+                <button type="button" data-testimonial-photo="images/gallery/s3.jpg" aria-label="Open le shelter community outreach">
+                <img src="images/gallery/s3.jpg" alt="Le Shelter community outreach" loading="lazy"></button>
+              </div>
+            </figure>
+            <figure class="volunteer-quote" hidden>
+              <figcaption><img src="images/gallery/Isaac.jpg" alt="Isaac" loading="lazy">
+                <div><h3>Isaac</h3><span>Le Shelter volunteer</span></div>
+              </figcaption>
+              <blockquote>Joining Le Shelter Foundation as a volunteer has been an eye-opening experience. Le Shelter Foundation has not only empowered the communities we serve but has also empowered me with a renewed sense of purpose and a deeper understanding of how small efforts can create significant change.</blockquote>
+              <div class="quote-gallery" aria-label="Testimonial photos">
+                <button type="button" data-testimonial-photo="images/gallery/Isaac.jpg" aria-label="Open volunteer portrait">
+                <img src="images/gallery/Isaac.jpg" alt="Volunteer portrait" loading="lazy"></button>
+                <button type="button" data-testimonial-photo="images/gallery/s1.jpg" aria-label="Open le shelter children and volunteers">
+                <img src="images/gallery/s1.jpg" alt="Le Shelter children and volunteers" loading="lazy"></button>
+                <button type="button" data-testimonial-photo="images/gallery/s3.jpg" aria-label="Open le shelter community outreach">
+                <img src="images/gallery/s3.jpg" alt="Le Shelter community outreach" loading="lazy"></button>
+              </div>
+            </figure>
+            <figure class="volunteer-quote" hidden>
+              <figcaption><img src="images/gallery/Priscilla.jpg" alt="Priscilla" loading="lazy">
+                <div><h3>Priscilla</h3><span>Le Shelter volunteer</span></div>
+              </figcaption>
+              <blockquote>I’ve had the chance to connect with students from rural areas and help guide them in making informed decisions about their futures. LSF has not only benefited the communities but has also given me the opportunity to grow as a mentor and leader.</blockquote>
+              <div class="quote-gallery" aria-label="Testimonial photos">
+                <button type="button" data-testimonial-photo="images/gallery/Priscilla.jpg" aria-label="Open volunteer portrait">
+                <img src="images/gallery/Priscilla.jpg" alt="Volunteer portrait" loading="lazy"></button>
+                <button type="button" data-testimonial-photo="images/gallery/s1.jpg" aria-label="Open le shelter children and volunteers">
+                <img src="images/gallery/s1.jpg" alt="Le Shelter children and volunteers" loading="lazy"></button>
+                <button type="button" data-testimonial-photo="images/gallery/s3.jpg" aria-label="Open le shelter community outreach">
+                <img src="images/gallery/s3.jpg" alt="Le Shelter community outreach" loading="lazy"></button>
+              </div>
+            </figure>
+            <figure class="volunteer-quote" hidden>
+              <figcaption><img src="images/gallery/elikem.webp" alt="Elikem" loading="lazy">
+                <div><h3>Elikem</h3><span>Le Shelter volunteer</span></div>
+              </figcaption>
+              <blockquote>LSF is more than just an NGO, it is a family of people united by a shared mission to bring hope and support to those in need. Volunteering here has opened my eyes to the challenges many communities face and has inspired me to become more compassionate and socially responsible.</blockquote>
+              <div class="quote-gallery" aria-label="Testimonial photos">
+                <button type="button" data-testimonial-photo="images/gallery/elikem.webp" aria-label="Open volunteer portrait">
+                <img src="images/gallery/elikem.webp" alt="Volunteer portrait" loading="lazy"></button>
+                <button type="button" data-testimonial-photo="images/gallery/s1.jpg" aria-label="Open le shelter children and volunteers">
+                <img src="images/gallery/s1.jpg" alt="Le Shelter children and volunteers" loading="lazy"></button>
+                <button type="button" data-testimonial-photo="images/gallery/s3.jpg" aria-label="Open le shelter community outreach">
+                <img src="images/gallery/s3.jpg" alt="Le Shelter community outreach" loading="lazy"></button>
+              </div>
+            </figure>
+            <figure class="volunteer-quote" hidden>
+              <figcaption><img src="images/gallery/Naa.jpg" alt="Naa" loading="lazy">
+                <div><h3>Naa</h3><span>Le Shelter volunteer</span></div>
+              </figcaption>
+              <blockquote>Volunteering with Le Shelter Foundation has been a truly transformative experience for me. From the very first outreach program I participated in, I could see the genuine passion and commitment the organization has towards helping vulnerable communities.</blockquote>
+              <div class="quote-gallery" aria-label="Testimonial photos">
+                <button type="button" data-testimonial-photo="images/gallery/Naa.jpg" aria-label="Open volunteer portrait">
+                <img src="images/gallery/Naa.jpg" alt="Volunteer portrait" loading="lazy"></button>
+                <button type="button" data-testimonial-photo="images/gallery/s1.jpg" aria-label="Open le shelter children and volunteers">
+                <img src="images/gallery/s1.jpg" alt="Le Shelter children and volunteers" loading="lazy"></button>
+                <button type="button" data-testimonial-photo="images/gallery/s3.jpg" aria-label="Open le shelter community outreach">
+                <img src="images/gallery/s3.jpg" alt="Le Shelter community outreach" loading="lazy">
+                </button>
+              </div>
+            </figure>
+          </div>
+          <span class="quote-mark" aria-hidden="true">&#8221;</span>
+          <div class="testimonial-controls">
+            <button type="button" data-quote-prev aria-label="Previous volunteer story">&#8592;</button>
+            <button type="button" data-quote-next aria-label="Next volunteer story">&#8594;</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="story-closing story-container">
+      <p class="eyebrow">TURN CARE INTO OPPORTUNITY</p>
+      <h2>The next chapter<br>could begin <em>with you.</em></h2>
+      <p>Help put learning materials, encouragement and possibility into a child's hands.</p>
+      <a class="solid-link" href="donate.html">Support our work <span aria-hidden="true">&#8599;</span></a>
+    </section>
+    <section class="reference-values story-values" aria-label="Find your place with Le Shelter">
+      <div class="values-slider-viewport">
+        <div class="values-slider-track">
+          <a class="value-tile" href="contact.html">
+            <div><img src="images/gallery/s1.jpg" alt="Children and volunteers coming together" loading="lazy">
+              <h2>Partner</h2>
+            </div>
+            <span>Join us &#8599;</span>
+          </a>
+          <a class="value-tile" href="#main-content">
+            <div><img src="images/gallery/s3.jpg" alt="Our education outreach" loading="lazy">
+              <h2>Mission</h2>
+            </div>
+            <span>Our purpose &#8599;</span>
+          </a>
+          <a class="value-tile" href="#our-vision">
+            <div><img src="images/gallery/s4.jpg" alt="Mentorship in the community" loading="lazy">
+              <h2>Vision</h2>
+            </div>
+            <span>Our future &#8599;</span>
+          </a>
+          <a class="value-tile" href="contact.html">
+            <div><img src="images/gallery/s2.jpg" alt="Le Shelter volunteers during outreach" loading="lazy">
+              <h2>Volunteer</h2>
+            </div>
+            <span>Give your time &#8599;</span>
+          </a>
+          <a class="value-tile" href="projects.html">
+            <div><img src="images/gallery/image15.webp" alt="Students taking part in learning activities" loading="lazy">
+              <h2>Projects</h2>
+            </div>
+            <span>See our work &#8599;</span>
+          </a>
+          <a class="value-tile" href="donate.html">
+            <div><img src="images/gallery/image43.webp" alt="Children learning together in Ghana" loading="lazy">
+              <h2>Donate</h2>
+            </div>
+            <span>Make a difference &#8599;</span>
+          </a>
+        </div>
+      </div>
+    </section>
+    <section class="story-project-feature story-container" aria-labelledby="story-project-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">OPPORTUNITY IN ACTION</p>
+          <h2 id="story-project-title">Close to communities.<br><em>Committed to change.</em></h2>
+        </div>
+        <a class="text-link" href="projects.html">Explore our projects &#8599;</a>
+      </div>
+      <div class="project-editorial">
+        <a class="featured-story" href="projects/Asiafo.html">
+          <div class="story-image">
+            <img src="images/gallery/image15.webp" alt="Students at Asiafo Amanfro receiving educational support" loading="lazy">
+            <span class="story-tag">EDUCATION &amp; MENTORSHIP</span>
+          </div>
+          <div class="story-title">
+            <div>
+              <p class="eyebrow">ASIAFO AMANFRO</p>
+              <h3>Learning today.<br>Dreaming bigger tomorrow.</h3>
+            </div>
+            <span class="circle-arrow" aria-hidden="true">&#8599;</span>
+          </div>
+          <p>Learning materials, hands-on workshops and mentorship to help young people see what is possible.</p>
+        </a>
+        <div class="work-list">
+          <p class="eyebrow">HOW WE MAKE A DIFFERENCE</p>
+          <a href="projects.html">
+            <span class="item-number">01</span>
+            <div>
+              <h3>The tools to learn</h3>
+              <p>Books, uniforms and school essentials that help children participate.</p>
+            </div>
+            <span aria-hidden="true">&#8599;</span>
+          </a>
+          <a href="projects.html">
+            <span class="item-number">02</span>
+            <div>
+              <h3>The confidence to dream</h3>
+              <p>Mentorship and guidance to inspire the next generation.</p>
+            </div>
+            <span aria-hidden="true">&#8599;</span>
+          </a>
+          <a href="projects.html">
+            <span class="item-number">03</span>
+            <div>
+              <h3>The space to grow</h3>
+              <p>Supporting school facilities and stronger learning environments.</p>
+            </div>
+            <span aria-hidden="true">&#8599;</span>
+          </a>
+          <p class="list-note">With communities. For their children's futures.</p>
+        </div>
+      </div>
+    </section>
+    </main>
+    <footer class="reference-footer">
+      <div class="reference-container reference-footer-grid">
+        <div><a href="index.html">
+          <img class="footer-brand" src="images/Logo.png" alt="Le Shelter Foundation" width="556" height="143"></a>
+          <p>Le Shelter Foundation provides equal educational opportunities for children in rural Ghana.</p>
+        </div>
+        <div><h2>Socials</h2>
+          <div class="social-links"><a href="https://www.facebook.com/profile.php?id=100067770571763" target="_blank" rel="noopener noreferrer" aria-label="Facebook">f</a>
+            <a href="https://www.instagram.com/le.shelter.foundation" target="_blank" rel="noopener noreferrer" aria-label="Instagram">&#9678;</a>
+            <a href="https://x.com/le_shelter" target="_blank" rel="noopener noreferrer" aria-label="X">X</a>
+            <a href="https://wa.me/233530449325" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">W</a>
+          </div>
+        </div>
+        <div><h2>Contact</h2>
+          <p>Baatsona-Spintex, Ghana</p>
+          <a href="tel:+233530449325">+233 53 044 9325</a>
+          <a href="mailto:lesheltergh@gmail.com">lesheltergh@gmail.com</a>
+        </div>
+        <div><h2>Stay connected</h2>
+          <p>Subscribe to our newsletter for updates.</p>
+          <a class="footer-contact" href="contact.html">Get in touch <span aria-hidden="true"></span></a>
+        </div>
+      </div>
+      <div class="reference-container reference-copyright">Copyright &copy; <span data-year>2026</span> Le Shelter Foundation. All rights reserved.</div>
+    </footer>
+    </section>
+  </main>
+  
+  <dialog class="testimonial-photo-modal" aria-label="Volunteer story photo">
+    <button type="button" class="testimonial-photo-close" aria-label="Close photo" autofocus>&times; Close</button>
+    <img alt="">
+  </dialog>
+  <script src="Javascript/redesign.js" defer></script>
+  <script src="Javascript/story.js" defer></script>
+</body>
+</html>
