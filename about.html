@@ -32,7 +32,7 @@
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    
+
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="images/icon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="images/icon/favicon-32x32.png">
@@ -45,30 +45,31 @@
     <link rel="stylesheet" href="css/redesign.css">
     <link rel="stylesheet" href="css/home.css">
     <link rel="stylesheet" href="css/story.css">
+  <script src="admin/content.js" defer></script>
   </head>
   <body class="home-redesign story-page">
     <a class="skip-link" href="#main-content">Skip to content</a>
-    <header class="site-header redesign-header">
+    <header class="site-header redesign-header" data-cms-section="about-section-1">
       <div class="utility-bar">
         <span>Equal opportunity. Every child. Every community.</span>
-        <a href="mailto:lesheltergh@gmail.com">lesheltergh@gmail.com</a>
+        <a href="mailto:lesheltergh@gmail.com" data-cms-key="about-field-1">lesheltergh@gmail.com</a>
       </div>
       <nav aria-label="Main navigation" class="main-navigation">
-        <a href="index.html" class="brand">
-          <img src="images/Logo.png" alt="Le Shelter Foundation" width="556" height="143">
+        <a href="index.html" class="brand" data-cms-key="about-field-2">
+          <img src="images/Logo.png" alt="Le Shelter Foundation" width="556" height="143" data-cms-key="about-field-3">
         </a>
         <div class="desktop-links">
-          <a href="index.html" class="nav-link">Home</a>
-          <a href="about.html" class="nav-link active" aria-current="page">Our story</a>
-          <a href="projects.html" class="nav-link " >Projects</a>
-          <a href="gallery.html" class="nav-link">Gallery</a>
-          <a href="shop.html" class="nav-link " >Shop</a>
-          <a href="contact.html" class="nav-link " >Contact Us</a>
+          <a href="index.html" class="nav-link" data-cms-key="about-field-4">Home</a>
+          <a href="about.html" class="nav-link active" aria-current="page" data-cms-key="about-field-5">Our story</a>
+          <a href="projects.html" class="nav-link " data-cms-key="about-field-6">Projects</a>
+          <a href="gallery.html" class="nav-link" data-cms-key="about-field-7">Gallery</a>
+          <a href="shop.html" class="nav-link " data-cms-key="about-field-8">Shop</a>
+          <a href="contact.html" class="nav-link " data-cms-key="about-field-9">Contact Us</a>
         </div>
-        <a class="give-button" href="donate.html">Make a difference</a>
-        <button id="menu-btn" type="button" aria-label="Open navigation" aria-controls="mobile-menu" aria-expanded="false">☰</button>
+        <a class="give-button" href="donate.html" data-cms-key="about-field-10">Make a difference</a>
+        <button id="menu-btn" type="button" aria-label="Open navigation" aria-controls="mobile-menu" aria-expanded="false" data-cms-key="about-field-11">☰</button>
       </nav>
-      <button id="donate-btn" hidden aria-hidden="true" tabindex="-1">Donate</button>
+      <button id="donate-btn" hidden aria-hidden="true" tabindex="-1" data-cms-key="about-field-12">Donate</button>
     </header>
     <div id="mobile-menu" class="mobile-navigation hidden">
       <button id="close-menu" aria-label="Close navigation">×</button>
@@ -81,13 +82,13 @@
       <a href="donate.html">Donate  </a>
     </div>
     <main id="main-content">
-    <div class="story-intro-backdrop">
+    <div class="story-intro-backdrop" data-cms-section="about-section-2">
       <section class="story-intro story-container">
         <div class="story-intro-copy">
-          <p class="script-label">Join us and start dreaming</p>
-          <h1>A shared belief.<br>A brighter future<br>for every child.</h1>
-          <p>Le Shelter Foundation is a humanitarian NGO founded in 2017 by Ruby Offeibea Adu. We believe a child's location should never limit their opportunity to learn.</p>
-          <p>Working alongside rural communities in Ghana, we provide school supplies, mentorship and practical support. Together, we help young people build confidence and imagine what comes next.</p>
+          <p class="script-label" data-cms-key="about-field-13">Join us and start dreaming</p>
+          <h1 data-cms-key="about-field-14">A shared belief.<br>A brighter future<br>for every child.</h1>
+          <p data-cms-key="about-field-15">Le Shelter Foundation is a humanitarian NGO founded in 2017 by Ruby Offeibea Adu. We believe a child's location should never limit their opportunity to learn.</p>
+          <p data-cms-key="about-field-16">Working alongside rural communities in Ghana, we provide school supplies, mentorship and practical support. Together, we help young people build confidence and imagine what comes next.</p>
           <div class="story-stats">
             <div><strong data-story-count="2017" data-suffix="" aria-label="2017">2017</strong>
               <span>Our story began</span>
@@ -104,14 +105,14 @@
           </div>
         </div>
         <div class="story-intro-art">
-          <img class="story-main-photo" src="images/gallery/image43.webp" alt="Children learning in a classroom in Ghana" fetchpriority="high">
-          <img class="story-small-photo" src="images/gallery/s4.jpg" alt="Le Shelter volunteers sharing guidance with students">
-          <img class="story-round-photo story-round-top" src="images/gallery/s2.jpg" alt="Volunteers supporting students with educational supplies" loading="lazy">
-          <img class="story-round-photo story-round-bottom" src="images/gallery/s1.jpg" alt="Children and volunteers celebrating together" loading="lazy">
+          <img class="story-main-photo" src="images/gallery/image43.webp" alt="Children learning in a classroom in Ghana" fetchpriority="high" data-cms-key="about-field-17">
+          <img class="story-small-photo" src="images/gallery/s4.jpg" alt="Le Shelter volunteers sharing guidance with students" data-cms-key="about-field-18">
+          <img class="story-round-photo story-round-top" src="images/gallery/s2.jpg" alt="Volunteers supporting students with educational supplies" loading="lazy" data-cms-key="about-field-19">
+          <img class="story-round-photo story-round-bottom" src="images/gallery/s1.jpg" alt="Children and volunteers celebrating together" loading="lazy" data-cms-key="about-field-20">
         </div>
       </section>
     </div>
-    <section class="story-purpose" aria-labelledby="purpose-title">
+    <section class="story-purpose" aria-labelledby="purpose-title" data-cms-section="about-section-3">
       <div class="story-container purpose-layout">
         <div class="purpose-introduction">
           <p class="eyebrow">OUR HEART. OUR PURPOSE.</p>
@@ -120,300 +121,300 @@
         </div>
         <div class="purpose-content">
           <div class="purpose-tabs" role="tablist" aria-label="Our purpose">
-            <button type="button" role="tab" id="mission-tab" data-purpose-tab aria-selected="true" aria-controls="mission-panel">Our mission</button>
-            <button type="button" role="tab" id="vision-tab" data-purpose-tab aria-selected="false" aria-controls="vision-panel" tabindex="-1">Our vision</button>
+            <button type="button" role="tab" id="mission-tab" data-purpose-tab aria-selected="true" aria-controls="mission-panel" data-cms-key="about-field-21">Our mission</button>
+            <button type="button" role="tab" id="vision-tab" data-purpose-tab aria-selected="false" aria-controls="vision-panel" tabindex="-1" data-cms-key="about-field-25">Our vision</button>
           </div>
           <div role="tabpanel" id="mission-panel" aria-labelledby="mission-tab" tabindex="0">
-            <h3>Learning today. Opportunity tomorrow.</h3>
-            <p>Our mission is to provide equal educational opportunities for all, focusing on children in rural Ghana through learning materials, guidance and meaningful engagement.</p>
-            <p>By working alongside schools and communities, we help students build confidence, find encouragement and see new possibilities for their futures.</p>
+            <h3 data-cms-key="about-field-22">Learning today. Opportunity tomorrow.</h3>
+            <p data-cms-key="about-field-23">Our mission is to provide equal educational opportunities for all, focusing on children in rural Ghana through learning materials, guidance and meaningful engagement.</p>
+            <p data-cms-key="about-field-24">By working alongside schools and communities, we help students build confidence, find encouragement and see new possibilities for their futures.</p>
           </div>
           <div role="tabpanel" id="vision-panel" aria-labelledby="vision-tab" tabindex="0" hidden>
-            <h3>Every child seen. Every dream supported.</h3>
-            <p>We envision a future where a child's background or location does not limit their opportunity to learn, grow and thrive.</p>
-            <p>Through inclusion, empathy and community service, we work towards stronger communities where children can pursue their potential with dignity and support.</p>
+            <h3 data-cms-key="about-field-26">Every child seen. Every dream supported.</h3>
+            <p data-cms-key="about-field-27">We envision a future where a child's background or location does not limit their opportunity to learn, grow and thrive.</p>
+            <p data-cms-key="about-field-28">Through inclusion, empathy and community service, we work towards stronger communities where children can pursue their potential with dignity and support.</p>
           </div>
         </div>
       </div>
     </section>
-    <section class="story-goals" id="our-vision">
+    <section class="story-goals" id="our-vision" data-cms-section="about-section-4">
       <div class="story-container">
         <div class="story-section-heading">
-          <p class="eyebrow">LOCAL ACTION. A SHARED FUTURE.</p>
-          <h2>Our Commitment to a Sustainable Future</h2>
-          <p>Education opens doors to opportunity, dignity and stronger communities. Our mission connects with the Sustainable Development Goals through learning, inclusion, well-being and working together.</p>
+          <p class="eyebrow" data-cms-key="about-field-29">LOCAL ACTION. A SHARED FUTURE.</p>
+          <h2 data-cms-key="about-field-30">Our Commitment to a Sustainable Future</h2>
+          <p data-cms-key="about-field-31">Education opens doors to opportunity, dignity and stronger communities. Our mission connects with the Sustainable Development Goals through learning, inclusion, well-being and working together.</p>
         </div>
         <ul class="goal-grid goal-image-grid" aria-label="Sustainable Development Goals connected to our mission">
-          <li><img src="images/gallery/e-goal-01.png" alt="Goal 1: No poverty" width="1024" height="1024" loading="lazy"></li>
-          <li><img src="images/gallery/e-goal-03.png" alt="Goal 3: Good health and well-being" width="1024" height="1024" loading="lazy"></li>
-          <li><img src="images/gallery/e-goal-04.png" alt="Goal 4: Quality education" width="1024" height="1024" loading="lazy"></li>
-          <li><img src="images/gallery/e-goal-05.png" alt="Goal 5: Gender equality" width="1024" height="1024" loading="lazy"></li>
+          <li><img src="images/gallery/e-goal-01.png" alt="Goal 1: No poverty" width="1024" height="1024" loading="lazy" data-cms-key="about-field-32"></li>
+          <li><img src="images/gallery/e-goal-03.png" alt="Goal 3: Good health and well-being" width="1024" height="1024" loading="lazy" data-cms-key="about-field-33"></li>
+          <li><img src="images/gallery/e-goal-04.png" alt="Goal 4: Quality education" width="1024" height="1024" loading="lazy" data-cms-key="about-field-34"></li>
+          <li><img src="images/gallery/e-goal-05.png" alt="Goal 5: Gender equality" width="1024" height="1024" loading="lazy" data-cms-key="about-field-35"></li>
         </ul>
-        <p class="story-mission-statement">With a clear mission aligned with global development goals, we strive to be a beacon of hope for those in need while fostering dignity and empowerment.</p>
+        <p class="story-mission-statement" data-cms-key="about-field-36">With a clear mission aligned with global development goals, we strive to be a beacon of hope for those in need while fostering dignity and empowerment.</p>
       </div>
     </section>
-    <section class="story-team story-container" id="team">
+    <section class="story-team story-container" id="team" data-cms-section="about-section-5">
       <div class="story-section-heading">
-        <p class="eyebrow">THE PEOPLE BEHIND THE PURPOSE</p>
-        <h2>Meet The Team</h2>
+        <p class="eyebrow" data-cms-key="about-field-37">THE PEOPLE BEHIND THE PURPOSE</p>
+        <h2 data-cms-key="about-field-38">Meet The Team</h2>
       </div>
       <div class="story-team-grid">
         <article class="story-person">
-          <img src="images/gallery/Ruby1.jpg" alt="Ruby Offeibea Adu, Founder / President" loading="lazy" width="400" height="460">
-          <h3>Ruby Offeibea Adu</h3>
-          <p>Founder / President</p>
+          <img src="images/gallery/Ruby1.jpg" alt="Ruby Offeibea Adu, Founder / President" loading="lazy" width="400" height="460" data-cms-key="about-field-39">
+          <h3 data-cms-key="about-field-40">Ruby Offeibea Adu</h3>
+          <p data-cms-key="about-field-41">Founder / President</p>
           <div class="person-socials">
-            <a href="https://www.linkedin.com/in/ing-ruby-offeibea-adu-86756754" target="_blank" rel="noopener noreferrer" aria-label="Ruby Offeibea Adu LinkedIn">in</a>
-            <a href="https://www.instagram.com/ruby.offeibea" target="_blank" rel="noopener noreferrer" aria-label="Ruby Offeibea Adu Instagram">&#9678;</a>
+            <a href="https://www.linkedin.com/in/ing-ruby-offeibea-adu-86756754" target="_blank" rel="noopener noreferrer" aria-label="Ruby Offeibea Adu LinkedIn" data-cms-key="about-field-42">in</a>
+            <a href="https://www.instagram.com/ruby.offeibea" target="_blank" rel="noopener noreferrer" aria-label="Ruby Offeibea Adu Instagram" data-cms-key="about-field-43">&#9678;</a>
           </div>
         </article>
         <article class="story-person">
-          <img src="images/gallery/Bene1.jpg" alt="Benedicta Safo, Vice President" loading="lazy" width="400" height="460">
-          <h3>Benedicta Safo</h3>
-          <p>Vice President</p>
+          <img src="images/gallery/Bene1.jpg" alt="Benedicta Safo, Vice President" loading="lazy" width="400" height="460" data-cms-key="about-field-44">
+          <h3 data-cms-key="about-field-45">Benedicta Safo</h3>
+          <p data-cms-key="about-field-46">Vice President</p>
           <div class="person-socials">
-            <a href="https://www.linkedin.com/in/benedicta-safo-225291108" target="_blank" rel="noopener noreferrer" aria-label="Benedicta Safo LinkedIn">in</a>
-            <a href="https://www.instagram.com/ser___waa" target="_blank" rel="noopener noreferrer" aria-label="Benedicta Safo Instagram">&#9678;</a>
+            <a href="https://www.linkedin.com/in/benedicta-safo-225291108" target="_blank" rel="noopener noreferrer" aria-label="Benedicta Safo LinkedIn" data-cms-key="about-field-47">in</a>
+            <a href="https://www.instagram.com/ser___waa" target="_blank" rel="noopener noreferrer" aria-label="Benedicta Safo Instagram" data-cms-key="about-field-48">&#9678;</a>
           </div>
         </article>
         <article class="story-person">
-          <img src="images/gallery/Joana.jpg" alt="Joana Attafuah, General Secretary" loading="lazy" width="400" height="460">
-          <h3>Joana Attafuah</h3>
-          <p>General Secretary</p>
+          <img src="images/gallery/Joana.jpg" alt="Joana Attafuah, General Secretary" loading="lazy" width="400" height="460" data-cms-key="about-field-49">
+          <h3 data-cms-key="about-field-50">Joana Attafuah</h3>
+          <p data-cms-key="about-field-51">General Secretary</p>
           <div class="person-socials">
-            <a href="https://www.linkedin.com/in/joana-attafuah-b67686103" target="_blank" rel="noopener noreferrer" aria-label="Joana Attafuah LinkedIn">in</a>
-            <a href="https://www.instagram.com/jaka_word" target="_blank" rel="noopener noreferrer" aria-label="Joana Attafuah Instagram">&#9678;</a>
+            <a href="https://www.linkedin.com/in/joana-attafuah-b67686103" target="_blank" rel="noopener noreferrer" aria-label="Joana Attafuah LinkedIn" data-cms-key="about-field-52">in</a>
+            <a href="https://www.instagram.com/jaka_word" target="_blank" rel="noopener noreferrer" aria-label="Joana Attafuah Instagram" data-cms-key="about-field-53">&#9678;</a>
           </div>
         </article>
         <article class="story-person">
-          <img src="images/gallery/Solomon1.jpg" alt="Solomon Paa Larweh, Organizing Secretary" loading="lazy" width="400" height="460">
-          <h3>Solomon Paa Larweh</h3>
-          <p>Organizing Secretary</p>
+          <img src="images/gallery/Solomon1.jpg" alt="Solomon Paa Larweh, Organizing Secretary" loading="lazy" width="400" height="460" data-cms-key="about-field-54">
+          <h3 data-cms-key="about-field-55">Solomon Paa Larweh</h3>
+          <p data-cms-key="about-field-56">Organizing Secretary</p>
           <div class="person-socials">
-            <a href="https://www.linkedin.com/in/solomon-paa-799374285?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank" rel="noopener noreferrer" aria-label="Solomon Paa Larweh LinkedIn">in</a>
-            <a href="https://www.instagram.com/pappy_solo07?igsh=NDllOXZ3cjVmdmg1" target="_blank" rel="noopener noreferrer" aria-label="Solomon Paa Larweh Instagram">&#9678;</a>
+            <a href="https://www.linkedin.com/in/solomon-paa-799374285?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank" rel="noopener noreferrer" aria-label="Solomon Paa Larweh LinkedIn" data-cms-key="about-field-57">in</a>
+            <a href="https://www.instagram.com/pappy_solo07?igsh=NDllOXZ3cjVmdmg1" target="_blank" rel="noopener noreferrer" aria-label="Solomon Paa Larweh Instagram" data-cms-key="about-field-58">&#9678;</a>
           </div>
         </article>
         <article class="story-person">
-          <img src="images/gallery/Adelaide1.jpg" alt="Adelaide Bosrotsi, Sponsorship Coordinator" loading="lazy" width="400" height="460">
-          <h3>Adelaide Bosrotsi</h3>
-          <p>Sponsorship Coordinator</p>
+          <img src="images/gallery/Adelaide1.jpg" alt="Adelaide Bosrotsi, Sponsorship Coordinator" loading="lazy" width="400" height="460" data-cms-key="about-field-59">
+          <h3 data-cms-key="about-field-60">Adelaide Bosrotsi</h3>
+          <p data-cms-key="about-field-61">Sponsorship Coordinator</p>
           <div class="person-socials">
-            <a href="https://www.linkedin.com/in/adelaide-bosrotsi-91aaabb0?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank" rel="noopener noreferrer" aria-label="Adelaide Bosrotsi LinkedIn">in</a>
+            <a href="https://www.linkedin.com/in/adelaide-bosrotsi-91aaabb0?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank" rel="noopener noreferrer" aria-label="Adelaide Bosrotsi LinkedIn" data-cms-key="about-field-62">in</a>
           </div>
         </article>
         <article class="story-person">
-          <img src="images/gallery/princess1.jpg" alt="Princess Zara Doe, Mentorship Coordinator" loading="lazy" width="400" height="460">
-          <h3>Princess Zara Doe</h3>
-          <p>Mentorship Coordinator</p>
+          <img src="images/gallery/princess1.jpg" alt="Princess Zara Doe, Mentorship Coordinator" loading="lazy" width="400" height="460" data-cms-key="about-field-63">
+          <h3 data-cms-key="about-field-64">Princess Zara Doe</h3>
+          <p data-cms-key="about-field-65">Mentorship Coordinator</p>
           <div class="person-socials">
-            <a href="https://www.instagram.com/hrh_prinnydoe?igsh=a3QwdDloN20xN3N4" target="_blank" rel="noopener noreferrer" aria-label="Princess Zara Doe Instagram">&#9678;</a>
+            <a href="https://www.instagram.com/hrh_prinnydoe?igsh=a3QwdDloN20xN3N4" target="_blank" rel="noopener noreferrer" aria-label="Princess Zara Doe Instagram" data-cms-key="about-field-66">&#9678;</a>
           </div>
         </article>
         <article class="story-person">
-          <img src="images/gallery/Cindy1.jpg" alt="Cindy Monica Agbeme, Mentorship Coordinator" loading="lazy" width="400" height="460">
-          <h3>Cindy Monica Agbeme</h3>
-          <p>Mentorship Coordinator</p>
+          <img src="images/gallery/Cindy1.jpg" alt="Cindy Monica Agbeme, Mentorship Coordinator" loading="lazy" width="400" height="460" data-cms-key="about-field-67">
+          <h3 data-cms-key="about-field-68">Cindy Monica Agbeme</h3>
+          <p data-cms-key="about-field-69">Mentorship Coordinator</p>
           <div class="person-socials">
-            <a href="https://www.linkedin.com/in/cindy-agbeme-41a46b314?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank" rel="noopener noreferrer" aria-label="Cindy Monica Agbeme LinkedIn">in</a>
-            <a href="https://www.instagram.com/unikmoniq?igsh=dWh0ZGZ3ZzA0a3Rn" target="_blank" rel="noopener noreferrer" aria-label="Cindy Monica Agbeme Instagram">&#9678;</a>
+            <a href="https://www.linkedin.com/in/cindy-agbeme-41a46b314?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank" rel="noopener noreferrer" aria-label="Cindy Monica Agbeme LinkedIn" data-cms-key="about-field-70">in</a>
+            <a href="https://www.instagram.com/unikmoniq?igsh=dWh0ZGZ3ZzA0a3Rn" target="_blank" rel="noopener noreferrer" aria-label="Cindy Monica Agbeme Instagram" data-cms-key="about-field-71">&#9678;</a>
           </div>
         </article>
         <article class="story-person">
-          <img src="images/gallery/Daniel1.jpg" alt="Daniel Mireku Osei, Media/Publicity" loading="lazy" width="400" height="460">
-          <h3>Daniel Mireku Osei</h3>
-          <p>Media/Publicity</p>
+          <img src="images/gallery/Daniel1.jpg" alt="Daniel Mireku Osei, Media/Publicity" loading="lazy" width="400" height="460" data-cms-key="about-field-72">
+          <h3 data-cms-key="about-field-73">Daniel Mireku Osei</h3>
+          <p data-cms-key="about-field-74">Media/Publicity</p>
           <div class="person-socials">
-            <a href="https://www.linkedin.com/in/ing-daniel-mireku-osei-pe-ghie-57220b75?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank" rel="noopener noreferrer" aria-label="Daniel Osei LinkedIn">in</a>
-            <a href="https://www.instagram.com/darnyelo?igsh=MTh5ZGc2Zm5hamlhbA==" target="_blank" rel="noopener noreferrer" aria-label="Daniel Osei Instagram">&#9678;</a>
+            <a href="https://www.linkedin.com/in/ing-daniel-mireku-osei-pe-ghie-57220b75?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank" rel="noopener noreferrer" aria-label="Daniel Osei LinkedIn" data-cms-key="about-field-75">in</a>
+            <a href="https://www.instagram.com/darnyelo?igsh=MTh5ZGc2Zm5hamlhbA==" target="_blank" rel="noopener noreferrer" aria-label="Daniel Osei Instagram" data-cms-key="about-field-76">&#9678;</a>
           </div>
         </article>
       </div>
     </section>
-    <section class="story-testimonials" id="volunteer-stories">
+    <section class="story-testimonials" id="volunteer-stories" data-cms-section="about-section-6">
       <div class="story-container testimonial-layout">
         <div class="testimonial-intro">
-          <p class="script-label">Our volunteers</p>
-          <h2>What they are saying<br>about our work</h2>
-          <p>School visits, shared skills and small acts of care. Hear from the people who help bring our purpose to life.</p>
-          <a class="yellow-button pill" href="contact.html">Become a volunteer</a>
+          <p class="script-label" data-cms-key="about-field-77">Our volunteers</p>
+          <h2 data-cms-key="about-field-78">What they are saying<br>about our work</h2>
+          <p data-cms-key="about-field-79">School visits, shared skills and small acts of care. Hear from the people who help bring our purpose to life.</p>
+          <a class="yellow-button pill" href="contact.html" data-cms-key="about-field-80">Become a volunteer</a>
         </div>
         <div class="testimonial-carousel" role="region" aria-roledescription="carousel" aria-label="Volunteer stories">
           <div class="testimonial-quotes" aria-live="polite">
             <figure class="volunteer-quote is-current">
-              <figcaption><img src="images/gallery/Ivy.jpg" alt="Ivy" loading="lazy">
-                <div><h3>Ivy</h3><span>Le Shelter volunteer</span></div>
+              <figcaption><img src="images/gallery/Ivy.jpg" alt="Ivy" loading="lazy" data-cms-key="about-field-81">
+                <div><h3 data-cms-key="about-field-82">Ivy</h3><span>Le Shelter volunteer</span></div>
               </figcaption>
               <blockquote>Through our school supply donation drives, I've witnessed firsthand the joy on childrens faces when they receive the tools they need to succeed in their education. It's heartwarming to know that we're not only providing tangible resources but also inspiring hope in these young minds.</blockquote>
               <div class="quote-gallery" aria-label="Testimonial photos">
                 <button type="button" data-testimonial-photo="images/gallery/Ivy.jpg" aria-label="Open volunteer portrait">
-                <img src="images/gallery/Ivy.jpg" alt="Volunteer portrait" loading="lazy"></button>
+                <img src="images/gallery/Ivy.jpg" alt="Volunteer portrait" loading="lazy" data-cms-key="about-field-84"></button>
                 <button type="button" data-testimonial-photo="images/gallery/s1.jpg" aria-label="Open le shelter children and volunteers">
-                <img src="images/gallery/s1.jpg" alt="Le Shelter children and volunteers" loading="lazy"></button>
+                <img src="images/gallery/s1.jpg" alt="Le Shelter children and volunteers" loading="lazy" data-cms-key="about-field-86"></button>
                 <button type="button" data-testimonial-photo="images/gallery/s3.jpg" aria-label="Open le shelter community outreach">
-                <img src="images/gallery/s3.jpg" alt="Le Shelter community outreach" loading="lazy"></button>
+                <img src="images/gallery/s3.jpg" alt="Le Shelter community outreach" loading="lazy" data-cms-key="about-field-88"></button>
               </div>
             </figure>
             <figure class="volunteer-quote" hidden>
-              <figcaption><img src="images/gallery/Isaac.jpg" alt="Isaac" loading="lazy">
-                <div><h3>Isaac</h3><span>Le Shelter volunteer</span></div>
+              <figcaption><img src="images/gallery/Isaac.jpg" alt="Isaac" loading="lazy" data-cms-key="about-field-89">
+                <div><h3 data-cms-key="about-field-90">Isaac</h3><span>Le Shelter volunteer</span></div>
               </figcaption>
               <blockquote>Joining Le Shelter Foundation as a volunteer has been an eye-opening experience. Le Shelter Foundation has not only empowered the communities we serve but has also empowered me with a renewed sense of purpose and a deeper understanding of how small efforts can create significant change.</blockquote>
               <div class="quote-gallery" aria-label="Testimonial photos">
                 <button type="button" data-testimonial-photo="images/gallery/Isaac.jpg" aria-label="Open volunteer portrait">
-                <img src="images/gallery/Isaac.jpg" alt="Volunteer portrait" loading="lazy"></button>
+                <img src="images/gallery/Isaac.jpg" alt="Volunteer portrait" loading="lazy" data-cms-key="about-field-92"></button>
                 <button type="button" data-testimonial-photo="images/gallery/s1.jpg" aria-label="Open le shelter children and volunteers">
-                <img src="images/gallery/s1.jpg" alt="Le Shelter children and volunteers" loading="lazy"></button>
+                <img src="images/gallery/s1.jpg" alt="Le Shelter children and volunteers" loading="lazy" data-cms-key="about-field-94"></button>
                 <button type="button" data-testimonial-photo="images/gallery/s3.jpg" aria-label="Open le shelter community outreach">
-                <img src="images/gallery/s3.jpg" alt="Le Shelter community outreach" loading="lazy"></button>
+                <img src="images/gallery/s3.jpg" alt="Le Shelter community outreach" loading="lazy" data-cms-key="about-field-96"></button>
               </div>
             </figure>
             <figure class="volunteer-quote" hidden>
-              <figcaption><img src="images/gallery/Priscilla.jpg" alt="Priscilla" loading="lazy">
-                <div><h3>Priscilla</h3><span>Le Shelter volunteer</span></div>
+              <figcaption><img src="images/gallery/Priscilla.jpg" alt="Priscilla" loading="lazy" data-cms-key="about-field-97">
+                <div><h3 data-cms-key="about-field-98">Priscilla</h3><span>Le Shelter volunteer</span></div>
               </figcaption>
-              <blockquote>I’ve had the chance to connect with students from rural areas and help guide them in making informed decisions about their futures. LSF has not only benefited the communities but has also given me the opportunity to grow as a mentor and leader.</blockquote>
+              <blockquote>I've had the chance to connect with students from rural areas and help guide them in making informed decisions about their futures. LSF has not only benefited the communities but has also given me the opportunity to grow as a mentor and leader.</blockquote>
               <div class="quote-gallery" aria-label="Testimonial photos">
                 <button type="button" data-testimonial-photo="images/gallery/Priscilla.jpg" aria-label="Open volunteer portrait">
-                <img src="images/gallery/Priscilla.jpg" alt="Volunteer portrait" loading="lazy"></button>
+                <img src="images/gallery/Priscilla.jpg" alt="Volunteer portrait" loading="lazy" data-cms-key="about-field-100"></button>
                 <button type="button" data-testimonial-photo="images/gallery/s1.jpg" aria-label="Open le shelter children and volunteers">
-                <img src="images/gallery/s1.jpg" alt="Le Shelter children and volunteers" loading="lazy"></button>
+                <img src="images/gallery/s1.jpg" alt="Le Shelter children and volunteers" loading="lazy" data-cms-key="about-field-102"></button>
                 <button type="button" data-testimonial-photo="images/gallery/s3.jpg" aria-label="Open le shelter community outreach">
-                <img src="images/gallery/s3.jpg" alt="Le Shelter community outreach" loading="lazy"></button>
+                <img src="images/gallery/s3.jpg" alt="Le Shelter community outreach" loading="lazy" data-cms-key="about-field-104"></button>
               </div>
             </figure>
             <figure class="volunteer-quote" hidden>
-              <figcaption><img src="images/gallery/elikem.webp" alt="Elikem" loading="lazy">
-                <div><h3>Elikem</h3><span>Le Shelter volunteer</span></div>
+              <figcaption><img src="images/gallery/elikem.webp" alt="Elikem" loading="lazy" data-cms-key="about-field-105">
+                <div><h3 data-cms-key="about-field-106">Elikem</h3><span>Le Shelter volunteer</span></div>
               </figcaption>
               <blockquote>LSF is more than just an NGO, it is a family of people united by a shared mission to bring hope and support to those in need. Volunteering here has opened my eyes to the challenges many communities face and has inspired me to become more compassionate and socially responsible.</blockquote>
               <div class="quote-gallery" aria-label="Testimonial photos">
                 <button type="button" data-testimonial-photo="images/gallery/elikem.webp" aria-label="Open volunteer portrait">
-                <img src="images/gallery/elikem.webp" alt="Volunteer portrait" loading="lazy"></button>
+                <img src="images/gallery/elikem.webp" alt="Volunteer portrait" loading="lazy" data-cms-key="about-field-108"></button>
                 <button type="button" data-testimonial-photo="images/gallery/s1.jpg" aria-label="Open le shelter children and volunteers">
-                <img src="images/gallery/s1.jpg" alt="Le Shelter children and volunteers" loading="lazy"></button>
+                <img src="images/gallery/s1.jpg" alt="Le Shelter children and volunteers" loading="lazy" data-cms-key="about-field-110"></button>
                 <button type="button" data-testimonial-photo="images/gallery/s3.jpg" aria-label="Open le shelter community outreach">
-                <img src="images/gallery/s3.jpg" alt="Le Shelter community outreach" loading="lazy"></button>
+                <img src="images/gallery/s3.jpg" alt="Le Shelter community outreach" loading="lazy" data-cms-key="about-field-112"></button>
               </div>
             </figure>
             <figure class="volunteer-quote" hidden>
-              <figcaption><img src="images/gallery/Naa.jpg" alt="Naa" loading="lazy">
-                <div><h3>Naa</h3><span>Le Shelter volunteer</span></div>
+              <figcaption><img src="images/gallery/Naa.jpg" alt="Naa" loading="lazy" data-cms-key="about-field-113">
+                <div><h3 data-cms-key="about-field-114">Naa</h3><span>Le Shelter volunteer</span></div>
               </figcaption>
               <blockquote>Volunteering with Le Shelter Foundation has been a truly transformative experience for me. From the very first outreach program I participated in, I could see the genuine passion and commitment the organization has towards helping vulnerable communities.</blockquote>
               <div class="quote-gallery" aria-label="Testimonial photos">
                 <button type="button" data-testimonial-photo="images/gallery/Naa.jpg" aria-label="Open volunteer portrait">
-                <img src="images/gallery/Naa.jpg" alt="Volunteer portrait" loading="lazy"></button>
+                <img src="images/gallery/Naa.jpg" alt="Volunteer portrait" loading="lazy" data-cms-key="about-field-116"></button>
                 <button type="button" data-testimonial-photo="images/gallery/s1.jpg" aria-label="Open le shelter children and volunteers">
-                <img src="images/gallery/s1.jpg" alt="Le Shelter children and volunteers" loading="lazy"></button>
+                <img src="images/gallery/s1.jpg" alt="Le Shelter children and volunteers" loading="lazy" data-cms-key="about-field-118"></button>
                 <button type="button" data-testimonial-photo="images/gallery/s3.jpg" aria-label="Open le shelter community outreach">
-                <img src="images/gallery/s3.jpg" alt="Le Shelter community outreach" loading="lazy">
+                <img src="images/gallery/s3.jpg" alt="Le Shelter community outreach" loading="lazy" data-cms-key="about-field-120">
                 </button>
               </div>
             </figure>
           </div>
           <span class="quote-mark" aria-hidden="true">&#8221;</span>
           <div class="testimonial-controls">
-            <button type="button" data-quote-prev aria-label="Previous volunteer story">&#8592;</button>
-            <button type="button" data-quote-next aria-label="Next volunteer story">&#8594;</button>
+            <button type="button" data-quote-prev aria-label="Previous volunteer story" data-cms-key="about-field-121">&#8592;</button>
+            <button type="button" data-quote-next aria-label="Next volunteer story" data-cms-key="about-field-122">&#8594;</button>
           </div>
         </div>
       </div>
     </section>
-    <section class="story-closing story-container">
-      <p class="eyebrow">TURN CARE INTO OPPORTUNITY</p>
-      <h2>The next chapter<br>could begin <em>with you.</em></h2>
-      <p>Help put learning materials, encouragement and possibility into a child's hands.</p>
-      <a class="solid-link" href="donate.html">Support our work <span aria-hidden="true">&#8599;</span></a>
+    <section class="story-closing story-container" data-cms-section="about-section-7">
+      <p class="eyebrow" data-cms-key="about-field-123">TURN CARE INTO OPPORTUNITY</p>
+      <h2 data-cms-key="about-field-124">The next chapter<br>could begin <em>with you.</em></h2>
+      <p data-cms-key="about-field-125">Help put learning materials, encouragement and possibility into a child's hands.</p>
+      <a class="solid-link" href="donate.html" data-cms-key="about-field-126">Support our work <span aria-hidden="true">&#8599;</span></a>
     </section>
-    <section class="reference-values story-values" aria-label="Find your place with Le Shelter">
+    <section class="reference-values story-values" aria-label="Find your place with Le Shelter" data-cms-section="about-section-8">
       <div class="values-slider-viewport">
         <div class="values-slider-track">
-          <a class="value-tile" href="contact.html">
-            <div><img src="images/gallery/s1.jpg" alt="Children and volunteers coming together" loading="lazy">
-              <h2>Partner</h2>
+          <a class="value-tile" href="contact.html" data-cms-key="about-field-127">
+            <div><img src="images/gallery/s1.jpg" alt="Children and volunteers coming together" loading="lazy" data-cms-key="about-field-128">
+              <h2 data-cms-key="about-field-129">Partner</h2>
             </div>
             <span>Join us &#8599;</span>
           </a>
-          <a class="value-tile" href="#main-content">
-            <div><img src="images/gallery/s3.jpg" alt="Our education outreach" loading="lazy">
-              <h2>Mission</h2>
+          <a class="value-tile" href="#main-content" data-cms-key="about-field-130">
+            <div><img src="images/gallery/s3.jpg" alt="Our education outreach" loading="lazy" data-cms-key="about-field-131">
+              <h2 data-cms-key="about-field-132">Mission</h2>
             </div>
             <span>Our purpose &#8599;</span>
           </a>
-          <a class="value-tile" href="#our-vision">
-            <div><img src="images/gallery/s4.jpg" alt="Mentorship in the community" loading="lazy">
-              <h2>Vision</h2>
+          <a class="value-tile" href="#our-vision" data-cms-key="about-field-133">
+            <div><img src="images/gallery/s4.jpg" alt="Mentorship in the community" loading="lazy" data-cms-key="about-field-134">
+              <h2 data-cms-key="about-field-135">Vision</h2>
             </div>
             <span>Our future &#8599;</span>
           </a>
-          <a class="value-tile" href="contact.html">
-            <div><img src="images/gallery/s2.jpg" alt="Le Shelter volunteers during outreach" loading="lazy">
-              <h2>Volunteer</h2>
+          <a class="value-tile" href="contact.html" data-cms-key="about-field-136">
+            <div><img src="images/gallery/s2.jpg" alt="Le Shelter volunteers during outreach" loading="lazy" data-cms-key="about-field-137">
+              <h2 data-cms-key="about-field-138">Volunteer</h2>
             </div>
             <span>Give your time &#8599;</span>
           </a>
-          <a class="value-tile" href="projects.html">
-            <div><img src="images/gallery/image15.webp" alt="Students taking part in learning activities" loading="lazy">
-              <h2>Projects</h2>
+          <a class="value-tile" href="projects.html" data-cms-key="about-field-139">
+            <div><img src="images/gallery/image15.webp" alt="Students taking part in learning activities" loading="lazy" data-cms-key="about-field-140">
+              <h2 data-cms-key="about-field-141">Projects</h2>
             </div>
             <span>See our work &#8599;</span>
           </a>
-          <a class="value-tile" href="donate.html">
-            <div><img src="images/gallery/image43.webp" alt="Children learning together in Ghana" loading="lazy">
-              <h2>Donate</h2>
+          <a class="value-tile" href="donate.html" data-cms-key="about-field-142">
+            <div><img src="images/gallery/image43.webp" alt="Children learning together in Ghana" loading="lazy" data-cms-key="about-field-143">
+              <h2 data-cms-key="about-field-144">Donate</h2>
             </div>
             <span>Make a difference &#8599;</span>
           </a>
         </div>
       </div>
     </section>
-    <section class="story-project-feature story-container" aria-labelledby="story-project-title">
+    <section class="story-project-feature story-container" aria-labelledby="story-project-title" data-cms-section="about-section-9">
       <div class="section-heading">
         <div>
-          <p class="eyebrow">OPPORTUNITY IN ACTION</p>
-          <h2 id="story-project-title">Close to communities.<br><em>Committed to change.</em></h2>
+          <p class="eyebrow" data-cms-key="about-field-145">OPPORTUNITY IN ACTION</p>
+          <h2 id="story-project-title" data-cms-key="about-field-146">Close to communities.<br><em>Committed to change.</em></h2>
         </div>
-        <a class="text-link" href="projects.html">Explore our projects &#8599;</a>
+        <a class="text-link" href="projects.html" data-cms-key="about-field-147">Explore our projects &#8599;</a>
       </div>
       <div class="project-editorial">
         <a class="featured-story" href="projects/Asiafo.html">
           <div class="story-image">
-            <img src="images/gallery/image15.webp" alt="Students at Asiafo Amanfro receiving educational support" loading="lazy">
+            <img src="images/gallery/image15.webp" alt="Students at Asiafo Amanfro receiving educational support" loading="lazy" data-cms-key="about-field-148">
             <span class="story-tag">EDUCATION &amp; MENTORSHIP</span>
           </div>
           <div class="story-title">
             <div>
               <p class="eyebrow">ASIAFO AMANFRO</p>
-              <h3>Learning today.<br>Dreaming bigger tomorrow.</h3>
+              <h3 data-cms-key="about-field-149">Learning today.<br>Dreaming bigger tomorrow.</h3>
             </div>
             <span class="circle-arrow" aria-hidden="true">&#8599;</span>
           </div>
           <p>Learning materials, hands-on workshops and mentorship to help young people see what is possible.</p>
         </a>
         <div class="work-list">
-          <p class="eyebrow">HOW WE MAKE A DIFFERENCE</p>
-          <a href="projects.html">
+          <p class="eyebrow" data-cms-key="about-field-150">HOW WE MAKE A DIFFERENCE</p>
+          <a href="projects.html" data-cms-key="about-field-151">
             <span class="item-number">01</span>
             <div>
-              <h3>The tools to learn</h3>
-              <p>Books, uniforms and school essentials that help children participate.</p>
+              <h3 data-cms-key="about-field-152">The tools to learn</h3>
+              <p data-cms-key="about-field-153">Books, uniforms and school essentials that help children participate.</p>
             </div>
             <span aria-hidden="true">&#8599;</span>
           </a>
-          <a href="projects.html">
+          <a href="projects.html" data-cms-key="about-field-154">
             <span class="item-number">02</span>
             <div>
-              <h3>The confidence to dream</h3>
-              <p>Mentorship and guidance to inspire the next generation.</p>
+              <h3 data-cms-key="about-field-155">The confidence to dream</h3>
+              <p data-cms-key="about-field-156">Mentorship and guidance to inspire the next generation.</p>
             </div>
             <span aria-hidden="true">&#8599;</span>
           </a>
-          <a href="projects.html">
+          <a href="projects.html" data-cms-key="about-field-157">
             <span class="item-number">03</span>
             <div>
-              <h3>The space to grow</h3>
-              <p>Supporting school facilities and stronger learning environments.</p>
+              <h3 data-cms-key="about-field-158">The space to grow</h3>
+              <p data-cms-key="about-field-159">Supporting school facilities and stronger learning environments.</p>
             </div>
             <span aria-hidden="true">&#8599;</span>
           </a>
@@ -422,39 +423,43 @@
       </div>
     </section>
     </main>
-    <footer class="reference-footer">
+    <footer class="reference-footer" data-cms-section="about-section-10">
       <div class="reference-container reference-footer-grid">
-        <div><a href="index.html">
-          <img class="footer-brand" src="images/Logo.png" alt="Le Shelter Foundation" width="556" height="143"></a>
-          <p>Le Shelter Foundation provides equal educational opportunities for children in rural Ghana.</p>
+        <div><a href="index.html" data-cms-key="about-field-160">
+          <img class="footer-brand" src="images/Logo.png" alt="Le Shelter Foundation" width="556" height="143" data-cms-key="about-field-161"></a>
+          <p data-cms-key="about-field-162">Le Shelter Foundation provides equal educational opportunities for children in rural Ghana.</p>
         </div>
-        <div><h2>Socials</h2>
-          <div class="social-links"><a href="https://www.facebook.com/profile.php?id=100067770571763" target="_blank" rel="noopener noreferrer" aria-label="Facebook">f</a>
-            <a href="https://www.instagram.com/le.shelter.foundation" target="_blank" rel="noopener noreferrer" aria-label="Instagram">&#9678;</a>
-            <a href="https://x.com/le_shelter" target="_blank" rel="noopener noreferrer" aria-label="X">X</a>
-            <a href="https://wa.me/233530449325" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">W</a>
+        <div><h2 data-cms-key="about-field-163">Socials</h2>
+          <div class="social-links"><a href="https://www.facebook.com/profile.php?id=100067770571763" target="_blank" rel="noopener noreferrer" aria-label="Facebook" data-cms-key="about-field-164">f</a>
+            <a href="https://www.instagram.com/le.shelter.foundation" target="_blank" rel="noopener noreferrer" aria-label="Instagram" data-cms-key="about-field-165">&#9678;</a>
+            <a href="https://x.com/le_shelter" target="_blank" rel="noopener noreferrer" aria-label="X" data-cms-key="about-field-166">X</a>
+            <a href="https://wa.me/233530449325" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" data-cms-key="about-field-167">W</a>
           </div>
         </div>
-        <div><h2>Contact</h2>
-          <p>Baatsona-Spintex, Ghana</p>
-          <a href="tel:+233530449325">+233 53 044 9325</a>
-          <a href="mailto:lesheltergh@gmail.com">lesheltergh@gmail.com</a>
+        <div><h2 data-cms-key="about-field-168">Contact</h2>
+          <p data-cms-key="about-field-169">Baatsona-Spintex, Ghana</p>
+          <a href="tel:+233530449325" data-cms-key="about-field-170">+233 53 044 9325</a>
+          <a href="mailto:lesheltergh@gmail.com" data-cms-key="about-field-171">lesheltergh@gmail.com</a>
         </div>
-        <div><h2>Stay connected</h2>
-          <p>Subscribe to our newsletter for updates.</p>
-          <a class="footer-contact" href="contact.html">Get in touch <span aria-hidden="true"></span></a>
+        <div><h2 data-cms-key="about-field-172">Stay connected</h2>
+          <p data-cms-key="about-field-173">Find your place in our next chapter.</p>
+          <a class="text-link" href="contact.html" data-cms-key="about-field-174">Get in touch &#8599;</a>
+          <form class="footer-newsletter" data-newsletter-form action="/api/newsletter" method="post">
+  <label class="newsletter-label" for="newsletter-email">Email address</label>
+  <div class="newsletter-input-row"><input id="newsletter-email" type="email" name="email" placeholder="Your email address" autocomplete="email" maxlength="254" required><button type="submit">Subscribe</button></div>
+  <p class="newsletter-status" role="status" aria-live="polite"></p>
+</form>
         </div>
       </div>
       <div class="reference-container reference-copyright">Copyright &copy; <span data-year>2026</span> Le Shelter Foundation. All rights reserved.</div>
     </footer>
-    </section>
-  </main>
-  
   <dialog class="testimonial-photo-modal" aria-label="Volunteer story photo">
     <button type="button" class="testimonial-photo-close" aria-label="Close photo" autofocus>&times; Close</button>
     <img alt="">
   </dialog>
   <script src="Javascript/redesign.js" defer></script>
   <script src="Javascript/story.js" defer></script>
+<script src="Javascript/cms.js" defer></script>
+<script src="Javascript/newsletter.js" defer></script>
 </body>
 </html>

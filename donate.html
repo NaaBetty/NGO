@@ -299,10 +299,11 @@
         </div>
         <div>
           <h4 class="text-xl font-bold text-[var(--primary)] mb-4" data-cms-key="donate-field-60">Newsletter</h4>
-          <form class="flex gap-2">
-            <input type="email" placeholder="Your email" class="flex-1 px-3 py-2 rounded text-gray-800 text-sm focus:outline-none" required/>
-            <button type="submit" class="px-4 py-2 bg-[var(--primary)] rounded hover:bg-orange-500 text-white font-bold transition" data-cms-key="donate-field-61">Sign Up</button>
-          </form>
+          <form class="footer-newsletter" data-newsletter-form action="/api/newsletter" method="post">
+  <label class="newsletter-label" for="newsletter-email">Email address</label>
+  <div class="newsletter-input-row"><input id="newsletter-email" type="email" name="email" placeholder="Your email address" autocomplete="email" maxlength="254" required><button type="submit" data-cms-key="donate-field-61">Subscribe</button></div>
+  <p class="newsletter-status" role="status" aria-live="polite"></p>
+</form>
         </div>
       </div>
       <div class="border-t border-gray-700 pt-5 text-center">
@@ -392,5 +393,6 @@
 
 <script src="Javascript/redesign.js" defer></script>
 <script src="Javascript/cms.js" defer></script>
+<script src="Javascript/newsletter.js" defer></script>
 </body>
 </html>

@@ -1,3 +1,4 @@
+import {newsletterHandler} from './newsletter.mjs';
 import {websiteLinks} from './link-inventory.mjs';
 import http from 'node:http';
 import { readFile, writeFile, mkdir, rename } from 'node:fs/promises';
@@ -138,6 +139,7 @@ function validateDraft(draft) {
   return draft;
 }
 function requireRole(user, list) { if (!list.includes(user.role)) {const error=new Error('Your role does not allow this action.');error.status=403;throw error;} }
+const subscribe=newsletterHandler(dataDir);
 const server=http.createServer(async(req,res)=>{
   res.setHeader('X-Content-Type-Options','nosniff');
   res.setHeader('Referrer-Policy','same-origin');
@@ -145,6 +147,7 @@ const server=http.createServer(async(req,res)=>{
   try {
     const url=new URL(req.url,'http://localhost');
     const pathname=url.pathname;
+    if(pathname==='/api/newsletter')return await subscribe(req,res);
     if (pathname.startsWith('/api/admin/')) {
       res.setHeader('Cache-Control','no-store');
       const write=!['GET','HEAD'].includes(req.method);

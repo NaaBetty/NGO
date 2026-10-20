@@ -25,7 +25,16 @@
       "Bash(\"/c/Program Files/Google/Chrome/Application/chrome.exe\" --headless=new --disable-gpu --force-device-scale-factor=2 --user-data-dir=\"C:/Users/HP/Documents/Shelter/Le-Shelter/_chrome_tmp\" --virtual-time-budget=3000 --window-size=780,1400 --dump-dom \"file:///C:/Users/HP/Documents/Shelter/Le-Shelter/_debug.html\")",
       "Bash(\"/c/Program Files/Google/Chrome/Application/chrome.exe\" --headless=new --disable-gpu --force-device-scale-factor=2 --user-data-dir=\"C:/Users/HP/Documents/Shelter/Le-Shelter/_chrome_tmp2\" --virtual-time-budget=3000 --window-size=780,1000 --screenshot=\"C:/Users/HP/Documents/Shelter/Le-Shelter/_true390.png\" \"file:///C:/Users/HP/Documents/Shelter/Le-Shelter/index.html\")",
       "Bash(rm -rf _cdp_tmp)",
-      "Bash(node _cdpshot.mjs)"
+      "Bash(node _cdpshot.mjs)",
+      "PowerShell(node --test \"C:\\\\Users\\\\HP\\\\Documents\\\\Shelter\\\\admin\\\\server\\\\newsletter.test.mjs\" 2>&1 | Select-Object -Last 20)",
+      "PowerShell(node --test \"C:\\\\Users\\\\HP\\\\Documents\\\\Shelter\\\\admin\\\\server\\\\newsletter.test.mjs\" 2>&1)",
+      "PowerShell(node --test \"C:\\\\Users\\\\HP\\\\Documents\\\\Shelter\\\\admin\\\\server\\\\server.test.mjs\" 2>&1)",
+      "Bash(node --test admin/server/server.test.mjs)",
+      "Bash(node -e \"const s=JSON.parse\\(require\\('fs'\\).readFileSync\\('admin/seed.json','utf8'\\)\\); const c=s.pages.find\\(p=>p.file==='contact.html'\\); const sec=c.sections.find\\(s=>s.fields.some\\(f=>f.key==='contact-field-55'\\)\\); const f=sec.fields.find\\(f=>f.key==='contact-field-55'\\); console.log\\('section:',sec.id,'field:',JSON.stringify\\(f\\)\\);\")",
+      "Bash(node -e \"const html=require\\('fs'\\).readFileSync\\('contact.html','utf8'\\); console.log\\('has contact-field-55:', html.includes\\('contact-field-55'\\)\\); console.log\\('has get-in-touch:', html.includes\\('Get in touch'\\)\\); const s=s=>html.includes\\(s\\)?'YES':'NO'; console.log\\('footer section attr:', s\\('data-cms-section=\\\\\"contact-section-5\\\\\"'\\)\\); console.log\\('contact-field-54:', s\\('data-cms-key=\\\\\"contact-field-54\\\\\"'\\)\\); console.log\\('newsletter form:', s\\('footer-newsletter'\\)\\);\")",
+      "Bash(node -e \"const s=JSON.parse\\(require\\('fs'\\).readFileSync\\('admin/seed.json','utf8'\\)\\); const p=s.pages.find\\(p=>p.file==='donate.html'\\); const sec=p.sections.find\\(s=>s.fields.some\\(f=>f.key==='donate-field-61'\\)\\); const f=sec.fields.find\\(f=>f.key==='donate-field-61'\\); console.log\\('section:',sec.id,'field:',JSON.stringify\\(f\\)\\); const html=require\\('fs'\\).readFileSync\\('donate.html','utf8'\\); console.log\\('has donate-field-60:',html.includes\\('donate-field-60'\\)\\); console.log\\('context:', html.substring\\(html.indexOf\\('donate-field-60'\\)-5, html.indexOf\\('donate-field-60'\\)+200\\)\\);\")",
+      "Bash(node -e \"const html=require\\('fs'\\).readFileSync\\('donate.html','utf8'\\); const idx=html.indexOf\\('donate-field-60'\\); console.log\\(html.substring\\(idx-50, idx+400\\)\\);\")",
+      "Bash(node -e \"const html=require\\('fs'\\).readFileSync\\('donate.html','utf8'\\); const idx=html.indexOf\\('donate-field-60'\\); console.log\\(html.substring\\(idx+100, idx+500\\)\\);\")"
     ]
   }
 }

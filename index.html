@@ -33,7 +33,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="images/icon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="images/icon/favicon-32x32.png">
@@ -80,73 +79,78 @@
 
   <link rel="stylesheet" href="css/redesign.css">
   <link rel="stylesheet" href="css/home.css">
+  <script src="admin/content.js" defer></script>
   </head>
   <body class="home-redesign">
     <a class="skip-link" href="#main-content">Skip to content</a>
-    <header class="site-header redesign-header">
-      <div class="utility-bar"><span>Equal opportunity. Every child. Every community.</span>
-        <a href="mailto:lesheltergh@gmail.com">lesheltergh@gmail.com</a>
+    <header class="site-header redesign-header" data-cms-section="index-section-1">
+      <div class="utility-bar">
+        <span>Equal opportunity. Every child. Every community.</span>
+        <a href="mailto:lesheltergh@gmail.com" data-cms-key="index-field-1">lesheltergh@gmail.com</a>
       </div>
       <nav aria-label="Main navigation" class="main-navigation">
-        <a href="index.html" class="brand">
-        <img src="images/Logo.png" alt="Le Shelter Foundation" width="556" height="143"></a>
-        <div class="desktop-links"><a href="index.html" class="nav-link active" aria-current=page>Home</a>
-          <a href="about.html" class="nav-link " >Our story</a>
-          <a href="projects.html" class="nav-link " >Projects</a>
-          <a href="gallery.html" class="nav-link">Gallery</a>
-          <a href="shop.html" class="nav-link " >Shop</a>
-          <a href="contact.html" class="nav-link " >Contact Us</a>
+        <a href="index.html" class="brand" data-cms-key="index-field-2">
+          <img src="images/Logo.png" alt="Le Shelter Foundation" width="556" height="143" data-cms-key="index-field-3">
+        </a>
+        <div class="desktop-links">
+          <a href="index.html" class="nav-link active" aria-current="page" data-cms-key="index-field-4">Home</a>
+          <a href="about.html" class="nav-link " data-cms-key="index-field-5">Our story</a>
+          <a href="projects.html" class="nav-link " data-cms-key="index-field-6">Projects</a>
+          <a href="gallery.html" class="nav-link" data-cms-key="index-field-7">Gallery</a>
+          <a href="shop.html" class="nav-link " data-cms-key="index-field-8">Shop</a>
+          <a href="contact.html" class="nav-link " data-cms-key="index-field-9">Contact Us</a>
         </div>
-        <a class="give-button" href="donate.html">Make a difference</a>
-        <button id="menu-btn" type="button" aria-label="Open navigation" aria-controls="mobile-menu" aria-expanded="false">☰</button>
+        <a class="give-button" href="donate.html" data-cms-key="index-field-10">Make a difference</a>
+        <button id="menu-btn" type="button" aria-label="Open navigation" aria-controls="mobile-menu" aria-expanded="false" data-cms-key="index-field-11">&#9776;</button>
       </nav>
-      <button id="donate-btn" hidden aria-hidden="true" tabindex="-1">Donate</button>
+      <button id="donate-btn" hidden aria-hidden="true" tabindex="-1" data-cms-key="index-field-12">Donate</button>
     </header>
     <div id="mobile-menu" class="mobile-navigation hidden">
-      <button id="close-menu" aria-label="Close navigation">×</button>
+      <button id="close-menu" aria-label="Close navigation">&times;</button>
       <a href="index.html" aria-current="page">Home</a>
       <a href="about.html">Our story</a>
       <a href="projects.html">Projects</a>
       <a href="gallery.html">Gallery</a>
       <a href="shop.html">Shop</a>
       <a href="contact.html">Contact Us</a>
-      <a href="donate.html">Donate ↗</a>
+      <a href="donate.html">Donate &#8599;</a>
     </div>
     <main id="main-content">
-      <section class="opening section-shell hero-carousel" role="region" aria-roledescription="carousel" aria-label="Le Shelter community stories">
+      <section class="opening section-shell hero-carousel" role="region" aria-roledescription="carousel" aria-label="Le Shelter community stories" data-cms-section="index-section-2">
         <div class="opening-copy">
-          <h1>A little support.<br>A lifetime of<br><em>possibility.</em></h1>
-          <p class="intro">Every child deserves the chance to learn, dream and thrive. We help children in rural Ghana find that chance, one school and one community at a time.</p>
-          <div class="action-row"><a class="solid-link" href="donate.html">Help a child learn <span aria-hidden="true"></span></a>
-            <a class="text-link" href="about.html">Meet Le Shelter <span aria-hidden="true"></span></a>
+          <h1 data-cms-key="index-field-13">A little support.<br>A lifetime of<br><em>possibility.</em></h1>
+          <p class="intro" data-cms-key="index-field-14">Every child deserves the chance to learn, dream and thrive. We help children in rural Ghana find that chance, one school and one community at a time.</p>
+          <div class="action-row">
+            <a class="solid-link" href="donate.html" data-cms-key="index-field-15">Help a child learn <span aria-hidden="true"></span></a>
+            <a class="text-link" href="about.html" data-cms-key="index-field-16">Meet Le Shelter <span aria-hidden="true"></span></a>
           </div>
           <div class="opening-note"><span class="note-line"></span>Local hearts. Shared purpose. Since 2017.</div>
         </div>
         <div class="opening-visual">
           <div class="hero-slides">
             <figure class="hero-slide" role="group" aria-roledescription="slide" aria-label="1 of 4">
-              <img src="images/gallery/image45.webp" alt="Children and Le Shelter volunteers celebrating together with learning materials" fetchpriority=high width="3120" height="1637">
+              <img src="images/gallery/image45.webp" alt="Children and Le Shelter volunteers celebrating together with learning materials" fetchpriority="high" width="3120" height="1637" data-cms-key="index-field-17">
               <figcaption class="photo-label">
                 <span aria-hidden="true">&#9825;</span>
                 <span>More than supplies.<br><strong>A reason to believe.</strong></span>
               </figcaption>
             </figure>
             <figure class="hero-slide" role="group" aria-roledescription="slide" aria-label="2 of 4" hidden>
-              <img src="images/gallery/image23.webp" alt="Students receiving educational materials from Le Shelter Foundation" loading=lazy width="3120" height="1637">
+              <img src="images/gallery/image23.webp" alt="Students receiving educational materials from Le Shelter Foundation" loading="lazy" width="3120" height="1637" data-cms-key="index-field-18">
               <figcaption class="photo-label">
                 <span aria-hidden="true">&#9825;</span>
                 <span>The tools to learn.<br><strong>The chance to thrive.</strong></span>
               </figcaption>
             </figure>
             <figure class="hero-slide" role="group" aria-roledescription="slide" aria-label="3 of 4" hidden>
-              <img src="images/gallery/image12.webp" alt="Le Shelter Foundation mentorship and community outreach in Ghana" loading=lazy width="3120" height="1637">
+              <img src="images/gallery/image12.webp" alt="Le Shelter Foundation mentorship and community outreach in Ghana" loading="lazy" width="3120" height="1637" data-cms-key="index-field-19">
               <figcaption class="photo-label">
                 <span aria-hidden="true">&#9825;</span>
                 <span>Guidance today.<br><strong>Confidence for tomorrow.</strong></span>
               </figcaption>
             </figure>
             <figure class="hero-slide" role="group" aria-roledescription="slide" aria-label="4 of 4" hidden>
-              <img src="images/gallery/image34.webp" alt="Community members taking part in a Le Shelter Foundation outreach" loading=lazy width="3120" height="1637">
+              <img src="images/gallery/image34.webp" alt="Community members taking part in a Le Shelter Foundation outreach" loading="lazy" width="3120" height="1637" data-cms-key="index-field-20">
               <figcaption class="photo-label">
                 <span aria-hidden="true">&#9825;</span>
                 <span>Stronger together.<br><strong>Possibility for every child.</strong></span>
@@ -156,18 +160,18 @@
           <span class="photo-caption">LE SHELTER FOUNDATION &middot; GHANA</span>
         </div>
         <div class="hero-controls">
-          <button type="button" data-hero-prev hidden aria-label="Previous slide">?</button>
+          <button type="button" data-hero-prev hidden aria-label="Previous slide" data-cms-key="index-field-21">?</button>
           <div class="hero-dots" aria-label="Choose a slide">
             <button type="button" data-hero-slide="0" aria-label="Show slide 1" aria-current="true"></button>
             <button type="button" data-hero-slide="1" aria-label="Show slide 2" aria-current="false"></button>
             <button type="button" data-hero-slide="2" aria-label="Show slide 3" aria-current="false"></button>
             <button type="button" data-hero-slide="3" aria-label="Show slide 4" aria-current="false"></button>
           </div>
-          <button type="button" data-hero-next hidden aria-label="Next slide">?</button>
-          <button type="button" data-hero-pause hidden aria-label="Pause slideshow">Pause</button>
+          <button type="button" data-hero-next hidden aria-label="Next slide" data-cms-key="index-field-26">?</button>
+          <button type="button" data-hero-pause hidden aria-label="Pause slideshow" data-cms-key="index-field-27">Pause</button>
         </div>
       </section>
-      <section class="reference-about">
+      <section class="reference-about" data-cms-section="index-section-3">
         <div class="reference-container about-layout">
           <div class="about-text">
             <div class="reference-stats" aria-label="Our impact">
@@ -181,23 +185,23 @@
                 <span>Community<br>volunteers</span>
               </div>
             </div>
-            <h2>Working Together for a<br>Just Society</h2>
-            <p>We work alongside rural communities in Ghana to help children access education, build confidence and find opportunities to thrive.</p>
+            <h2 data-cms-key="index-field-28">Working Together for a<br>Just Society</h2>
+            <p data-cms-key="index-field-29">We work alongside rural communities in Ghana to help children access education, build confidence and find opportunities to thrive.</p>
             <div class="mission-columns">
               <div>
-                <h3><span aria-hidden="true">&#10043;</span> Our Mission</h3>
-                <p>To provide equal educational opportunities through learning materials, guidance and community support.</p>
+                <h3 data-cms-key="index-field-30"><span aria-hidden="true">&#10043;</span> Our Mission</h3>
+                <p data-cms-key="index-field-31">To provide equal educational opportunities through learning materials, guidance and community support.</p>
               </div>
               <div>
-                <h3><span aria-hidden="true">&#10043;</span> Our Vision</h3>
-                <p>A future where every child has the opportunity to learn, dream and reach their potential.</p>
+                <h3 data-cms-key="index-field-32"><span aria-hidden="true">&#10043;</span> Our Vision</h3>
+                <p data-cms-key="index-field-33">A future where every child has the opportunity to learn, dream and reach their potential.</p>
               </div>
             </div>
-            <a class="yellow-button pill" href="about.html">More About Us<span aria-hidden="true"></span></a>
+            <a class="yellow-button pill" href="about.html" data-cms-key="index-field-34">More About Us<span aria-hidden="true"></span></a>
           </div>
           <div class="about-collage">
-            <img class="collage-back" src="images/gallery/s2.jpg" alt="Le Shelter volunteers supporting children with learning materials" loading="lazy">
-            <img class="collage-front" src="images/gallery/s3.jpg" alt="Le Shelter Foundation school outreach in Ghana" loading="lazy">
+            <img class="collage-back" src="images/gallery/s2.jpg" alt="Le Shelter volunteers supporting children with learning materials" loading="lazy" data-cms-key="index-field-35">
+            <img class="collage-front" src="images/gallery/s3.jpg" alt="Le Shelter Foundation school outreach in Ghana" loading="lazy" data-cms-key="index-field-36">
             <div class="experience-tag">
               <strong>Since<br>2017</strong>
               <span>Growing<br>opportunity</span>
@@ -206,19 +210,21 @@
           </div>
         </div>
       </section>
-      <section class="upcoming-project" id="upcoming-project" aria-labelledby="upcoming-title">
+      <section class="upcoming-project" id="upcoming-project" aria-labelledby="upcoming-title" data-cms-section="index-section-4">
         <div class="reference-container">
           <header class="upcoming-heading">
-            <h2 id="upcoming-title">Upcoming Project</h2>
-            <p>Help create an inspiring learning environment for children in rural Ghana.</p>
+            <h2 id="upcoming-title" data-cms-key="index-field-37">Upcoming Project</h2>
+            <p data-cms-key="index-field-38">Help create an inspiring learning environment for children in rural Ghana.</p>
           </header>
-          <div class="upcoming-panel"><h3>Dream ~ Learn ~ Achieve</h3>
+          <div class="upcoming-panel">
+            <h3 data-cms-key="index-field-39">Dream ~ Learn ~ Achieve</h3>
             <div class="upcoming-layout">
               <button class="project-flyer" type="button" data-open-flyer aria-haspopup="dialog" aria-controls="flyer-modal" aria-label="View the full Anyirawase project flyer">
-                <img src="images/Anyirawase.jpg" alt="Dream Learn Achieve project flyer for Anyirawase D/A JHS, Volta Region. Flyer dates: September 18 to 21, 2026." width="4000" height="4000" loading="lazy"></button>
+                <img src="images/Anyirawase.jpg" alt="Dream Learn Achieve project flyer for Anyirawase D/A JHS, Volta Region. Flyer dates: September 18 to 21, 2026." width="4000" height="4000" loading="lazy" data-cms-key="index-field-41">
+              </button>
               <div class="upcoming-details">
-                <h4>Investing in young lives.<br>Strengthening a community.</h4>
-                <p>This initiative reflects Le Shelter Foundation's commitment to empowering children and supporting underserved communities through education. At Anyirawase D/A JHS in the Volta Region, the project aims to create a supportive learning environment where students can dream boldly, learn confidently and achieve their potential.</p>
+                <h4 data-cms-key="index-field-42">Investing in young lives.<br>Strengthening a community.</h4>
+                <p data-cms-key="index-field-43">This initiative reflects Le Shelter Foundation's commitment to empowering children and supporting underserved communities through education. At Anyirawase D/A JHS in the Volta Region, the project aims to create a supportive learning environment where students can dream boldly, learn confidently and achieve their potential.</p>
                 <dl class="project-facts">
                   <div><dt>Dates</dt>
                     <dd><time datetime="2026-09-18">September 18</time>&ndash;<time datetime="2026-09-21">21, 2026</time></dd>
@@ -233,14 +239,13 @@
                     <dd>GH&#8373;10,000 for school supplies</dd>
                   </div>
                 </dl>
-
                 <div class="project-actions">
-                  <a class="solid-link" href="donate.html">Donate Today</a>
-                  <a class="project-outline-link" href="https://docs.google.com/forms/d/e/1FAIpQLSf8BNb_TOu1TX99yPvh-6kXlTA_dcG3nNBWbJJK5OmTPgmAxQ/viewform?pli=1" target="_blank" rel="noopener noreferrer">Get Involved</a>
+                  <a class="solid-link" href="donate.html" data-cms-key="index-field-44">Donate Today</a>
+                  <a class="project-outline-link" href="https://docs.google.com/forms/d/e/1FAIpQLSf8BNb_TOu1TX99yPvh-6kXlTA_dcG3nNBWbJJK5OmTPgmAxQ/viewform?pli=1" target="_blank" rel="noopener noreferrer" data-cms-key="index-field-45">Get Involved</a>
                 </div>
                 <div class="project-contact">
-                  <p>Have another way to support this project?</p>
-                  <a href="contact.html">Talk to our team &#8594;</a>
+                  <p data-cms-key="index-field-46">Have another way to support this project?</p>
+                  <a href="contact.html" data-cms-key="index-field-47">Talk to our team &#8594;</a>
                 </div>
               </div>
             </div>
@@ -248,101 +253,117 @@
         </div>
       </section>
       <div class="projects-community-screen">
-        <section class="reference-events">
+        <section class="reference-events" data-cms-section="index-section-5">
           <div class="reference-container events-layout">
             <div class="events-intro">
-              <p class="script-label">Opportunity in action</p>
-              <h2>Join in.<br>Make a lasting<br>difference.</h2>
-              <p>Meet the communities and explore the projects at the heart of our work.</p>
-              <a class="yellow-button pill" href="projects.html">Discover more</a>
+              <p class="script-label" data-cms-key="index-field-48">Opportunity in action</p>
+              <h2 data-cms-key="index-field-49">Join in.<br>Make a lasting<br>difference.</h2>
+              <p data-cms-key="index-field-50">Meet the communities and explore the projects at the heart of our work.</p>
+              <a class="yellow-button pill" href="projects.html" data-cms-key="index-field-51">Discover more</a>
             </div>
             <div class="project-carousel" role="region" aria-roledescription="carousel" aria-label="Five community projects">
               <div class="event-track" id="community-stories" tabindex="0" aria-label="Community projects">
-                <a class="event-card" href="projects/Asiafo.html">
-                  <img src="images/gallery/image15.webp" alt="Learning activities at Asiafo Amanfro" loading="lazy">
+                <a class="event-card" href="projects/Asiafo.html" data-cms-key="index-field-53">
+                  <img src="images/gallery/image15.webp" alt="Learning activities at Asiafo Amanfro" loading="lazy" data-cms-key="index-field-54">
                   <span class="event-category">Asiafo Amanfro</span>
-                  <div><h3>Learning today.<br>Dreaming bigger tomorrow.</h3>
+                  <div>
+                    <h3 data-cms-key="index-field-55">Learning today.<br>Dreaming bigger tomorrow.</h3>
                     <span class="event-link">Explore the project &#8599;</span>
                   </div>
                 </a>
-                <a class="event-card" href="projects/Apewosika.html">
-                  <img src="images/Apewosika.jpeg" alt="Le Shelter Foundation outreach at Apewosika" loading="lazy">
+                <a class="event-card" href="projects/Apewosika.html" data-cms-key="index-field-56">
+                  <img src="images/Apewosika.jpeg" alt="Le Shelter Foundation outreach at Apewosika" loading="lazy" data-cms-key="index-field-57">
                   <span class="event-category">Apewosika</span>
-                  <div><h3>Small acts of care.<br>A shared opportunity.</h3>
+                  <div>
+                    <h3 data-cms-key="index-field-58">Small acts of care.<br>A shared opportunity.</h3>
                     <span class="event-link">Explore the project &#8599;</span>
                   </div>
                 </a>
-                <a class="event-card" href="projects/Asutsuare.html">
-                  <img src="images/gallery/s4.jpg" alt="Le Shelter volunteers engaging with a local community" loading="lazy">
+                <a class="event-card" href="projects/Asutsuare.html" data-cms-key="index-field-59">
+                  <img src="images/gallery/s4.jpg" alt="Le Shelter volunteers engaging with a local community" loading="lazy" data-cms-key="index-field-60">
                   <span class="event-category">Asutsuare</span>
-                  <div><h3>Encouragement that<br>opens new doors.</h3>
+                  <div>
+                    <h3 data-cms-key="index-field-61">Encouragement that<br>opens new doors.</h3>
                     <span class="event-link">Explore the project &#8599;</span>
                   </div>
                 </a>
-                <a class="event-card" href="projects/Ayensukrom.html">
-                  <img src="images/gallery/image15.webp" alt="Students at Ayensukrom M/A School" loading="lazy">
+                <a class="event-card" href="projects/Ayensukrom.html" data-cms-key="index-field-62">
+                  <img src="images/gallery/image15.webp" alt="Students at Ayensukrom M/A School" loading="lazy" data-cms-key="index-field-63">
                   <span class="event-category">Ayensukrom</span>
                   <div>
-                    <p>School support</p>
-                    <h3>A new chapter.<br>A stronger school.</h3>
+                    <p data-cms-key="index-field-64">School support</p>
+                    <h3 data-cms-key="index-field-65">A new chapter.<br>A stronger school.</h3>
                     <span class="event-link">Explore the project &#8599;</span>
                   </div>
                 </a>
-                <a class="event-card" href="#upcoming-project">
-                  <img src="images/Anyirawase.jpg" alt="Dream Learn Achieve project flyer" loading="lazy">
+                <a class="event-card" href="#upcoming-project" data-cms-key="index-field-66">
+                  <img src="images/Anyirawase.jpg" alt="Dream Learn Achieve project flyer" loading="lazy" data-cms-key="index-field-67">
                   <span class="event-category">Anyirawase</span>
                   <div>
-                    <p>Dream ~ Learn ~ Achieve</p>
-                    <h3>Investing in young lives.<br>Growing opportunity.</h3>
+                    <p data-cms-key="index-field-68">Dream ~ Learn ~ Achieve</p>
+                    <h3 data-cms-key="index-field-69">Investing in young lives.<br>Growing opportunity.</h3>
                     <span class="event-link">Explore the project &#8599;</span>
                   </div>
                 </a>
               </div>
             </div>
-            <button class="project-carousel-arrow next" type="button" data-story-next aria-label="Next projects" aria-controls="community-stories">&#8594;</button>
-          </div>
+            <button class="project-carousel-arrow prev" type="button" data-story-prev aria-label="Previous projects" aria-controls="community-stories" data-cms-key="index-field-52">&#8592;</button>
+            <button class="project-carousel-arrow next" type="button" data-story-next aria-label="Next projects" aria-controls="community-stories" data-cms-key="index-field-70">&#8594;</button>
           </div>
         </section>
-        <section class="community-invitation">
+        <section class="community-invitation" data-cms-section="index-section-6">
           <div class="reference-container invitation-layout">
-            <div><p class="eyebrow">THERE IS A PLACE FOR YOU HERE</p>
-              <h2>Your kindness could<br>change someone?s story.</h2>
-              <p>Give your time. Share your skills. Make a donation.<br>However you choose to help, it matters.</p>
+            <div>
+              <p class="eyebrow" data-cms-key="index-field-71">THERE IS A PLACE FOR YOU HERE</p>
+              <h2 data-cms-key="index-field-72">Your kindness could<br>change someone's story.</h2>
+              <p data-cms-key="index-field-73">Give your time. Share your skills. Make a donation.<br>However you choose to help, it matters.</p>
             </div>
-            <a class="yellow-button pill" href="contact.html">Get involved</a>
+            <a class="yellow-button pill" href="contact.html" data-cms-key="index-field-74">Get involved</a>
           </div>
         </section>
       </div>
-      <section class="reference-support">
-        <img src="images/gallery/image70.webp" alt="" loading="lazy">
-        <div><p class="script-label">Together, we can do more</p>
-          <h2>Your Support Creates Change</h2>
-          <p>With your dedication and kindness, we can help children access education,<br>build confidence and find opportunities to thrive.</p>
-          <a class="yellow-button pill" href="shop.html">Buy to Support</a>
+      <section class="reference-support" data-cms-section="index-section-7">
+        <img src="images/gallery/image70.webp" alt="" loading="lazy" data-cms-key="index-field-75">
+        <div>
+          <p class="script-label" data-cms-key="index-field-76">Together, we can do more</p>
+          <h2 data-cms-key="index-field-77">Your Support Creates Change</h2>
+          <p data-cms-key="index-field-78">With your dedication and kindness, we can help children access education,<br>build confidence and find opportunities to thrive.</p>
+          <a class="yellow-button pill" href="shop.html" data-cms-key="index-field-79">Buy to Support</a>
         </div>
       </section>
     </main>
-    <footer class="reference-footer">
+    <footer class="reference-footer" data-cms-section="index-section-8">
       <div class="reference-container reference-footer-grid">
-        <div><a href="index.html">
-          <img class="footer-brand" src="images/Logo.png" alt="Le Shelter Foundation" width="556" height="143"></a>
-          <p>Le Shelter Foundation provides equal educational opportunities for children in rural Ghana.</p>
+        <div>
+          <a href="index.html" data-cms-key="index-field-80">
+            <img class="footer-brand" src="images/Logo.png" alt="Le Shelter Foundation" width="556" height="143" data-cms-key="index-field-81">
+          </a>
+          <p data-cms-key="index-field-82">Le Shelter Foundation provides equal educational opportunities for children in rural Ghana.</p>
         </div>
-        <div><h2>Socials</h2>
-          <div class="social-links"><a href="https://www.facebook.com/profile.php?id=100067770571763" target="_blank" rel="noopener noreferrer" aria-label="Facebook">f</a>
-            <a href="https://www.instagram.com/le.shelter.foundation" target="_blank" rel="noopener noreferrer" aria-label="Instagram">&#9678;</a>
-            <a href="https://x.com/le_shelter" target="_blank" rel="noopener noreferrer" aria-label="X">X</a>
-            <a href="https://wa.me/233530449325" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">W</a>
+        <div>
+          <h2 data-cms-key="index-field-83">Socials</h2>
+          <div class="social-links">
+            <a href="https://www.facebook.com/profile.php?id=100067770571763" target="_blank" rel="noopener noreferrer" aria-label="Facebook" data-cms-key="index-field-84">f</a>
+            <a href="https://www.instagram.com/le.shelter.foundation" target="_blank" rel="noopener noreferrer" aria-label="Instagram" data-cms-key="index-field-85">&#9678;</a>
+            <a href="https://x.com/le_shelter" target="_blank" rel="noopener noreferrer" aria-label="X" data-cms-key="index-field-86">X</a>
+            <a href="https://wa.me/233530449325" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" data-cms-key="index-field-87">W</a>
           </div>
         </div>
-        <div><h2>Contact</h2>
-          <p>Baatsona-Spintex, Ghana</p>
-          <a href="tel:+233530449325">+233 53 044 9325</a>
-          <a href="mailto:lesheltergh@gmail.com">lesheltergh@gmail.com</a>
+        <div>
+          <h2 data-cms-key="index-field-88">Contact</h2>
+          <p data-cms-key="index-field-89">Baatsona-Spintex, Ghana</p>
+          <a href="tel:+233530449325" data-cms-key="index-field-90">+233 53 044 9325</a>
+          <a href="mailto:lesheltergh@gmail.com" data-cms-key="index-field-91">lesheltergh@gmail.com</a>
         </div>
-        <div><h2>Stay connected</h2>
-          <p>Subscribe to our newsletter for updates.</p>
-          <a class="footer-contact" href="contact.html">Get in touch <span aria-hidden="true"></span></a>
+        <div>
+          <h2 data-cms-key="index-field-92">Stay connected</h2>
+          <p data-cms-key="index-field-93">Find your place in our next chapter.</p>
+          <a class="text-link" href="contact.html" data-cms-key="index-field-94">Get in touch &#8599;</a>
+          <form class="footer-newsletter" data-newsletter-form action="/api/newsletter" method="post">
+  <label class="newsletter-label" for="newsletter-email">Email address</label>
+  <div class="newsletter-input-row"><input id="newsletter-email" type="email" name="email" placeholder="Your email address" autocomplete="email" maxlength="254" required><button type="submit">Subscribe</button></div>
+  <p class="newsletter-status" role="status" aria-live="polite"></p>
+</form>
         </div>
       </div>
       <div class="reference-container reference-copyright">Copyright &copy; <span data-year>2026</span> Le Shelter Foundation. All rights reserved.</div>
@@ -352,5 +373,7 @@
       <img src="images/Anyirawase.jpg" alt="Dream Learn Achieve project flyer for Anyirawase D/A JHS, Volta Region, September 18 to 21, 2026." width="4000" height="4000">
     </dialog>
     <script src="Javascript/redesign.js" defer></script>
+    <script src="Javascript/cms.js" defer></script>
+    <script src="Javascript/newsletter.js" defer></script>
   </body>
 </html>
