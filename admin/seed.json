@@ -2265,26 +2265,8 @@
               "type": "text",
               "attribute": "text",
               "label": "P: Find your place in our next chapter.",
-              "value": "Find your place in our next chapter.",
-              "default": "Find your place in our next chapter."
-            },
-            {
-              "id": "about-field-174-text",
-              "key": "about-field-174",
-              "type": "text",
-              "attribute": "text",
-              "label": "A: Get in touch ↗",
-              "value": "Get in touch ↗",
-              "default": "Get in touch ↗"
-            },
-            {
-              "id": "about-field-174-href",
-              "key": "about-field-174",
-              "type": "link",
-              "attribute": "href",
-              "label": "Destination",
-              "value": "contact.html",
-              "default": "contact.html"
+              "value": "To find your place in our next chapter, Subscribe to our Newsletter",
+              "default": "To find your place in our next chapter, Subscribe to our Newsletter"
             }
           ],
           "hidden": false,
@@ -3041,26 +3023,8 @@
               "type": "text",
               "attribute": "text",
               "label": "P: Find your place in our next chapter.",
-              "value": "Find your place in our next chapter.",
-              "default": "Find your place in our next chapter."
-            },
-            {
-              "id": "contact-field-55-text",
-              "key": "contact-field-55",
-              "type": "text",
-              "attribute": "text",
-              "label": "A: Get in touch ↗",
-              "value": "Get in touch ↗",
-              "default": "Get in touch ↗"
-            },
-            {
-              "id": "contact-field-55-href",
-              "key": "contact-field-55",
-              "type": "link",
-              "attribute": "href",
-              "label": "Destination",
-              "value": "contact.html",
-              "default": "contact.html"
+              "value": "To find your place in our next chapter, Subscribe to our Newsletter",
+              "default": "To find your place in our next chapter, Subscribe to our Newsletter"
             }
           ],
           "hidden": false,
@@ -5042,26 +5006,8 @@
               "type": "text",
               "attribute": "text",
               "label": "P: Find your place in our next chapter.",
-              "value": "Find your place in our next chapter.",
-              "default": "Find your place in our next chapter."
-            },
-            {
-              "id": "gallery-field-95-text",
-              "key": "gallery-field-95",
-              "type": "text",
-              "attribute": "text",
-              "label": "A: Get in touch ↗",
-              "value": "Get in touch ↗",
-              "default": "Get in touch ↗"
-            },
-            {
-              "id": "gallery-field-95-href",
-              "key": "gallery-field-95",
-              "type": "link",
-              "attribute": "href",
-              "label": "Destination",
-              "value": "contact.html",
-              "default": "contact.html"
+              "value": "To find your place in our next chapter, Subscribe to our Newsletter",
+              "default": "To find your place in our next chapter, Subscribe to our Newsletter"
             }
           ],
           "hidden": false,
@@ -6310,26 +6256,8 @@
               "type": "text",
               "attribute": "text",
               "label": "P: Find your place in our next chapter.",
-              "value": "Find your place in our next chapter.",
-              "default": "Find your place in our next chapter."
-            },
-            {
-              "id": "index-field-94-text",
-              "key": "index-field-94",
-              "type": "text",
-              "attribute": "text",
-              "label": "A: Get in touch ↗",
-              "value": "Get in touch ↗",
-              "default": "Get in touch ↗"
-            },
-            {
-              "id": "index-field-94-href",
-              "key": "index-field-94",
-              "type": "link",
-              "attribute": "href",
-              "label": "Destination",
-              "value": "contact.html",
-              "default": "contact.html"
+              "value": "To find your place in our next chapter, Subscribe to our Newsletter",
+              "default": "To find your place in our next chapter, Subscribe to our Newsletter"
             }
           ],
           "hidden": false,
@@ -8155,26 +8083,8 @@
               "type": "text",
               "attribute": "text",
               "label": "P: Find your place in our next chapter.",
-              "value": "Find your place in our next chapter.",
-              "default": "Find your place in our next chapter."
-            },
-            {
-              "id": "projects-field-135-text",
-              "key": "projects-field-135",
-              "type": "text",
-              "attribute": "text",
-              "label": "A: Get in touch ↗",
-              "value": "Get in touch ↗",
-              "default": "Get in touch ↗"
-            },
-            {
-              "id": "projects-field-135-href",
-              "key": "projects-field-135",
-              "type": "link",
-              "attribute": "href",
-              "label": "Destination",
-              "value": "contact.html",
-              "default": "contact.html"
+              "value": "To find your place in our next chapter, Subscribe to our Newsletter",
+              "default": "To find your place in our next chapter, Subscribe to our Newsletter"
             }
           ],
           "hidden": false,
@@ -9052,24 +8962,6 @@
               "label": "P: Questions about availability or delivery? Get in",
               "value": "Questions about availability or delivery? Get in touch.",
               "default": "Questions about availability or delivery? Get in touch."
-            },
-            {
-              "id": "shop-field-102-text",
-              "key": "shop-field-102",
-              "type": "text",
-              "attribute": "text",
-              "label": "A: Get in touch.",
-              "value": "Get in touch.",
-              "default": "Get in touch."
-            },
-            {
-              "id": "shop-field-102-href",
-              "key": "shop-field-102",
-              "type": "link",
-              "attribute": "href",
-              "label": "Destination",
-              "value": "contact.html",
-              "default": "contact.html"
             }
           ],
           "hidden": false,
@@ -9416,26 +9308,8 @@
               "type": "text",
               "attribute": "text",
               "label": "P: Find your place in our next chapter.",
-              "value": "Find your place in our next chapter.",
-              "default": "Find your place in our next chapter."
-            },
-            {
-              "id": "shop-field-127-text",
-              "key": "shop-field-127",
-              "type": "text",
-              "attribute": "text",
-              "label": "A: Get in touch ↗",
-              "value": "Get in touch ↗",
-              "default": "Get in touch ↗"
-            },
-            {
-              "id": "shop-field-127-href",
-              "key": "shop-field-127",
-              "type": "link",
-              "attribute": "href",
-              "label": "Destination",
-              "value": "contact.html",
-              "default": "contact.html"
+              "value": "To find your place in our next chapter, Subscribe to our Newsletter",
+              "default": "To find your place in our next chapter, Subscribe to our Newsletter"
             }
           ],
           "hidden": false,
@@ -10632,26 +10506,8 @@
               "type": "text",
               "attribute": "text",
               "label": "P: Find your place in our next chapter.",
-              "value": "Find your place in our next chapter.",
-              "default": "Find your place in our next chapter."
-            },
-            {
-              "id": "project-apewosika-field-88-text",
-              "key": "project-apewosika-field-88",
-              "type": "text",
-              "attribute": "text",
-              "label": "A: Get in touch ↗",
-              "value": "Get in touch ↗",
-              "default": "Get in touch ↗"
-            },
-            {
-              "id": "project-apewosika-field-88-href",
-              "key": "project-apewosika-field-88",
-              "type": "link",
-              "attribute": "href",
-              "label": "Destination",
-              "value": "../contact.html",
-              "default": "../contact.html"
+              "value": "To find your place in our next chapter, Subscribe to our Newsletter",
+              "default": "To find your place in our next chapter, Subscribe to our Newsletter"
             }
           ],
           "hidden": false,
@@ -11848,26 +11704,8 @@
               "type": "text",
               "attribute": "text",
               "label": "P: Find your place in our next chapter.",
-              "value": "Find your place in our next chapter.",
-              "default": "Find your place in our next chapter."
-            },
-            {
-              "id": "project-asiafo-field-88-text",
-              "key": "project-asiafo-field-88",
-              "type": "text",
-              "attribute": "text",
-              "label": "A: Get in touch ↗",
-              "value": "Get in touch ↗",
-              "default": "Get in touch ↗"
-            },
-            {
-              "id": "project-asiafo-field-88-href",
-              "key": "project-asiafo-field-88",
-              "type": "link",
-              "attribute": "href",
-              "label": "Destination",
-              "value": "../contact.html",
-              "default": "../contact.html"
+              "value": "To find your place in our next chapter, Subscribe to our Newsletter",
+              "default": "To find your place in our next chapter, Subscribe to our Newsletter"
             }
           ],
           "hidden": false,
@@ -13064,26 +12902,8 @@
               "type": "text",
               "attribute": "text",
               "label": "P: Find your place in our next chapter.",
-              "value": "Find your place in our next chapter.",
-              "default": "Find your place in our next chapter."
-            },
-            {
-              "id": "project-asutsuare-field-88-text",
-              "key": "project-asutsuare-field-88",
-              "type": "text",
-              "attribute": "text",
-              "label": "A: Get in touch ↗",
-              "value": "Get in touch ↗",
-              "default": "Get in touch ↗"
-            },
-            {
-              "id": "project-asutsuare-field-88-href",
-              "key": "project-asutsuare-field-88",
-              "type": "link",
-              "attribute": "href",
-              "label": "Destination",
-              "value": "../contact.html",
-              "default": "../contact.html"
+              "value": "To find your place in our next chapter, Subscribe to our Newsletter",
+              "default": "To find your place in our next chapter, Subscribe to our Newsletter"
             }
           ],
           "hidden": false,
@@ -14280,26 +14100,8 @@
               "type": "text",
               "attribute": "text",
               "label": "P: Find your place in our next chapter.",
-              "value": "Find your place in our next chapter.",
-              "default": "Find your place in our next chapter."
-            },
-            {
-              "id": "project-ayensukrom-field-88-text",
-              "key": "project-ayensukrom-field-88",
-              "type": "text",
-              "attribute": "text",
-              "label": "A: Get in touch ↗",
-              "value": "Get in touch ↗",
-              "default": "Get in touch ↗"
-            },
-            {
-              "id": "project-ayensukrom-field-88-href",
-              "key": "project-ayensukrom-field-88",
-              "type": "link",
-              "attribute": "href",
-              "label": "Destination",
-              "value": "../contact.html",
-              "default": "../contact.html"
+              "value": "To find your place in our next chapter, Subscribe to our Newsletter",
+              "default": "To find your place in our next chapter, Subscribe to our Newsletter"
             }
           ],
           "hidden": false,
@@ -15496,26 +15298,8 @@
               "type": "text",
               "attribute": "text",
               "label": "P: Find your place in our next chapter.",
-              "value": "Find your place in our next chapter.",
-              "default": "Find your place in our next chapter."
-            },
-            {
-              "id": "project-ayensukrom0-field-88-text",
-              "key": "project-ayensukrom0-field-88",
-              "type": "text",
-              "attribute": "text",
-              "label": "A: Get in touch ↗",
-              "value": "Get in touch ↗",
-              "default": "Get in touch ↗"
-            },
-            {
-              "id": "project-ayensukrom0-field-88-href",
-              "key": "project-ayensukrom0-field-88",
-              "type": "link",
-              "attribute": "href",
-              "label": "Destination",
-              "value": "../contact.html",
-              "default": "../contact.html"
+              "value": "To find your place in our next chapter, Subscribe to our Newsletter",
+              "default": "To find your place in our next chapter, Subscribe to our Newsletter"
             }
           ],
           "hidden": false,
