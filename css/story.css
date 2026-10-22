@@ -186,3 +186,12 @@
 .story-project-feature div.featured-story:hover img{transform:none}
 
 .story-project-feature .story-tag{display:none}
+
+/* Fill the feature column without a caption below the rotating photograph. */
+.story-project-feature .project-editorial{align-items:stretch}
+.story-project-feature .featured-story{position:relative;min-height:clamp(180px,calc(100svh - var(--story-footer-height,200px) - 195px),400px)}
+.story-project-feature .story-image{position:absolute;inset:0;width:100%;height:100%;aspect-ratio:auto}
+@media(max-width:700px){
+  .story-project-feature .featured-story{min-height:0}
+  .story-project-feature .story-image{position:relative;inset:auto;height:auto;aspect-ratio:1.7}
+}

@@ -147,3 +147,5 @@
 .reference-support .support-button{background:var(--sunflower);color:#193d31;font-weight:750}
 .reference-support .support-button:hover{background:#f3c333}
 @media(max-width:700px){.reference-support p:not(.script-label){font-size:14px}}
+.opening.hero-carousel [data-hero-prev],
+.opening.hero-carousel [data-hero-next]{display:none!important}
