@@ -70,3 +70,13 @@ html{scroll-padding-top:115px}
 .whatsapp-float-icon .fa-whatsapp{font-size:29px}
 .social-links a.social-icon-explicit::before{content:none}
 .social-links a.social-icon-explicit i{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:18px;line-height:1}
+.mobile-menu-open{overflow:hidden}
+#mobile-menu.mobile-navigation{display:flex;align-items:center;justify-content:center;padding:85px 22px 55px;background:rgba(255,255,255,.6);-webkit-backdrop-filter:blur(9px);backdrop-filter:blur(9px);overflow-y:auto;overscroll-behavior:contain}
+#mobile-menu.mobile-navigation.hidden{display:none}
+#mobile-menu .mobile-menu-panel{display:flex;flex-direction:column;align-items:stretch;width:min(100%,480px);height:min(650px,calc(100svh - 140px));min-height:360px;padding:18px 30px 25px;background:#fff}
+#mobile-menu .mobile-menu-panel a{display:flex;flex:1;align-items:center;justify-content:center;margin:0;padding:10px 5px;text-align:center;font-family:Inter,Arial,sans-serif;font-size:18px;font-weight:500;line-height:1.4;color:var(--primary);text-decoration:none}
+#mobile-menu .mobile-menu-panel a[href*="donate.html"]{flex:0 0 auto;min-height:54px;margin-top:20px;background:var(--primary);color:#fff;border-radius:3px;font-size:16px;font-weight:700}
+#mobile-menu #close-menu{position:absolute;top:max(18px,env(safe-area-inset-top));right:25px;display:grid;place-items:center;width:40px;height:40px;padding:0;font:32px/1 Inter,Arial,sans-serif;color:#63706e;cursor:pointer}
+#mobile-menu a:focus-visible,#mobile-menu button:focus-visible{outline:2px solid var(--primary);outline-offset:4px}
+@media(min-width:851px){#mobile-menu.mobile-navigation{display:none!important}}
+@media(max-height:520px){#mobile-menu.mobile-navigation{align-items:flex-start;padding-top:60px}.mobile-menu-open #mobile-menu .mobile-menu-panel{height:auto;min-height:340px}}

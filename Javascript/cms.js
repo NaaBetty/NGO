@@ -161,5 +161,12 @@
     document.addEventListener('click',event=>{if(event.target.closest('a,button')){event.preventDefault();event.stopImmediatePropagation();}},true);
     window.addEventListener('message',event=>{if(event.origin===location.origin&&event.source===parent&&event.data?.type==='leshelter-preview')apply(event.data.content);});
     parent.postMessage({type:'leshelter-preview-ready'},location.origin);
-  }else apply(window.LE_SHELTER_CONTENT);
+  }else {
+    apply(window.LE_SHELTER_CONTENT);
+    import('./membership-client.js').then(async({supabaseConfig})=>{
+      const response=await fetch(supabaseConfig.url+'/rest/v1/cms_published?id=eq.main&select=content',{headers:{apikey:supabaseConfig.publishableKey},cache:'no-store',signal:AbortSignal.timeout(10000)});
+      if(!response.ok)return;
+      const rows=await response.json();if(rows[0]?.content)apply(rows[0].content);
+    }).catch(()=>{ /* Keep the bundled published content available during outages. */ });
+  }
 })();

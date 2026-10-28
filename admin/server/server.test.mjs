@@ -9,7 +9,7 @@ import {fileURLToPath} from 'node:url';
 test('authenticated roles, draft revisions, publishing and private files',async()=>{
  const directory=await mkdtemp(path.join(tmpdir(),'leshelter-admin-'));
  const origin='http://127.0.0.1:4797';
- const child=spawn(process.execPath,[fileURLToPath(new URL('./server.mjs',import.meta.url))],{env:{...process.env,PORT:'4797',LESHELTER_ADMIN_DATA:directory,LESHELTER_ADMIN_PUBLISH_FILE:path.join(directory,'published.js')},stdio:['ignore','pipe','pipe']});
+ const child=spawn(process.execPath,[fileURLToPath(new URL('./server.mjs',import.meta.url))],{env:{...process.env,CMS_STORAGE:'local',PORT:'4797',LESHELTER_ADMIN_DATA:directory,LESHELTER_ADMIN_PUBLISH_FILE:path.join(directory,'published.js')},stdio:['ignore','pipe','pipe']});
  try{
   await new Promise((resolve,reject)=>{child.stdout.on('data',chunk=>{if(String(chunk).includes('Admin dashboard'))resolve();});child.once('error',reject);child.once('exit',code=>reject(new Error('Server exited '+code)));setTimeout(()=>reject(new Error('Server startup timed out')),10000).unref();});
   const request=async(route,{method='GET',data,auth,csrf=true}={})=>{

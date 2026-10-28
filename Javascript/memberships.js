@@ -1,0 +1,28 @@
+import QRCode from './vendor/qrcode.js';
+import {createMembershipClient,supabaseConfig} from './membership-client.js';
+const client=createMembershipClient();
+const $=s=>document.querySelector(s);
+const message=text=>{$('#message').textContent=text;};
+function field(label,value){const p=document.createElement('p');const strong=document.createElement('strong');strong.textContent=label+': ';p.append(strong,String(value));return p;}
+async function busy(button,work){button.disabled=true;try{await work();}catch(e){message(e.message);}finally{button.disabled=false;}}
+let members=[];
+async function load(){members=await client.list();const list=$('#members');list.replaceChildren();for(const m of members){
+ const card=document.createElement('article');const title=document.createElement('h3');title.textContent=m.full_name;card.append(title,field('Member',m.member_number),field('Role',m.member_role),field('Status',m.status==='Revoked'?'Revoked':m.expires_on<new Date().toISOString().slice(0,10)?'Expired':'Active'),field('Expires',m.expires_on));
+ if(m.photo_path){const img=document.createElement('img');img.className='member-photo';img.alt=m.full_name;img.src=await client.photoUrl(m.photo_path);card.prepend(img);}
+ const uploadLabel=document.createElement('label');uploadLabel.textContent='Upload / replace photo';const upload=document.createElement('input');upload.type='file';upload.accept='image/jpeg,image/png,image/webp';upload.addEventListener('change',()=>busy(upload,async()=>{if(!upload.files[0])return;await client.uploadPhoto(m.id,upload.files[0]);await load();message('Member photo updated.');}));uploadLabel.append(upload);card.append(uploadLabel);
+ const actions=document.createElement('div');actions.className='actions';
+ for(const [label,action] of [['View ID',()=>showCard(m)],['Edit / renew',()=>edit(m,card)],['Revoke',async()=>{if(!confirm('Revoke '+m.member_number+'? Its verification page will show Revoked.'))return;await client.update(m.id,{status:'Revoked'});await load();message('Membership revoked.');}]]){
+ const b=document.createElement('button');b.type='button';b.textContent=label;b.addEventListener('click',()=>busy(b,action));if(label==='Revoke'&&m.status==='Revoked')b.disabled=true;actions.append(b);}
+ card.append(actions);list.append(card);
+}if(!members.length)list.textContent='No members yet. Add your first member above.';}
+function edit(m,card){
+ if(card.querySelector('form'))return;
+ const form=document.createElement('form');for(const [key,label,type,max] of [['full_name','Name','text',120],['member_role','Role','text',80],['expires_on','Expiry date','date',null]]){const l=document.createElement('label');l.textContent=label;const input=document.createElement('input');input.name=key;input.type=type;input.value=m[key];input.required=true;if(max)input.maxLength=max;l.append(input);form.append(l);}
+ const save=document.createElement('button');save.textContent='Save changes';form.append(save);form.addEventListener('submit',e=>{e.preventDefault();busy(save,async()=>{await client.update(m.id,Object.fromEntries(new FormData(form)));await load();message('Member updated.');});});card.append(form);
+}
+async function showCard(m){const card=$('#member-card');card.replaceChildren();const logo=document.createElement('img');logo.src='/images/Logo.png';logo.alt='Le Shelter Foundation';logo.className='logo';const title=document.createElement('h2');title.textContent='Membership ID';const name=document.createElement('h3');name.textContent=m.full_name;card.append(logo,title,name);if(m.photo_path){const photo=document.createElement('img');photo.className='member-photo';photo.alt=m.full_name;photo.src=await client.photoUrl(m.photo_path);card.append(photo);}card.append(field('Member number',m.member_number),field('Role',m.member_role),field('Issued',m.issued_on),field('Expires',m.expires_on));const link=document.createElement('a');const url=new URL('/verify.html',supabaseConfig.siteUrl);url.hash=m.verification_token;link.href=url.href;link.textContent='Verify this membership';link.target='_blank';link.rel='noopener noreferrer';const image=document.createElement('img');image.className='member-qr';image.alt='Scan to verify this membership';image.src=await QRCode.toDataURL(url.href,{width:320,margin:4,errorCorrectionLevel:'M'});const download=document.createElement('a');download.href=image.src;download.download=m.member_number+'-QR.png';download.textContent='Download QR image';download.className='qr-download';card.append(image,download,link,field('Verification code',m.verification_token));$('#card-dialog').showModal();}
+$('#login').addEventListener('submit',event=>{event.preventDefault();busy(event.submitter,async()=>{const values=new FormData(event.target);await client.signIn(values.get('email'),values.get('password'));event.target.reset();try{await load();$('#login-panel').hidden=true;$('#management').hidden=false;message('Connected to Supabase.');}catch(e){await client.signOut();throw e;}});});
+$('#member-form').addEventListener('submit',event=>{event.preventDefault();busy(event.submitter,async()=>{await client.create(Object.fromEntries(new FormData(event.target)));event.target.reset();await load();message('Member created. Open View ID to get the verification link.');});});
+$('#refresh').onclick=e=>busy(e.target,load);
+$('#logout').onclick=e=>busy(e.target,async()=>{try{await client.signOut();}finally{$('#members').replaceChildren();$('#member-card').replaceChildren();$('#card-dialog').close();members=[];$('#management').hidden=true;$('#login-panel').hidden=false;message('Signed out.');}});
+$('#close-card').onclick=()=>$('#card-dialog').close();$('#print-card').onclick=()=>window.print();

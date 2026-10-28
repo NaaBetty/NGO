@@ -1,0 +1,9 @@
+﻿.env
+.env.*
+.admin
+.git
+node_modules
+supabase
+*.pdf
+admin/server/*.test.mjs
+admin/server/server.test.mjs

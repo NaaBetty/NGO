@@ -22,17 +22,26 @@
   const trigger = document.getElementById('menu-btn');
   const menu = document.getElementById('mobile-menu');
   if (trigger && menu) {
+    const panel = document.createElement('nav');
+    panel.className = 'mobile-menu-panel';
+    panel.setAttribute('aria-label', 'Mobile navigation');
+    menu.querySelectorAll(':scope > a').forEach(link => panel.append(link));
+    menu.append(panel);
+    const donate = panel.querySelector('a[href*="donate.html"]');
+    if (donate) donate.textContent = 'Donate Now';
     trigger.setAttribute('aria-controls', 'mobile-menu');
     const sync = () => {
       const open = !menu.classList.contains('hidden');
       trigger.setAttribute('aria-expanded', String(open));
       trigger.setAttribute('aria-label', open ? 'Close navigation' : 'Open navigation');
+      document.body.classList.toggle('mobile-menu-open', open);
     };
     new MutationObserver(sync).observe(menu, { attributes: true, attributeFilter: ['class'] });
-    if (document.body.classList.contains('home-redesign')) {
       trigger.addEventListener('click', () => menu.classList.toggle('hidden'));
       document.getElementById('close-menu')?.addEventListener('click', () => { menu.classList.add('hidden'); trigger.focus(); });
-    }
+    menu.addEventListener('click', event => {
+      if (event.target === menu || event.target.closest('a')) menu.classList.add('hidden');
+    });
     document.addEventListener('keydown', event => {
       if (event.key === 'Escape' && !menu.classList.contains('hidden')) {
         menu.classList.add('hidden');

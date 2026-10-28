@@ -1,19 +1,25 @@
+import {cloudRepository} from './cloud-repository.mjs';
+import {loadEnvFile} from 'node:process';
+try { loadEnvFile(); } catch(error) { if(error.code!=='ENOENT')throw error; }
 import {newsletterHandler} from './newsletter.mjs';
 import {websiteLinks} from './link-inventory.mjs';
 import http from 'node:http';
 import { readFile, writeFile, mkdir, rename } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { randomBytes, scryptSync, timingSafeEqual } from 'node:crypto';
+import { randomBytes, scryptSync, timingSafeEqual, createHash } from 'node:crypto';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../..');
+const cloud = process.env.CMS_STORAGE==='supabase' ? cloudRepository() : null;
+if(process.env.VERCEL&&!process.env.SITE_URL)throw new Error('Configure SITE_URL for the production origin.');
+if(process.env.VERCEL&&!cloud)throw new Error('Vercel requires CMS_STORAGE=supabase and server-side Supabase credentials.');
 const dataDir = process.env.LESHELTER_ADMIN_DATA || path.join(root, '.admin');
-await mkdir(dataDir, { recursive: true });
+if(!cloud)await mkdir(dataDir, { recursive: true });
 const seed = JSON.parse(await readFile(path.join(root, 'admin/seed.json'), 'utf8'));
 const stateFile = path.join(dataDir, 'state.json');
 const publishedFile = process.env.LESHELTER_ADMIN_PUBLISH_FILE || path.join(root,'admin/content.js');
 let state;
-try { state = JSON.parse(await readFile(stateFile, 'utf8')); }
+try { state = cloud ? {users:[],draft:structuredClone(seed),published:structuredClone(seed),revision:0,history:[],audit:[]} : JSON.parse(await readFile(stateFile, 'utf8')); }
 catch (error) {
   if (error.code !== 'ENOENT') throw error;
   state = { users: [], draft: structuredClone(seed), published: structuredClone(seed), revision: 0, history: [], audit: [] };
@@ -38,7 +44,9 @@ const permissions = {
 const publicUser = user => ({ id:user.id, name:user.name, email:user.email, role:user.role, areas:user.areas });
 const allowed = user => user.areas ? permissions[user.role].filter(area => user.areas.includes(area)) : permissions[user.role];
 let queue = Promise.resolve();
+let cloudVersion;
 const persist = async () => {
+  if(cloud){cloudVersion=await cloud.save(cloudVersion,{...state,sessions:[...sessions]});return;} 
   const content = JSON.stringify(state);
   queue = queue.catch(() => {}).then(async () => {
     await writeFile(stateFile+'.tmp', content, { mode:0o600 });
@@ -61,6 +69,7 @@ function makeUser(input) {
 const mime = {'.html':'text/html; charset=utf-8','.js':'text/javascript; charset=utf-8','.mjs':'text/javascript; charset=utf-8','.css':'text/css; charset=utf-8','.png':'image/png','.jpg':'image/jpeg','.jpeg':'image/jpeg','.webp':'image/webp','.svg':'image/svg+xml','.json':'application/json'};
 function json(res, status, body) { res.writeHead(status, {'Content-Type':'application/json','Cache-Control':'no-store'});res.end(JSON.stringify(body)); }
 async function body(req) {
+  if(req.body!==undefined){if(typeof req.body==='object')return req.body;return JSON.parse(req.body);}
   let buffer = Buffer.alloc(0);
   for await (const chunk of req) {
     buffer = Buffer.concat([buffer,chunk]);
@@ -70,16 +79,16 @@ async function body(req) {
 }
 function session(req) {
   const cookie = /(?:^|;\s*)ls_admin=([a-f0-9]+)/.exec(req.headers.cookie||'');
-  const entry = cookie && sessions.get(cookie[1]);
+  const entry = cookie && sessions.get(createHash('sha256').update(cookie[1]).digest('hex'));
   if (!entry || entry.expires<Date.now()) return null;
   const user=state.users.find(user=>user.id===entry.userId);
-  return user ? {entry,user,token:cookie[1]} : null;
+  return user ? {entry,user,token:createHash('sha256').update(cookie[1]).digest('hex')} : null;
 }
 function newSession(res,user) {
   const token=randomBytes(32).toString('hex'),csrf=randomBytes(24).toString('hex');
-  sessions.set(token,{userId:user.id,csrf,expires:Date.now()+8*3600000});
-  res.setHeader('Set-Cookie',`ls_admin=${token}; HttpOnly; SameSite=Strict; Path=/; Max-Age=28800`);
-  return {user:publicUser(user),csrf,permissions:allowed(user)};
+  sessions.set(createHash('sha256').update(token).digest('hex'),{userId:user.id,csrf,expires:Date.now()+8*3600000});
+  res.setHeader('Set-Cookie',`ls_admin=${token}; HttpOnly; SameSite=Strict; Path=/; Max-Age=28800${process.env.VERCEL?'; Secure':''}`);
+  return {user:publicUser(user),csrf,permissions:allowed(user),storage:cloud?'supabase':'local'};
 }
 function safeURL(value, image=false) {
   if (typeof value!=='string' || value.length>2000 || /[\x00-\x1f]/.test(value)) return false;
@@ -139,44 +148,58 @@ function validateDraft(draft) {
   return draft;
 }
 function requireRole(user, list) { if (!list.includes(user.role)) {const error=new Error('Your role does not allow this action.');error.status=403;throw error;} }
-const subscribe=newsletterHandler(dataDir);
-const server=http.createServer(async(req,res)=>{
+const subscribe=newsletterHandler(dataDir,{cloud,siteUrl:process.env.VERCEL?process.env.SITE_URL:undefined});
+async function handle(req,res){
   res.setHeader('X-Content-Type-Options','nosniff');
   res.setHeader('Referrer-Policy','same-origin');
-  res.setHeader('Content-Security-Policy',"default-src 'self'; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data: blob: https:; connect-src 'self' https://script.google.com; frame-src 'self'; frame-ancestors 'self'; base-uri 'self'; object-src 'none'; form-action 'self'");
+  res.setHeader('Content-Security-Policy',"default-src 'self'; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data: blob: https:; connect-src 'self' https://script.google.com https://iewrvbzgygmpcrlaqsaq.supabase.co; frame-src 'self'; frame-ancestors 'self'; base-uri 'self'; object-src 'none'; form-action 'self'");
   try {
     const url=new URL(req.url,'http://localhost');
     const pathname=url.pathname;
+    if(cloud && pathname.startsWith('/api/admin/')){
+      const stored=await cloud.load();cloudVersion=stored.version;state=stored.payload;
+      for(const content of [state.draft,state.published])hydrateProducts(content);
+      sessions.clear();for(const [token,entry] of state.sessions||[])if(entry.expires>Date.now())sessions.set(token,entry);
+    }
+    if(pathname==='/api/member-photo'){
+      if(req.method!=='POST')return json(res,405,{error:'Method not allowed.'});
+      const photoStore=cloud||cloudRepository();if(!photoStore)return json(res,503,{error:'Photo service is not configured.'});
+      const input=await body(req);if(!/^[a-f0-9]{64}$/.test(input.token||''))return json(res,400,{error:'Invalid verification code.'});
+      const ip=(process.env.VERCEL?req.headers['x-real-ip']:null)||req.socket.remoteAddress;
+      if(!await photoStore.rate(createHash('sha256').update('photo:'+ip).digest('hex')))return json(res,429,{error:'Please try again in a minute.'});
+      return json(res,200,{url:await photoStore.publicPhoto(input.token)});
+    }
     if(pathname==='/api/newsletter')return await subscribe(req,res);
     if (pathname.startsWith('/api/admin/')) {
       res.setHeader('Cache-Control','no-store');
       const write=!['GET','HEAD'].includes(req.method);
-      if (write && req.headers.origin!==`http://${req.headers.host}`) return json(res,403,{error:'Same-origin requests are required.'});
+      if (write && req.headers.origin!==(process.env.VERCEL&&process.env.SITE_URL?new URL(process.env.SITE_URL).origin:`http://${req.headers.host}`)) return json(res,403,{error:'Same-origin requests are required.'});
       if (pathname==='/api/admin/session' && req.method==='GET') {
         const auth=session(req);
-        return json(res,200,{setup:state.users.length===0,...(auth?{user:publicUser(auth.user),csrf:auth.entry.csrf,permissions:allowed(auth.user)}:{user:null})});
+        return json(res,200,{setup:state.users.length===0,storage:cloud?'supabase':'local',...(auth?{user:publicUser(auth.user),csrf:auth.entry.csrf,permissions:allowed(auth.user)}:{user:null})});
       }
       if (['/api/admin/setup','/api/admin/login'].includes(pathname) && req.method==='POST') {
-        const key=req.socket.remoteAddress;
+        const key=(process.env.VERCEL?req.headers['x-real-ip']:null)||req.socket.remoteAddress;
+        if(cloud&&!await cloud.rate(createHash('sha256').update('login:'+key).digest('hex')))return json(res,429,{error:'Too many attempts. Try again in a minute.'});
         const record=attempts.get(key)||{count:0,at:Date.now()};
         if (Date.now()-record.at>60000) {record.count=0;record.at=Date.now();}
         record.count++;attempts.set(key,record);
         if (record.count>10) return json(res,429,{error:'Too many attempts. Try again in a minute.'});
         const input=await body(req);
         if(pathname.endsWith('/setup')) {
-          if(state.users.length) return json(res,403,{error:'Owner account already configured.'});
-          const user=makeUser({...input,role:'Owner'});state.users.push(user);audit(user,'Created initial owner account');await persist();return json(res,201,newSession(res,user));
+          if(cloud||state.users.length) return json(res,403,{error:'Owner account already configured.'});
+          const user=makeUser({...input,role:'Owner'});state.users.push(user);audit(user,'Created initial owner account');const result=newSession(res,user);await persist();return json(res,201,result);
         }
         const user=state.users.find(user=>user.email===String(input.email).toLowerCase());
         const actual=passwordHash(String(input.password||'').slice(0,200),user?.salt||'invalid-user');
         if (!user || !timingSafeEqual(Buffer.from(actual,'hex'),Buffer.from(user.hash,'hex'))) return json(res,401,{error:'Email or password is incorrect.'});
-        attempts.delete(key);audit(user,'Signed in');await persist();return json(res,200,newSession(res,user));
+        attempts.delete(key);audit(user,'Signed in');const result=newSession(res,user);await persist();return json(res,200,result);
       }
       const auth=session(req);
       if(!auth)return json(res,401,{error:'Sign in to continue.'});
       const {user,entry}=auth;
       if(write&&req.headers['x-csrf-token']!==entry.csrf)return json(res,403,{error:'Invalid request token. Sign in again.'});
-      if(pathname==='/api/admin/logout'&&req.method==='POST'){sessions.delete(auth.token);res.setHeader('Set-Cookie','ls_admin=; HttpOnly; SameSite=Strict; Path=/; Max-Age=0');return json(res,200,{ok:true});}
+      if(pathname==='/api/admin/logout'&&req.method==='POST'){sessions.delete(auth.token);if(cloud)await persist();res.setHeader('Set-Cookie','ls_admin=; HttpOnly; SameSite=Strict; Path=/; Max-Age=0');return json(res,200,{ok:true});}
       if(pathname==='/api/admin/links'&&req.method==='GET')return json(res,200,{items:await websiteLinks(root,seed.pages)});
       if(pathname==='/api/admin/state'&&req.method==='GET')return json(res,200,{draft:state.draft,published:state.published,revision:state.revision,history:state.history.map(({content,...revision})=>revision),audit:state.audit,users:user.role==='Owner'?state.users.map(publicUser):[],permissions:allowed(user)});
       if(pathname==='/api/admin/draft'&&req.method==='PUT') {
@@ -195,9 +218,11 @@ const server=http.createServer(async(req,res)=>{
         const input=await body(req);if(input.revision!==state.revision)return json(res,409,{error:'Draft changed. Reload before publishing.'});
         const content=validateDraft(structuredClone(state.draft));
         for(const page of content.pages)for(const section of page.sections)if(!section.custom)section.fields=section.fields.filter(field=>field.value!==field.default||content.textStyles?.[['pages',page.id,section.id,field.id].join('.')]);
+        if(!cloud){
         await writeFile(publishedFile+'.tmp','window.LE_SHELTER_CONTENT = '+JSON.stringify(content).replace(/</g,'\\u003c')+';\n');
         await rename(publishedFile+'.tmp',publishedFile);
-        state.published=structuredClone(state.draft);audit(user,'Published saved draft to workspace website files');await persist();return json(res,200,{ok:true});
+        }
+        state.published=structuredClone(state.draft);audit(user,cloud?'Published saved draft to Supabase':'Published saved draft to workspace website files');await persist();return json(res,200,{ok:true});
       }
       if(pathname==='/api/admin/restore'&&req.method==='POST') {
         requireRole(user,['Owner','Administrator']);const input=await body(req);
@@ -217,13 +242,15 @@ const server=http.createServer(async(req,res)=>{
       if(pathname==='/api/admin/upload'&&req.method==='POST') {
         if(!allowed(user).includes('media'))return json(res,403,{error:'Media editing is not permitted.'});
         const input=await body(req);const bytes=Buffer.from(input.data||'','base64');
-        if(!bytes.length||bytes.length>5*1024*1024)throw new Error('Choose an image smaller than 5 MB.');
+        if(!bytes.length||bytes.length>(cloud?3:5)*1024*1024)throw new Error(cloud?'Choose an image smaller than 3 MB for CMS uploads.':'Choose an image smaller than 5 MB.');
         let extension;
         if(bytes.subarray(0,8).equals(Buffer.from([137,80,78,71,13,10,26,10])))extension='png';
         else if(bytes[0]===255&&bytes[1]===216&&bytes[2]===255)extension='jpg';
         else if(bytes.toString('ascii',0,4)==='RIFF'&&bytes.toString('ascii',8,12)==='WEBP')extension='webp';
         else throw new Error('Only PNG, JPEG and WebP images are supported.');
-        await mkdir(path.join(root,'images/uploads'),{recursive:true});const file=randomBytes(16).toString('hex')+'.'+extension;
+        const file=randomBytes(16).toString('hex')+'.'+extension;
+        if(cloud){const url=await cloud.upload(file,bytes,{'png':'image/png','jpg':'image/jpeg','webp':'image/webp'}[extension]);audit(user,'Uploaded a media image');await persist();return json(res,201,{id:file,url,alt:String(input.alt||'').slice(0,300),folder:'Uploads'});}
+        await mkdir(path.join(root,'images/uploads'),{recursive:true});
         await writeFile(path.join(root,'images/uploads',file),bytes);audit(user,'Uploaded a media image');await persist();return json(res,201,{id:file,url:'images/uploads/'+file,alt:String(input.alt||'').slice(0,300),folder:'Uploads'});
       }
       return json(res,404,{error:'Unknown admin action.'});
@@ -238,6 +265,11 @@ const server=http.createServer(async(req,res)=>{
     if(!file.startsWith(root+path.sep))return json(res,403,{error:'Not found.'});
     const bytes=await readFile(file);res.writeHead(200,{'Content-Type':mime[path.extname(file)]||'application/octet-stream','Cache-Control':'no-cache'});res.end(req.method==='HEAD'?undefined:bytes);
   } catch(error) {json(res,error.code==='ENOENT'?404:error.status||400,{error:error.code==='ENOENT'?'Not found.':error.message});}
-});
+}
+let requestQueue=Promise.resolve();
+export default function handler(req,res){
+ const next=requestQueue.catch(()=>{}).then(()=>handle(req,res));requestQueue=next;return next;
+}
+const server=http.createServer(handler);
 const port=Number(process.env.PORT||4173);
-server.listen(port,'127.0.0.1',()=>console.log(`LeShelter website: http://127.0.0.1:${port}\nAdmin dashboard: http://127.0.0.1:${port}/admin/\nCreate your owner account on the first visit. Data stays in ${dataDir}`));
+if(!process.env.VERCEL)server.listen(port,'127.0.0.1',()=>console.log(`LeShelter website: http://127.0.0.1:${port}\nAdmin dashboard: http://127.0.0.1:${port}/admin/\nCreate your owner account on the first visit. Data stays in ${dataDir}`));

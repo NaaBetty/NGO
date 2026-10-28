@@ -1,18 +1,21 @@
+import {createHash} from 'node:crypto';
 import {readFile,writeFile,rename,mkdir} from 'node:fs/promises';
 import path from 'node:path';
-export function newsletterHandler(dataDir){
+export function newsletterHandler(dataDir,{cloud=null,siteUrl}={}){
  let queue=Promise.resolve();const attempts=new Map();
  return async(req,res)=>{
   const send=(status,data)=>{res.writeHead(status,{'Content-Type':'application/json','Cache-Control':'no-store'});res.end(JSON.stringify(data));};
   if(req.method!=='POST')return send(405,{error:'Use the subscription form to sign up.'});
-  if(req.headers.origin!==`http://${req.headers.host}`)return send(403,{error:'Same-origin requests are required.'});
-  const key=req.socket.remoteAddress,now=Date.now(),record=attempts.get(key);
+  if(req.headers.origin!==(siteUrl?new URL(siteUrl).origin:`http://${req.headers.host}`))return send(403,{error:'Same-origin requests are required.'});
+  const key=(process.env.VERCEL?req.headers['x-real-ip']:null)||req.socket.remoteAddress,now=Date.now(),record=attempts.get(key);
   if(record&&now-record.at<60000&&record.count>=10)return send(429,{error:'Please wait a minute before trying again.'});
   attempts.set(key,record&&now-record.at<60000?{at:record.at,count:record.count+1}:{at:now,count:1});
   try{
-   const chunks=[];let length=0;for await(const chunk of req){length+=chunk.length;if(length>4096)return send(413,{error:'Subscription request is too large.'});chunks.push(chunk);}
+   if(cloud&&!await cloud.rate(createHash('sha256').update('newsletter:'+key).digest('hex')))return send(429,{error:'Please wait a minute before trying again.'});
+   const chunks=[];let length=0;for await(const chunk of (req.body!==undefined?[Buffer.from(typeof req.body==='object'?JSON.stringify(req.body):req.body)]:req)){length+=chunk.length;if(length>4096)return send(413,{error:'Subscription request is too large.'});chunks.push(chunk);}
    const input=JSON.parse(Buffer.concat(chunks).toString()),email=typeof input.email==='string'?input.email.trim().toLowerCase():'';
    if(email.length>254||! /^[^\s@<>]+@[^\s@<>]+\.[^\s@<>]+$/.test(email))return send(400,{error:'Please enter a valid email address.'});
+   if(cloud){await cloud.subscribe(email);return send(200,{ok:true});}
    queue=queue.catch(()=>{}).then(async()=>{
     await mkdir(dataDir,{recursive:true});const file=path.join(dataDir,'newsletter.json');let subscribers=[];
     try{subscribers=JSON.parse(await readFile(file,'utf8'));}catch(error){if(error.code!=='ENOENT')throw error;}
